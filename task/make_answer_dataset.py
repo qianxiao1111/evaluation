@@ -7,6 +7,7 @@ import sys
 sys.path.append(".")
 import json
 import sqlite3
+import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from typing import List, Dict, Tuple
@@ -75,6 +76,8 @@ def get_table_info(table_names: List[str], path_to_db: str, topk: int = 1):
         fk_info = get_foreign_key_relation(table_names, conn)
         table_info += "Foreign keys:\n{}\n".format(",".join(fk_info))
     conn.close()
+    df_locals["pd"] = pd
+    df_locals["np"] = np
     return table_info, df_locals
 
 
@@ -141,8 +144,15 @@ with open("datasets/evalset/code_and_exec.json", "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False)
 print("总集合", len(results))
 
-
-errors = [result for result in results if result["exec_bool"] is False]
-with open("datasets/evalset/error_answer_spider_bird.json", "w", encoding="utf-8") as f:
+errors = [
+    result
+    for result in results
+    if (result["exec_bool"] is False)
+    & (result["exec_result"] != "NameError: name 'pd' is not defined")
+    & (result["exec_result"] != "NameError: name 'np' is not defined")
+]
+with open(
+    "datasets/evalset/error_answer_spider_bird_new.json", "w", encoding="utf-8"
+) as f:
     json.dump(errors, f, ensure_ascii=False)
 print("错误集", len(errors))
