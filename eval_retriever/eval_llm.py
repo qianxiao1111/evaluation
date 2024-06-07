@@ -16,8 +16,8 @@ def gen_preds(
     llm_gen: BaseLanguageModel,
     llm_extract: BaseLanguageModel,
     num: int = None,
-    path_to_queries: str = "test_data/querys.json",
-    path_to_tables: str = "test_data/tables.json",
+    path_to_queries: str = "datasets/evalset/querys.json",
+    path_to_tables: str = "datasets/evalset/tables.json",
     path_to_save: str = "report",
 ):
     samples = load_json(path_to_queries)
@@ -152,10 +152,14 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate retrieval metrics.")
     parser.add_argument(
-        "--gen_model_url", required=True, help="http url for llm inference, this is the eval llm server url link"
+        "--gen_model_url",
+        required=True,
+        help="http url for llm inference, this is the eval llm server url link",
     )
     parser.add_argument(
-        "--extract_model_url", required=True, help="http url for llm inference, this is the anwser extract llm server url link"
+        "--extract_model_url",
+        required=True,
+        help="http url for llm inference, this is the anwser extract llm server url link",
     )
     parser.add_argument(
         "--path_to_save",
