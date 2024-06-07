@@ -10,7 +10,7 @@
 2. files
 
    ```bash
-   # code_gen_eval/eval_retriever/test_data
+   # datasets/evalset
    ├── querys.json # 问题集
    ├── tables.json # 表格信息
    ├── y_columns.json # 字段召回标签
@@ -23,25 +23,25 @@
 
      ```bash
      # python
-     python eval_llm.py \
+     python eval_retriever/eval_llm.py \
          --gen_model_url "http://localhost:8081" \
          --extract_model_url "http://localhost:8082" \
          --num 100
      # or bash
-     bash run_llm.sh
+     bash eval_retriever/run_llm.sh
      ```
 
    - 提供 `预测结果`
 
      ```bash
      # python
-     python eval.py \
+     python eval_retriever/eval.py \
      	--pred_tables eval_retriever/preds/pred_tables.json \
      	--label_tables eval_retriever/test_data/y_tables.json \
      	--pred_columns eval_retriever/preds/pred_columns.json \
      	--label_columns eval_retriever/test_data/y_columns.json
      # or bash
-     bash run.sh
+     bash eval_retriever/run.sh
      ```
 
 4. response example
