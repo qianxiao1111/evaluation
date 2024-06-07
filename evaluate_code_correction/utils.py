@@ -10,7 +10,6 @@ import re
 from typing import Any
 from langchain_core.runnables import RunnablePassthrough
 from langchain.agents.format_scratchpad import format_log_to_str
-from langchain_openai import ChatOpenAI
 from langchain.agents import AgentExecutor
 from evaluate_code_correction.output_parser import CustomOutputParser
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
@@ -87,12 +86,8 @@ def create_agent(prompt, llm, tools, max_iter):
 
     agent_executor = AgentExecutor(agent=agent,
                                    tools=tools,
-                                   verbose=False,
+                                   verbose=True,
                                    return_intermediate_steps=True,
                                    handle_parsing_errors=True,
                                    max_iterations=max_iter)
     return agent_executor
-
-
-
-

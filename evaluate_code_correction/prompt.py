@@ -7,25 +7,24 @@
 """
 
 RECTIFY_PROMPT_PYTHON = """
-你现在正在充当一名Python代码reviewer，你需要根据输入的query、表格信息、运行的错误信息来对代码进行校正。
+你现在正在充当一名Python代码reviewer，你需要根据输入的query、表格信息、运行的错误信息来对输入的原始代码和代码思路进行修改，以获得正确的运行结果。
 
 输出的内容需要保持以下格式：
-<format>
 Thought: 思考解决问题的步骤
 Python Code:
 ```python
-# Data preparation: 这一步可能包括创建新列、转换数据类型等。
+# Data preprocessing: Preprocessing and cleaning data if necessary. Avoid using `pd.DataFrame` to obtain analysis data.
 
-# Data processing: 这一步可能包括分组、过滤等。
+# Data analysis: Manipulating data for analysis, such as grouping, filtering, aggregating, etc.
 
-# Declare `final_df` var: 将经过准备和处理后的数据分配给`final_df`。
+# Declare `final_df` var: Assign the result of the data preparation and processing to `final_df`.
 
-# Print the final result based on the question: 打印符合题意的最终结果
+# Print the final result based on the question
 ```
 Observation: 动作输出的观察内容
 ... (这个 Thought/Python Code/Observation 过程可以重复N次)
-Thought: 根据观察的结果做出总结, Final Answer:
-</format>
+Thought: 根据观察的结果做出总结。
+Final Answer:
 
 以下是输入的表格信息：
 {table_infos}
@@ -33,29 +32,26 @@ Thought: 根据观察的结果做出总结, Final Answer:
 以下是输入的query：
 {query}
 
-以下是原始的Thought以及Python代码：
+以下是输入的代码和思考过程：
 {output}
 
 以下是原始Python代码运行后的结果Observe：
 {observe}
 
 开始！
-请根据以上约定的格式, 对输入的代码进行校正:\n
+请根据以上约定的格式, 对输入的代码进行纠错，保证代码获得符合用户输入和表格信息的正确结果。 注意不要使用`pd.DataFrame`来获取分析数据\n
 当前时间: {current_time}
 {agent_scratchpad}
 """
 
 CLASSIFY_PROMPT_PYTHON = """
-你现在正在充当一名Python代码reviewer，输入的代码以及执行结果是根据用户的query和表格信息生成的。
-但由于程序员水平有限，这个输入的代码可能是错的。 你需要根据用户的query/表格信息以及真实结果，来对代码以及代码执行结果的正确性进行判断。
+你现在正在充当一名Python代码reviewer，输入思考过程和代码以及执行结果是根据用户的query和表格信息生成的。
+但由于程序员水平有限，这个输入的代码可能是错的。 你需要根据用户的query、代码的执行结果和真实结果，来对代码以及代码执行结果的正确性进行判断。
 
 以下是输入的query
 {query}
 
-以下是表格信息
-{table_infos}
-
-以下是程序员根据query和表格信息所生成的代码
+以下是程序员根据query和表格信息所生成的和代码
 {code}
 
 以下是代码的执行观测结果：
@@ -82,13 +78,13 @@ Question: 需要解决的问题，可以对问题进行适度改写方便生成�
 Thought: 思考解决问题的步骤
 Python Code:
 ```python
-# Data preparation: 这一步可能包括创建新列、转换数据类型等。
+# Data preprocessing: Preprocessing and cleaning data if necessary.
 
-# Data processing: 这一步可能包括分组、过滤等。
+# Data analysis: Manipulating data for analysis, such as grouping, filtering, aggregating, etc.
 
-# Declare `final_df` var: 将经过准备和处理后的数据分配给`final_df`。
+# Declare `final_df` var: Assign the result of the data preparation and processing to `final_df`.
 
-# Print the final result based on the question: 打印符合题意的最终结果
+# Print the final result based on the question
 ```
 </format>
 
@@ -110,7 +106,7 @@ Question: 需要解决的问题，可以对问题进行适度改写方便生成�
 Thought: 思考解决问题的步骤
 Python Code:
 ```python
-# Data preparation: 这一步可能包括创建新列、转换数据类型等。
+# Data preprocessing: 这一步可能包括创建新列、转换数据类型等。
 
 # Data processing: 这一步可能包括分组、过滤等。
 
