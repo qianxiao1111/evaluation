@@ -10,10 +10,11 @@ from eval_metrics import load_json, save_json, evaluation
 
 def build_chain():
     os.environ['https_proxy'] = 'http://10.0.0.46:7979'
+    # this is the eval-model
     llm = ChatOpenAI(
         # openai_api_base="https://api.openai.com",
-        openai_api_key="sk-proj-vdxxxNg",
-        model_name="gpt-3.5-turbo-0125",
+        openai_api_key="",
+        model_name="gpt-4o-2024-05-13",
         # max_tokens=1024,
         max_tokens=1536,
         temperature=0,
@@ -58,10 +59,10 @@ def llm_eval(test_file_path):
         print(llm_output)
         processed_data.append(test_dt)
     
-    save_json("test_data/llm_output_data.json", processed_data)
-    evaluation("test_data/ground_truth.json", "test_data/llm_output_data.json")
+    save_json("../evalset/reject_test/llm_output_data.json", processed_data)
+    evaluation("../evalset/reject_test/ground_truth.json", "../evalset/reject_test/llm_output_data.json")
 
 
 if __name__ == "__main__":
-    test_file_path = "test_data/test_query.json"
+    test_file_path = "../evalset/reject_test/test_query.json"
     llm_eval(test_file_path)

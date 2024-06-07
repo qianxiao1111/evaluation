@@ -7,6 +7,7 @@
 """
 from langchain_openai import ChatOpenAI
 
+# llm for generate the original wrong answer
 llm_gen = ChatOpenAI(
     temperature=0.01,
     max_tokens=1024,
@@ -16,18 +17,20 @@ llm_gen = ChatOpenAI(
     model_name="deepseek-coder-6.7b-instruct",
 )
 
+# llm for code correction evaluation
 llm_for_eval = ChatOpenAI(
-    temperature=0.01,
+    temperature=0.1,
     max_tokens=2048,
     verbose=True,
     openai_api_key="",
-    model_name="gpt-4o-2024-05-13",
+    model_name="gpt-3.5-turbo",
     # model_kwargs={"stop": stop},
 )
 
+# llm for the eval_method `llm_eval`
 llm_judge = ChatOpenAI(
     temperature=0.7,
-    max_tokens=1024,
+    max_tokens=2048,
     verbose=True,
     openai_api_key="",
     model_name="gpt-4o-2024-05-13",
