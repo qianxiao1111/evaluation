@@ -5,6 +5,7 @@
 @File ：run_eval.py
 @IDE ：PyCharm
 """
+import time
 from tqdm import tqdm
 import datetime
 from typing import Literal, Optional, Any
@@ -13,12 +14,14 @@ import pandas as pd
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.base import Chain
+from langchain_openai import ChatOpenAI
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
 from langchain_core.output_parsers import StrOutputParser
 from evaluate_code_correction.prompt import CLASSIFY_PROMPT_PYTHON, \
     RECTIFY_PROMPT_PYTHON
 from evaluate_code_correction.utils import get_tool, create_agent
-from llms import llm_for_eval, llm_judge
+from evaluate_code_correction.llms import llm_judge
+from util import start_service, is_service_up
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -30,6 +33,38 @@ import warnings
 warnings.filterwarnings("ignore")
 # Fixing Chinese font issues
 use_font("Noto Serif CJK SC")"""
+
+def main(args):
+    """main function to run the code correction evaluation"""
+    model_path = args.model_path
+    max_len = args.max_len
+    temperature = args.temperature if args.temperature else 1.0
+    eval_dataset_path = args.eval_dataset_path
+    eval_results_save_path =
+    model_kwargs = {}
+    # 启动vllm 模型服务
+    service_process, port, model_name = start_service(model_path, max_len)
+    # 等待服务启动
+    service_url = f"http://localhost:{port}"
+    while not is_service_up(service_url):
+        print("Waiting for the service to start...")
+        time.sleep(3)
+    time.sleep(2)
+    print("服务已启动")
+    # 业务代码
+    service_openai_url = service_url + "/v1"
+
+    llm_eval = ChatOpenAI(
+        temperature=temperature,
+        openai_api_base=service_openai_url,
+        openai_api_key="none",
+        model_name=model_name,
+        model_kwargs=model_kwargs
+    )
+    gen_answer(que)
+
+
+
 
 
 def pass_rate(sample_len: int, passed: int) -> float:
@@ -64,7 +99,6 @@ def execution_eval(output_code: str, dfs: Any) -> bool:
 
 def llm_eval(
         query: str,
-        table_infos,
         code: str,
         observation: str,
         true_result,
@@ -123,7 +157,8 @@ def gen_answer(
 def get_results(eval_dataset_path: str,
                 lan_type: str = "python",
                 k: int = 1,
-                result_path: str = "../evalset/code_correction_test/results.json"):
+                result_path: str = "../evalset/code_correction_test/results.json",
+                llm_for_eval: BaseLanguageModel = None):
     """Generate all llm-eval results"""
     import json
     with open(eval_dataset_path, "r") as f:
@@ -194,16 +229,18 @@ def run_eval(
         else:
             df = [pd.read_csv(path) for path in df_paths]
         execute_passed += 1 if execution_eval(code, df) else 0
-        llm_eval_passed += 1 if llm_eval(query,
-                                table_infos,
-                                code, observe,
-                                true_result, llm_for_judge) else 0
+        if llm_for_judge is not None:
+            llm_eval_passed += 1 if llm_eval(query,
+                                    table_infos,
+                                    code, observe,
+                                    true_result, llm_for_judge) else 0
         print("*" * 20)
     print(f"Sample length: {total_len}. "
           f"Execute Passed: {execute_passed}."
-          f"LLM eval Passed: {llm_eval_passed}")
-    print(f"Execute pass-rate is:", round(execute_passed / total_len, 3))
-    print(f"LLM_eval pass-rate is:", round(llm_eval_passed / total_len, 3))
+          f"Execute pass-rate is:", round(execute_passed / total_len, 3))
+    if llm_for_judge is not None:
+        print(f"LLM eval Passed: {llm_eval_passed}")
+        print(f"LLM_eval pass-rate is:", round(llm_eval_passed / total_len, 3))
     result = {
         "Execute pass-rate": round(execute_passed / total_len, 3),
         "LLM_eval pass-rate": round(llm_eval_passed / total_len, 3)
@@ -212,6 +249,8 @@ def run_eval(
         json.dump(result, f, ensure_ascii=False)
 
 if __name__ == "__main__":
+    import argparse
+
     get_results(eval_dataset_path="../evalset/code_correction_test/correction_set_new.json")
     run_eval(eval_result_path="../evalset/code_correction_test/results.json")
 

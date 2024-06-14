@@ -11,7 +11,6 @@ import warnings
 
 warnings.filterwarnings(action="ignore")
 
-
 def gen_preds(
     llm_gen: BaseLanguageModel,
     llm_extract: BaseLanguageModel,
