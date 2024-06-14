@@ -34,7 +34,9 @@ def start_service(model_path, max_len):
         "--served-model-name", model_name,
         "--max-model-len", max_len_cmd,
         "--gpu-memory-utilization", "0.8",
-        "--port", port_cmd
+        "--port", port_cmd,
+        "--dtype", "half",
+        "--disable-log-requests"
     ]
     process = subprocess.Popen(command)
     return process, port, model_name
