@@ -54,7 +54,16 @@ evalset/reject_test/ground_truth.json # ground_truth
 ```
 
 ## 4.retrieval-eval(table_column_select)
+```bash
+cd eval_retriever
 
-运行方法参考
-
-eval_retriever/readme.md
+# 以跑10行数据为例
+python eval_llm_local.py \
+    --model_path /home/dev/weights/CodeQwen1.5-7B-Chat \
+    --temperature 0 \
+    --max_len 8192 \
+    --temperature 0.01 \
+    --eval_dataset_path ../evalset \
+    --eval_results_save_path ../evalset \
+    --num 10
+```

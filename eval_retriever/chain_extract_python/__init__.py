@@ -1,7 +1,7 @@
 from typing import Any, Optional
 
 from langchain.chains.llm import LLMChain
-from langchain.llms.base import LLM
+from langchain.schema.language_model import BaseLanguageModel
 from langchain_core.output_parsers.base import BaseOutputParser
 from langchain_core.prompts import BasePromptTemplate
 
@@ -12,7 +12,7 @@ from chain_extract_python.prompt import prompt_template
 class ExtractPythonChain(LLMChain):
     """extract metadata from python code"""
 
-    llm: Optional[LLM] = None
+    llm: Optional[BaseLanguageModel] = None
     prompt: BasePromptTemplate = prompt_template
     input_key: str = "code"  #: :meta private:
 
@@ -23,7 +23,7 @@ class ExtractPythonChain(LLMChain):
     @classmethod
     def from_llm(
         cls,
-        llm: LLM,
+        llm: BaseLanguageModel,
         prompt: BasePromptTemplate = prompt_template,
         output_parser: BaseOutputParser = None,
         **kwargs: Any,
