@@ -80,63 +80,45 @@ prompt_inspect = PromptTemplate(
     template=PROMPT_INSPECT,
 )
 
+TEMPLATE_REGEN = """Acting as a Python code reviewer, your task is to refine the code based on the given query, table details, and error messages from its execution.
 
-RECTIFY_PROMPT_PYTHON = """
-你现在正在充当一名Python代码reviewer，你需要根据输入的query、表格信息、运行的错误信息来对代码进行校正。
+Your output should adhere to this format:
 
-输出的内容需要保持以下格式：
-<format>
-Thought: 思考解决问题的步骤
+```
+Thought: Outline the steps to address the issue.
 Python Code:
 ```python
-# Data preparation: 这一步可能包括创建新列、转换数据类型等。
+# Data Preparation: This may entail creating new columns, converting data types, etc.
 
-# Data processing: 这一步可能包括分组、过滤等。
+# Data Processing: Steps like grouping, filtering, etc., can be applied here.
 
-# Declare `final_df` var: 将经过准备和处理后的数据分配给`final_df`。
+# Define `final_df`: Assign the processed dataset to `final_df`.
 
-# Print the final result based on the question: 打印符合题意的最终结果
+# Display the Final Output: Print the outcome conforming to the query's requirements.
 ```
-</format>
 
-以下是输入的表格信息：
+Provided below is the table information:
 {table_infos}
 
-以下是输入的query：
+Here is the input query:
 {query}
 
-以下是原始的Thought以及Python代码：
-{output}
+Original Thought Process
+{cot}
 
-以下是原始Python代码运行后的结果Observe：
-{observe}
-
-开始！
-请根据以上约定的格式, 对输入的代码进行校正:\n
-
-"""
-
-CLASSIFY_PROMPT_PYTHON = """
-你现在正在充当一名Python代码reviewer，输入的代码以及执行结果是根据用户的query和表格信息生成的。
-但由于程序员水平有限，这个输入的代码可能是错的。 你需要根据用户的query/表格信息以及真实结果，来对代码以及代码执行结果的正确性进行判断。
-
-以下是输入的query
-{query}
-
-以下是表格信息
-{table_infos}
-
-以下是程序员根据query和表格信息所生成的代码
+Original Python Code:
 {code}
 
-以下是代码的执行观测结果：
+Observations from Executing the Original Python Code:
 {observation}
 
-以下是用户问题对应的真实结果：
-{true_result}
+begin
 
-请根据以上内容，判定代码的正确性。
-如果认为代码是正确的，请输出`yes`， 否则输出`no`。
+Please revise the submitted code following the agreed-upon format above.
 
-开始！注意除了`yes` or `no`之外不要输出任何其他内容。
 """
+
+prompt_template_regen = PromptTemplate(
+    input_variables=["table_infos", "query", "cot", "code", "observation"],
+    template=TEMPLATE_REGEN,
+)

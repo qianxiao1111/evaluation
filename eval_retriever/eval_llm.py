@@ -91,8 +91,8 @@ def evaluate_metrics(
     pred_tables_path: str,
     pred_columns_path: str,
     num: int = None,
-    label_tables_path: str = "test_data/y_tables.json",
-    label_columns_path: str = "test_data/y_columns.json",
+    label_tables_path: str = "datasets/evalset/y_tables.json",
+    label_columns_path: str = "datasets/evalset/y_columns.json",
 ):
     pred_tables = load_json(pred_tables_path)
     pred_columns = load_json(pred_columns_path)
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--path_to_save",
         required=False,
-        default="report",
+        default="datasets/report",
         help="folder to save",
     )
     parser.add_argument(
