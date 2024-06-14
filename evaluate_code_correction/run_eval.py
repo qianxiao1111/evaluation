@@ -18,7 +18,8 @@ from langchain_core.output_parsers import StrOutputParser
 from evaluate_code_correction.prompt import CLASSIFY_PROMPT_PYTHON, \
     RECTIFY_PROMPT_PYTHON
 from evaluate_code_correction.utils import get_tool, create_agent
-from llms import llm_for_eval, llm_judge
+from evaluate_code_correction.llms import llm_judge
+from util import start_service, is_service_up
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -30,6 +31,12 @@ import warnings
 warnings.filterwarnings("ignore")
 # Fixing Chinese font issues
 use_font("Noto Serif CJK SC")"""
+
+def main(args):
+    """main function to run the code correction evaluation"""
+    model_path = args.model_path
+    model_name = args.model_name
+    service_process = start_service(model_path, model_name, max_len, port)
 
 
 def pass_rate(sample_len: int, passed: int) -> float:
@@ -212,6 +219,8 @@ def run_eval(
         json.dump(result, f, ensure_ascii=False)
 
 if __name__ == "__main__":
+    import argparse
+
     get_results(eval_dataset_path="../evalset/code_correction_test/correction_set_new.json")
     run_eval(eval_result_path="../evalset/code_correction_test/results.json")
 
