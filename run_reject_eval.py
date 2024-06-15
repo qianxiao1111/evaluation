@@ -30,8 +30,6 @@ def main(args):
     service_process.terminate()
 
 
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval reject")
     parser.add_argument('--temperature', type=float, default=0.5, help='Temperature setting')

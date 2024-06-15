@@ -58,7 +58,7 @@ evalset/reject_test/ground_truth.json # ground_truth
 cd eval_retriever
 
 # 以跑10行数据为例
-python eval_llm_local.py \
+python run_table_select_eval.py \
     --model_path /home/dev/weights/CodeQwen1.5-7B-Chat \
     --temperature 0 \
     --max_len 8192 \

@@ -20,7 +20,6 @@ from langchain_core.output_parsers import StrOutputParser
 from evaluate_code_correction.prompt import CLASSIFY_PROMPT_PYTHON, \
     RECTIFY_PROMPT_PYTHON
 from evaluate_code_correction.utils import get_tool, create_agent
-from evaluate_code_correction.llms import llm_judge
 from util import start_service, is_service_up
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
@@ -33,39 +32,6 @@ import warnings
 warnings.filterwarnings("ignore")
 # Fixing Chinese font issues
 use_font("Noto Serif CJK SC")"""
-
-def main(args):
-    """main function to run the code correction evaluation"""
-    model_path = args.model_path
-    max_len = args.max_len
-    temperature = args.temperature if args.temperature else 1.0
-    eval_dataset_path = args.eval_dataset_path
-    eval_results_save_path =
-    model_kwargs = {}
-    # 启动vllm 模型服务
-    service_process, port, model_name = start_service(model_path, max_len)
-    # 等待服务启动
-    service_url = f"http://localhost:{port}"
-    while not is_service_up(service_url):
-        print("Waiting for the service to start...")
-        time.sleep(3)
-    time.sleep(2)
-    print("服务已启动")
-    # 业务代码
-    service_openai_url = service_url + "/v1"
-
-    llm_eval = ChatOpenAI(
-        temperature=temperature,
-        openai_api_base=service_openai_url,
-        openai_api_key="none",
-        model_name=model_name,
-        model_kwargs=model_kwargs
-    )
-    gen_answer(que)
-
-
-
-
 
 def pass_rate(sample_len: int, passed: int) -> float:
     """
@@ -95,7 +61,6 @@ def execution_eval(output_code: str, dfs: Any) -> bool:
     print("Execute Observe:", code_res)
     print("Execute Result:", res)
     return res
-
 
 def llm_eval(
         query: str,
@@ -204,7 +169,7 @@ def get_results(eval_dataset_path: str,
 
 def run_eval(
     eval_result_path: str = "../evalset/code_correction_test/results.json",
-    llm_for_judge: Optional[BaseLanguageModel] = llm_judge
+    llm_for_judge: Optional[BaseLanguageModel] = None
 ):
     """
     :param eval_results_path:  Evaluation dataset path
@@ -248,9 +213,9 @@ def run_eval(
     with open("../evalset/code_correction_test/Eval_result.json", "w") as f:
         json.dump(result, f, ensure_ascii=False)
 
-if __name__ == "__main__":
-    import argparse
-
-    get_results(eval_dataset_path="../evalset/code_correction_test/correction_set_new.json")
-    run_eval(eval_result_path="../evalset/code_correction_test/results.json")
+# if __name__ == "__main__":
+#     import argparse
+#
+#     get_results(eval_dataset_path="../evalset/code_correction_test/correction_set_new.json")
+#     run_eval(eval_result_path="../evalset/code_correction_test/results.json")
 
