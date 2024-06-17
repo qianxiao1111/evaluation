@@ -63,7 +63,7 @@ python run_table_select_eval.py \
     --temperature 0 \
     --max_len 8192 \
     --temperature 0.01 \
-    --eval_dataset_path ../evalset \
-    --eval_results_save_path ../evalset \
+    --eval_dataset_path evalset \
+    --eval_results_save_path evalset \
     --num 10
 ```
