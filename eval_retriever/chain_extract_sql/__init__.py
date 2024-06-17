@@ -5,8 +5,8 @@ from langchain.schema.language_model import BaseLanguageModel
 from langchain_core.output_parsers.base import BaseOutputParser
 from langchain_core.prompts import BasePromptTemplate
 
-from chain_extract_sql.output_parser import OutputParser
-from chain_extract_sql.prompt import prompt_template
+from eval_retriever.chain_extract_sql.output_parser import OutputParser
+from eval_retriever.chain_extract_sql.prompt import prompt_template
 
 
 class ExtractSqlChain(LLMChain):

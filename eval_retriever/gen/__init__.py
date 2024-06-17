@@ -3,8 +3,8 @@ from langchain.schema.language_model import BaseLanguageModel
 from langchain.chains.llm import LLMChain
 from langchain_core.prompts import BasePromptTemplate
 from langchain_core.output_parsers.base import BaseOutputParser
-from gen.prompt import prompt_template, prompt_template_py
-from gen.output_parser import OutputParser, PyOutputParser
+from eval_retriever.gen.prompt import prompt_template, prompt_template_py
+from eval_retriever.gen.output_parser import OutputParser, PyOutputParser
 
 
 class SqlGenChain(LLMChain):
