@@ -128,9 +128,6 @@ def get_results(eval_dataset_path: str,
     import json
     with open(eval_dataset_path, "r") as f:
         test_samples = json.load(f)
-    # sample_len = len(test_samples)
-    # # mini_batches = split_batch(test_samples, batch_size)
-    passed = 0
     if lan_type == "python":
         prompt_answer_gen = ChatPromptTemplate.from_messages(
             [("system", RECTIFY_PROMPT_PYTHON)]
@@ -154,15 +151,20 @@ def get_results(eval_dataset_path: str,
         table_infos = sample["table_infos"]
         outputs = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
         observes = sample["observation"]
-        eval_answer = gen_answer(queries, table_infos, outputs, observes, agent)
-        code = eval_answer["intermediate_steps"][-1][0].tool_input
-        eval_answer_sample["query"] = queries
-        eval_answer_sample["observe"] = eval_answer["intermediate_steps"][-1][1]
-        eval_answer_sample["code"] = code
-        eval_answer_sample["true_result"] = true_result
-        eval_answer_sample["table_infos"] = table_infos
-        eval_answer_sample["table_paths"] = df_paths
-        answers.append(eval_answer_sample)
+        try:
+            eval_answer = gen_answer(queries, table_infos, outputs, observes, agent)
+            code = eval_answer["intermediate_steps"][-1][0].tool_input
+            eval_answer_sample["query"] = queries
+            eval_answer_sample["observe"] = eval_answer["intermediate_steps"][-1][1]
+            eval_answer_sample["code"] = code
+            eval_answer_sample["true_result"] = true_result
+            eval_answer_sample["table_infos"] = table_infos
+            eval_answer_sample["table_paths"] = df_paths
+            answers.append(eval_answer_sample)
+        except Exception as e:
+            print(f"Error raised generating eval answer: {e}")
+            continue
+
     with open(result_path, "w") as f:
         json.dump(answers, f,ensure_ascii=False)
 
@@ -213,9 +215,4 @@ def run_eval(
     with open("../evalset/code_correction_test/Eval_result.json", "w") as f:
         json.dump(result, f, ensure_ascii=False)
 
-# if __name__ == "__main__":
-#     import argparse
-#
-#     get_results(eval_dataset_path="../evalset/code_correction_test/correction_set_new.json")
-#     run_eval(eval_result_path="../evalset/code_correction_test/results.json")
 
