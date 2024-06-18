@@ -42,9 +42,7 @@
 
 ### 运行方法
 
-1）修改./evaluate_code_correction/run_eval.py 中 build_chain()函数对应的llm配置， 将llm替换为待评价llm。
-
-2）运行./evaluate_code_correction/run_eval.py
+1）运行 run_reject_eval.py
 
 评价测试集为：
 

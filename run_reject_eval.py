@@ -1,52 +1,52 @@
-from util import start_service, is_service_up
-from reject_eval.run_eval import run_eval
 import argparse
 import time
+from reject_eval.run_eval import format_inputs, load_json, eval_outputs
+from inference import load_model, load_tokenizer_and_template, generate_outputs
 
 def main(args):
     temperature = args.temperature
     model_path = args.model_path
-    max_tokens = args.max_tokens
-    cutoff_len = args.cutoff_len
+    max_new_tokens = args.max_new_tokens
+    max_model_len = args.max_model_len
     test_path = args.test_path
+    template = args.template
 
-    # 启动服务
-    service_process, port, model_name = start_service(model_path, cutoff_len)
+    # 加载 model 和 tokenizer
+    llm_model = load_model(model_path, max_model_len)
+    tokenizer = load_tokenizer_and_template(model_path, template)
 
-    service_url = f"http://localhost:{port}"
-    while not is_service_up(service_url):
-        print("Waiting for the service to start...")
-        time.sleep(1)
-    time.sleep(2)
-    service_openai_url = service_url + "/v1"
-    print("服务已启动！")
+    # 推理参数
+    generate_args = {
+        "temperature": temperature,
+        "max_tokens": max_new_tokens,
+    }
 
-    # eval 评估
-    # -----------------------------
-    run_eval(test_path, model_name, temperature, max_tokens, service_openai_url)
-    # -----------------------------
-
-    # 关闭服务
-    service_process.terminate()
+    # 推理&评估
+    test_datas = load_json(test_path)
+    format_message_datas = format_inputs(test_datas)
+    model_outputs = generate_outputs(format_message_datas, llm_model, tokenizer, generate_args)
+    eval_outputs(model_outputs, test_path)
+    
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval reject")
     parser.add_argument('--temperature', type=float, default=0.5, help='Temperature setting')
     parser.add_argument('--model_path', type=str, required=True, help='Path to the model')
-    parser.add_argument('--max_tokens', type=int, default=1024, help='Maximum number of output tokens')
-    parser.add_argument('--cutoff_len', type=int, default=8192, help='Cutoff length')
+    parser.add_argument('--max_new_tokens', type=int, default=1024, help='Maximum number of output new tokens')
+    parser.add_argument('--max_model_len', type=int, default=8192, help='Max model length')
+    parser.add_argument('--template', type=str, choices=[None, 'llama3', 'baichuan', 'chatglm'], default=None, help='The template must be specified if not present in the config file')
     parser.add_argument('--test_path', type=str, default="evalset/reject_test/test_query.json", help='Test File Path')
 
     args = parser.parse_args()
     main(args)
 
 
-# example /home/dev/weights/CodeQwen1.5-7B-Chat
+# example /home/dev/weights/CodeQwen1.5-7B-Chat /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200 
 """
 python run_reject_eval.py \
-    --model_path /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200 \
+    --model_path /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200  \
     --temperature 0 \
-    --cutoff_len 16384 \
-    --max_tokens 1024
+    --max_model_len 16384 \
+    --max_new_tokens 1024
 """
