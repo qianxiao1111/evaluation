@@ -1,67 +1,51 @@
 from reject_eval.prompt import eval_system, eval_instruction
 from reject_eval.eval_metrics import load_json, save_json, evaluation
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain.chains.llm import LLMChain
 import sys
 import os
 
 
-def build_chain(openai_url, model_name, max_tokens, temperature):
-    # this is the eval-model
-    llm = ChatOpenAI(
-        openai_api_base=openai_url,
-        openai_api_key="empty",
-        model_name=model_name,
-        max_tokens=max_tokens,
-        temperature=temperature,
-    )
-    prompt = ChatPromptTemplate.from_messages(
-        [
-            ("system", eval_system),
-            ("human", eval_instruction),
-        ]
-    )
-    chat_llm_chain = LLMChain(
-        llm=llm,
-        prompt=prompt,
-        # verbose=True
-    )
-
-    return chat_llm_chain
-
-def run_eval(test_file_path, model_name, temperature, max_tokens, openai_url):
-    # 加载问题
-    test_datas = load_json(test_file_path)
-    processed_data = []
-    test_datas_len = len(test_datas)
+def format_inputs(test_datas):
+    # 把需要推理的数据拼成 message 形式
+    format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        print(f"进度：{idx}/{test_datas_len}")
         query = test_dt["query"]
         df_info_str = test_dt["df_info"]
 
-        chat_llm_chain = build_chain(openai_url, model_name, max_tokens, temperature)
-        res = chat_llm_chain.invoke({
-            "df_info": df_info_str,
-            "input": query,
-        })
-        llm_output = res["text"]
+        format_instruction = eval_instruction.format(df_info=df_info_str, input=query)
+        format_system = eval_system.format(df_info=df_info_str, input=query)
+
+        messages = [
+            {"role": "system", "content": format_system},
+            {"role": "user", "content": format_instruction}
+        ]
+        format_message_datas.append(messages)
+    
+    return format_message_datas
+
+
+def eval_outputs(model_outputs, test_file_path):
+    test_datas = load_json(test_file_path)
+    # 提取模型输出list
+    output_texts = [i["output_text"] for i in model_outputs]
+    processed_data = []
+    for idx, test_dt in enumerate(test_datas):
+        llm_output = output_texts[idx]
         test_dt["llm_output"] = llm_output
-        # 解析
+        # 解析输出判断结果
         if "yes" in llm_output.lower():
             test_dt["is_reject"] = False
         elif "no" in llm_output.lower():
             test_dt["is_reject"] = True
         else:
-            print("解析错误")
-        
-        print(llm_output)
+            pass
+            # print("解析错误")
         processed_data.append(test_dt)
-
+    
     # 保存路径
     parent_path = os.path.dirname(test_file_path)
     save_path = os.path.join(parent_path, 'llm_output_data.json')
     ground_truth_path = os.path.join(parent_path, 'ground_truth.json')
 
     save_json(save_path, processed_data)
+    print(f"评估每条数据的模型输出及结果保存路径：{save_path}")
     evaluation(ground_truth_path, save_path)
