@@ -58,7 +58,7 @@ for sample in yss:
             "code": sample["python_code"],
             "observation": sample["exec_result"],
             "true_result": sample["exec_result_glm4"],
-            "table_info": "df:\n{}".format(load_df(path).head(3).to_markdown()),
+            "table_infos": "df:\n{}".format(load_df(path).head(3).to_markdown()),
         }
     )
 

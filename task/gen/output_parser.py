@@ -41,7 +41,7 @@ class SqlOutputParser(BaseTransformOutputParser[str]):
 class PyOutputParser(BaseTransformOutputParser[str]):
     """OutputParser that parses LLMResult into the top likely string."""
 
-    pattern_cot = r"Thought:\n(.*?)\n```"
+    pattern_cot = r"Thought:(.*?)```"
     pattern_py = r"```python\n(.*?)\n```"
 
     def parse(self, text: str) -> Dict:

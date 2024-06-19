@@ -51,17 +51,14 @@ evalset/reject_test/test_query.json # queries
 evalset/reject_test/ground_truth.json # ground_truth
 ```
 
-## 4.retrieval-eval(table_column_select)
+## 4.recall-eval(table_column_select)
 ```bash
-cd eval_retriever
-
 # 以跑10行数据为例
-python run_table_select_eval.py \
+python run_recall_eval.py \
     --model_path /home/dev/weights/CodeQwen1.5-7B-Chat \
-    --temperature 0 \
-    --max_len 8192 \
     --temperature 0.01 \
-    --eval_dataset_path evalset \
-    --eval_results_save_path evalset \
+    --max_model_len  8192 \
+    --max_new_tokens 1024 \
+    --test_path evalset/recall_set.json \
     --num 10
 ```
