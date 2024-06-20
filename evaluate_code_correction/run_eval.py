@@ -5,62 +5,46 @@
 @File ：run_eval.py
 @IDE ：PyCharm
 """
-import time
-from tqdm import tqdm
-import datetime
-from typing import Literal, Optional, Any
-
+import signal
 import pandas as pd
+import json
+import os
+import datetime
+from tqdm import tqdm
+from typing import Optional, Any
+from langchain_openai import ChatOpenAI
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.prompts import ChatPromptTemplate
-from langchain.chains.base import Chain
-from langchain_openai import ChatOpenAI
-from langchain_experimental.tools.python.tool import PythonAstREPLTool
 from langchain_core.output_parsers import StrOutputParser
-from evaluate_code_correction.prompt import CLASSIFY_PROMPT_PYTHON, \
-    RECTIFY_PROMPT_PYTHON
-from evaluate_code_correction.utils import get_tool, create_agent
-from util import start_service, is_service_up
+from evaluate_code_correction.utils import filter_code, filter_cot, get_tool
+from evaluate_code_correction.prompt import (
+    RECTIFY_PROMPT_PYTHON_SYSTEM,
+    RECTIFY_PROMPT_PYTHON_INSTRUCTION,
+    CLASSIFY_PROMPT_PYTHON,
+)
 
-CODE_PREFIX = """import matplotlib.pyplot as plt
-from mplfonts import use_font
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import warnings
+from contextlib import contextmanager
 
-warnings.filterwarnings("ignore")
-# Fixing Chinese font issues
-use_font("Noto Serif CJK SC")"""
+# 定义一个异常类，用于超时处理
+class TimeoutException(Exception):
+    pass
 
-def pass_rate(sample_len: int, passed: int) -> float:
-    """
-    :param sample_len: Testing sample length
-    :param passed: The number of samples passed test
-    :return: pass_rate
-    """
-    return passed / sample_len
+# 创建一个上下文管理器来处理超时
+@contextmanager
+def timeout(time):
+    # 定义信号处理函数
+    def raise_timeout(signum, frame):
+        raise TimeoutException(f"Timeout error, running time exceed {time}")
 
-
-def execution_eval(output_code: str, dfs: Any) -> bool:
-    """
-    :param output: output code of llm generation
-    :return: True or False
-    """
-    import re
-    python_executor = get_tool(dfs)
-    code = output_code.strip(" ").strip('"')
-    code_res = python_executor.run(code)
-    # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
-    pattern = re.compile(r"error|exception", re.IGNORECASE)
-
+    # 设置信号定时器
+    signal.signal(signal.SIGALRM, raise_timeout)
+    signal.alarm(time)
     try:
-        res = not pattern.search(code_res)
-    except:
-        res = True
-    print("Execute Observe:", code_res)
-    print("Execute Result:", res)
-    return res
+        yield
+    finally:
+        # 取消信号定时器
+        signal.alarm(0)
+
 
 def llm_eval(
         query: str,
@@ -99,78 +83,101 @@ def llm_eval(
     return True if res.lower() == "yes" else False
 
 
-def eval_pass_k(last_output_k: str, result: str):
-    pass
-
-
-def gen_answer(
-        queries: str,
-        table_infos: str,
-        outputs: str,
-        observations: str,
-        answer_chain: Chain,
-):
-    time_now = datetime.datetime.now().strftime('%Y-%m-%d:%H')
-    results = answer_chain.invoke(
-        input={"query": queries, "table_infos": table_infos,
-               "observe": observations, "output": outputs,
-               "current_time": time_now
-               })
-    return results
-
-
-def get_results(eval_dataset_path: str,
-                lan_type: str = "python",
-                k: int = 1,
-                result_path: str = "../evalset/code_correction_test/results.json",
-                llm_for_eval: BaseLanguageModel = None):
-    """Generate all llm-eval results"""
-    import json
-    with open(eval_dataset_path, "r") as f:
-        test_samples = json.load(f)
-    if lan_type == "python":
-        prompt_answer_gen = ChatPromptTemplate.from_messages(
-            [("system", RECTIFY_PROMPT_PYTHON)]
-        )
-    else:
-        raise Exception(f"Do not support {lan_type} sample evaluation now..")
-
-    answers = []
-    for sample in tqdm(test_samples):
-        eval_answer_sample = {}
-        df_paths = sample["table_paths"]
-        if len(df_paths) == 1:
-            df = pd.read_csv(df_paths[0])
-        else:
-            df = [pd.read_csv("../"+path) for path in df_paths]
-        tool = get_tool(df)
-        tools = [tool]
-        agent = create_agent(prompt_answer_gen, llm_for_eval, tools, k)
-        true_result = sample["true_result"]
+def format_inputs(test_datas, lan_type="Python"):
+    # 把需要推理的数据拼成 message 形式
+    format_message_datas = []
+    for idx, sample in tqdm(enumerate(test_datas)):
         queries = sample["query"]
         table_infos = sample["table_infos"]
-        outputs = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
+
+        current_time = datetime.datetime.now().strftime('%Y-%m-%d:%H')
+        output = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
         observes = sample["observation"]
+
+        format_instruction = RECTIFY_PROMPT_PYTHON_INSTRUCTION.format(
+            table_infos=table_infos,
+            query=queries,
+            observe=observes,
+            current_time=current_time,
+            output=output
+        )
+        format_system = RECTIFY_PROMPT_PYTHON_SYSTEM
+        messages = [
+            {"role": "system", "content": format_system},
+            {"role": "user", "content": format_instruction}
+        ]
+        format_message_datas.append(messages)
+
+    return format_message_datas
+
+def eval_outputs(model_outputs, eval_dataset_path, test_csv_file_path, lan_type):
+    """generate complete eval samples according to the eval_datasets
+    and the model_outputs"""
+    with open(eval_dataset_path, "r", encoding="utf-8") as f:
+        test_datas = json.load(f)
+    output_texts = [i["output_text"] for i in model_outputs]
+    processed_data = []
+    for idx, test_dt in enumerate(test_datas):
+        llm_output = output_texts[idx]
+        table_infos = test_datas[idx]["table_infos"]
+        df_paths = test_datas[idx]["table_paths"]
+        true_result = test_datas[idx]["true_result"]
+        query = test_datas[idx]["query"]
+        eval_result_sample = {}
+        # STATIC = "/home/qyhuang/zhaliangyu/Evaluation"
+
+        if len(df_paths) == 1:
+            df = pd.read_csv(os.path.join(test_csv_file_path, df_paths[0]), low_memory=False)
+        else:
+            df = [pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False) for path in df_paths]
+        tool = get_tool(df)
+
+        code = filter_code(llm_output)
+        cot = filter_cot(llm_output)
+        output = cot + f"{lan_type} Code:\n" + code
         try:
-            eval_answer = gen_answer(queries, table_infos, outputs, observes, agent)
-            code = eval_answer["intermediate_steps"][-1][0].tool_input
-            eval_answer_sample["query"] = queries
-            eval_answer_sample["observe"] = eval_answer["intermediate_steps"][-1][1]
-            eval_answer_sample["code"] = code
-            eval_answer_sample["true_result"] = true_result
-            eval_answer_sample["table_infos"] = table_infos
-            eval_answer_sample["table_paths"] = df_paths
-            answers.append(eval_answer_sample)
+            try:
+                with timeout(15):  # 设置超时时间为15秒
+                    observe = tool.run(code)  # 需要监控超时的代码块
+            except TimeoutException as e:
+                observe = e
+        except SystemExit as e:
+            observe = e 
+            # 处理 SystemExit 异常，例如记录日志、清理资源等
         except Exception as e:
-            print(f"Error raised generating eval answer: {e}")
-            continue
+            observe = e
+        eval_result_sample["code"] = output
+        eval_result_sample["observe"] = observe
+        eval_result_sample["true_result"] = true_result
+        eval_result_sample["table_infos"] = table_infos
+        eval_result_sample["table_paths"] = df_paths
+        eval_result_sample["query"] = query
+        processed_data.append(eval_result_sample)
+    return processed_data
 
-    with open(result_path, "w") as f:
-        json.dump(answers, f,ensure_ascii=False)
+def execution_eval(output_code: str, dfs: Any) -> bool:
+    """
+    :param output: output code of llm generation
+    :return: True or False
+    """
+    import re
+    python_executor = get_tool(dfs)
+    code = output_code.strip(" ").strip('"')
+    code_res = python_executor.run(code)
+    # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
+    pattern = re.compile(r"error|exception", re.IGNORECASE)
 
+    try:
+        res = not pattern.search(code_res)
+    except:
+        res = True
+    print("Execute Observe:", code_res)
+    print("Execute Result:", res)
+    return res
 
 def run_eval(
     eval_result_path: str = "../evalset/code_correction_test/results.json",
+    test_csv_file_path: str = "./",
     llm_for_judge: Optional[BaseLanguageModel] = None
 ):
     """
@@ -185,20 +192,18 @@ def run_eval(
     execute_passed, llm_eval_passed = 0, 0
     total_len = len(samples)
     for sample in tqdm(samples):
-        code = sample["code"]
+        code = filter_code(sample["code"])
         observe = sample["observe"]
         true_result = sample["true_result"]
-        table_infos = sample["table_infos"]
         df_paths = sample["table_paths"]
         query = sample["query"]
         if len(df_paths) == 1:
-            df = pd.read_csv(df_paths[0])
+            df = pd.read_csv(os.path.join(test_csv_file_path, df_paths[0]), low_memory=False)
         else:
-            df = [pd.read_csv(path) for path in df_paths]
+            df = [pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False) for path in df_paths]
         execute_passed += 1 if execution_eval(code, df) else 0
         if llm_for_judge is not None:
             llm_eval_passed += 1 if llm_eval(query,
-                                    table_infos,
                                     code, observe,
                                     true_result, llm_for_judge) else 0
         print("*" * 20)
@@ -208,11 +213,5 @@ def run_eval(
     if llm_for_judge is not None:
         print(f"LLM eval Passed: {llm_eval_passed}")
         print(f"LLM_eval pass-rate is:", round(llm_eval_passed / total_len, 3))
-    result = {
-        "Execute pass-rate": round(execute_passed / total_len, 3),
-        "LLM_eval pass-rate": round(llm_eval_passed / total_len, 3)
-    }
-    with open("../evalset/code_correction_test/Eval_result.json", "w") as f:
-        json.dump(result, f, ensure_ascii=False)
 
 

@@ -15,7 +15,39 @@ from evaluate_code_correction.output_parser import CustomOutputParser
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
 
 
-def split_batch(samples: list[str], size=4):
+def is_python_code(line):
+    # 检查是否包含常见的Python关键字或语法特征
+    python_keywords = ['import', 'from', 'def', 'class', 'for', 'while', 'if',
+                       'elif', 'else', '#', '=', 'print']
+    return any(keyword in line for keyword in python_keywords)
+
+def extract_text_before_code(text):
+    lines = text.split('\n')
+    text_before_code = []
+
+    for line in lines:
+        if is_python_code(line):
+            break
+        text_before_code.append(line)
+
+    return '\n'.join(text_before_code)
+
+
+def extract_python_code(text: str) -> str:
+    lines = text.split('\n')
+    python_code = []
+    code_started = False
+
+    for line in lines:
+        if is_python_code(line):
+            code_started = True
+        if code_started:
+            python_code.append(line)
+
+    return '\n'.join(python_code)
+
+
+def split_batch(samples: list, size=4):
     mini_batches = []
 
     for i in range(0, len(samples), size):
@@ -23,32 +55,55 @@ def split_batch(samples: list[str], size=4):
 
     return mini_batches
 
-
 def fix_indents(text: str) -> str:
     return text.replace("\t", "    ")
+
+def filter_cot(completion: str):
+    try:
+        # 如果输出较为规范，可以使用这种方式提取cot部分的内容
+        pattern = r"Thought:\s*(.*?)\s*(?=Python Code:)"
+        match = re.search(pattern, completion, re.DOTALL)
+        if match:
+            thought_content = match.group(1)
+        else:
+            # 如果输出内容相对杂乱
+            thought_content = extract_text_before_code(completion)
+        return thought_content
+    except:
+        return ""
 
 
 def filter_code(completion: str) -> str:
     # The program tends to overwrite, we only take the first function
     CODE_PREFIX = """import matplotlib.pyplot as plt
-    from mplfonts import use_font
-    import pandas as pd
-    import numpy as np
-    import seaborn as sns
-    import warnings
+from mplfonts import use_font
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import warnings
 
-    warnings.filterwarnings("ignore")
-    # Fixing Chinese font issues
-    use_font("Noto Serif CJK SC")"""
-    regex = r"```python\s(.*?)```"
-    action_match = re.search(regex, completion, re.DOTALL)
-    tool_prefix = CODE_PREFIX
-    action_input = action_match.group(1)
-    action_input = action_input.strip(" ")
-    action_input = action_input.strip('"')
-    code = action_input.strip(" ")
-    code = tool_prefix + code
-    return code
+warnings.filterwarnings("ignore")
+# Fixing Chinese font issues
+use_font("Noto Serif CJK SC")\n"""
+    try:
+        # 输出形式符合prompt
+        regex = r"```python\s(.*?)```"
+        action_match = re.search(regex, completion, re.DOTALL)
+        if action_match:
+            tool_prefix = CODE_PREFIX
+            action_input = action_match.group(1)
+            action_input = action_input.strip(" ")
+            action_input = action_input.strip('"')
+            code = action_input.strip(" ")
+            code = tool_prefix + code
+        else:
+            # 输出形式随意
+            code = extract_python_code(completion)
+            code = code.strip(" ")
+            code = CODE_PREFIX + code
+        return code
+    except:
+        return ""
 
 
 def get_tool(df: Any):

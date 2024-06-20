@@ -6,11 +6,12 @@
 @IDE ：PyCharm
 """
 
-RECTIFY_PROMPT_PYTHON = """
+
+RECTIFY_PROMPT_PYTHON_SYSTEM = """
 你现在正在充当一名Python代码reviewer，你需要根据输入的query、表格信息、运行的错误信息来对输入的原始代码和代码思路进行修改，以获得正确的运行结果。
 
 输出的内容需要保持以下格式：
-Thought: 思考解决问题的步骤
+Thought: 思考错误的原因并输出正确的解决方法
 Python Code:
 ```python
 # Data preprocessing: Preprocessing and cleaning data if necessary. Avoid using `pd.DataFrame` to obtain analysis data.
@@ -21,11 +22,9 @@ Python Code:
 
 # Print the final result based on the question
 ```
-Observation: 动作输出的观察内容
-... (这个 Thought/Python Code/Observation 过程可以重复N次)
-Thought: 根据观察的结果做出总结。
-Final Answer:
+"""
 
+RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
 以下是输入的表格信息：
 {table_infos}
 
@@ -41,7 +40,6 @@ Final Answer:
 开始！
 请根据以上约定的格式, 对输入的代码进行纠错，保证代码获得符合用户输入和表格信息的正确结果。 注意不要使用`pd.DataFrame`来获取分析数据\n
 当前时间: {current_time}
-{agent_scratchpad}
 """
 
 CLASSIFY_PROMPT_PYTHON = """
@@ -51,7 +49,7 @@ CLASSIFY_PROMPT_PYTHON = """
 以下是输入的query
 {query}
 
-以下是程序员根据query和表格信息所生成的和代码
+以下是程序员根据query和表格信息所生成的思考过程和代码
 {code}
 
 以下是代码的执行观测结果：
@@ -66,63 +64,7 @@ CLASSIFY_PROMPT_PYTHON = """
 开始！注意除了`yes` or `no`之外不要输出任何其他内容。
 """
 
-PROMPT_PYTHON_GENERATE_NORMAL = """
-你正在使用Python代码处理一个命名为`df`的pandas分析任务。
-以下是输入表格的信息:
-{df_head}
 
-你需要严格遵循以下格式来生成内容：
-
-<format>
-Question: 需要解决的问题，可以对问题进行适度改写方便生成步骤和python code
-Thought: 思考解决问题的步骤
-Python Code:
-```python
-# Data preprocessing: Preprocessing and cleaning data if necessary.
-
-# Data analysis: Manipulating data for analysis, such as grouping, filtering, aggregating, etc.
-
-# Declare `final_df` var: Assign the result of the data preparation and processing to `final_df`.
-
-# Print the final result based on the question
-```
-</format>
-
-开始! 以规定的格式(Thought/Python Code)回答问题。
-当前时间: {current_time}
-<format>
-Question: {input}
-"""
-
-PROMPT_PYTHON_GENERATE_VISUAL = """
-你正在使用Python代码处理一个命名为`df`的pandas分析任务。 分析的过程包含可视化的内容。
-以下是输入表格的信息:
-{df_head}
-
-你需要严格遵循以下格式来生成内容：
-
-<format>
-Question: 需要解决的问题，可以对问题进行适度改写方便生成步骤和python code
-Thought: 思考解决问题的步骤
-Python Code:
-```python
-# Data preprocessing: 这一步可能包括创建新列、转换数据类型等。
-
-# Data processing: 这一步可能包括分组、过滤等。
-
-# Declare `final_df` var: 将经过准备和处理后的数据分配给`final_df`。
-
-# Visualization:  使用代码来绘制图表，请添加标题、标签和图例。
-
-# Print the final result based on the question: 打印符合题意的最终结果
-```
-</format>
-
-开始! 以规定的格式(Thought/Python Code)回答问题。
-当前时间: {current_time}
-<format>
-Question: {input}
-"""
 
 
 

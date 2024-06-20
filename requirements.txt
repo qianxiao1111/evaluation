@@ -15,3 +15,5 @@ sql_metadata==2.11.0
 SQLAlchemy==2.0.8
 torch>=1.8.1
 tqdm
+vllm
+matplotlib
