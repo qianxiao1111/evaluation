@@ -17,3 +17,5 @@ torch>=1.8.1
 tqdm
 vllm
 matplotlib
+mplfonts
+seaborn
