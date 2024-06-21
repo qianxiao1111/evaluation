@@ -208,7 +208,7 @@ def run_eval(
     """
         # print(eval_answer)
     import json
-    with open(eval_result_path, "r") as f:
+    with open(eval_result_path, "r", encoding="utf-8") as f:
         samples = json.load(f)
     execute_passed, llm_eval_passed = 0, 0
     total_len = len(samples)

@@ -4,16 +4,13 @@
 @File ：run_code_correction_eval.py
 @IDE ：PyCharm
 """
-
+# todo 筛选eval-set， 剔除数据过大的样本， 并新增一批样本
 import json
-import argparse
-from tqdm import tqdm
 from evaluate_code_correction.run_eval import (
     format_inputs,
     eval_outputs,
     run_eval
 )
-
 from inference import load_model, load_tokenizer_and_template, generate_outputs
 
 def check_eval_dataset_keys(test_datas):
