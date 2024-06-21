@@ -11,7 +11,7 @@ from inference import load_model, load_tokenizer_and_template, generate_outputs
 
 def main(args):
     # init model
-    llm_model = load_model(args.model_path, args.max_model_len)
+    llm_model = load_model(args.model_path, args.max_model_len, args.gpus_num)
     tokenizer = load_tokenizer_and_template(args.model_path, args.template)
     generate_args = {
         "temperature": args.temperature,
@@ -58,6 +58,9 @@ if __name__ == "__main__":
         required=True,
         default="/home/dev/weights/CodeQwen1.5-7B-Chat",
         help="Path to the model",
+    )
+    parser.add_argument(
+        '--gpus_num', type=int, default=1, help='the number of GPUs you want to use.'
     )
     parser.add_argument(
         "--temperature", type=float, default=0.5, help="Temperature setting"

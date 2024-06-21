@@ -10,9 +10,10 @@ def main(args):
     max_model_len = args.max_model_len
     test_path = args.test_path
     template = args.template
+    gpus_num = args.gpus_num
 
     # 加载 model 和 tokenizer
-    llm_model = load_model(model_path, max_model_len)
+    llm_model = load_model(model_path, max_model_len, gpus_num)
     tokenizer = load_tokenizer_and_template(model_path, template)
 
     # 推理参数
@@ -31,6 +32,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="eval reject")
+    parser.add_argument('--gpus_num', type=int, default=1, help='the number of GPUs you want to use.')
     parser.add_argument('--temperature', type=float, default=0.5, help='Temperature setting')
     parser.add_argument('--model_path', type=str, required=True, help='Path to the model')
     parser.add_argument('--max_new_tokens', type=int, default=1024, help='Maximum number of output new tokens')
