@@ -10,6 +10,7 @@ def _transform(
     y_pred: List[List],
     y_true: List[List],
 ):
+    # binary encoding
     mlb = MultiLabelBinarizer()
     tmp = deepcopy(y_true)
     tmp.extend(y_pred)
@@ -20,12 +21,13 @@ def _transform(
 
 
 class Metric:
+    # eval metrics for classifcation task
     @classmethod
     def averaged(
         cls,
         y_pred: List[List],
         y_true: List[List],
-        metric_types: List[str] = ["micro", "macro", "samples", "weighted"],
+        metric_types: List[str] = ["macro"],
     ) -> Dict:
         y_pred_binary, y_true_binary = _transform(y_pred, y_true)
         resp = {}
