@@ -1,5 +1,6 @@
 from reject_eval.prompt import eval_system, eval_instruction
-from reject_eval.eval_metrics import load_json, save_json, evaluation
+from reject_eval.eval_metrics import evaluation
+from util import load_json, save_json
 import sys
 import os
 

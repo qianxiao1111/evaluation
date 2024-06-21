@@ -8,7 +8,8 @@ from recall_eval.prompt import (
     extract_sys_sql,
     extract_user,
 )
-from recall_eval.eval_metrics import load_json, save_json, Metric
+from recall_eval.eval_metrics import Metric
+from util import load_json, save_json
 
 
 def format_inputs(samples, mode: str):
