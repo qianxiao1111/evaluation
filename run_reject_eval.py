@@ -45,7 +45,7 @@ if __name__ == "__main__":
 # example /home/dev/weights/CodeQwen1.5-7B-Chat /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200 
 """
 python run_reject_eval.py \
-    --model_path /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200  \
+    --model_path /data1/sft_models/checkpoints/v0619/qwen2-7b-instruct  \
     --temperature 0 \
     --max_model_len 16384 \
     --max_new_tokens 1024
