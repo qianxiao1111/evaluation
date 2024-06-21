@@ -1,8 +1,8 @@
 import argparse
+from util import load_json
 from recall_eval.run_eval import (
     format_inputs,
     parser_list,
-    load_json,
     eval_outputs,
     save_result,
 )

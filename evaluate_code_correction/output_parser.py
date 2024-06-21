@@ -6,12 +6,7 @@
 @IDE ：PyCharm
 """
 # -*- coding: utf-8 -*-
-"""
-@Time ： 2024/4/28 10:57
-@Auth ： zhaliangyu
-@File ：outputparser.py
-@IDE ：PyCharm
-"""
+
 import re
 from typing import Union
 

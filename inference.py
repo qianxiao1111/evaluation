@@ -60,9 +60,11 @@ def generate_outputs(messages_batch, llm_model, tokenizer, generate_args):
     
     prompt_batch = []
     for messages in messages_batch:
+        # 如果是basemodel， 直接拼接prompt内容后输入到模型
         if model_type == "base_model":
             messages_content = [msg["content"] for msg in messages]
             prompt = "\n".join(messages_content)
+        # 如果是chat—model 则拼接chat-template后输入
         else:
             prompt = tokenizer.apply_chat_template(
                 messages,
@@ -83,24 +85,3 @@ def generate_outputs(messages_batch, llm_model, tokenizer, generate_args):
         })
     
     return outputs_batch
-
-
-if __name__ == "__main__":
-    model_name_or_path = "/home/dev/weights/CodeQwen1.5-7B-Chat"
-    template = "baichuan"
-    generate_args = {
-        "temperature": 0.8,
-        "top_p": 0.95,
-        "max_tokens": 1024
-    }
-    max_model_len = 16384
-    tokenizer = load_tokenizer_and_template(model_name_or_path, template)
-    llm_model = load_model(model_name_or_path, max_model_len)
-
-    messages = [
-        # {"role": "system", "content": "You are a python assistant."},
-        {"role": "user", "content": "list dict 根据某个key排序"}
-    ]
-    messages_batch = [messages] * 1000
-    outputs_batch = generate_outputs(messages_batch, llm_model, tokenizer, generate_args)
-    print(outputs_batch)

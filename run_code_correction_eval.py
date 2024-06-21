@@ -43,7 +43,6 @@ def main(args):
     max_model_len = args.max_model_len
     template = args.template
     gpus_num = args.gpus_num
-    model_type = args.model_type
     model_kwargs = get_infer_kwargs(args)
     print("Load model...")
     llm_model = load_model(model_path, max_model_len, gpus_num)
@@ -63,7 +62,7 @@ def main(args):
                                          llm_model,
                                          tokenizer,
                                          model_kwargs)
-    with open("results_model_outputs.json", "w") as f:
+    with open("results_model_outputs.json", "w", encoding="utf-8") as f:
         json.dump(model_outputs, f, ensure_ascii=False)
     # with open("results_model_outputs.json", "r", encoding="utf-8") as f:
     #     model_outputs = json.load(f)
@@ -75,7 +74,7 @@ def main(args):
                                 test_csv_file_path=test_csv_file_path,
                                 lan_type="Python")
     print("Eval answers construct complete..")
-    with open(eval_results_save_path, "w") as f:
+    with open(eval_results_save_path, "w", encoding="utf-8") as f:
         json.dump(eval_answers, f, ensure_ascii=False)
     # this is the step to get eval_pass_rate
     run_eval(eval_result_path=eval_results_save_path,

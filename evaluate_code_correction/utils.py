@@ -15,13 +15,15 @@ from evaluate_code_correction.output_parser import CustomOutputParser
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
 
 
-def is_python_code(line):
+def is_python_code(line: str):
+    """Tool function for extract python code"""
     # 检查是否包含常见的Python关键字或语法特征
     python_keywords = ['import', 'from', 'def', 'class', 'for', 'while', 'if',
                        'elif', 'else', '#', '=', 'print']
     return any(keyword in line for keyword in python_keywords)
 
-def extract_text_before_code(text):
+def extract_text_before_code(text: str) -> str:
+    """Tool function for extract text content"""
     lines = text.split('\n')
     text_before_code = []
 
@@ -34,6 +36,7 @@ def extract_text_before_code(text):
 
 
 def extract_python_code(text: str) -> str:
+    """Tool function for extract python code"""
     lines = text.split('\n')
     python_code = []
     code_started = False
@@ -46,19 +49,15 @@ def extract_python_code(text: str) -> str:
 
     return '\n'.join(python_code)
 
-
-def split_batch(samples: list, size=4):
-    mini_batches = []
-
-    for i in range(0, len(samples), size):
-        mini_batches.append(samples[i : i + size])
-
-    return mini_batches
-
 def fix_indents(text: str) -> str:
     return text.replace("\t", "    ")
 
 def filter_cot(completion: str):
+    """
+    Filter the COT steps before python code
+    :param completion: llm output contents
+    :return filtered COT content
+    """
     try:
         # 如果输出较为规范，可以使用这种方式提取cot部分的内容
         pattern = r"Thought:\s*(.*?)\s*(?=Python Code:)"
@@ -74,7 +73,12 @@ def filter_cot(completion: str):
 
 
 def filter_code(completion: str) -> str:
-    # The program tends to overwrite, we only take the first function
+    """
+    Filter python code from the llm output completion
+    :param completion: llm output contents
+    :return filtered python code
+    """
+
     CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
 import pandas as pd
@@ -107,6 +111,11 @@ use_font("Noto Serif CJK SC")\n"""
 
 
 def get_tool(df: Any):
+    """
+    Define python code execute tool
+    :param df: List[pd.DataFrame] or pd.DataFrame
+    :return Runnable
+    """
     tool = PythonAstREPLTool()
     if isinstance(df, pd.DataFrame):
         locals = {"df": df}
@@ -114,7 +123,6 @@ def get_tool(df: Any):
         locals = {}
         for i, dataframe in enumerate(df):
             locals[f"df{i + 1}"] = dataframe
-        # locals = {f"df_i": t for t in df}
     tool.locals = locals
     tool.globals = tool.locals
     return tool
@@ -134,26 +142,3 @@ def get_table_infos(
         df_head_markdown = df.head(3).to_markdown(index=False)
         table_infos += f"Table samples of {table_name}\n" + df_head_markdown + "\n"
     return table_infos
-
-
-def create_agent(prompt, llm, tools, max_iter):
-    tool_names = tools[0].name
-    llm_with_stop = llm.bind(stop=["\nObservation", "\n\tObservation"])
-    agent = (
-        RunnablePassthrough.assign(
-            agent_scratchpad=lambda x: format_log_to_str(x["intermediate_steps"]),
-        )
-        | prompt
-        | llm_with_stop
-        | CustomOutputParser(tool_names)
-    )
-
-    agent_executor = AgentExecutor(
-        agent=agent,
-        tools=tools,
-        verbose=True,
-        return_intermediate_steps=True,
-        handle_parsing_errors=True,
-        max_iterations=max_iter,
-    )
-    return agent_executor
