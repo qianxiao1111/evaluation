@@ -21,11 +21,12 @@ def load_tokenizer_and_template(model_name_or_path, template=None):
     return tokenizer
 
 
-def load_model(model_name_or_path, max_model_len=None):
+def load_model(model_name_or_path, max_model_len=None, gpus_num=1):
     llm_args = {
         "model": model_name_or_path,
         "gpu_memory_utilization": 0.8,
         "trust_remote_code": True,
+        "tensor_parallel_size": gpus_num,
         "dtype": "half",
     }
 
