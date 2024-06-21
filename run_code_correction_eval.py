@@ -24,10 +24,12 @@ def get_infer_kwargs(args) -> dict:
     """llm_inference kwargs"""
     temperature = args.temperature if args.temperature else 1.0
     max_new_tokens = args.max_new_tokens if args.max_new_tokens else 1024
+    model_type = args.model_type if args.model_type else "chat_model"
 
     kwargs = {
         "temperature": temperature,
         "max_tokens": max_new_tokens,
+        "model_type": model_type,
     }
     return kwargs
 
@@ -41,6 +43,7 @@ def main(args):
     max_model_len = args.max_model_len
     template = args.template
     gpus_num = args.gpus_num
+    model_type = args.model_type
     model_kwargs = get_infer_kwargs(args)
     print("Load model...")
     llm_model = load_model(model_path, max_model_len, gpus_num)
@@ -86,6 +89,7 @@ if __name__ == "__main__":
     parser.add_argument('--temperature', type=float, default=0.5, help='Temperature setting')
     parser.add_argument('--template', type=str, choices=[None, 'llama3', 'baichuan', 'chatglm'], default=None, help='The template must be specified if not present in the config file')
     parser.add_argument('--model_path', type=str, required=True, help='Path to the model')
+    parser.add_argument('--model_type', choices=['base_model', 'chat_model'], default="chat_model", help='Base model or Chat model')
     parser.add_argument('--test_csv_file_path', type=str, required=True, help='Path to the test csv files' ,default="./")
     parser.add_argument('--max_new_tokens', type=int, default=1024, help='Maximum number of output tokens')
     parser.add_argument('--max_model_len', type=int, default=8192, help='Cutoff length')

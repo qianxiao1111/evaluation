@@ -16,6 +16,7 @@ def main(args):
     generate_args = {
         "temperature": args.temperature,
         "max_tokens": args.max_new_tokens,
+        "model_type": args.model_type,
     }
     report = dict()
     preds = dict()
@@ -58,6 +59,9 @@ if __name__ == "__main__":
         required=True,
         default="/home/dev/weights/CodeQwen1.5-7B-Chat",
         help="Path to the model",
+    )
+    parser.add_argument(
+        '--model_type', choices=['base_model', 'chat_model'], default="chat_model", help='Base model or Chat model'
     )
     parser.add_argument(
         '--gpus_num', type=int, default=1, help='the number of GPUs you want to use.'

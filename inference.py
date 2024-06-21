@@ -7,7 +7,7 @@ import torch
 
 
 def load_tokenizer_and_template(model_name_or_path, template=None):
-    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
     
     if tokenizer.chat_template is None:
         if template is not None:
@@ -17,7 +17,8 @@ def load_tokenizer_and_template(model_name_or_path, template=None):
             with open(chatml_jinja_path, "r") as f:
                 tokenizer.chat_template = f.read()
         else:
-            raise ValueError("chat_template is not found in the config file, please provide the template parameter.")
+            pass
+            # raise ValueError("chat_template is not found in the config file, please provide the template parameter.")
     return tokenizer
 
 
@@ -53,15 +54,21 @@ def generate_outputs(messages_batch, llm_model, tokenizer, generate_args):
         ""
     }
     """
+    model_type = generate_args.pop("model_type", "chat_model")
+
     sampling_params = SamplingParams(**generate_args)
     
     prompt_batch = []
     for messages in messages_batch:
-        prompt = tokenizer.apply_chat_template(
-            messages,
-            tokenize=False,
-            add_generation_prompt=True
-        )
+        if model_type == "base_model":
+            messages_content = [msg["content"] for msg in messages]
+            prompt = "\n".join(messages_content)
+        else:
+            prompt = tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
         prompt_batch.append(prompt)
     
     outputs = llm_model.generate(prompt_batch, sampling_params)
