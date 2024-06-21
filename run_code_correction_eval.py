@@ -40,9 +40,10 @@ def main(args):
     test_csv_file_path = args.test_csv_file_path
     max_model_len = args.max_model_len
     template = args.template
+    gpus_num = args.gpus_num
     model_kwargs = get_infer_kwargs(args)
     print("Load model...")
-    llm_model = load_model(model_path, max_model_len)
+    llm_model = load_model(model_path, max_model_len, gpus_num)
     tokenizer = load_tokenizer_and_template(model_path, template)
     print("Model load success..")
     with open(eval_dataset_path, "r", encoding="utf-8") as f:
@@ -81,6 +82,7 @@ def main(args):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="eval code_correction")
+    parser.add_argument('--gpus_num', type=int, default=1, help='the number of GPUs you want to use.')
     parser.add_argument('--temperature', type=float, default=0.5, help='Temperature setting')
     parser.add_argument('--template', type=str, choices=[None, 'llama3', 'baichuan', 'chatglm'], default=None, help='The template must be specified if not present in the config file')
     parser.add_argument('--model_path', type=str, required=True, help='Path to the model')
