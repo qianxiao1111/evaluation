@@ -8,7 +8,6 @@ from recall_eval.run_eval import (
 )
 from inference import load_model, load_tokenizer_and_template, generate_outputs
 
-
 def main(args):
     # init model
     llm_model = load_model(args.model_path, args.max_model_len, args.gpus_num)
@@ -31,7 +30,7 @@ def main(args):
     msgs_ext_sql = format_inputs(code_gen_sql, "extract_sql")
     resp_ext_sql = generate_outputs(msgs_ext_sql, llm_model, tokenizer, generate_args)
     pred_ext_sql = parser_list(resp_ext_sql, "extract_sql")
-    report["sql"] = eval_outputs(pred_ext_sql, samples)
+    report["sql"] = eval_outputs(pred_ext_sql, samples, 'sql')
     preds["resp_gen_sql"] = resp_gen_sql
     preds["resp_ext_sql"] = resp_ext_sql
 
@@ -42,7 +41,7 @@ def main(args):
     msgs_ext_py = format_inputs(code_gen_py, "extract_python")
     resp_ext_py = generate_outputs(msgs_ext_py, llm_model, tokenizer, generate_args)
     pred_ext_py = parser_list(resp_ext_py, "extract_python")
-    report["python"] = eval_outputs(pred_ext_py, samples)
+    report["python"] = eval_outputs(pred_ext_py, samples,'python')
     preds["resp_gen_py"] = resp_gen_py
     preds["resp_ext_py"] = resp_ext_py
 
@@ -64,7 +63,10 @@ if __name__ == "__main__":
         '--model_type', choices=['base_model', 'chat_model'], default="chat_model", help='Base model or Chat model'
     )
     parser.add_argument(
-        '--gpus_num', type=int, default=1, help='the number of GPUs you want to use.'
+        '--gpus_num', 
+        type=int, 
+        default=1, 
+        help='the number of GPUs you want to use.'
     )
     parser.add_argument(
         "--temperature", type=float, default=0.5, help="Temperature setting"
@@ -88,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--test_path",
         type=str,
-        default="evalset/recall_set.json",
+        default="evalset/retrieval_test/recall_set.json",
         help="Test File Path",
     )
     parser.add_argument("--num", type=int, default=None, help="number of lines to eval")
@@ -98,10 +100,21 @@ if __name__ == "__main__":
 
 # example /home/dev/weights/CodeQwen1.5-7B-Chat /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200
 """
+# 跑 10 行 测试
 python run_recall_eval.py \
     --model_path /home/qyhuang/weights/CodeQwen1.5-7B-Chat \
     --temperature 0.01 \
     --max_model_len  8192 \
     --max_new_tokens 1024 \
     --test_path evalset/retrieval_test/recall_set.json 
+    --num 10
+
+# llama3 70b 全量测试
+python run_recall_eval.py \
+    --model_path /mnt/tablegpt/zt/modelscope/qwen/Qwen2-72B-Instruct-GPTQ-Int4 \
+    --temperature 0.01 \
+    --max_model_len  8192 \
+    --max_new_tokens 1024 \
+    --test_path evalset/retrieval_test/recall_set.json \
+    --gpus_num 4 
 """
