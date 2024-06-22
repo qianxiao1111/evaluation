@@ -10,6 +10,8 @@ def _transform(
     y_pred: List[List],
     y_true: List[List],
 ):
+    # 对 y_pred 做一个类型检查
+    y_pred = [[y if type(y) == str else "" for y in y_ls] for y_ls in y_pred]
     # binary encoding
     mlb = MultiLabelBinarizer()
     tmp = deepcopy(y_true)
