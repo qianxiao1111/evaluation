@@ -1,6 +1,7 @@
 import os
 import re
 import ast
+from typing import List,Dict,Any
 from recall_eval.prompt import (
     gen_sys_python,
     gen_sys_sql,
@@ -13,9 +14,13 @@ from recall_eval.eval_metrics import Metric
 from util import load_json, save_json
 
 
-def format_inputs(samples, mode: str):
-    # 按照 generate 的格式要求改造 inputs
-    # 共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取
+def format_inputs(samples: List[Dict], mode: str)->List:
+    """
+    输入数据格式化函数，按照 generate 的格式要求改造 inputs
+    共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取  
+    :param samples: 待格式化样例数据
+    :param mode: 格式化模式
+    """
     assert mode in [
         "gen_sql",
         "gen_python",
@@ -51,9 +56,13 @@ def format_inputs(samples, mode: str):
     return msgs
 
 
-def parser_text(text, mode: str):
-    # 提取 llm_response['output_text'] 中的 生成代码 或 召回的表格和字段信息
-    # 共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取
+def parser_text(text:str, mode: str)->Any:
+    """
+    llm 推理结果解析函数，提取 生成代码 或 召回的表格和字段信息
+    共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取
+    :param text: 文本，形如 llm_response['output_text']
+    :param mode: 解析模式，gen 为解析生成的代码，extract 为解析召回结果
+    """
     assert mode in [
         "gen_sql",
         "gen_python",
@@ -117,8 +126,12 @@ def save_result(preds, report, test_file_path):
     print(f"Recall Eval Saved:{save_path}")
 
 
-def eval_outputs(preds, samples,lang=None):
-    # 使用 Metric 中评估方法，评估表格、字段召回的相关指标
+def eval_outputs(preds:List[Dict], samples:List[Dict],lang:str=None)->Dict:
+    '''
+    eval结果计算函数，使用 Metric 中评估方法，评估表格、字段召回的相关指标
+    :param preds: 模型预测结果
+    :param samples: 数据集测试样本
+    '''
     def combine_metrics_under_key(pred_data, label_data, key):
         combined_metrics = {}
         for metric_name in ["averaged", "jaccard", "hamming"]:
