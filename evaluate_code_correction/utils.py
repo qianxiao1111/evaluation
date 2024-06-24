@@ -5,18 +5,20 @@
 @File ：utils.py
 @IDE ：PyCharm
 """
+import ast
 import pandas as pd
 import re
 from typing import Any
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
 
 
-def is_python_code(line: str):
+def is_python_code(line: str) -> bool:
     """Tool function for extract python code"""
-    # 检查是否包含常见的Python关键字或语法特征
-    python_keywords = ['import', 'from', 'def', 'class', 'for', 'while', 'if',
-                       'elif', 'else', '#', '=', 'print']
-    return any(keyword in line for keyword in python_keywords)
+    try:
+        ast.parse(line)
+        return True
+    except:
+        return False
 
 def extract_text_before_code(text: str) -> str:
     """Tool function for extract text content"""
@@ -35,12 +37,9 @@ def extract_python_code(text: str) -> str:
     """Tool function for extract python code"""
     lines = text.split('\n')
     python_code = []
-    code_started = False
 
     for line in lines:
         if is_python_code(line):
-            code_started = True
-        if code_started:
             python_code.append(line)
 
     return '\n'.join(python_code)
