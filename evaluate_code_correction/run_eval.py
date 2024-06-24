@@ -154,7 +154,6 @@ def eval_outputs(
 
         code = filter_code(llm_output)
         cot = filter_cot(llm_output)
-        output = cot + f"{lan_type} Code:\n" + code
         # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
         try:
             # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
@@ -165,12 +164,11 @@ def eval_outputs(
                     observe = tool.run(code)  # 需要监控超时的代码块
         except TimeoutException as e:
             observe = e
-        except Exception(f"SytemExit Error...") as e:
-            observe = e
+        except SystemExit as e:
+            observe = f"SystemExit Error: {str(e)}"
+        except Exception as e:
+            observe = f"Unexpected Error: {str(e)}"
 
-            # 处理 SystemExit 异常，例如记录日志、清理资源等
-        except Exception(f"Other unknown exceptions") as e:
-            observe = e
         eval_result_sample["code"] = code
         eval_result_sample["cot"] = cot
         eval_result_sample["observe"] = observe
