@@ -1,0 +1,552 @@
+id,baseSetSize,block,booster,code,isFoilOnly,isForeignOnly,isNonFoilOnly,isOnlineOnly,isPartialPreview,keyruneCode,mcmId,mcmIdExtras,mcmName,mtgoCode,name,parentCode,releaseDate,tcgplayerGroupId,totalSetSize,type
+1,383,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rare': 1, 'uncommon': 3}, 'weight': 1913922}, {'contents': {'basic': 1, 'common': 9, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 318987}, {'contents': {'basic': 1, 'common': 10, ",10E,0,0,0,0,0,10E,74.0,,Tenth Edition,10E,Tenth Edition,,2007-07-13,1.0,508,core
+2,302,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'0ab4e3e6-f9fe-5fdc-9697-fd20690a0e15': 1, '0b326a61-0389-54e2-ac58-7bb47ca88202': 1, '0f099574-e9f7-",2ED,0,0,1,0,0,2ED,,,,,Unlimited Edition,,1993-12-01,115.0,302,core
+3,332,,"{'default': {'boosters': [{'contents': {'common': 8, 'dedicatedFoil2xm': 2, 'rareMythic': 2, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'01df4e32-7fe4-5b8d-9460-0f08fa29153e': 1, '032c60",2XM,0,0,0,0,0,2XM,3204.0,3209.0,Double Masters,2XM,Double Masters,,2020-08-07,2655.0,384,masters
+4,306,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'06ab1cc7-cc5e-55aa-a1d6-0c174ef0af7d': 1, '08313acd-3e35-59b0-b018-c197d67bb74b': 1, '08c502ff-65f8-",3ED,0,0,1,0,0,3ED,,,,,Revised Edition,,1994-04-01,97.0,306,core
+5,378,,,4BB,0,1,0,0,0,4ED,,,,,Fourth Edition Foreign Black Border,,1995-04-01,,378,core
+6,378,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'01cc31a8-e1da-5dde-bec1-b656a32cc866': 1, '05bc686b-4f13-50a8-9357-d973bec32e",4ED,0,0,1,0,0,4ED,10.0,,Fourth Edition,,Fourth Edition,,1995-04-01,46.0,379,core
+7,165,Mirrodin,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",5DN,0,0,0,0,0,5DN,47.0,,Fifth Dawn,5DN,Fifth Dawn,,2004-06-04,43.0,165,expansion
+8,455,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'078c45d3-46da-52e2-822f-30681e5daa20': 1, '0b3dc354-ebae-5fad-bad7-d5b4f154ae",5ED,0,0,1,0,0,5ED,23.0,,Fifth Edition,,Fifth Edition,,1997-03-24,44.0,460,core
+9,351,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'0060dad6-8a5b-55b3-a02d-4b725db44fc3': 1, '0199da87-80b6-5816-954c-e58f75835e",6ED,0,0,1,0,0,6ED,,,,,Classic Sixth Edition,,1999-04-21,23.0,351,core
+10,354,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rare': 1, 'uncommon': 3}, 'weight': 8556273}, {'contents': {'basic': 1, 'common': 9, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 950697}, {'contents': {'basic': 1, 'common': 10, ",7ED,0,0,0,0,0,7ED,37.0,,Seventh Edition,7E,Seventh Edition,,2001-04-11,2.0,354,core
+11,354,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rare': 1, 'uncommon': 3}, 'weight': 1913922}, {'contents': {'basic': 1, 'common': 9, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 318987}, {'contents': {'basic': 1, 'common': 10, ",8ED,0,0,0,0,0,8ED,44.0,,Eighth Edition,8ED,Eighth Edition,,2003-07-28,3.0,361,core
+12,350,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rare': 1, 'uncommon': 3}, 'weight': 1913922}, {'contents': {'basic': 1, 'common': 9, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 318987}, {'contents': {'basic': 1, 'common': 10, ",9ED,0,0,0,0,0,9ED,49.0,,Ninth Edition,9ED,Ninth Edition,,2005-07-29,4.0,359,core
+13,249,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'007b621a-9bd2-5ae8-8b8c-48ab926ecff6': 1, '0530a1a0",A25,0,0,0,0,0,A25,1820.0,,Masters 25,A25,Masters 25,,2018-03-16,2189.0,249,masters
+14,184,Kaladesh,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foilOrMasterpiece1In144': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common':",AER,0,0,0,0,0,AER,1718.0,,Aether Revolt,AER,Aether Revolt,,2017-01-20,1857.0,197,expansion
+15,18,,,AJMP,0,0,0,1,0,JMP,,,,,Jumpstart Arena Exclusives,JMP,2020-07-17,,18,starter
+16,269,Amonkhet,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foilOrMasterpiece1In129': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 4",AKH,0,0,0,0,0,AKH,1729.0,,Amonkhet,AKH,Amonkhet,,2017-04-28,1882.0,287,expansion
+17,338,,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Amonkhet Remastered Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'00f7e2ce-2c04-5f9b-9142-afa3",AKR,0,0,0,1,0,AKR,,,,,Amonkhet Remastered,,2020-08-13,,339,masters
+18,249,Alara,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ALA,0,0,0,0,0,ALA,102.0,,Shards of Alara,ALA,Shards of Alara,,2008-10-03,103.0,249,expansion
+19,199,Ice Age,"{'default': {'boosters': [{'contents': {'common': 8, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'00f811a9-f7e1-5956-88ce-93d0312674b7': 1, '0552859b-7408-5f6a-969e-dfd367796fe7': 1, '05e25387-b88b-5",ALL,0,0,1,0,0,ALL,15.0,,Alliances,,Alliances,,1996-06-10,6.0,199,expansion
+20,54,,,AMH1,0,0,1,0,0,MH1,,,,,Modern Horizons Art Series,MH1,2019-06-05,,54,memorabilia
+21,40,,,ANA,0,0,0,1,0,MTGA,,,,,Arena New Player Experience,,2018-07-14,,40,starter
+22,116,,,ANB,0,0,0,1,0,MTGA,,,,,Arena Beginner Set,,2020-08-13,,116,starter
+23,143,Invasion,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",APC,0,0,0,0,0,APC,36.0,,Apocalypse,AP,Apocalypse,,2001-06-04,10.0,143,expansion
+24,145,Alara,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'cards': {'0003d2",ARB,0,0,0,0,0,ARB,108.0,,Alara Reborn,ARB,Alara Reborn,,2009-04-30,5.0,145,expansion
+25,150,,,ARC,0,0,1,0,0,ARC,1194.0,,Archenemy,,Archenemy,,2010-06-18,12.0,150,archenemy
+26,78,,"{'default': {'boosters': [{'contents': {'common': 6, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'0924b359-5336-5655-8f5c-40ff1ec9d0c1': 3, '14f305bb-b59e-524d-ad10-c189334727bc': 1, '184eabef-2042-5e2d-a2b3-96",ARN,0,0,1,0,0,ARN,4.0,,Arabian Nights,,Arabian Nights,,1993-12-17,11.0,92,expansion
+27,85,,,ATH,0,0,1,0,0,ATH,75.0,,Anthologies,,Anthologies,,1998-11-01,1275.0,85,box
+28,100,,"{'default': {'boosters': [{'contents': {'common': 6, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'03014f7c-5ed1-5eaa-b405-53e66a114061': 4, '04f6bbac-81d2-5ae7-ae0d-e18ef003760c': 2, '062dec00-8d7e-51f2-ba8d-ea",ATQ,0,0,1,0,0,ATQ,5.0,,Antiquities,,Antiquities,,1994-03-04,8.0,101,expansion
+29,244,Innistrad,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",AVR,0,0,0,0,0,AVR,1358.0,,Avacyn Restored,AVR,Avacyn Restored,,2012-05-04,362.0,244,expansion
+30,81,,,AZNR,0,0,0,0,0,ZNR,,,,,Zendikar Rising Art Series,ZNR,2020-09-25,,81,memorabilia
+31,254,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 28985}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 11935}, {'contents': {'basic': 1, 'common': 1",BBD,0,0,0,0,0,BBD,2111.0,,Battlebond,,Battlebond,,2018-06-08,2245.0,256,draft_innovation
+32,274,Battle for Zendikar,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foilOrMasterpiece1In144': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 4",BFZ,0,0,0,0,0,BFZ,1668.0,,Battle for Zendikar,BFZ,Battle for Zendikar,,2015-10-02,1645.0,299,expansion
+33,165,Theros,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': ",BNG,0,0,0,0,0,BNG,1469.0,,Born of the Gods,BNG,Born of the Gods,,2014-02-07,1276.0,165,expansion
+34,165,Kamigawa,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",BOK,0,0,0,0,0,BOK,51.0,,Betrayers of Kamigawa,BOK,Betrayers of Kamigawa,,2005-02-04,18.0,165,expansion
+35,136,,,BRB,0,0,1,0,0,BRB,,,,,Battle Royale Box Set,,1999-11-12,15.0,136,box
+36,90,,,BTD,0,0,0,0,0,BTD,,,,,Beatdown Box Set,,2000-10-01,16.0,90,box
+37,356,Commander,,C13,0,0,1,0,0,C13,1464.0,,Commander 2013,C13,Commander 2013,,2013-11-01,1164.0,356,commander
+38,337,Commander,,C14,0,0,1,0,0,C14,1513.0,,Commander 2014,C14,Commander 2014,,2014-11-07,1476.0,337,commander
+39,342,Commander,,C15,0,0,1,0,0,C15,1679.0,,Commander 2015,,Commander 2015,,2015-11-13,1673.0,342,commander
+40,351,Commander,,C16,0,0,0,0,0,C16,1719.0,,Commander 2016,,Commander 2016,,2016-11-11,1792.0,351,commander
+41,309,Commander,,C17,0,0,0,0,0,C17,1813.0,,Commander 2017,,Commander 2017,,2017-08-25,2009.0,309,commander
+42,307,Commander,,C18,0,0,0,0,0,C18,2110.0,,Commander 2018,,Commander 2018,,2018-08-09,2251.0,307,commander
+43,302,Commander,,C19,0,0,0,0,0,C19,2448.0,,Commander 2019,C19,Commander 2019,,2019-08-23,2481.0,302,commander
+44,322,Commander,,C20,0,0,0,0,0,C20,,,,C20,Commander 2020,,2020-04-17,2634.0,322,commander
+45,8,,,CC1,0,0,0,0,0,CC1,3394.0,,Commander Collection: Green,,Commander Collection: Green,,2020-12-04,2699.0,8,from_the_vault
+46,302,,,CED,0,0,1,0,0,CED,,,,,Collectors’ Edition,,1993-12-10,1526.0,302,memorabilia
+47,302,,,CEI,0,0,1,0,0,CEI,,,,,Intl. Collectors’ Edition,,1993-12-10,1527.0,302,memorabilia
+48,306,Kamigawa,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, ",CHK,0,0,0,0,0,CHK,48.0,,Champions of Kamigawa,CHK,Champions of Kamigawa,,2004-10-01,20.0,307,expansion
+49,125,,"{'default': {'boosters': [{'contents': {'common': 9, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'056078b4-63ee-587e-8f30-d72f782e75b3': 3, '09d1c255-b1c2-5dad-b2c6-6729c463e30e': 3, '0c61f13c-0b46-50ce-9b8a-94",CHR,0,0,1,0,0,CHR,12.0,,Chronicles,,Chronicles,,1995-07-01,22.0,125,masters
+50,18,Commander,,CM1,1,0,0,0,0,CM1,1418.0,,Commander's Arsenal,,Commander's Arsenal,,2012-11-02,568.0,18,commander
+51,312,Commander,,CM2,0,0,0,0,0,CM2,,,,,Commander Anthology Volume II,,2018-06-08,2246.0,312,commander
+52,320,Commander,,CMA,0,0,0,0,0,CMA,1732.0,,Commander Anthology,,Commander Anthology,,2017-06-09,1933.0,320,commander
+53,121,,"{'default': {'boosters': [{'contents': {'blackA': 1, 'blackB': 1, 'blueA': 1, 'blueB': 1, 'colorless': 1, 'greenA': 1, 'greenB': 1, 'multicolor': 1, 'oldFrame': 1, 'playtest': 1, 'rare': 1, 'redA': 1, 'redB': 1, 'whiteA': 1, 'whiteB': 1}, 'weight': 1}], '",CMB1,0,0,1,0,0,PLANESWALKER,,,,,Mystery Booster Playtest Cards,MB1,2019-11-07,2570.0,121,funny
+54,318,Commander,,CMD,0,0,1,0,0,CMD,,,,CMD,Commander 2011,,2011-06-17,25.0,318,commander
+55,361,,"{'default': {'boosters': [{'contents': {'common': 13, 'dedicatedFoil': 1, 'legendary': 2, 'nonlegendaryRareMythic': 1, 'nonlegendaryUncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'002cd341-e0",CMR,0,0,0,0,0,CMR,3454.0,3459.0,Commander Legends,CMR,Commander Legends,,2020-11-20,2708.0,718,draft_innovation
+56,221,,"{'default': {'boosters': [{'contents': {'conspiracy': 1, 'nonconspiracyCommon': 10, 'nonconspiracyRareMythic': 1, 'nonconspiracyUncommon': 3}, 'weight': 2046}, {'contents': {'conspiracy': 1, 'nonconspiracyCommon': 9, 'nonconspiracyFoil': 1, 'nonconspiracy",CN2,0,0,0,0,0,CN2,1702.0,,Conspiracy: Take the Crown,,Conspiracy: Take the Crown,,2016-08-26,1794.0,222,draft_innovation
+57,210,,"{'default': {'boosters': [{'contents': {'draft': 1, 'nondraftCommon': 10, 'nondraftRareMythic': 1, 'nondraftUncommon': 3}, 'weight': 2046}, {'contents': {'draft': 1, 'nondraftCommon': 9, 'nondraftFoil': 1, 'nondraftRareMythic': 1, 'nondraftUncommon': 3}, ",CNS,0,0,0,0,0,CNS,1483.0,,Conspiracy,,Conspiracy,,2014-06-06,1312.0,210,draft_innovation
+58,145,Alara,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': ",CON,0,0,0,0,0,CON,106.0,,Conflux,CON,Conflux,,2009-02-06,26.0,145,expansion
+59,6,,,CP1,1,0,0,0,0,PMEI,,,,,Magic 2015 Clash Pack,M15,2014-07-18,,6,starter
+60,6,Khans of Tarkir,,CP2,1,0,0,0,0,PMEI,,,,,Fate Reforged Clash Pack,FRF,2015-01-23,,6,starter
+61,6,,,CP3,1,0,0,0,0,PMEI,,,,,Magic Origins Clash Pack,ORI,2015-07-17,,6,starter
+62,155,Ice Age,"{'default': {'boosters': [{'contents': {'commonOrBasic': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'commonOrBasic': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'commonOrBasic': {'balance",CSP,0,0,0,0,0,CSP,52.0,,Coldsnap,CSP,Coldsnap,,2006-07-21,24.0,155,expansion
+63,62,Ice Age,,CST,0,0,1,0,0,CSP,82.0,,Coldsnap Theme Decks,,Coldsnap Theme Decks,CSP,2006-07-21,1348.0,62,box
+64,62,,,DD1,0,0,0,0,0,DD1,91.0,,Duel Decks: Elves vs. Goblins,EVG,Duel Decks: Elves vs. Goblins,,2007-11-16,33.0,62,duel_deck
+65,64,,,DD2,0,0,0,0,0,DD2,104.0,,Duel Decks: Jace vs. Chandra,DD2,Duel Decks: Jace vs. Chandra,,2008-11-07,35.0,64,duel_deck
+66,62,,,DDC,0,0,0,0,0,DDC,107.0,,Duel Decks: Divine vs. Demonic,DDC,Duel Decks: Divine vs. Demonic,,2009-04-10,31.0,62,duel_deck
+67,63,,,DDD,0,0,0,0,0,DDD,115.0,,Duel Decks: Garruk vs. Liliana,DDD,Duel Decks: Garruk vs. Liliana,,2009-10-30,34.0,63,duel_deck
+68,71,,,DDE,0,0,0,0,0,DDE,119.0,,Duel Decks: Phyrexia vs. The Coalition,DDE,Duel Decks: Phyrexia vs. the Coalition,,2010-03-19,37.0,71,duel_deck
+69,79,,,DDF,0,0,0,0,0,DDF,1203.0,,Duel Decks: Elspeth vs. Tezzeret,DDF,Duel Decks: Elspeth vs. Tezzeret,,2010-09-03,32.0,79,duel_deck
+70,81,,,DDG,0,0,0,0,0,DDG,1261.0,,Duel Decks: Knights vs. Dragons,DDG,Duel Decks: Knights vs. Dragons,,2011-04-01,36.0,81,duel_deck
+71,80,,,DDH,0,0,0,0,0,DDH,1288.0,,Duel Decks: Ajani vs. Nicol Bolas,DDH,Duel Decks: Ajani vs. Nicol Bolas,,2011-09-02,30.0,80,duel_deck
+72,77,,,DDI,0,0,0,0,0,DDI,1350.0,,Duel Decks: Venser vs. Koth,DDI,Duel Decks: Venser vs. Koth,,2012-03-30,367.0,77,duel_deck
+73,90,,,DDJ,0,0,0,0,0,DDJ,1398.0,,Duel Decks: Izzet vs. Golgari,DDJ,Duel Decks: Izzet vs. Golgari,,2012-09-07,365.0,90,duel_deck
+74,80,,,DDK,0,0,0,0,0,DDK,1430.0,,Duel Decks: Sorin vs. Tibalt,DDK,Duel Decks: Sorin vs. Tibalt,,2013-03-15,601.0,80,duel_deck
+75,81,,,DDL,0,0,0,0,0,DDL,1456.0,,Duel Decks: Heroes vs. Monsters,DDL,Duel Decks: Heroes vs. Monsters,,2013-09-06,1145.0,81,duel_deck
+76,88,,,DDM,0,0,0,0,0,DDM,1477.0,,Duel Decks: Jace vs. Vraska,DDM,Duel Decks: Jace vs. Vraska,,2014-03-14,1166.0,88,duel_deck
+77,82,,,DDN,0,0,0,0,0,DDN,1496.0,,Duel Decks: Speed vs. Cunning,,Duel Decks: Speed vs. Cunning,,2014-09-05,1477.0,82,duel_deck
+78,67,,,DDO,0,0,0,0,0,DDO,1593.0,,Duel Decks: Elspeth vs. Kiora,,Duel Decks: Elspeth vs. Kiora,,2015-02-27,1511.0,67,duel_deck
+79,80,,,DDP,0,0,0,0,0,DDP,1663.0,,Duel Decks: Zendikar vs. Eldrazi,,Duel Decks: Zendikar vs. Eldrazi,,2015-08-28,1641.0,80,duel_deck
+80,80,,,DDQ,0,0,0,0,0,DDQ,1692.0,,Duel Decks: Blessed vs. Cursed,,Duel Decks: Blessed vs. Cursed,,2016-02-26,1726.0,80,duel_deck
+81,76,,,DDR,0,0,0,0,0,DDR,1720.0,,Duel Decks: Nissa vs. Ob Nixilis,,Duel Decks: Nissa vs. Ob Nixilis,,2016-09-02,1835.0,76,duel_deck
+82,65,,,DDS,0,0,0,0,0,DDS,1728.0,,Duel Decks: Mind vs. Might,,Duel Decks: Mind vs. Might,,2017-03-31,1905.0,65,duel_deck
+83,63,,,DDT,0,0,0,0,0,DDT,1818.0,,Duel Decks: Merfolk vs. Goblins,,Duel Decks: Merfolk vs. Goblins,,2017-10-24,2076.0,63,duel_deck
+84,76,,,DDU,0,0,0,0,0,DDU,2068.0,,Duel Decks: Elves vs. Inventors,DDU,Duel Decks: Elves vs. Inventors,,2018-04-06,2207.0,76,duel_deck
+85,156,Return to Ravnica,"{'default': {'boosters': [{'contents': {'common': 10, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 9, 'foil': 1, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common",DGM,0,0,0,0,0,DGM,1435.0,,Dragon's Maze,DGM,Dragon's Maze,,2013-05-03,570.0,156,expansion
+86,180,Ravnica,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",DIS,0,0,0,0,0,DIS,53.0,,Dissension,DIS,Dissension,,2006-05-05,28.0,180,expansion
+87,158,Innistrad,"{'default': {'boosters': [{'contents': {'dfc': 1, 'sfcCommon': 10, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 31}, {'contents': {'dfc': 1, 'foil': 1, 'sfcCommon': 9, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 's",DKA,0,0,0,0,0,DKA,1345.0,,Dark Ascension,DKA,Dark Ascension,,2012-02-03,125.0,158,expansion
+88,58,,,DKM,0,0,0,0,0,DKM,67.0,,Deckmasters,,Deckmasters,,2001-12-01,1311.0,58,box
+89,269,,"{'arena': {'boosters': [{'contents': {'common': 10, 'legendaryRareMythic': 1, 'nonlegendaryUncommon': 3}, 'weight': 4356}, {'contents': {'common': 10, 'legendaryRareMythic': 1, 'legendaryUncommon': 1, 'nonlegendaryUncommon': 2}, 'weight': 828}, {'contents",DOM,0,0,0,0,0,DOM,1822.0,,Dominaria,DAR,Dominaria,,2018-04-27,2199.0,280,expansion
+90,113,,,DPA,0,0,0,0,0,DPA,,,,,Duels of the Planeswalkers,,2010-06-04,1274.0,113,box
+91,15,,,DRB,1,0,0,0,0,DRB,100.0,,From the Vault: Dragons,DRB,From the Vault: Dragons,,2008-08-29,47.0,15,from_the_vault
+92,119,,"{'default': {'boosters': [{'contents': {'common': 6, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'0de59a71-9aef-5996-9670-84bf4605b28c': 1, '11c9b608-2df1-5ce1-85e7-959fc671cc8f': 3, '13b239a8-9a73-5193-8b1c-04",DRK,0,0,1,0,0,DRK,8.0,,The Dark,,The Dark,,1994-08-01,109.0,122,expansion
+93,165,Mirrodin,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",DST,0,0,0,0,0,DST,46.0,,Darksteel,DST,Darksteel,,2004-02-06,27.0,165,expansion
+94,264,Khans of Tarkir,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",DTK,0,0,0,0,0,DTK,1601.0,,Dragons of Tarkir,DTK,Dragons of Tarkir,,2015-03-27,1515.0,264,expansion
+95,62,,,DVD,0,0,0,0,0,DDC,,,,,Duel Decks Anthology: Divine vs. Demonic,,2014-12-05,,62,duel_deck
+96,106,,,E01,0,0,1,0,0,E01,1730.0,,Archenemy: Nicol Bolas,,Archenemy: Nicol Bolas,,2017-06-16,1904.0,106,archenemy
+97,48,,,E02,0,0,1,0,0,E02,1830.0,,Explorers of Ixalan,,Explorers of Ixalan,,2017-11-24,2077.0,48,box
+98,269,,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Throne of Eldraine Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'01c6d9ad-8e56-55dc-87a4-53a63",ELD,0,0,0,0,0,ELD,2582.0,2587.0,Throne of Eldraine,ELD,Throne of Eldraine,,2019-10-04,2494.0,397,expansion
+99,249,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'01a1c69d-1647-5184-848f-cca58dd6ff27': 1, '06fa564a",EMA,0,0,0,0,0,EMA,1696.0,,Eternal Masters,EMA,Eternal Masters,,2016-06-10,1740.0,249,masters
+100,205,Shadows over Innistrad,"{'default': {'boosters': [{'contents': {'dfcCommonUncommon': 1, 'sfcCommon': 10, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 217}, {'contents': {'dfcCommonUncommon': 1, 'foil': 1, 'sfcCommon': 9, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 63}, ",EMN,0,0,0,0,0,EMN,1695.0,,Eldritch Moon,EMN,Eldritch Moon,,2016-07-22,1790.0,208,expansion
+101,180,Shadowmoor,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'cards': {'049c80a9-db73-514f",EVE,0,0,0,0,0,EVE,99.0,,Eventide,EVE,Eventide,,2008-07-25,39.0,180,expansion
+102,62,,,EVG,0,0,0,0,0,DD1,,,,,Duel Decks Anthology: Elves vs. Goblins,,2014-12-05,33.0,62,duel_deck
+103,143,Tempest,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'00e99d4c-8aff-56b8-851e-ed83450095e4': 1, '0c1cf88e-67ca-516a-b59e-8a45585741",EXO,0,0,0,0,0,EXO,21.0,,Exodus,EX,Exodus,,1998-06-15,40.0,143,expansion
+104,45,Battle for Zendikar,,EXP,1,0,0,0,0,EXP,1669.0,,Zendikar Expeditions,EXP,Zendikar Expeditions,BFZ,2015-10-02,1649.0,45,masterpiece
+105,7,Friday Night Magic,,F01,1,0,0,0,0,DCI,,,,,Friday Night Magic 2001,,2001-01-01,,7,promo
+106,12,Friday Night Magic,,F02,1,0,0,0,0,DCI,,,,,Friday Night Magic 2002,,2002-01-01,,12,promo
+107,13,Friday Night Magic,,F03,1,0,0,0,0,DCI,,,,,Friday Night Magic 2003,,2003-01-01,,13,promo
+108,12,Friday Night Magic,,F04,1,0,0,0,0,DCI,,,,,Friday Night Magic 2004,,2004-01-01,,12,promo
+109,12,Friday Night Magic,,F05,1,0,0,0,0,DCI,,,,,Friday Night Magic 2005,,2005-01-01,,12,promo
+110,12,Friday Night Magic,,F06,1,0,0,0,0,DCI,,,,,Friday Night Magic 2006,,2006-01-01,,12,promo
+111,12,Friday Night Magic,,F07,1,0,0,0,0,DCI,,,,,Friday Night Magic 2007,,2007-01-01,,12,promo
+112,12,Friday Night Magic,,F08,1,0,0,0,0,DCI,,,,,Friday Night Magic 2008,,2008-01-01,,12,promo
+113,12,Friday Night Magic,,F09,1,0,0,0,0,DCI,,,,,Friday Night Magic 2009,,2009-01-01,,12,promo
+114,12,Friday Night Magic,,F10,1,0,0,0,0,DCI,,,,,Friday Night Magic 2010,,2010-01-01,,12,promo
+115,12,Friday Night Magic,,F11,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2011,,2011-01-01,,12,promo
+116,13,Friday Night Magic,,F12,0,0,0,0,0,PMEI,,,,,Friday Night Magic 2012,,2012-01-01,,13,promo
+117,12,Friday Night Magic,,F13,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2013,,2013-01-01,,12,promo
+118,12,Friday Night Magic,,F14,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2014,,2014-01-01,,12,promo
+119,12,Friday Night Magic,,F15,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2015,,2015-01-01,,12,promo
+120,12,Friday Night Magic,,F16,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2016,,2016-01-01,,12,promo
+121,12,Friday Night Magic,,F17,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2017,,2017-01-01,,12,promo
+122,3,Friday Night Magic,,F18,1,0,0,0,0,PMEI,,,,,Friday Night Magic 2018,,2017-12-27,,3,promo
+123,307,Core Set,,FBB,0,1,1,0,0,3ED,,,,,Foreign Black Border,,1994-04-01,1689.0,307,core
+124,187,,"{'default': {'boosters': [{'contents': {'common': 6, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'02857b62-d88d-5b94-8f64-b51a457f2ddf': 1, '035a78f0-ce02-57c3-bbcf-3b541b4fc1bd': 1, '03949ce0-be07-5bd8-972b-f1",FEM,0,0,1,0,0,FEM,9.0,,Fallen Empires,,Fallen Empires,,1994-11-01,41.0,187,expansion
+125,46,,,FJMP,0,0,0,0,0,JMP,,,,,Jumpstart Front Cards,JMP,2020-06-18,,46,memorabilia
+126,121,,,FMB1,1,0,0,0,0,PLANESWALKER,,,,,Mystery Booster Retail Edition Foils,MB1,2020-03-08,2571.0,121,masters
+127,11,Friday Night Magic,,FNM,1,0,0,0,0,DEFAULT,,,,,Friday Night Magic 2000,,2000-01-01,45.0,11,promo
+128,185,Khans of Tarkir,"{'default': {'boosters': [{'contents': {'common': 10, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 9, 'foil': 1, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common",FRF,0,0,0,0,0,FRF,1522.0,,Fate Reforged,FRF,Fate Reforged,,2015-01-23,1497.0,185,expansion
+129,180,Time Spiral,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': True, 'cards",FUT,0,0,0,0,0,FUT,70.0,,Future Sight,FUT,Future Sight,,2007-05-04,51.0,180,expansion
+130,2,Judge Gift Cards,,G00,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2000,,2000-01-01,62.0,2,promo
+131,2,Judge Gift Cards,,G01,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2001,,2001-01-01,62.0,2,promo
+132,2,Judge Gift Cards,,G02,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2002,,2002-01-01,62.0,2,promo
+133,3,Judge Gift Cards,,G03,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2003,,2003-01-01,62.0,3,promo
+134,6,Judge Gift Cards,,G04,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2004,,2004-01-01,62.0,6,promo
+135,4,Judge Gift Cards,,G05,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2005,,2005-01-01,62.0,4,promo
+136,4,Judge Gift Cards,,G06,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2006,,2006-01-01,62.0,4,promo
+137,5,Judge Gift Cards,,G07,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2007,,2007-01-01,62.0,5,promo
+138,5,Judge Gift Cards,,G08,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2008,,2008-01-01,62.0,5,promo
+139,10,Judge Gift Cards,,G09,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2009,,2009-01-01,62.0,10,promo
+140,8,Judge Gift Cards,,G10,1,0,0,0,0,DCI,,,,,Judge Gift Cards 2010,,2010-01-01,62.0,8,promo
+141,9,Judge Gift Cards,,G11,0,0,0,0,0,DEFAULT,,,,,Judge Gift Cards 2011,,2011-01-01,62.0,9,promo
+142,5,,,G17,1,0,0,0,0,PMEI,,,,,2017 Gift Pack,,2017-10-20,,5,box
+143,5,,,G18,1,0,0,0,0,M19,,,,,M19 Gift Pack,M19,2018-11-16,,5,box
+144,1,Judge Gift Cards,,G99,1,0,0,0,0,DEFAULT,,,,,Judge Gift Cards 1999,,1999-01-01,62.0,1,promo
+145,127,,,GK1,0,0,0,0,0,GRN,,,,,GRN Guild Kit,,2018-11-02,2334.0,127,box
+146,133,,,GK2,0,0,0,0,0,RNA,,,,,RNA Guild Kit,,2019-02-15,2388.0,133,box
+147,64,,,GN2,0,0,0,0,0,GN2,2804.0,,Game Night 2019,,Game Night 2019,,2019-11-15,2359.0,64,box
+148,68,,,GNT,0,0,1,0,0,GNT,,,,,Game Night,,2018-11-16,2359.0,68,box
+149,165,Ravnica,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",GPT,0,0,0,0,0,GPT,54.0,,Guildpact,GPT,Guildpact,,2006-02-03,55.0,165,expansion
+150,259,Guilds of Ravnica,"{'arena': {'boosters': [{'contents': {'common': 10, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Guilds of Ravnica Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'00afc5b6-4169-5049-",GRN,0,0,0,0,0,GRN,2348.0,2371.0,Guilds of Ravnica,GRN,Guilds of Ravnica,,2018-10-05,2290.0,273,expansion
+151,41,,,GS1,0,0,0,0,0,GS1,2108.0,,Global Series Jiang Yanggu & Mu Yanling,,Global Series Jiang Yanggu & Mu Yanling,,2018-06-22,2247.0,41,duel_deck
+152,249,Return to Ravnica,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': ",GTC,0,0,0,0,0,GTC,1424.0,,Gatecrash,GTC,Gatecrash,,2013-02-01,569.0,249,expansion
+153,63,,,GVL,0,0,0,0,0,DDD,,,,,Duel Decks Anthology: Garruk vs. Liliana,,2014-12-05,,63,duel_deck
+154,41,,,H09,1,0,0,0,0,H09,116.0,,Premium Deck Series: Slivers,H09,Premium Deck Series: Slivers,,2009-11-20,91.0,41,premium_deck
+155,4,,,H17,1,0,0,0,0,H17,,,,,HasCon 2017,,2017-09-20,,4,funny
+156,20,,,HA1,0,0,1,1,0,HA1,,,,,Historic Anthology 1,,2019-11-21,,20,box
+157,25,,,HA2,0,0,0,1,0,HA1,,,,,Historic Anthology 2,,2020-03-12,,25,box
+158,27,,,HA3,0,0,0,1,0,HA1,,,,,Historic Anthology 3,,2020-05-21,,27,box
+159,15,,,HHO,0,0,0,0,0,PMEI,,,,,Happy Holidays,,2006-12-31,,17,funny
+160,140,,"{'default': {'boosters': [{'contents': {'common': 6, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'03ad43a4-1f04-543a-b131-e8bcdf28feec': 1, '04778b81-5bf3-5b8c-8c47-e739eb253959': 1, '0615af89-af8c-5690-8138-38",HML,0,0,1,0,0,HML,14.0,,Homelands,,Homelands,,1995-10-01,57.0,140,expansion
+161,169,,,HOP,0,0,1,0,0,HOP,113.0,,Planechase,PC1,Planechase,,2009-09-04,84.0,169,planechase
+162,199,Amonkhet,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foilOrMasterpiece1In129': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 4",HOU,0,0,0,0,0,HOU,1731.0,,Hour of Devastation,HOU,Hour of Devastation,,2017-07-14,1934.0,209,expansion
+163,3,,,HTR,0,0,1,0,0,PMEI,,,,,2016 Heroes of the Realm,,2017-09-20,,3,memorabilia
+164,3,,,HTR17,0,0,1,0,0,PMEI,,,,,2017 Heroes of the Realm,,2018-08-01,,3,funny
+165,4,,,HTR18,0,0,0,0,0,PMEI,,,,,Heroes of the Realm 2018,,2019-08-01,,4,funny
+166,383,Ice Age,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'0095dc15-9033-59d3-9931-00cf4bdc03e2': 1, '08caa01c-b2d4-5742-bdf8-64903c9b9d",ICE,0,0,1,0,0,ICE,11.0,,Ice Age,,Ice Age,,1995-06-03,58.0,383,expansion
+167,274,,"{'arena': {'boosters': [{'contents': {'basicOrGainland': 1, 'regularNongainlandCommon': 10, 'regularRareMythic': 1, 'regularUncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Ikoria: Lair of Behemoths Arena Booster', 'sheets': {'basicOrGainl",IKO,0,0,0,0,0,IKO,2819.0,3113.0,Ikoria: Lair of Behemoths,IKO,Ikoria: Lair of Behemoths,,2020-04-24,2603.0,388,expansion
+168,249,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'006a38e6-eba7-5a0a-b24b-be7bf351f9da': 1, '00b2f49b",IMA,0,0,0,0,0,IMA,1811.0,,Iconic Masters,IMA,Iconic Masters,,2017-11-17,2050.0,249,masters
+169,351,Invasion,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1,",INV,0,0,0,0,0,INV,34.0,,Invasion,IN,Invasion,,2000-10-02,60.0,351,expansion
+170,264,Innistrad,"{'default': {'boosters': [{'contents': {'basic': 1, 'dfc': 1, 'sfcCommon': 9, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'dfc': 1, 'foil': 1, 'sfcCommon': 8, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 9}], 'boost",ISD,0,0,0,0,0,ISD,1327.0,,Innistrad,ISD,Innistrad,,2011-09-30,59.0,264,expansion
+171,67,,,ITP,0,0,1,0,0,X2PS,85.0,,Introductory Two-Player Set,,Introductory Two-Player Set,,1996-12-31,2742.0,67,starter
+172,9,Judge Gift Cards,,J12,0,0,0,0,0,PMEI,,,,,Judge Gift Cards 2012,,2012-01-01,62.0,9,promo
+173,9,Judge Gift Cards,,J13,0,0,0,0,0,PMEI,,,,,Judge Gift Cards 2013,,2013-01-01,62.0,9,promo
+174,14,Judge Gift Cards,,J14,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2014,,2014-01-01,62.0,14,promo
+175,8,Judge Gift Cards,,J15,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2015,,2015-01-01,62.0,8,promo
+176,8,Judge Gift Cards,,J16,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2016,,2016-01-01,62.0,8,promo
+177,9,Judge Gift Cards,,J17,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2017,,2017-01-01,62.0,9,promo
+178,8,Judge Gift Cards,,J18,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2018,,2018-01-01,62.0,8,promo
+179,8,Judge Gift Cards,,J19,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2019,,2019-04-10,,8,promo
+180,10,Judge Gift Cards,,J20,1,0,0,0,0,PMEI,,,,,Judge Gift Cards 2020,,2020-01-01,,10,promo
+181,2,,,J21,0,0,0,0,0,DEFAULT,,,,,Judge Gift Cards 2021,,2021-01-01,,2,promo
+182,3,Judge Gift Cards,,JGP,1,0,0,0,0,DEFAULT,,,,,Judge Gift Cards 1998,,1998-01-01,62.0,3,promo
+183,495,,,JMP,0,0,0,0,0,JMP,3053.0,,Jumpstart,,Jumpstart,,2020-07-17,2654.0,496,draft_innovation
+184,165,Theros,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 133889}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 38871}, {'contents': {'therosGods': 15}, 'weight': 40}], 'boostersT",JOU,0,0,0,0,0,JOU,1481.0,,Journey into Nyx,JOU,Journey into Nyx,,2014-05-02,1277.0,165,expansion
+185,143,Odyssey,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",JUD,0,0,0,0,0,JUD,40.0,,Judgment,JUD,Judgment,,2002-05-27,63.0,143,expansion
+186,62,,,JVC,0,0,0,0,0,DD2,,,,,Duel Decks Anthology: Jace vs. Chandra,,2014-12-05,,62,duel_deck
+187,119,,,KHC,0,0,0,0,0,KHC,,,,,Kaldheim Commander,KHM,2021-02-05,2766.0,119,commander
+188,290,,"{'arena': {'boosters': [{'contents': {'basictype': 1, 'nonBasictypeCommon': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Kaldheim Arena Booster', 'sheets': {'basictype': {'cards': {'0d72a768-d9e2-5ce7-9669-5fb60a8",KHM,0,0,0,0,0,KHM,3660.0,3680.0,Kaldheim,KHM,Kaldheim,,2021-02-05,2750.0,405,expansion
+189,264,Kaladesh,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foilOrMasterpiece1In144': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 4",KLD,0,0,0,0,0,KLD,1717.0,,Kaladesh,KLD,Kaladesh,,2016-09-30,1791.0,278,expansion
+190,301,,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Kaladesh Remastered Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'037a9089-1944-56e4-972c-29f7",KLR,0,0,0,1,0,KLR,,,,,Kaladesh Remastered,,2020-11-12,,302,masters
+191,269,Khans of Tarkir,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",KTK,0,0,0,0,0,KTK,1495.0,,Khans of Tarkir,KTK,Khans of Tarkir,,2014-09-26,1356.0,269,expansion
+192,2,,,L12,0,0,1,0,0,DEFAULT,,,,,League Tokens 2012,,2012-01-01,,2,token
+193,4,,,L13,0,0,1,0,0,DEFAULT,,,,,League Tokens 2013,,2013-01-01,,4,token
+194,4,,,L14,0,0,1,0,0,DEFAULT,,,,,League Tokens 2014,,2014-01-01,,4,token
+195,1,,,L15,0,0,1,0,0,DEFAULT,,,,,League Tokens 2015,,2015-01-01,,1,token
+196,1,,,L16,1,0,0,0,0,DEFAULT,,,,,League Tokens 2016,,2016-01-01,,1,token
+197,1,,,L17,1,0,0,0,0,DEFAULT,,,,,League Tokens 2017,,2017-01-01,,1,token
+198,295,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'04a1cf0c-7c18-59ed-80fa-b58d3230c3dd': 1, '0581bf53-8935-5476-b230-08e75da69aca': 1, '06f4a6aa-babf-",LEA,0,0,1,0,0,LEA,,,,,Limited Edition Alpha,,1993-08-05,7.0,295,core
+199,302,Core Set,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'01107f75-2e0e-51f0-8dcb-3dce8b96fff2': 1, '0113d0ae-30c1-5f04-a61d-64351dce2bfd': 1, '0350483c-f9ac-",LEB,0,0,1,0,0,LEB,,,,,Limited Edition Beta,,1993-10-04,17.0,302,core
+200,310,,"{'default': {'boosters': [{'contents': {'common': 12, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'cards': {'0118ea0d-4957-58d7-8e6b-fe368578b940': 1, '040b2b91-c7ed-5d58-8dcf-cf464acbe8b9': 1, '04991927-a413-",LEG,0,0,1,0,0,LEG,7.0,,Legends,,Legends,,1994-06-01,65.0,310,expansion
+201,145,Onslaught,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",LGN,0,0,0,0,0,LGN,42.0,,Legions,LGN,Legions,,2003-02-03,66.0,145,expansion
+202,301,Lorwyn,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': True, 'cards",LRW,0,0,0,0,0,LRW,84.0,,Lorwyn,LRW,Lorwyn,,2007-10-12,67.0,301,expansion
+203,249,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M10,0,0,0,0,0,M10,109.0,,Magic 2010,M10,Magic 2010,,2009-07-17,68.0,249,core
+204,249,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M11,0,0,0,0,0,M11,1197.0,,Magic 2011,M11,Magic 2011,,2010-07-16,69.0,249,core
+205,249,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M12,0,0,0,0,0,M12,1280.0,,Magic 2012,M12,Magic 2012,,2011-07-15,70.0,249,core
+206,249,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M13,0,0,0,0,0,M13,1388.0,,Magic 2013,M13,Magic 2013,,2012-07-13,364.0,249,core
+207,249,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M14,0,0,0,0,0,M14,1449.0,,Magic 2014,M14,Magic 2014,,2013-07-19,1113.0,249,core
+208,269,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",M15,0,0,0,0,0,M15,1485.0,,Magic 2015,M15,Magic 2015,,2014-07-18,1293.0,284,core
+209,280,Core Set,"{'arena': {'boosters': [{'contents': {'basicOrCommonLand': 1, 'nonlandCommon': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Core Set 2019 Arena Booster', 'sheets': {'basicOrCommonLand': {'cards': {'101bdef2-4bec-5",M19,0,0,0,0,0,M19,1835.0,,Core 2019,M19,Core Set 2019,,2018-07-13,2250.0,314,core
+210,280,Core Set,"{'arena': {'boosters': [{'contents': {'basicOrCommonLand': 1, 'nonlandCommon': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Core Set 2020 Arena Booster', 'sheets': {'basicOrCommonLand': {'cards': {'00141b2c-2eff-5",M20,0,0,0,0,0,M20,2447.0,,Core 2020,M20,Core Set 2020,,2019-07-12,2441.0,345,core
+211,277,Core Set,"{'arena': {'boosters': [{'contents': {'basicOrGainland': 1, 'nongainlandCommon': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Core Set 2021 Arena Booster', 'sheets': {'basicOrGainland': {'cards': {'0ef985c1-e2c4-5",M21,0,0,0,0,0,M21,3048.0,,Core 2021,M21,Core Set 2021,,2020-07-03,2653.0,397,core
+212,1694,,"{'default': {'boosters': [{'contents': {'blackA': 1, 'blackB': 1, 'blueA': 1, 'blueB': 1, 'colorless': 1, 'foil': 1, 'greenA': 1, 'greenB': 1, 'multicolor': 1, 'oldFrame': 1, 'rare': 1, 'redA': 1, 'redB': 1, 'whiteA': 1, 'whiteB': 1}, 'weight': 1}], 'boos",MB1,0,0,1,0,0,PLANESWALKER,2874.0,,Mystery Booster,,Mystery Booster,,2019-11-07,2572.0,1694,masters
+213,155,Scars of Mirrodin,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",MBS,0,0,0,0,0,MBS,1253.0,,Mirrodin Besieged,MBS,Mirrodin Besieged,,2011-02-04,76.0,155,expansion
+214,26,,,MD1,0,0,1,0,0,MD1,1484.0,,Modern Event Deck 2014,,Modern Event Deck 2014,,2014-05-30,1346.0,26,box
+215,195,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ME1,0,0,0,1,0,ME1,,,,MED,Masters Edition,,2007-09-10,,195,masters
+216,245,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ME2,0,0,0,1,0,ME2,,,,ME2,Masters Edition II,,2008-09-22,,245,masters
+217,230,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ME3,0,0,0,1,0,ME3,,,,ME3,Masters Edition III,,2009-09-07,,230,masters
+218,269,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ME4,0,0,0,1,0,ME4,,,,ME4,Masters Edition IV,,2011-01-10,,269,masters
+219,24,,,MED,1,0,0,0,0,MED,,,,MS4,Mythic Edition,,2018-10-05,2326.0,24,masterpiece
+220,10,,,MGB,0,0,1,0,0,VIS,1519.0,,Multiverse Gift Box,,Multiverse Gift Box,,1996-11-01,,10,box
+221,254,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",MH1,0,0,0,0,0,MH1,2440.0,,Modern Horizons,MH1,Modern Horizons,,2019-06-14,2422.0,255,draft_innovation
+222,350,Mirage,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'007e9122-9daf-53d3-9972-15cc08cd9a15': 1, '06274f11-4c80-54df-bd19-0ff5ff8d38",MIR,0,0,1,0,0,MIR,16.0,,Mirage,MI,Mirage,,1996-10-08,74.0,351,expansion
+223,249,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'0310277c-b6f1-5634-b43b-532497d41b1d': 1, '07198d73",MM2,0,0,0,0,0,MM2,1641.0,,Modern Masters 2015,MM2,Modern Masters 2015,,2015-05-22,1503.0,249,masters
+224,249,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'054e8720-bff1-5987-a882-d86ac7e01be3': 1, '0d68355d",MM3,0,0,0,0,0,MM3,1727.0,,Modern Masters 2017,MM3,Modern Masters 2017,,2017-03-17,1879.0,249,masters
+225,229,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'000a83dc-9ee4-528d-866d-2ca2063e718c': 1, '004b3b84",MMA,0,0,0,0,0,MMA,1444.0,,Modern Masters,MMA,Modern Masters,,2013-06-07,1111.0,229,masters
+226,350,Masques,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1,",MMQ,0,0,0,0,0,MMQ,31.0,,Mercadian Masques,MM,Mercadian Masques,,1999-10-04,73.0,350,expansion
+227,150,Lorwyn,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': True, 'cards",MOR,0,0,0,0,0,MOR,92.0,,Morningtide,MOR,Morningtide,,2008-02-01,77.0,150,expansion
+228,54,Amonkhet,,MP2,1,0,0,0,0,MP2,1798.0,,Amonkhet Invocations,MS3,Amonkhet Invocations,AKH,2017-04-28,1909.0,54,masterpiece
+229,8,Magic Player Rewards,,MPR,0,0,0,0,0,DCI,,,,,Magic Player Rewards 2001,,2001-01-01,,8,promo
+230,54,Kaladesh,,MPS,1,0,0,0,0,MPS,1733.0,,Kaladesh Inventions,MS2,Kaladesh Inventions,KLD,2016-09-30,1837.0,54,masterpiece
+231,306,Mirrodin,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, ",MRD,0,0,0,0,0,MRD,45.0,,Mirrodin,MRD,Mirrodin,,2003-10-02,75.0,306,expansion
+232,5,,,MZNR,0,0,0,0,0,ZNR,,,,,Zendikar Rising Minigames,ZNR,2020-09-25,,5,funny
+233,143,Masques,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",NEM,0,0,0,0,0,NEM,32.0,,Nemesis,NE,Nemesis,,2000-02-14,78.0,143,expansion
+234,175,Scars of Mirrodin,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",NPH,0,0,0,0,0,NPH,1262.0,,New Phyrexia,NPH,New Phyrexia,,2011-05-13,79.0,175,expansion
+235,14,,,OANA,0,0,1,1,0,MTGA,,,,OANA,Arena New Player Experience Cards,ANA,2018-07-14,,14,starter
+236,45,,,OARC,0,0,1,0,0,ARC,,,,,Archenemy Schemes,ARC,2010-06-18,,45,archenemy
+237,15,Commander,,OC13,1,0,0,0,0,C13,,,,,Commander 2013 Oversized,C13,2013-11-01,,15,memorabilia
+238,5,Commander,,OC14,1,0,0,0,0,C14,,,,,Commander 2014 Oversized,C14,2014-11-07,,5,memorabilia
+239,5,Commander,,OC15,1,0,0,0,0,C15,,,,,Commander 2015 Oversized,C15,2015-11-13,,5,memorabilia
+240,5,Commander,,OC16,1,0,0,0,0,C16,,,,,Commander 2016 Oversized,C16,2016-11-11,,5,memorabilia
+241,4,Commander,,OC17,1,0,0,0,0,C17,,,,,Commander 2017 Oversized,C17,2017-08-25,,4,memorabilia
+242,4,Commander,,OC18,1,0,0,0,0,C18,,,,,Commander 2018 Oversized,C18,2018-08-09,,4,memorabilia
+243,4,Commander,,OC19,1,0,0,0,0,C19,,,,,Commander 2019 Oversized,C19,2019-08-31,,4,memorabilia
+244,5,,,OC20,0,0,0,0,0,C20,,,,,Commander 2020 Oversized,C20,2020-04-17,,5,memorabilia
+245,10,Commander,,OCM1,1,0,0,0,0,CM1,,,,,Commander's Arsenal Oversized,CM1,2012-11-02,,10,memorabilia
+246,15,Commander,,OCMD,1,0,0,0,0,CMD,,,,,Commander 2011 Oversized,CMD,2011-06-17,,15,memorabilia
+247,350,Odyssey,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1,",ODY,0,0,0,0,0,ODY,38.0,,Odyssey,OD,Odyssey,,2001-10-01,80.0,352,expansion
+248,20,,,OE01,0,0,1,0,0,E01,,,,,Archenemy: Nicol Bolas Schemes,E01,2017-06-16,,20,archenemy
+249,184,Battle for Zendikar,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foilOrMasterpiece1In144': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 4",OGW,0,0,0,0,0,OGW,1676.0,,Oath of the Gatewatch,OGW,Oath of the Gatewatch,,2016-01-22,1693.0,187,expansion
+250,40,,,OHOP,0,0,1,0,0,HOP,,,,OHOP,Planechase Planes,HOP,2009-09-04,,40,planechase
+251,15,,,OLGC,0,0,0,0,0,PMEI,,,,,Legacy Championship,,2011-01-01,,15,memorabilia
+252,350,Onslaught,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, ",ONS,0,0,0,0,0,ONS,41.0,,Onslaught,ONS,Onslaught,,2002-10-07,81.0,350,expansion
+253,40,,,OPC2,0,0,1,0,0,PC2,,,,OPC2,Planechase 2012 Planes,PC2,2012-06-01,,40,planechase
+254,86,,,OPCA,0,0,1,0,0,PCA,,,,,Planechase Anthology Planes,PCA,2018-12-25,,86,planechase
+255,272,Core Set,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ORI,0,0,0,0,0,ORI,1652.0,,Magic Origins,ORI,Magic Origins,,2015-07-17,1512.0,288,core
+256,23,,,OVNT,0,0,0,0,0,PMEI,,,,,Vintage Championship,,2003-01-01,,23,memorabilia
+257,165,,"{'default': {'boosters': [{'contents': {'basic': 2, 'common': 9, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'basic': {'cards': {'0d6b107e-68c6-5e28-97ce-6d1932eb4595': 1, '14a0f5d1-1100-55e8-9f6f-15c4806d053b': 1, '279a",P02,0,0,1,0,0,P02,24.0,,Portal Second Age,,Portal Second Age,,1998-06-24,87.0,165,starter
+258,7,Magic Player Rewards,,P03,0,0,1,0,0,DCI,,,,,Magic Player Rewards 2003,,2003-01-01,,7,promo
+259,6,Magic Player Rewards,,P04,0,0,0,0,0,DCI,,,,,Magic Player Rewards 2004,,2004-01-01,,6,promo
+260,6,Magic Player Rewards,,P05,0,0,0,0,0,DCI,,,,,Magic Player Rewards 2005,,2005-01-01,,6,promo
+261,7,Magic Player Rewards,,P06,0,0,0,0,0,DCI,,,,,Magic Player Rewards 2006,,2006-01-01,,7,promo
+262,7,Magic Player Rewards,,P07,0,0,0,0,0,DEFAULT,,,,,Magic Player Rewards 2007,,2007-01-01,,7,promo
+263,7,Magic Player Rewards,,P08,0,0,0,0,0,DEFAULT,,,,,Magic Player Rewards 2008,,2008-01-01,,7,promo
+264,9,Magic Player Rewards,,P09,0,0,0,0,0,DEFAULT,,,,,Magic Player Rewards 2009,,2009-01-01,,9,promo
+265,9,Magic Player Rewards,,P10,0,0,0,0,0,DEFAULT,,,,,Magic Player Rewards 2010,,2010-01-01,,9,promo
+266,1,,,P10E,1,0,0,0,0,10E,,,,,Tenth Edition Promos,10E,2007-07-13,,1,promo
+267,5,Magic Player Rewards,,P11,0,0,0,0,0,DEFAULT,,,,,Magic Player Rewards 2011,,2011-01-01,,5,promo
+268,2,,,P15A,1,0,0,0,0,DEFAULT,,,,,15th Anniversary Cards,,2008-04-01,,2,promo
+269,1,,,P2HG,1,0,0,0,0,DCI,,,,,Two-Headed Giant Tournament,,2005-12-09,,1,promo
+270,1,Mirrodin,,P5DN,1,0,0,0,0,5DN,,,,,Fifth Dawn Promos,5DN,2004-06-04,,1,promo
+271,1,Core Set,,P8ED,1,0,0,0,0,8ED,,,,,Eighth Edition Promos,8ED,2003-07-28,,1,promo
+272,2,Core Set,,P9ED,1,0,0,0,0,9ED,,,,,Ninth Edition Promos,9ED,2005-07-29,,2,promo
+273,65,Kaladesh,,PAER,0,0,0,0,0,AER,,,,,Aether Revolt Promos,AER,2017-01-21,,65,promo
+274,76,Amonkhet,,PAKH,0,0,0,0,0,AKH,,,,,Amonkhet Promos,AKH,2017-04-28,,76,promo
+275,11,Arena League,,PAL00,1,0,0,0,0,PARL2,,,,,Arena League 2000,,2000-01-01,,11,promo
+276,12,Arena League,,PAL01,1,0,0,0,0,PARL2,,,,,Arena League 2001,,2001-01-01,,12,promo
+277,5,Arena League,,PAL02,1,0,0,0,0,PARL,,,,,Arena League 2002,,2002-01-01,,5,promo
+278,8,Arena League,,PAL03,0,0,0,0,0,PARL,,,,,Arena League 2003,,2003-01-01,,8,promo
+279,14,Arena League,,PAL04,0,0,0,0,0,PARL,,,,,Arena League 2004,,2004-01-01,,14,promo
+280,8,Arena League,,PAL05,0,0,0,0,0,PARL,,,,,Arena League 2005,,2005-01-01,,8,promo
+281,9,Arena League,,PAL06,0,0,0,0,0,PARL,,,,,Arena League 2006,,2006-01-01,,9,promo
+282,9,Arena League,,PAL99,0,0,0,0,0,USG,,,,,Arena League 1999,,1999-01-01,,10,promo
+283,1,Alara,,PALA,1,0,0,0,0,ALA,,,,,Shards of Alara Promos,ALA,2008-10-03,,1,promo
+284,15,,,PALP,0,0,1,0,0,PAPAC,,,,,Asia Pacific Land Program,,1998-09-01,9.0,15,promo
+285,57,,,PANA,0,0,0,1,0,MTGA,,,,,MTG Arena Promos,,2018-07-14,,57,promo
+286,1,Invasion,,PAPC,1,0,0,0,0,APC,,,,,Apocalypse Promos,APC,2001-06-04,,1,promo
+287,2,Alara,,PARB,1,0,0,0,0,ARB,,,,,Alara Reborn Promos,ARB,2009-04-30,,2,promo
+288,5,,,PARC,0,0,1,0,0,DCI,,,,,Promotional Schemes,,2010-06-18,,5,archenemy
+289,7,Arena League,,PARL,0,0,1,0,0,PARL,,,,,Arena League 1996,,1996-08-02,,7,promo
+290,12,,,PAST,0,0,1,1,0,PAST,,,,,Astral Cards,,1997-04-01,,12,box
+291,5,Innistrad,,PAVR,0,0,0,0,0,AVR,,,,,Avacyn Restored Promos,AVR,2012-04-28,,5,promo
+292,22,,,PBBD,1,0,0,0,0,BBD,,,,,Battlebond Promos,BBD,2018-06-09,,22,promo
+293,87,Battle for Zendikar,,PBFZ,0,0,0,0,0,BFZ,,,,,Battle for Zendikar Promos,BFZ,2015-10-03,,87,promo
+294,9,Theros,,PBNG,0,0,0,0,0,BNG,,,,,Born of the Gods Promos,BNG,2014-02-01,,9,promo
+295,2,Kamigawa,,PBOK,1,0,0,0,0,BOK,,,,,Betrayers of Kamigawa Promos,BOK,2005-02-04,,2,promo
+296,1,,,PBOOK,0,0,1,0,0,PBOOK,,,,,Miscellaneous Book Promos,,2009-01-27,,1,promo
+297,156,,,PC2,0,0,1,0,0,PC2,1369.0,,Planechase 2012,PC2,Planechase 2012,,2012-06-01,363.0,156,planechase
+298,156,,,PCA,0,0,1,0,0,PCA,1722.0,,Planechase Anthology,,Planechase Anthology,,2016-11-25,1793.0,156,planechase
+299,7,,,PCEL,0,0,1,0,0,DEFAULT,,,,,Celebration Cards,,1996-08-14,,7,memorabilia
+300,1,Kamigawa,,PCHK,1,0,0,0,0,CHK,,,,,Champions of Kamigawa Promos,CHK,2004-10-01,,1,promo
+301,5,Commander,,PCMD,1,0,0,0,0,CMD,,,,,Commander 2011 Launch Party,CMD,2011-06-17,,5,memorabilia
+302,12,,,PCMP,0,0,0,0,0,DEFAULT,,,,,Champs and States,,2006-03-18,21.0,12,promo
+303,1,,,PCNS,1,0,0,0,0,CNS,,,,,Conspiracy Promos,CNS,2014-06-06,,1,promo
+304,2,Alara,,PCON,1,0,0,0,0,CON,,,,,Conflux Promos,CON,2009-02-06,,2,promo
+305,2,Ice Age,,PCSP,1,0,0,0,0,CSP,,,,,Coldsnap Promos,CSP,2006-07-21,,2,promo
+306,144,Masques,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",PCY,0,0,0,0,0,PCY,33.0,,Prophecy,PR,Prophecy,,2000-06-05,94.0,144,expansion
+307,34,,,PD2,1,0,0,0,0,PD2,,,,PD2,Premium Deck Series: Fire and Lightning,,2010-11-19,89.0,34,premium_deck
+308,30,,,PD3,1,0,0,0,0,PD3,1337.0,,Premium Deck Series: Graveborn,PD3,Premium Deck Series: Graveborn,,2011-11-18,90.0,30,premium_deck
+309,6,Return to Ravnica,,PDGM,0,0,0,0,0,DGM,,,,,Dragon's Maze Promos,DGM,2013-04-27,,6,promo
+310,2,Ravnica,,PDIS,1,0,0,0,0,DIS,,,,,Dissension Promos,DIS,2006-05-05,,2,promo
+311,5,Innistrad,,PDKA,0,0,0,0,0,DKA,,,,,Dark Ascension Promos,DKA,2012-01-28,,5,promo
+312,118,,,PDOM,0,0,0,0,0,DOM,,,,,Dominaria Promos,DOM,2018-04-27,,118,promo
+313,2,,,PDP10,1,0,0,0,0,PMTG2,,,,,Duels of the Planeswalkers 2010 Promos,,2010-01-01,,2,promo
+314,3,,,PDP12,1,0,0,0,0,PMTG2,,,,,Duels of the Planeswalkers 2012 Promos,,2011-01-01,,3,promo
+315,3,,,PDP13,0,0,1,0,0,M13,,,,,Duels of the Planeswalkers 2013 Promos,,2012-01-01,,3,promo
+316,3,,,PDP14,1,0,0,0,0,M14,,,,,Duels of the Planeswalkers 2014 Promos,,2013-01-01,,3,promo
+317,2,,,PDP15,1,0,0,0,0,M15,,,,,Duels of the Planeswalkers 2015 Promos,,2014-01-01,,2,promo
+318,1,,,PDRC,0,0,1,0,0,PDRC,,,,,Dragon Con,,1994-07-15,,1,promo
+319,1,Mirrodin,,PDST,1,0,0,0,0,DST,,,,,Darksteel Promos,DST,2004-06-04,,1,promo
+320,51,Khans of Tarkir,,PDTK,0,0,0,0,0,DTK,,,,,Dragons of Tarkir Promos,DTK,2015-03-28,,51,promo
+321,1,,,PDTP,1,0,0,0,0,PXBOX,,,,,Duels of the Planeswalkers 2009 Promos,,2009-01-01,,1,promo
+322,136,,,PELD,0,0,0,0,0,ELD,,,,,Throne of Eldraine Promos,ELD,2019-10-04,,136,promo
+323,15,,,PELP,0,0,1,0,0,PEURO,,,,,European Land Program,,2000-02-05,38.0,15,promo
+324,76,Shadows over Innistrad,,PEMN,0,0,0,0,0,EMN,,,,,Eldritch Moon Promos,EMN,2016-07-22,,76,promo
+325,2,Shadowmoor,,PEVE,1,0,0,0,0,EVE,,,,,Eventide Promos,EVE,2008-07-25,,2,promo
+326,1,Tempest,,PEXO,0,0,1,0,0,EXO,,,,,Exodus Promos,EXO,1998-06-15,,1,promo
+327,7,,,PF19,0,0,0,0,0,PMEI,,,,,MagicFest 2019,,2019-01-01,,7,promo
+328,6,,,PF20,0,0,0,0,0,PMEI,,,,,MagicFest 2020,,2020-01-01,,6,promo
+329,42,Khans of Tarkir,,PFRF,0,0,0,0,0,FRF,,,,,Fate Reforged Promos,FRF,2015-01-24,,42,promo
+330,2,Time Spiral,,PFUT,1,0,0,0,0,FUT,,,,,Future Sight Promos,FUT,2007-05-04,,2,promo
+331,9,,,PG07,1,0,0,0,0,DCI,,,,,Gateway 2007,,2007-01-01,,9,promo
+332,8,,,PG08,1,0,0,0,0,DCI,,,,,Gateway 2008,,2008-01-01,,8,promo
+333,2,Ravnica,,PGPT,1,0,0,0,0,GPT,,,,,Guildpact Promos,GPT,2006-02-03,,2,promo
+334,20,,,PGPX,1,0,0,0,0,DEFAULT,1595.0,,Grand Prix Promos,,Grand Prix Promos,,2007-02-24,54.0,20,promo
+335,83,Guilds of Ravnica,,PGRN,0,0,0,0,0,GRN,,,,,Guilds of Ravnica Promos,GRN,2018-10-05,,83,promo
+336,5,,,PGRU,0,0,1,0,0,PGRU,,,,,Guru,,1999-07-12,56.0,5,promo
+337,9,Return to Ravnica,,PGTC,0,0,0,0,0,GTC,,,,,Gatecrash Promos,GTC,2013-01-26,,9,promo
+338,3,,,PGTW,1,0,0,0,0,DCI,,,,,Gateway 2006,,2006-01-01,,3,promo
+339,6,,,PHEL,0,0,0,0,0,AVR,,,,,Open the Helvault,AVR,2012-04-28,,6,promo
+340,5,,,PHJ,0,1,1,0,0,DEFAULT,,,,,Hobby Japan Promos,,2002-07-01,,5,promo
+341,6,,,PHOP,0,0,1,0,0,DCI,,,,,Promotional Planes,,2009-09-04,,6,promo
+342,60,Amonkhet,,PHOU,0,0,0,0,0,HOU,,,,,Hour of Devastation Promos,HOU,2017-07-14,,60,promo
+343,5,,,PHPR,0,0,1,0,0,PBOOK,,,,,HarperPrism Book Promos,,1994-09-01,,5,promo
+344,60,,,PHUK,0,0,1,0,0,PHUK,,,,,Hachette UK,,2006-01-01,,60,box
+345,5,,,PI13,0,0,1,0,0,PIDW,,,,,IDW Comics 2013,,2013-01-01,,5,promo
+346,3,,,PI14,0,0,1,0,0,PIDW,,,,,IDW Comics 2014,,2014-01-01,,3,promo
+347,9,,,PIDW,0,0,1,0,0,PIDW,,,,,IDW Comics 2012,,2012-01-01,,9,promo
+348,136,,,PIKO,0,0,0,0,0,IKO,,,,,Ikoria: Lair of Behemoths Promos,IKO,2020-04-24,,136,promo
+349,1,Invasion,,PINV,1,0,0,0,0,INV,,,,,Invasion Promos,INV,2000-10-02,,1,promo
+350,5,Innistrad,,PISD,0,0,0,0,0,ISD,,,,,Innistrad Promos,ISD,2011-09-24,,5,promo
+351,6,,,PJAS,1,0,0,0,0,DCI,,,,,Junior APAC Series,,2006-01-01,,6,promo
+352,12,,,PJJT,1,1,0,0,0,DEFAULT,,,,,Japan Junior Tournament,,2003-01-01,,12,promo
+353,9,Theros,,PJOU,0,0,0,0,0,JOU,,,,,Journey into Nyx Promos,JOU,2014-04-26,,9,promo
+354,8,,,PJSE,1,0,0,0,0,DCI,,,,,Junior Series Europe,,2005-01-01,,8,promo
+355,1,Odyssey,,PJUD,1,0,0,0,0,JUD,,,,,Judgment Promos,JUD,2002-05-27,,1,promo
+356,0,,,PKHC,1,0,1,0,0,KHC,,,,,Kaldheim Commander Promos,KHC,2021-02-05,,0,promo
+357,169,,,PKHM,0,0,0,0,0,KHM,,,,,Kaldheim Promos,KHM,2021-02-05,,169,promo
+358,82,Kaladesh,,PKLD,0,0,0,0,0,KLD,,,,,Kaladesh Promos,KLD,2016-09-30,,82,promo
+359,56,Khans of Tarkir,,PKTK,0,0,0,0,0,KTK,,,,,Khans of Tarkir Promos,KTK,2014-09-27,,56,promo
+360,2,,,PL21,0,0,0,0,0,PMEI,,,,,2021 Lunar New Year,,2021-01-25,,2,promo
+361,165,Time Spiral,"{'default': {'boosters': [{'contents': {'pcCommon': 8, 'pcCsCommon': 3, 'pcCsUncommonRare': 1, 'pcRare': 1, 'pcUncommon': 2}, 'weight': 31}, {'contents': {'foil': 1, 'pcCommon': 7, 'pcCsCommon': 3, 'pcCsUncommonRare': 1, 'pcRare': 1, 'pcUncommon': 2}, 'we",PLC,0,0,0,0,0,PLC,58.0,,Planar Chaos,PLC,Planar Chaos,,2007-02-02,83.0,165,expansion
+362,2,,,PLGM,0,0,1,0,0,DEFAULT,,,,,DCI Legend Membership,,1995-01-01,,2,promo
+363,1,Onslaught,,PLGN,1,0,0,0,0,LGN,,,,,Legions Promos,LGN,2003-02-03,,1,promo
+364,2,,,PLGS,1,0,0,0,0,PMEI,,,,,Love Your LGS,,2020-05-18,,2,promo
+365,330,,,PLIST,0,0,0,0,0,PLANESWALKER,3494.0,,The List,,The List,,2020-09-26,2715.0,348,masters
+366,1,,,PLNY,1,0,0,0,0,PMEI,,,,,2018 Lunar New Year,,2018-02-16,,1,promo
+367,2,Lorwyn,,PLRW,1,0,0,0,0,LRW,,,,,Lorwyn Promos,LRW,2007-10-12,,2,promo
+368,143,Invasion,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",PLS,0,0,0,0,0,PLS,35.0,,Planeshift,PS,Planeshift,,2001-02-05,85.0,146,expansion
+369,5,,,PM10,1,0,0,0,0,M10,,,,,Magic 2010 Promos,M10,2009-07-16,,5,promo
+370,5,,,PM11,0,0,0,0,0,M11,,,,,Magic 2011 Promos,M11,2010-07-15,,5,promo
+371,5,,,PM12,0,0,0,0,0,M12,,,,,Magic 2012 Promos,M12,2011-07-14,,5,promo
+372,5,,,PM13,0,0,0,0,0,M13,,,,,Magic 2013 Promos,M13,2012-07-12,,5,promo
+373,5,,,PM14,0,0,0,0,0,M14,,,,,Magic 2014 Promos,M14,2013-07-18,,5,promo
+374,13,,,PM15,0,0,0,0,0,M15,,,,,Magic 2015 Promos,M15,2014-07-17,,13,promo
+375,94,,,PM19,0,0,0,0,0,M19,,,,,Core Set 2019 Promos,M19,2018-07-13,,94,promo
+376,143,,,PM20,0,0,0,0,0,M20,,,,,Core Set 2020 Promos,M20,2019-07-12,92.0,143,promo
+377,142,,,PM21,0,0,0,0,0,M21,,,,,Core Set 2021 Promos,M21,2020-07-03,,142,promo
+378,6,Scars of Mirrodin,,PMBS,0,0,0,0,0,MBS,,,,,Mirrodin Besieged Promos,MBS,2011-02-03,,6,promo
+379,38,,,PMEI,0,0,0,0,0,PMEI,,,,,Magazine Inserts,,1995-01-01,,38,promo
+380,1,,,PMH1,1,0,0,0,0,MH1,,,,PMH1,Modern Horizons Promos,MH1,2019-06-14,,1,promo
+381,1,,,PMIC,0,0,1,1,0,PAST,,,,,MicroProse Promos,PAST,1997-04-01,,1,memorabilia
+382,1,Masques,,PMMQ,1,0,0,0,0,MMQ,,,,,Mercadian Masques Promos,MMQ,1999-10-04,,1,promo
+383,85,,,PMOA,0,0,0,1,0,MTGO,,,,PMOA,Magic Online Avatars,,2003-01-01,,85,vanguard
+384,2,Lorwyn,,PMOR,1,0,0,0,0,MOR,,,,,Morningtide Promos,MOR,2008-02-01,,2,promo
+385,20,,,PMPS,1,1,0,0,0,RAV,,,,,Magic Premiere Shop 2005,,2005-01-01,,20,promo
+386,5,,,PMPS06,1,1,0,0,0,PMTG2,,,,,Magic Premiere Shop 2006,,2006-01-01,,5,promo
+387,5,,,PMPS07,0,1,0,0,0,PMPS,,,,,Magic Premiere Shop 2007,,2007-01-01,,5,promo
+388,6,,,PMPS08,0,1,0,0,0,PMPS,,,,,Magic Premiere Shop 2008,,2008-01-01,,6,promo
+389,5,,,PMPS09,0,1,0,0,0,PMPS,,,,,Magic Premiere Shop 2009,,2009-01-01,,5,promo
+390,5,,,PMPS10,0,1,0,0,0,PMPS,,,,,Magic Premiere Shop 2010,,2010-01-01,,5,promo
+391,5,,,PMPS11,0,1,0,0,0,PMPS,,,,,Magic Premiere Shop 2011,,2011-01-01,,5,promo
+392,1,Mirrodin,,PMRD,1,0,0,0,0,MRD,,,,,Mirrodin Promos,MRD,2004-06-04,,1,promo
+393,1,,,PNAT,1,0,0,0,0,PMEI,,,,,Nationals Promos,,2018-01-25,,1,promo
+394,1,Masques,,PNEM,1,0,0,0,0,NEM,,,,,Nemesis Promos,NEM,2000-02-14,,1,promo
+395,6,Scars of Mirrodin,,PNPH,0,0,0,0,0,NPH,,,,,New Phyrexia Promos,NPH,2011-05-12,,6,promo
+396,1,Odyssey,,PODY,1,0,0,0,0,ODY,,,,,Odyssey Promos,ODY,2001-10-01,,1,promo
+397,65,Battle for Zendikar,,POGW,0,0,0,0,0,OGW,,,,,Oath of the Gatewatch Promos,OGW,2016-01-23,,65,promo
+398,1,Onslaught,,PONS,1,0,0,0,0,ONS,,,,,Onslaught Promos,ONS,2003-02-03,,1,promo
+399,243,,"{'default': {'boosters': [{'contents': {'basic': 2, 'common': 9, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'basic': {'cards': {'0cabcd45-81cb-5d8b-9428-b7a983223e87': 1, '117f2f69-8556-5431-bb32-d04deaa94828': 1, '3209",POR,0,0,0,0,0,POR,25.0,,Portal,,Portal,,1997-05-01,86.0,250,starter
+400,53,,,PORI,0,0,0,0,0,ORI,,,,,Magic Origins Promos,ORI,2015-07-17,,53,promo
+401,2,,,PPC1,0,0,1,0,0,M15,,,,,M15 Prerelease Challenge,M15,2014-07-12,,2,memorabilia
+402,1,Masques,,PPCY,1,0,0,0,0,PCY,,,,,Prophecy Promos,PCY,2000-06-05,,1,promo
+403,2,Time Spiral,,PPLC,1,0,0,0,0,PLC,,,,,Planar Chaos Promos,PLC,2007-02-02,,2,promo
+404,1,Invasion,,PPLS,1,0,0,0,0,PLS,,,,,Planeshift Promos,PLS,2001-02-05,,1,promo
+405,6,,,PPOD,0,0,1,0,0,POR,,,,,Portal Demo Game,POR,1997-05-01,,6,starter
+406,5,Core Set,,PPP1,0,0,0,0,0,PMEI,,,,,M20 Promo Packs,M20,2019-07-12,,5,promo
+407,22,,,PPRO,1,0,0,0,0,PMEI,1596.0,,Pro Tour Promos,,Pro Tour Promos,,2007-02-09,93.0,22,promo
+408,2,,,PPTK,0,0,1,0,0,PTK,,,,,Portal: Three Kingdoms Promos,PTK,1999-07-01,,2,promo
+409,6,Magic Player Rewards,,PR2,0,0,1,0,0,DCI,,,,,Magic Player Rewards 2002,,2002-01-01,,6,promo
+410,2,Ravnica,,PRAV,1,0,0,0,0,RAV,,,,,Ravnica: City of Guilds Promos,RAV,2005-10-07,,2,promo
+411,1,,,PRED,0,1,1,0,0,DEFAULT,,,,,Redemption Program,,1996-10-01,,1,promo
+412,26,,,PRES,1,0,0,0,0,PMEI,98.0,,Resale Promos,,Resale Promos,,2007-01-01,,26,promo
+413,96,Ixalan,,PRIX,0,0,0,0,0,RIX,,,,,Rivals of Ixalan Promos,RIX,2018-01-19,,96,promo
+414,1323,,,PRM,0,0,0,1,0,MTGO,,,,PRM,Magic Online Promos,,2002-06-24,,1323,promo
+415,80,Guilds of Ravnica,,PRNA,0,0,0,0,0,RNA,,,,,Ravnica Allegiance Promos,RNA,2019-01-25,,80,promo
+416,6,Zendikar,,PROE,0,0,0,0,0,ROE,,,,,Rise of the Eldrazi Promos,ROE,2010-04-23,,6,promo
+417,10,Return to Ravnica,,PRTR,0,0,0,0,0,RTR,,,,,Return to Ravnica Promos,RTR,2012-10-05,,10,promo
+418,10,Guilds of Ravnica,,PRW2,1,0,0,0,0,RNA,,,,,RNA Ravnica Weekend,RNA,2019-02-16,,10,promo
+419,10,Guilds of Ravnica,,PRWK,1,0,0,0,0,GRN,,,,,GRN Ravnica Weekend,GRN,2018-11-09,,10,promo
+420,224,,,PS11,0,1,1,0,0,PSAL,,,,,Salvat 2011,,2011-01-01,,224,box
+421,6,,,PS14,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2014,,2014-07-08,,6,promo
+422,5,,,PS15,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2015,,2015-07-09,,5,promo
+423,5,,,PS16,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2016,,2016-10-01,,5,promo
+424,6,,,PS17,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2017,,2017-07-20,,6,promo
+425,5,,,PS18,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2018,,2018-07-19,,5,promo
+426,5,,,PS19,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2019,,2019-07-18,,5,promo
+427,720,,,PSAL,0,1,1,0,0,PHUK,,,,,Salvat 2005,,2005-08-22,,720,box
+428,1,Onslaught,,PSCG,1,0,0,0,0,SCG,,,,,Scourge Promos,SCG,2003-05-26,,1,promo
+429,5,,,PSDC,1,0,0,0,0,DEFAULT,,,,,San Diego Comic-Con 2013,,2013-07-18,,5,promo
+430,10,,,PSDG,0,0,1,1,0,PSDG,,,,,Sega Dreamcast Cards,,2001-06-28,,10,box
+431,2,Shadowmoor,,PSHM,1,0,0,0,0,SHM,,,,,Shadowmoor Promos,SHM,2008-05-02,,2,promo
+432,89,Shadows over Innistrad,,PSOI,0,0,0,0,0,SOI,,,,,Shadows over Innistrad Promos,SOI,2016-04-09,,90,promo
+433,2,Kamigawa,,PSOK,1,0,0,0,0,SOK,,,,,Saviors of Kamigawa Promos,SOK,2005-06-03,,2,promo
+434,5,Scars of Mirrodin,,PSOM,0,0,0,0,0,SOM,,,,,Scars of Mirrodin Promos,SOM,2010-09-30,,5,promo
+435,5,Battle for Zendikar,,PSS1,0,0,1,0,0,BFZ,,,,,BFZ Standard Series,BFZ,2015-10-02,,5,promo
+436,5,Ixalan,,PSS2,1,0,0,0,0,PMEI,,,,,XLN Standard Showdown,XLN,2017-09-29,,5,promo
+437,5,,,PSS3,1,0,0,0,0,PMEI,,,,,M19 Standard Showdown,M19,2018-07-13,,5,promo
+438,1,Tempest,,PSTH,0,0,1,0,0,STH,,,,,Stronghold Promos,STH,1998-03-02,,1,promo
+439,2,,,PSUM,1,0,0,0,0,10E,,,,,Summer of Magic,,2007-07-21,,2,promo
+440,18,,,PSUS,1,0,0,0,0,DCI,,,,,Junior Super Series,,1999-12-01,61.0,18,promo
+441,308,,,PTC,0,0,0,0,0,DEFAULT,,,,,Pro Tour Collector Set,,1996-05-01,,308,memorabilia
+442,3,,,PTG,1,0,0,0,0,PTG,2699.0,,Ponies: The Galloping,,Ponies: The Galloping,,2019-10-22,2552.0,3,funny
+443,136,,,PTHB,0,0,0,0,0,THB,,,,,Theros Beyond Death Promos,THB,2020-01-24,,136,promo
+444,10,Theros,,PTHS,0,0,0,0,0,THS,,,,,Theros Promos,THS,2013-09-21,,10,promo
+445,180,,"{'default': {'boosters': [{'contents': {'basic': 2, 'common': 5, 'rare': 1, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'basic': {'cards': {'026eba13-6231-5299-a9bb-338f2d9eeeaa': 1, '04db31b4-d70e-578d-a044-4a695b8c8611': 1, '0570",PTK,0,0,0,0,0,PTK,30.0,,Portal Three Kingdoms,,Portal Three Kingdoms,,1999-07-06,88.0,180,starter
+446,4,Khans of Tarkir,,PTKDF,0,0,1,0,0,DTK,,,,,Tarkir Dragonfury,DTK,2015-04-03,1520.0,4,promo
+447,1,Tempest,,PTMP,0,0,1,0,0,TMP,,,,,Tempest Promos,TMP,1997-10-14,,1,promo
+448,1,Odyssey,,PTOR,0,0,0,0,0,TOR,,,,,Torment Promos,TOR,2002-02-04,,3,promo
+449,2,Time Spiral,,PTSP,1,0,0,0,0,TSP,,,,,Time Spiral Promos,TSP,2006-10-06,,2,promo
+450,1,Urza,,PUDS,1,0,0,0,0,UDS,,,,,Urza's Destiny Promos,UDS,1999-06-07,,1,promo
+451,1,Urza,,PULG,0,0,0,0,0,ULG,,,,,Urza's Legacy Promos,ULG,1999-02-15,,2,promo
+452,40,,,PUMA,1,0,0,0,0,UMA,,,,PUMA,Ultimate Box Topper,UMA,2018-12-07,2361.0,40,masterpiece
+453,1,,,PUNH,1,0,0,0,0,UNH,,,,,Unhinged Promos,UNH,2004-11-19,,1,promo
+454,9,,,PURL,1,0,0,0,0,PMEI,,,,,URL/Convention Promos,,2009-02-08,,9,promo
+455,1,Urza,,PUSG,1,0,0,0,0,USG,,,,,Urza's Saga Promos,USG,1998-10-12,,1,promo
+456,1,,,PUST,1,0,0,0,0,UST,,,,,Unstable Promos,UST,2017-11-13,,1,promo
+457,32,,,PVAN,0,0,1,0,0,VAN,,,,,Vanguard Series,,1997-05-01,119.0,32,vanguard
+458,175,,,PWAR,0,0,0,0,0,WAR,,,,,War of the Spark Promos,WAR,2019-05-04,,175,promo
+459,5,,,PWCQ,1,0,0,0,0,PMEI,,,,,World Magic Cup Qualifiers,,2013-04-06,,5,promo
+460,2,,,PWOR,1,0,0,0,0,DEFAULT,,,,,World Championship Promos,,1999-08-04,,2,promo
+461,1,,,PWOS,1,0,0,0,0,DEFAULT,,,,,Wizards of the Coast Online Store,,1999-09-04,,1,promo
+462,8,,,PWP09,1,0,0,0,0,DCI,,,,,Wizards Play Network 2009,,2009-01-01,,8,promo
+463,10,,,PWP10,1,0,0,0,0,DCI,,,,,Wizards Play Network 2010,,2010-01-01,,10,promo
+464,14,,,PWP11,1,0,0,0,0,PMEI,,,,,Wizards Play Network 2011,,2011-01-01,,14,promo
+465,3,,,PWP12,1,0,0,0,0,PMEI,,,,,Wizards Play Network 2012,,2012-01-01,,3,promo
+466,2,,,PWPN,1,0,0,0,0,DCI,,,,,Wizards Play Network 2008,,2008-10-01,,2,promo
+467,6,Zendikar,,PWWK,0,0,0,0,0,WWK,,,,,Worldwake Promos,WWK,2010-02-05,,6,promo
+468,120,Ixalan,,PXLN,0,0,0,0,0,XLN,,,,,Ixalan Promos,XLN,2017-09-29,,120,promo
+469,10,Ixalan,,PXTC,1,0,0,0,0,XLN,,,,,XLN Treasure Chest,XLN,2017-11-24,,10,promo
+470,149,,,PZ1,0,0,0,1,0,PZ1,,,,PZ1,Legendary Cube Prize Pack,,2015-11-18,,149,treasure_chest
+471,282,,,PZ2,0,0,0,1,0,PZ2,,,,PZ2,Treasure Chest,,2016-11-16,,282,treasure_chest
+472,5,Zendikar,,PZEN,0,0,0,0,0,ZEN,,,,,Zendikar Promos,ZEN,2009-10-02,,5,promo
+473,168,,,PZNR,0,0,0,0,0,ZNR,,,,,Zendikar Rising Promos,ZNR,2020-09-25,,168,promo
+474,306,Ravnica,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommonOrBasic': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, ",RAV,0,0,0,0,0,RAV,55.0,,Ravnica: City of Guilds,RAV,Ravnica: City of Guilds,,2005-10-07,95.0,306,expansion
+475,122,,,REN,0,1,1,0,0,REN,60.0,,Renaissance,,Renaissance,,1995-08-01,2379.0,122,masters
+476,69,,,RIN,0,1,1,0,0,RIN,96.0,,Rinascimento,,Rinascimento,,1995-08-01,,69,masters
+477,196,Ixalan,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Rivals of Ixalan Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'016b5ac0-f8e3-593b-ac32-602f465",RIX,0,0,0,0,0,RIX,1829.0,,Rivals of Ixalan,RIX,Rivals of Ixalan,,2018-01-19,2098.0,205,expansion
+478,259,Guilds of Ravnica,"{'arena': {'boosters': [{'contents': {'common': 10, 'land': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Ravnica Allegiance Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'00aa8ab6-2c28-5cfd",RNA,0,0,0,0,0,RNA,2411.0,2419.0,Ravnica Allegiance,RNA,Ravnica Allegiance,,2019-01-25,2366.0,273,expansion
+479,248,Zendikar,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ROE,0,0,0,0,0,ROE,120.0,,Rise of the Eldrazi,ROE,Rise of the Eldrazi,,2010-04-23,98.0,248,expansion
+480,65,,,RQS,0,0,1,0,0,DEFAULT,,,,,Rivals Quick Start Set,,1996-07-01,2778.0,65,box
+481,274,Return to Ravnica,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",RTR,0,0,0,0,0,RTR,1389.0,,Return to Ravnica,RTR,Return to Ravnica,,2012-10-05,370.0,274,expansion
+482,20,,,S00,0,0,0,0,0,S00,65.0,,Starter 2000,,Starter 2000,,2000-04-01,106.0,20,starter
+483,173,,"{'default': {'boosters': [{'contents': {'basic': 2, 'common': 9, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'basic': {'cards': {'176f4e67-50b9-55bc-9c62-65f9c3cb4fed': 1, '2c28e2f6-e4c5-5ee0-87c8-8ce162545c22': 1, '2e81",S99,0,0,1,0,0,S99,63.0,,Starter 1999,,Starter 1999,,1999-07-01,105.0,173,starter
+484,143,Onslaught,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",SCG,0,0,0,0,0,SCG,43.0,,Scourge,SCG,Scourge,,2003-05-26,101.0,143,expansion
+485,301,Shadowmoor,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rare': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'cards': {'008d434b-e1df-59a5",SHM,0,0,0,0,0,SHM,95.0,,Shadowmoor,SHM,Shadowmoor,,2008-05-02,102.0,302,expansion
+486,218,,,SLD,0,0,0,0,0,PMEI,,,,,Secret Lair Drop,,2019-12-02,2576.0,218,box
+487,15,,,SLU,0,0,0,0,0,PMEI,3068.0,,Secret Lair: Ultimate Edition,,Secret Lair: Ultimate Edition,SLD,2020-05-29,2632.0,15,box
+488,297,Shadows over Innistrad,"{'default': {'boosters': [{'contents': {'basic': 1, 'dfcCommonUncommon': 1, 'sfcCommon': 9, 'sfcRareMythic': 1, 'sfcUncommon': 3}, 'weight': 217}, {'contents': {'basic': 1, 'dfcCommonUncommon': 1, 'foil': 1, 'sfcCommon': 8, 'sfcRareMythic': 1, 'sfcUncommo",SOI,0,0,0,0,0,SOI,1694.0,,Shadows over Innistrad,SOI,Shadows over Innistrad,,2016-04-08,1708.0,302,expansion
+489,165,Kamigawa,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",SOK,0,0,0,0,0,SOK,50.0,,Saviors of Kamigawa,SOK,Saviors of Kamigawa,,2005-06-03,99.0,165,expansion
+490,249,Scars of Mirrodin,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",SOM,0,0,0,0,0,SOM,1206.0,,Scars of Mirrodin,SOM,Scars of Mirrodin,,2010-10-01,100.0,249,expansion
+491,8,,,SS1,0,0,0,0,0,SS1,2103.0,,Signature Spellbook: Jace,,Signature Spellbook: Jace,,2018-06-15,2220.0,8,spellbook
+492,8,,,SS2,0,0,0,0,0,SS2,2460.0,,Signature Spellbook: Gideon,,Signature Spellbook: Gideon,,2019-06-28,2447.0,8,spellbook
+493,8,,,SS3,0,0,0,0,0,SS3,3063.0,,Signature Spellbook: Chandra,,Signature Spellbook: Chandra,,2020-06-26,2633.0,8,spellbook
+494,143,Tempest,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'08176bc3-2707-53aa-ac1e-6ff5153d8965': 1, '090983e9-557b-5c7c-aba5-07375e74f2",STH,0,0,0,0,0,STH,20.0,,Stronghold,ST,Stronghold,,1998-03-02,107.0,143,expansion
+495,306,Core Set,,SUM,0,0,1,0,0,PSUM,,,,,Summer Magic / Edgar,,1994-06-21,2642.0,306,core
+496,9,,,SZNR,0,0,0,0,0,ZNR,,,,,Zendikar Rising Substitute Cards,ZNR,2020-09-25,,9,token
+497,15,Theros,,TBTH,0,0,1,0,0,BNG,,,,,Battle the Horde,BNG,2014-03-01,,15,token
+498,197,,,TD0,0,0,1,1,0,TD0,,,,TD0,Magic Online Theme Decks,,2010-11-08,,197,box
+499,88,,,TD2,0,0,1,1,0,TD2,,,,TD2,Duel Decks: Mirrodin Pure vs. New Phyrexia,,2011-05-14,,88,duel_deck
+500,15,Theros,,TDAG,0,0,1,0,0,JOU,,,,,Defeat a God,JOU,2014-05-25,,15,token
+501,15,Theros,,TFTH,0,0,1,0,0,THS,,,,,Face the Hydra,THS,2013-10-19,,15,token
+502,254,,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Theros Beyond Death Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'00234fb5-1fea-5993-8303-ab1b",THB,0,0,0,0,0,THB,2814.0,2961.0,Theros Beyond Death,THB,Theros Beyond Death,,2020-01-24,2568.0,358,expansion
+503,7,Theros,,THP1,0,0,1,0,0,THS,,,,,Theros Hero's Path,THS,2013-09-27,,7,memorabilia
+504,7,Theros,,THP2,0,0,1,0,0,BNG,,,,,Born of the Gods Hero's Path,BNG,2014-02-07,,7,memorabilia
+505,9,Theros,,THP3,0,0,0,0,0,JOU,,,,,Journey into Nyx Hero's Path,JOU,2014-05-02,,9,promo
+506,249,Theros,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",THS,0,0,0,0,0,THS,1457.0,,Theros,THS,Theros,,2013-09-27,1144.0,249,expansion
+507,350,Tempest,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'03debc19-ddaa-5ff2-9474-f2bb9e3210f4': 1, '05925dd2-1ff8-5b59-934b-f3e4f5d8e7",TMP,0,0,0,0,0,TMP,19.0,,Tempest,TE,Tempest,,1997-10-14,108.0,350,expansion
+508,143,Odyssey,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 272757}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 50853}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncomm",TOR,0,0,0,0,0,TOR,39.0,,Torment,TOR,Torment,,2002-02-04,112.0,143,expansion
+509,269,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",TPR,0,0,0,1,0,TPR,,,,TPR,Tempest Remastered,,2015-05-06,,269,masters
+510,121,Time Spiral,,TSB,0,0,0,0,0,TSP,,,,TSB,Time Spiral Timeshifted,TSP,2006-10-06,111.0,121,expansion
+511,301,Time Spiral,"{'default': {'boosters': [{'contents': {'common': 10, 'rare': 1, 'tsts': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 9, 'rare': 1, 'tsFoil': 1, 'tsts': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balan",TSP,0,0,0,0,0,TSP,56.0,,Time Spiral,TSP,Time Spiral,,2006-10-06,110.0,301,expansion
+512,5,,,TSR,0,0,0,0,1,TSR,,,,,Time Spiral Remastered,,2021-03-19,2772.0,5,masters
+513,143,Urza,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",UDS,0,0,0,0,0,UDS,28.0,,Urza's Destiny,UD,Urza's Destiny,,1999-06-07,116.0,143,expansion
+514,26,Khans of Tarkir,,UGIN,0,0,1,0,0,FRF,,,,,Ugin's Fate,FRF,2015-01-17,1507.0,26,promo
+515,88,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 6, 'rare': 1, 'uncommon': 2}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'basic': {'cards': {'18548922-7199-5e53-a68e-13e18b239be6': 1, '536d955c-bb4c-5ad2-ac79-c51c6a8c6a6b': 1, '58f9",UGL,0,0,1,0,0,UGL,22.0,,Unglued,,Unglued,,1998-08-11,113.0,88,funny
+516,143,Urza,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 854667}, {'contents': {'common': 10, 'foilCommon': 1, 'rare': 1, 'uncommon': 3}, 'weight': 105633}, {'contents': {'common': 11, 'foilUncommon': 1, 'rare': 1, 'uncom",ULG,0,0,0,0,0,ULG,27.0,,Urza's Legacy,UL,Urza's Legacy,,1999-02-15,117.0,143,expansion
+517,254,,"{'default': {'boosters': [{'contents': {'common': 10, 'dedicatedFoil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'01a5f51b-daa3-578a-bb2c-2718ab83240e': 1, '06143991",UMA,0,0,0,0,0,UMA,2397.0,,Ultimate Masters,UMA,Ultimate Masters,,2018-12-07,2360.0,254,masters
+518,96,,,UND,0,0,0,0,0,UND,2809.0,,Unsanctioned,,Unsanctioned,,2020-02-29,2598.0,96,funny
+519,141,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'rareMythic': 1, 'uncommon': 3, 'unhingedFoil': 1}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets'",UNH,0,0,0,0,0,UNH,59.0,,Unhinged,,Unhinged,,2004-11-19,114.0,168,funny
+520,356,Urza,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'06045f16-c79b-5203-ae4a-020ef2800995': 1, '08ac289e-06f1-5529-8361-4817a8b7f3",USG,0,0,0,0,0,USG,26.0,,Urza's Saga,UZ,Urza's Saga,,1998-10-12,118.0,356,expansion
+521,268,,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 8, 'contraption': 2, 'rareMythic': 1, 'uncommon': 3}, 'weight': 27}, {'contents': {'basic': 1, 'common': 7, 'contraption': 2, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 10}, {'conten",UST,0,0,0,0,0,UST,1821.0,,Unstable,,Unstable,,2017-12-08,2092.0,268,funny
+522,15,,,V09,1,0,0,0,0,V09,112.0,,From the Vault: Exiled,V09,From the Vault: Exiled,,2009-08-28,48.0,15,from_the_vault
+523,15,,,V10,1,0,0,0,0,V10,1202.0,,From the Vault: Relics,V10,From the Vault: Relics,,2010-08-27,50.0,15,from_the_vault
+524,15,,,V11,1,0,0,0,0,V11,1286.0,,From the Vault: Legends,V11,From the Vault: Legends,,2011-08-26,49.0,15,from_the_vault
+525,15,,,V12,1,0,0,0,0,V12,1397.0,,From the Vault: Realms,V12,From the Vault: Realms,,2012-08-31,368.0,15,from_the_vault
+526,20,,,V13,1,0,0,0,0,V13,1455.0,,From the Vault: Twenty,V13,From the Vault: Twenty,,2013-08-23,1141.0,20,from_the_vault
+527,15,,,V14,1,0,0,0,0,V14,1494.0,,From the Vault: Annihilation,V14,From the Vault: Annihilation,,2014-08-22,1475.0,15,from_the_vault
+528,15,,,V15,1,0,0,0,0,V15,1661.0,,From the Vault: Angels,V15,From the Vault: Angels,,2015-08-21,1577.0,15,from_the_vault
+529,16,,,V16,1,0,0,0,0,V16,1703.0,,From the Vault: Lore,V16,From the Vault: Lore,,2016-08-19,1821.0,16,from_the_vault
+530,16,,,V17,1,0,0,0,0,V17,1819.0,,From the Vault: Transform,V17,From the Vault: Transform,,2017-11-24,2078.0,16,from_the_vault
+531,167,Mirage,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'08c56700-abfd-505b-8d85-8b2eb7c4c3f4': 1, '09fcf745-f682-5a9e-a177-11d0387536",VIS,0,0,0,0,0,VIS,17.0,,Visions,VI,Visions,,1997-02-03,120.0,167,expansion
+532,325,,"{'default': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'special': 1, 'uncommon': 3}, 'weight': 9}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 471}], 'boostersTotalWeight': 480, 'sheets': {'common': {'",VMA,0,0,0,1,0,VMA,,,,VMA,Vintage Masters,,2014-06-16,,325,masters
+533,16,,,W16,0,0,1,0,0,W16,1710.0,,Welcome Deck 2016,W16,Welcome Deck 2016,,2016-04-08,1765.0,16,starter
+534,30,,,W17,0,0,1,0,0,W17,1802.0,,Welcome Deck 2017,W17,Welcome Deck 2017,,2017-04-15,1930.0,30,starter
+535,264,Guilds of Ravnica,"{'arena': {'boosters': [{'contents': {'common': 10, 'nonplaneswalkerUncommon': 3, 'planeswalkerRareMythic': 1}, 'weight': 29}, {'contents': {'common': 10, 'nonplaneswalkerRareMythic': 1, 'nonplaneswalkerUncommon': 2, 'planeswalkerUncommon': 1}, 'weight': ",WAR,0,0,0,0,0,WAR,2439.0,2451.0,War of the Spark,WAR,War of the Spark,,2019-05-03,2418.0,311,expansion
+536,117,,,WC00,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 2000,,2000-08-02,,117,memorabilia
+537,138,,,WC01,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 2001,,2001-08-08,,138,memorabilia
+538,153,,,WC02,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 2002,,2002-08-14,,153,memorabilia
+539,142,,,WC03,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 2003,,2003-08-06,,142,memorabilia
+540,103,,,WC04,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 2004,,2004-09-01,,103,memorabilia
+541,131,,,WC97,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 1997,,1997-08-13,2198.0,131,memorabilia
+542,117,,,WC98,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 1998,,1998-08-12,,117,memorabilia
+543,111,,,WC99,0,0,0,0,0,DEFAULT,,,,,World Championship Decks 1999,,1999-08-04,,111,memorabilia
+544,167,Mirage,"{'default': {'boosters': [{'contents': {'common': 11, 'rare': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'sheets': {'common': {'balanceColors': True, 'cards': {'02cae858-ed56-5a28-aec0-8bad52b0b3a4': 1, '042a6374-aa12-5645-8e24-31de0b9fea",WTH,0,0,0,0,0,WTH,18.0,,Weatherlight,WL,Weatherlight,,1997-06-09,121.0,167,expansion
+545,145,Zendikar,"{'default': {'boosters': [{'contents': {'common': 11, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'common': 10, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'common': {'balanceColors': ",WWK,0,0,0,0,0,WWK,118.0,,Worldwake,WWK,Worldwake,,2010-02-05,122.0,145,expansion
+546,30,,,XANA,0,0,1,1,0,DEFAULT,,,,,Arena New Player Experience Extras,ANA,2018-07-14,,30,memorabilia
+547,279,Ixalan,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Ixalan Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'01bdcc3a-29e3-5972-af02-726fee266cfd': 1,",XLN,0,0,0,0,0,XLN,1812.0,,Ixalan,XLN,Ixalan,,2017-09-29,2043.0,289,expansion
+548,249,Zendikar,"{'default': {'boosters': [{'contents': {'basic': 1, 'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 31}, {'contents': {'basic': 1, 'common': 9, 'foil': 1, 'rareMythic': 1, 'uncommon': 3}, 'weight': 9}], 'boostersTotalWeight': 40, 'sheets': {'basi",ZEN,0,0,0,0,0,ZEN,114.0,,Zendikar,ZEN,Zendikar,,2009-10-02,124.0,269,expansion
+549,142,Commander,,ZNC,0,0,0,0,0,ZNC,,,,,Zendikar Rising Commander,ZNR,2020-09-25,2716.0,142,commander
+550,30,,,ZNE,0,0,0,0,0,ZNE,3489.0,,Zendikar Rising Expeditions,,Zendikar Rising Expeditions,ZNR,2020-09-25,2713.0,30,masterpiece
+551,285,,"{'arena': {'boosters': [{'contents': {'common': 10, 'rareMythic': 1, 'uncommon': 3}, 'weight': 1}], 'boostersTotalWeight': 1, 'name': 'Zendikar Rising Arena Booster', 'sheets': {'common': {'balanceColors': True, 'cards': {'01d1ef65-cbcd-5b28-85c8-0edeca7e",ZNR,0,0,0,0,0,ZNR,3404.0,3474.0,Zendikar Rising,ZNR,Zendikar Rising,,2020-09-25,2648.0,392,expansion

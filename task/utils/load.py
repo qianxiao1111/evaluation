@@ -104,3 +104,11 @@ def load_openai_llm(
         temperature=temperature,
     )
     return llm
+
+
+def save_json(data_path, data_list):
+    """
+    # 保存 json 文件
+    """
+    with open(data_path, "w", encoding="utf-8") as f:
+        json.dump(data_list, f, ensure_ascii=False)

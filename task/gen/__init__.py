@@ -8,8 +8,14 @@ from task.gen.prompt import (
     prompt_template_sql,
     prompt_template_py,
     prompt_template_regen,
+    prompt_template_reject,
 )
-from task.gen.output_parser import InspectOutputParser, SqlOutputParser, PyOutputParser
+from task.gen.output_parser import (
+    InspectOutputParser,
+    SqlOutputParser,
+    PyOutputParser,
+    RejectOutputParser,
+)
 
 
 class SqlGenChain(LLMChain):
@@ -105,4 +111,28 @@ class RegenChain(LLMChain):
     ):
         if output_parser is None:
             output_parser = PyOutputParser()
+        return cls(llm=llm, prompt=prompt, output_parser=output_parser, **kwargs)
+
+
+class RejectChain(LLMChain):
+    """reject"""
+
+    llm: Optional[BaseLanguageModel] = None
+    prompt: BasePromptTemplate = None
+    input_key: List = ["table_infos", "query"]
+
+    @property
+    def _chain_type(self) -> str:
+        return "gen"
+
+    @classmethod
+    def from_llm(
+        cls,
+        llm: BaseLanguageModel,
+        prompt: BasePromptTemplate = prompt_template_reject,
+        output_parser: BaseOutputParser = None,
+        **kwargs: Any,
+    ):
+        if output_parser is None:
+            output_parser = RejectOutputParser()
         return cls(llm=llm, prompt=prompt, output_parser=output_parser, **kwargs)
