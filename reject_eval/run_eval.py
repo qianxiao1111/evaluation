@@ -1,11 +1,11 @@
 from reject_eval.prompt import eval_system, eval_instruction
 from reject_eval.eval_metrics import evaluation
 from util import load_json, save_json
-import sys
 import os
 
 
-def format_inputs(test_datas):
+def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
+    """Format inputs to the required messages"""
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
@@ -24,7 +24,10 @@ def format_inputs(test_datas):
     return format_message_datas
 
 
-def eval_outputs(model_outputs, test_file_path):
+def eval_outputs(model_outputs: list[dict], test_file_path: str) -> None:
+    """Calculate the reject evaluation metric based
+    on model outputs for binary classification
+    """
     test_datas = load_json(test_file_path)
     # 提取模型输出list
     output_texts = [i["output_text"] for i in model_outputs]

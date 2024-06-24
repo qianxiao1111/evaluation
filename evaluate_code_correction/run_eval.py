@@ -154,6 +154,7 @@ def eval_outputs(
         code = filter_code(llm_output)
         cot = filter_cot(llm_output)
         output = cot + f"{lan_type} Code:\n" + code
+        # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
         try:
             try:
                 with timeout(15):  # 设置超时时间为15秒
