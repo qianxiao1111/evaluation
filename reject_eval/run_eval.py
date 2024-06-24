@@ -24,7 +24,7 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     return format_message_datas
 
 
-def eval_outputs(model_outputs: list[dict], test_file_path: str) -> None:
+def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str = "") -> None:
     """Calculate the reject evaluation metric based
     on model outputs for binary classification
     """
@@ -47,7 +47,8 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str) -> None:
     
     # 保存路径
     parent_path = os.path.dirname(test_file_path)
-    save_path = os.path.join(parent_path, 'llm_output_data.json')
+    if not save_path:
+        save_path = os.path.join(parent_path, 'llm_output_data.json')
     ground_truth_path = os.path.join(parent_path, 'ground_truth.json')
 
     save_json(save_path, processed_data)

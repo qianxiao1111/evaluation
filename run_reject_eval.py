@@ -42,6 +42,7 @@ if __name__ == "__main__":
     parser.add_argument('--max_model_len', type=int, default=8192, help='Max model length')
     parser.add_argument('--template', type=str, choices=[None, 'llama3', 'baichuan', 'chatglm'], default=None, help='The template must be specified if not present in the config file')
     parser.add_argument('--test_path', type=str, default="evalset/reject_test/test_query.json", help='Test File Path')
+    parser.add_argument('--save_path', type=str, default="evalset/reject_test/llm_output_data.json", help='LLM output samples save path')
 
     args = parser.parse_args()
     main(args)

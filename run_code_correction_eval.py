@@ -75,7 +75,6 @@ def main(args):
         json.dump(eval_answers, f, ensure_ascii=False)
     # this is the step to get eval_pass_rate
     run_eval(eval_result_path=eval_results_save_path,
-             test_csv_file_path=test_csv_file_path,
              llm_for_judge=llm_for_judge)
 
 if __name__ == "__main__":
