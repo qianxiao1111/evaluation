@@ -165,7 +165,7 @@ def eval_outputs(
                     observe = tool.run(code)  # 需要监控超时的代码块
         except TimeoutException as e:
             observe = e
-        except SystemExit(f"SytemExit Error...") as e:
+        except Exception(f"SytemExit Error...") as e:
             observe = e
 
             # 处理 SystemExit 异常，例如记录日志、清理资源等
