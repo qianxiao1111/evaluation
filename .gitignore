@@ -1,15 +1,11 @@
-datasets
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-*.json
-*.jsonl
 *.sql
 *.sqlite
 *.splite
-*.csv
 *.desc
 *.txt
 *.DS_Store

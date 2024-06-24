@@ -72,3 +72,16 @@ class InspectOutputParser(BaseTransformOutputParser[str]):
     def _type(self) -> str:
         """Return the output parser type for serialization."""
         return "gen"
+
+
+class RejectOutputParser(BaseTransformOutputParser[str]):
+    """OutputParser that parses LLMResult into the top likely string."""
+
+    def parse(self, text: str) -> Dict:
+        print(text)
+        return text
+
+    @property
+    def _type(self) -> str:
+        """Return the output parser type for serialization."""
+        return "gen"
