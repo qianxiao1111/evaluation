@@ -1,6 +1,12 @@
 import argparse
 import time
-from reject_eval.run_eval import format_inputs, load_json, eval_outputs
+from reject_eval.run_eval import (
+    format_inputs,
+    load_json,
+    save_json,
+    eval_outputs,
+    format_llm_outputs
+)
 from inference import load_model, load_tokenizer_and_template, generate_outputs
 
 def main(args):
@@ -27,7 +33,17 @@ def main(args):
     # 推理&评估
     test_datas = load_json(test_path)
     format_message_datas = format_inputs(test_datas)
-    model_outputs = generate_outputs(format_message_datas, llm_model, tokenizer, generate_args)
+    # 这是第一轮输出， 由于eval-llm指令遵循能力可能比较弱，不会按照指定格式输出，因而在第一轮后增加一轮校正输出
+    model_outputs_tmp = generate_outputs(format_message_datas,
+                                         llm_model,
+                                         tokenizer,
+                                         generate_args)
+    # save_json("./model_outputs.json", model_outputs_tmp)
+    # 这是第二轮输出， 输出类别为negative， positive或者uncertain
+    format_message_datas_tmp = format_llm_outputs(model_outputs_tmp)
+    model_outputs = generate_outputs(format_message_datas_tmp,
+                                     llm_model, tokenizer, generate_args)
+    # save_json("./model_outputs.json", model_outputs)
     eval_outputs(model_outputs, test_path)
     
 

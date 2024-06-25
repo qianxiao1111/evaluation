@@ -1,4 +1,9 @@
-from reject_eval.prompt import eval_system, eval_instruction
+from reject_eval.prompt import (
+    eval_system,
+    eval_instruction,
+    output_content_classify_instruct,
+    output_content_classify_system
+)
 from reject_eval.eval_metrics import evaluation
 from util import load_json, save_json
 import os
@@ -23,6 +28,19 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     
     return format_message_datas
 
+def format_llm_outputs(model_outputs: list[dict]) -> list[list[dict]]:
+    format_message_datas = []
+    for sample in model_outputs:
+        sentence = sample["output_text"]
+        format_instruction = output_content_classify_instruct.format(input=sentence)
+        messages = [
+            {"role": "system", "content": output_content_classify_system},
+            {"role": "user", "content": format_instruction}
+        ]
+        format_message_datas.append(messages)
+
+    return format_message_datas
+
 
 def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str = "") -> None:
     """Calculate the reject evaluation metric based
@@ -36,9 +54,9 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
         llm_output = output_texts[idx]
         test_dt["llm_output"] = llm_output
         # 解析输出判断结果
-        if "yes" in llm_output.lower():
+        if any(keyword.lower() in llm_output.lower() for keyword in ["positive"]):
             test_dt["is_reject"] = False
-        elif "no" in llm_output.lower():
+        elif any(keyword.lower() in llm_output.lower() for keyword in ["negative"]):
             test_dt["is_reject"] = True
         else:
             pass

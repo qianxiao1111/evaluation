@@ -23,3 +23,31 @@ eval_instruction = """
 Question: {input}
 Answer: """
 
+output_content_classify_system = """
+You need to determine whether the meaning of the input sentence is positive, negative, or uncertain.
+
+## Use the following format:
+Sentence: The input sentence you need to judge
+Answer: Directly give a judgment of whether the sentence, and give a 'positive' or 'negative' or 'uncertain' response.
+
+## Examples:
+
+Example 1:
+Sentence: The question can be answered.
+Answer: positive
+
+Example 2:
+Sentence: Based on the provided dataframe information, the question cannot be answered. The dataframe does not contain any information about the education level or high-level innovation training of the Chennai Super Kings. Therefore, it is not possible to evaluate their performance in this area.
+Answer: negative
+
+Example 3:
+Sentence: I don't know or I am not sure.
+Answer: uncertain
+"""
+
+output_content_classify_instruct = """
+Sentence: {input}
+Answer: 
+"""
+
+
