@@ -25,6 +25,17 @@ from evaluate_code_correction.prompt import (
 
 from contextlib import contextmanager
 
+CODE_PREFIX = """import matplotlib.pyplot as plt
+from mplfonts import use_font
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import warnings
+
+warnings.filterwarnings("ignore")
+# Fixing Chinese font issues
+use_font("Noto Serif CJK SC")\n"""
+
 # 定义一个异常类，用于超时处理
 class TimeoutException(Exception):
     pass
@@ -152,16 +163,17 @@ def eval_outputs(
             df = [pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False) for path in df_paths]
         tool = get_tool(df)
 
-        code = filter_code(llm_output)
+        code, pure_code = filter_code(llm_output)
         cot = filter_cot(llm_output)
         # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
         try:
             # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
-            if not code:
+            if not pure_code:
                 observe = "Code Error: output empty code.."
             else:
                 with timeout(5):  # 设置超时时间为15秒
-                    observe = tool.run(code)  # 需要监控超时的代码块
+                    pure_code = CODE_PREFIX + pure_code
+                    observe = tool.run(pure_code)  # 需要监控超时的代码块
         except TimeoutException as e:
             observe = e
         except SystemExit as e:
@@ -169,7 +181,7 @@ def eval_outputs(
         except Exception as e:
             observe = f"Unexpected Error: {str(e)}"
 
-        eval_result_sample["code"] = code
+        eval_result_sample["code"] = CODE_PREFIX + code
         eval_result_sample["cot"] = cot
         eval_result_sample["observe"] = observe
         eval_result_sample["true_result"] = true_result

@@ -5,11 +5,34 @@
 @File ：utils.py
 @IDE ：PyCharm
 """
+import tokenize
+from io import StringIO
 import ast
 import pandas as pd
 import re
-from typing import Any
+from typing import Any, Tuple
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
+
+def extract_code_without_comments(code):
+    """
+    从Python代码中提取除注释行以外的代码。
+
+    :param code: str, 输入的Python代码
+    :return: str, 提取后的代码
+    """
+    code_io = StringIO(code)
+    result = []
+
+    try:
+        tokens = tokenize.generate_tokens(code_io.readline)
+        for token_type, token_string, _, _, _ in tokens:
+            # Skip comment tokens
+            if token_type != tokenize.COMMENT:
+                result.append(token_string)
+    except tokenize.TokenError as e:
+        print(f"Token error: {e}")
+
+    return ''.join(result)
 
 
 def is_python_code(line: str) -> bool:
@@ -67,42 +90,30 @@ def filter_cot(completion: str):
         return ""
 
 
-def filter_code(completion: str) -> str:
+def filter_code(completion: str) -> Tuple[str, str]:
     """
     Filter python code from the llm output completion
     :param completion: llm output contents
-    :return filtered python code
+    :return filtered python code and execute code
     """
 
-    CODE_PREFIX = """import matplotlib.pyplot as plt
-from mplfonts import use_font
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import warnings
-
-warnings.filterwarnings("ignore")
-# Fixing Chinese font issues
-use_font("Noto Serif CJK SC")\n"""
     try:
         # 输出形式符合prompt
         regex = r"```python\s(.*?)```"
         action_match = re.search(regex, completion, re.DOTALL)
         if action_match:
-            tool_prefix = CODE_PREFIX
             action_input = action_match.group(1)
             action_input = action_input.strip(" ")
             action_input = action_input.strip('"')
             code = action_input.strip(" ")
-            code = tool_prefix + code
         else:
             # 输出形式随意
             code = extract_python_code(completion)
             code = code.strip(" ")
-            code = CODE_PREFIX + code
-        return code
+        pure_code = extract_code_without_comments(code)
+        return code, pure_code
     except:
-        return ""
+        return "", ""
 
 
 def get_tool(df: Any):
