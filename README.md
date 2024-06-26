@@ -1,63 +1,105 @@
-# evaluation
+# Table-llm-eval： An Open-Source tabular data related tasks evaluation framework
 
-## 1.概览
+<p align="center">
+    <a href="#-About">🔥About</a> •
+    <a href="#-Usage">💻Usage</a> •
+</p>
 
-目前提供llm 三种不同能力的指标测试
+## About
 
-1）代码纠错能力 ——code_correction
+</div>
 
-2）模糊回答拒绝能力——reject
+Table-llm-eval is a project designed to support the evaluation of large language model (LLM) capabilities related to table data. 
 
-3）多表场景选表选字段能力——retrievar
+Given the complexity of table QA tasks and the uncertainty of input instructions, unlike typical table-based QA tasks,  we provide evaluation datasets and scripts for three capabilities: 
 
-## 2.code_correction_eval
+- ✨Code correction based on tables 
+- ✨Refusal of ambiguous questions
+- ✨Table & field recall in multi-table scenarios.
 
-### 2.1运行脚本
+We have built an inference method based on the local model path using VLLM as the backend, and defined a set of example prompts templates for the three tasks: code correction, ambiguous question refusal, and table and field recall. 	You also can define your own prompt templates. 
 
-```python
-./evaluate_code_correction/run_eval.py
+## Usage
+
+</div>
+</details>
+
+⏬ To use this framework, please first install the repository from GitHub:
+
+```shell
+git clone https://github.com/tablegpt/tablegpt-eval
+cd tablegpt-eval
+pip install -r requirements.txt
 ```
 
-脚本运行分为两步：
+</div>
+</details>
 
-1）生成待评价llm的code_correction 结果， 保存为results.json,默认保存在
+[!Tip]
 
-`./evalset/code_correction_test/results.json`
+If you want more configuration options for running parameters, refer to the typical Python script.
 
-2）由生成的results.json，计算pass-rate指标（目前支持execute-pass-rate和llm-eval-pass-rate两种）
+### Code correction eval
 
-### 2.2运行方法
-
-1.修改evaluate_code_correction/run_eval.py脚本中的eval_dataset_path为对应的eval-dataset
-
-```python
-./evalset/code_correction_test/correction_set_new.json
-```
-
-2.在evaluate_code_correction/llms.py中修改llm_for_eval和llm_judge对应的配置，对于本地模型，配置可参考llm_gen
-
-3.运行run_eval.py(备注： gen_answers()和 run_eval()函数可分别运行)
-
-## 3.reject-eval
-
-### 运行方法
-
-1）运行 run_reject_eval.py
-
-评价测试集为：
+We provide a non-executable eval dataset based on the Python language. Eval dataset path:
 
 ```python
-evalset/reject_test/test_query.json # queries
-evalset/reject_test/ground_truth.json # ground_truth
+evalset/code_correction_test/correction_set.json
 ```
 
-## 4.retrieval-eval(table_column_select)
+We use the  ***executable_pass_rate***  of the corrected code in pass-1 to evaluate the model's code correction ability. You can perform code-correction evaluation by running the following Python command:
+
+```bash
+python run_code_correction_eval.py \
+		--model_path  <EVAL MODEL PATH> \
+		--template  <CHAT_TEMPLATE_NAME, support [llama3, baichuan, chatglm, None], default None> \
+    	--eval_results_save_path <PATH TO SAVE THE EVAL RESULTS> \
+        --gpus_num <NUMBER OF GPU TO RUN INFERENCE> \
+        --temperature <ONE OF THE INFERENCE PARAMETER>
+```
+
+### Ambiguous reject eval
+
+We provide 300 table-based queries, with a ratio of 1:3 between queries marked as ambiguous (to be rejected) and queries that should be accepted and correctly answered. Dataset path:
+
+```python
+# test queries
+evalset/reject_test/test_query.json
+# queries with ground truth
+evalset/reject_test/ground_truth.json
+```
+
+We use **accuracy**, **recall**, and **F1 score** as metrics to evaluate the LLM's ability in this task. You can perform reject evaluation by  running the following Python command:
+
+```bash
+python run_reject_eval.py \
+    --model_path <EVAL MODEL PATH>  \
+    --save_path <LLM OUTPUT CONTENT SAVE PATH> \
+    --gpus_num <NUMBER OF GPU TO RUN INFERENCE> \
+    --temperature <ONE OF THE INFERENCE PARAMETER>
+```
+
+### Table&Fields recall eval
+
+The provided eval dataset path:
+
+```python
+evalset/retrieval_test/recall_set.json
+```
+
+We use a series of evaluation metrics such as **recall**, **precision**, **Jaccard similarity**, and **Hamming loss** to assess the LLM's performance in table and field retrieval tasks.  You can perform recall evaluation by  running the following Python command:
+
 ```bash
 python run_recall_eval.py \
-    --model_path /mnt/tablegpt/zt/modelscope/qwen/Qwen2-72B-Instruct-GPTQ-Int4 \
-    --temperature 0.01 \
-    --max_model_len  8192 \
-    --max_new_tokens 1024 \
-    --test_path evalset/retrieval_test/recall_set.json \
-    --gpus_num 4 
+    --model_path <EVAL MODEL PATH> \
+    --temperature <LLM OUTPUT CONTENT SAVE PATH> \
+    --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
 ```
+
+
+
+
+
+
+
+## 

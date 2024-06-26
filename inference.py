@@ -55,7 +55,8 @@ def generate_outputs(messages_batch, llm_model, tokenizer, generate_args):
     }
     """
     model_type = generate_args.pop("model_type", "chat_model")
-
+    # 添加一个默认参数， 抑制instruct-following能力较差的模型，输出重复内容，考虑加入参数配置
+    generate_args["presence_penalty"] = 2.0
     sampling_params = SamplingParams(**generate_args)
     
     prompt_batch = []
