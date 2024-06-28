@@ -18,12 +18,9 @@ def extract_ori_observe(completion: str) -> str:
     pattern = r"Observe：\n(.*?)\n\n"
 
     # 使用re.search进行匹配
-    try:
-        match = re.search(pattern, completion, re.DOTALL)
-        return match.group(1)
-    except:
-        print(completion)
-        raise Exception()
+
+    match = re.search(pattern, completion, re.DOTALL)
+    return match.group(1)
 
 def extract_code_without_comments(code):
     """
