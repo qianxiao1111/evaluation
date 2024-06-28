@@ -29,19 +29,18 @@ def extract_code_without_comments(code):
     :param code: str, 输入的Python代码
     :return: str, 提取后的代码
     """
-    code_io = StringIO(code)
-    result = []
+    code = re.sub(r'"""[\s\S]*?"""', '', code)
+    code = re.sub(r"'''[\s\S]*?'''", '', code)
 
-    try:
-        tokens = tokenize.generate_tokens(code_io.readline)
-        for token_type, token_string, _, _, _ in tokens:
-            # Skip comment tokens
-            if token_type != tokenize.COMMENT:
-                result.append(token_string)
-    except tokenize.TokenError as e:
-        print(f"Token error: {e}")
-
-    return ''.join(result)
+    # 移除单行注释
+    lines = code.split('\n')
+    cleaned_lines = []
+    for line in lines:
+        # 移除以 # 开始的注释，但保留字符串中的 #
+        cleaned_line = re.sub(r'(?<!["\'"])#.*$', '', line)
+        cleaned_lines.append(cleaned_line.rstrip())  # rstrip() 移除行尾空白
+    # 重新组合代码，保留空行以维持原始结构
+    return '\n'.join(cleaned_lines)
 
 
 def is_python_code(line: str) -> bool:
@@ -157,3 +156,23 @@ def get_table_infos(
         df_head_markdown = df.head(3).to_markdown(index=False)
         table_infos += f"Table samples of {table_name}\n" + df_head_markdown + "\n"
     return table_infos
+
+if __name__ == "__main__":
+    st ="""import pandas as pd
+
+# Assuming df1 and df2 are the dataframes
+
+# Join df1 and df2 on 'id'
+merged_df = pd.merge(df1, df2, on='id')
+
+# Filter the dataframe to include only the battles where the 'ship_type' is 'Brig'
+brig_ship_battles = merged_df[merged_df['ship_type'] == 'Brig']
+
+# Get the unique 'id' and 'name' of the battles
+final_df = brig_ship_battles[['id', 'name']].drop_duplicates()
+
+# Print the final result
+print(final_df)
+"""
+    c = extract_code_without_comments(st)
+    print(c)
