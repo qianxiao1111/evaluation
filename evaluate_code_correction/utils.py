@@ -13,6 +13,18 @@ import re
 from typing import Any, Tuple
 from langchain_experimental.tools.python.tool import PythonAstREPLTool
 
+def extract_ori_observe(completion: str) -> str:
+    # 正则表达式模式
+    pattern = r"Observe：\n(.*?)\n\n"
+
+    # 使用re.search进行匹配
+    try:
+        match = re.search(pattern, completion, re.DOTALL)
+        return match.group(1)
+    except:
+        print(completion)
+        raise Exception()
+
 def extract_code_without_comments(code):
     """
     从Python代码中提取除注释行以外的代码。

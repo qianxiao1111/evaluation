@@ -40,15 +40,15 @@ class Metric:
                 "samples",
                 "weighted",
             ], "metric type error."
-            resp["{}-Averaged Precision".format(metric_type)] = precision_score(
+            resp["{}-Averaged Precision".format(metric_type)] = round(precision_score(
                 y_true_binary, y_pred_binary, average=metric_type
-            )
-            resp["{}-Averaged Recall".format(metric_type)] = recall_score(
+            ),3)
+            resp["{}-Averaged Recall".format(metric_type)] = round(recall_score(
                 y_true_binary, y_pred_binary, average=metric_type
-            )
-            resp["{}-Averaged F1".format(metric_type)] = f1_score(
+            ),3)
+            resp["{}-Averaged F1".format(metric_type)] = round(f1_score(
                 y_true_binary, y_pred_binary, average=metric_type
-            )
+            ),3)
         return resp
 
     @classmethod
@@ -70,7 +70,7 @@ class Metric:
         ]
 
         jaccard = sum(similarities) / len(similarities)
-        return {"Jaccard Similarity": jaccard}
+        return {"Jaccard Similarity": round(jaccard,3)}
 
     @classmethod
     def hamming(
@@ -82,4 +82,4 @@ class Metric:
         hamming_loss = np.sum(y_true_binary != y_pred_binary) / (
             y_true_binary.shape[0] * y_true_binary.shape[1]
         )
-        return {"Hamming Loss": hamming_loss}
+        return {"Hamming Loss": round(hamming_loss,3)}
