@@ -22,6 +22,7 @@ def extract_ori_observe(completion: str) -> str:
     match = re.search(pattern, completion, re.DOTALL)
     return match.group(1)
 
+
 def extract_code_without_comments(code):
     """
     从Python代码中提取除注释行以外的代码。
