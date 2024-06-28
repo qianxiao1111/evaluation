@@ -81,6 +81,16 @@ def get_table_info(table_names: List[str], path_to_db: str, topk: int = 1):
     return table_info, df_locals
 
 
+CODE_PREFIX = """import matplotlib.pyplot as plt
+from mplfonts import use_font
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import warnings
+
+warnings.filterwarnings("ignore")
+# Fixing Chinese font issues
+use_font("Noto Serif CJK SC")\n"""
 path_to_csv = "datasets/csv_lower/{}/{}.csv"
 path_to_query = "datasets/evalset/querys.json"
 path_to_tables = "datasets/evalset/y_tables.json"
@@ -120,7 +130,8 @@ for i in tqdm(range(len(samples))):
         table_infos, df_locals = get_table_info(y_table, path_to_sqlite)
         plan, code, ori = gen.predict(table_infos=table_infos, query=question)
         ast = PythonAstREPLTool(locals=df_locals)
-        flag, exec = ast(code)
+        exec_code = CODE_PREFIX + code
+        flag, exec = ast(exec_code)
         results.append(
             {
                 "id": "Retriever-{}".format(i),
@@ -128,7 +139,7 @@ for i in tqdm(range(len(samples))):
                 "table_infos": table_infos,
                 "query": question,
                 "thought_cot": str(plan),
-                "python_code": str(code),
+                "python_code": str(exec_code),
                 "exec_bool": flag,
                 "exec_result": str(exec),
                 "answer": str(answer),

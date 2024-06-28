@@ -6,8 +6,10 @@
 @IDE ：PyCharm
 """
 import re
+import ast
 import signal
 import pandas as pd
+import numpy as np
 import json
 import os
 import datetime
@@ -20,7 +22,7 @@ from evaluate_code_correction.utils import (
     filter_code,
     filter_cot,
     get_tool,
-    extract_ori_observe
+    extract_ori_observe,
 )
 from evaluate_code_correction.prompt import (
     RECTIFY_PROMPT_PYTHON_SYSTEM,
@@ -41,9 +43,11 @@ warnings.filterwarnings("ignore")
 # Fixing Chinese font issues
 use_font("Noto Serif CJK SC")\n"""
 
+
 # 定义一个异常类，用于超时处理
 class TimeoutException(Exception):
     pass
+
 
 # 创建一个上下文管理器来处理超时
 @contextmanager
@@ -61,6 +65,7 @@ def timeout(time):
         # 取消信号定时器
         signal.alarm(0)
 
+
 def llm_eval(
     query: str,
     code: str,
@@ -77,10 +82,8 @@ def llm_eval(
     :param llm: llm_judge
     :return: Enum [True, False]
     """
-    print("True result", true_result)
-    prompt = ChatPromptTemplate.from_messages(
-        [("system", CLASSIFY_PROMPT_PYTHON)]
-    )
+    # print("True result", true_result)
+    prompt = ChatPromptTemplate.from_messages([("system", CLASSIFY_PROMPT_PYTHON)])
     eval_chain = prompt | llm | StrOutputParser()
     # eval_chain.verbose = True
     input = {
@@ -88,21 +91,16 @@ def llm_eval(
         # "table_infos": table_infos,
         "code": code,
         "observation": observation,
-        "true_result": true_result
+        "true_result": true_result,
     }
-    output = eval_chain.invoke(
-        input=input
-    )
+    output = eval_chain.invoke(input=input)
     res = output
-    print("Observe:", observation)
-    print("LLM eval results: ", res)
+    # print("Observe:", observation)
+    # print("LLM eval results: ", res)
     return True if res.lower() == "yes" else False
 
 
-def format_inputs(
-    test_datas: list[dict],
-    lan_type: str = "Python"
-) -> list[list[dict]]:
+def format_inputs(test_datas: list[dict], lan_type: str = "Python") -> list[list[dict]]:
     """
     Format inputs with prompts and input variances
     :param test_datas: loaded eval samples
@@ -115,7 +113,7 @@ def format_inputs(
         queries = sample["query"]
         table_infos = sample["table_infos"]
 
-        current_time = datetime.datetime.now().strftime('%Y-%m-%d:%H')
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d:%H")
         output = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
         observes = sample["observation"]
 
@@ -124,22 +122,82 @@ def format_inputs(
             query=queries,
             observe=observes,
             current_time=current_time,
-            output=output
+            output=output,
         )
         format_system = RECTIFY_PROMPT_PYTHON_SYSTEM
         messages = [
             {"role": "system", "content": format_system},
-            {"role": "user", "content": format_instruction}
+            {"role": "user", "content": format_instruction},
         ]
         format_message_datas.append(messages)
 
     return format_message_datas
 
+
+def text_to_array(text: str) -> np.array:
+    """
+    将给定的文本转换为NumPy数组。
+    支持数字、字符串以及简单结构（如元组、列表）的转换。
+
+    参数:
+    text (str): 输入的文本，可以是数字、字符串或结构化的数据表示。
+
+    返回:
+    numpy.ndarray: 转换后的NumPy数组。如果输入不支持转换，则返回None。
+    """
+    try:
+        # 使用ast.literal_eval安全地解析文本
+        parsed_data = ast.literal_eval(text)
+        if isinstance(parsed_data, (int, float, str)):  # 如果是单一value
+            return np.array([[parsed_data]])
+        elif isinstance(parsed_data, (list, tuple)):  # 处理列表或元组
+            return pd.DataFrame(parsed_data).dropna(how="all").drop_duplicates().values
+        else:
+            # print("警告：不支持 match 的数据类型或结构。")
+            return None
+    except (ValueError, SyntaxError) as e:
+        # print(f"解析错误：{e}")
+        return None
+
+
+def compare_arrays(A: np.array, B: np.array, threshold: float = 0.5):
+    """
+    比较两个NumPy数组A和B。
+
+    参数:
+    - A, B: NumPy数组
+    - threshold: 部分一致的阈值比例，默认为0.5
+
+    返回:
+    - tuple(bool, bool): 第一个布尔值表示是否存在完全一致的行或列，第二个布尔值表示是否存在部分一致（超过阈值）的行或列。
+    """
+    # 初始化比较结果
+    full_match_found = False
+    partial_match_found = False
+
+    if A is not None and B is not None:
+        # 转置B以方便同时比较行和列
+        A_transposed = A.T
+        B_transposed = B.T
+        # 检查A的每一行是否与B的任一行或列完全一致
+        for arr_A in [A, A_transposed]:
+            for arr_B in [B, B_transposed]:
+                for row_a in arr_A:
+                    if row_a.shape[0] == arr_B.shape[1]:
+                        if np.any(np.all(row_a == arr_B, axis=1)):
+                            full_match_found = True
+                    for row_b in arr_B:  # 这里的 row_b 可能是B的列
+                        match_count = len(set(row_a) & set(row_b))
+                        if match_count / len(row_b) >= threshold:  # a是预测的，b是答案
+                            partial_match_found = True
+    return full_match_found, partial_match_found
+
+
 def eval_outputs(
     model_outputs: list[dict],
     eval_dataset_path: str,
     test_csv_file_path: str,
-    lan_type: str
+    lan_type: str,
 ) -> list[dict]:
     """
     Generate complete eval samples according to the eval_datasets
@@ -166,9 +224,14 @@ def eval_outputs(
         eval_result_sample = {}
 
         if len(df_paths) == 1:
-            df = pd.read_csv(os.path.join(test_csv_file_path, df_paths[0]), low_memory=False)
+            df = pd.read_csv(
+                os.path.join(test_csv_file_path, df_paths[0]), low_memory=False
+            )
         else:
-            df = [pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False) for path in df_paths]
+            df = [
+                pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False)
+                for path in df_paths
+            ]
         tool = get_tool(df)
 
         code, pure_code = filter_code(llm_output)
@@ -182,6 +245,7 @@ def eval_outputs(
                 with timeout(5):  # 设置超时时间为15秒
                     pure_code = CODE_PREFIX + pure_code
                     observe = tool.run(pure_code)  # 需要监控超时的代码块
+
         except TimeoutException as e:
             observe = e
         except SystemExit as e:
@@ -200,6 +264,7 @@ def eval_outputs(
         processed_data.append(eval_result_sample)
     return processed_data
 
+
 def execution_eval(observe: str, ori_error: str) -> bool:
     """
     Test whether the code generated by eval_llm can be executed.
@@ -213,14 +278,33 @@ def execution_eval(observe: str, ori_error: str) -> bool:
         res = not pattern.search(observe)
     except:
         res = True
-    print("Original Error:", ori_error)
-    print("Execute Observe:", observe)
-    print("Execute Result:", res)
+    # print("Original Error:", ori_error)
+    # print("Execute Observe:", observe)
+    # print("Execute Result:", res)
     return res
+
+
+def result_eval(observe: str, true_result: str) -> bool:
+    """
+    Whether observe equal to true_result
+    :return: True or False
+    """
+    observe = observe.strip()
+    while observe.endswith("\n"):
+        observe = observe.strip("\n").strip()
+
+    # 判断完全一致
+    text_full_match = observe == true_result
+    # 判断部分一致
+    arr_pred = text_to_array(observe)
+    arr_true = text_to_array(true_result)
+    arr_full_match, arr_partial_match = compare_arrays(arr_pred, arr_true)
+    return text_full_match, arr_full_match, arr_partial_match
+
 
 def run_eval(
     eval_result_path: str = "../evalset/code_correction_test/results.json",
-    llm_for_judge: Optional[BaseLanguageModel] = None
+    llm_for_judge: Optional[BaseLanguageModel] = None,
 ):
     """
     Calculate eval pass rate, support execute_pass_rate and llm_eval_pass_rate
@@ -228,11 +312,13 @@ def run_eval(
     :param llm_for_judge: llm for classify the content generated by the llm_eval, this param is used while `eval_method == "execution",`
     :return: pass rate
     """
-        # print(eval_answer)
+    # print(eval_answer)
     import json
+
     with open(eval_result_path, "r", encoding="utf-8") as f:
         samples = json.load(f)
     execute_passed, llm_eval_passed = 0, 0
+    matched_all, matched_row, matched_row_patial = 0, 0, 0
     total_len = len(samples)
     for sample in tqdm(samples):
         code = sample["code"]
@@ -241,14 +327,33 @@ def run_eval(
         true_result = sample["true_result"]
         query = sample["query"]
         execute_passed += 1 if execution_eval(observe, ori_error) else 0
+        result = result_eval(observe, true_result)
+        matched_all += 1 if result[0] else 0
+        matched_row += 1 if result[1] else 0
+        matched_row_patial += 1 if result[2] else 0
         if llm_for_judge is not None:
-            llm_eval_passed += 1 if llm_eval(query,
-                                    code, observe,
-                                    true_result, llm_for_judge) else 0
-        print("*" * 20)
-    print(f"Sample length: {total_len}. "
-          f"Execute Passed: {execute_passed}."
-          f"Execute pass-rate is:", round(execute_passed / total_len, 3))
+            llm_eval_passed += (
+                1 if llm_eval(query, code, observe, true_result, llm_for_judge) else 0
+            )
+    print(f"Sample length: {total_len}. ")
+
+    print(
+        f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
+        round(execute_passed / total_len, 3),
+    )
+    print(
+        f"Exactly Matched: {matched_all}." f"\tResult accuracy is:",
+        round(matched_all / total_len, 3),
+    )
+    print(
+        f"Row/Col Matched: {matched_row}." f"\tResult accuracy is:",
+        round(matched_row / total_len, 3),
+    )
+    print(
+        f"Row/Col Partial: {matched_row_patial}." f"\tResult accuracy is:",
+        round(matched_row_patial / total_len, 3),
+    )
+
     if llm_for_judge is not None:
         print(f"LLM eval Passed: {llm_eval_passed}")
         print(f"LLM_eval pass-rate is:", round(llm_eval_passed / total_len, 3))
