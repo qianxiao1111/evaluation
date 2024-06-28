@@ -29,9 +29,6 @@ Question: question based on tables
 Thought: plans to solve the problem
 
 ```python
-import numpy as np
-import pandas as pd
-
 # Data Preparation: This may include creating new columns, converting test_data types, etc.
 
 # Data Processing: This may include grouping, filtering, etc.

@@ -11,7 +11,10 @@ import ast
 import pandas as pd
 import re
 from typing import Any, Tuple
-from langchain_experimental.tools.python.tool import PythonAstREPLTool
+from evaluate_code_correction.pytool import PythonAstREPLTool
+
+# from langchain_experimental.tools.python.tool import PythonAstREPLTool
+
 
 def extract_ori_observe(completion: str) -> str:
     # 正则表达式模式
@@ -30,18 +33,18 @@ def extract_code_without_comments(code):
     :param code: str, 输入的Python代码
     :return: str, 提取后的代码
     """
-    code = re.sub(r'"""[\s\S]*?"""', '', code)
-    code = re.sub(r"'''[\s\S]*?'''", '', code)
+    code = re.sub(r'"""[\s\S]*?"""', "", code)
+    code = re.sub(r"'''[\s\S]*?'''", "", code)
 
     # 移除单行注释
-    lines = code.split('\n')
+    lines = code.split("\n")
     cleaned_lines = []
     for line in lines:
         # 移除以 # 开始的注释，但保留字符串中的 #
-        cleaned_line = re.sub(r'(?<!["\'"])#.*$', '', line)
+        cleaned_line = re.sub(r'(?<!["\'"])#.*$', "", line)
         cleaned_lines.append(cleaned_line.rstrip())  # rstrip() 移除行尾空白
     # 重新组合代码，保留空行以维持原始结构
-    return '\n'.join(cleaned_lines)
+    return "\n".join(cleaned_lines)
 
 
 def is_python_code(line: str) -> bool:
@@ -52,9 +55,10 @@ def is_python_code(line: str) -> bool:
     except:
         return False
 
+
 def extract_text_before_code(text: str) -> str:
     """Tool function for extract text content"""
-    lines = text.split('\n')
+    lines = text.split("\n")
     text_before_code = []
 
     for line in lines:
@@ -62,22 +66,24 @@ def extract_text_before_code(text: str) -> str:
             break
         text_before_code.append(line)
 
-    return '\n'.join(text_before_code)
+    return "\n".join(text_before_code)
 
 
 def extract_python_code(text: str) -> str:
     """Tool function for extract python code"""
-    lines = text.split('\n')
+    lines = text.split("\n")
     python_code = []
 
     for line in lines:
         if is_python_code(line):
             python_code.append(line)
 
-    return '\n'.join(python_code)
+    return "\n".join(python_code)
+
 
 def fix_indents(text: str) -> str:
     return text.replace("\t", "    ")
+
 
 def filter_cot(completion: str):
     """
@@ -157,23 +163,3 @@ def get_table_infos(
         df_head_markdown = df.head(3).to_markdown(index=False)
         table_infos += f"Table samples of {table_name}\n" + df_head_markdown + "\n"
     return table_infos
-
-if __name__ == "__main__":
-    st ="""import pandas as pd
-
-# Assuming df1 and df2 are the dataframes
-
-# Join df1 and df2 on 'id'
-merged_df = pd.merge(df1, df2, on='id')
-
-# Filter the dataframe to include only the battles where the 'ship_type' is 'Brig'
-brig_ship_battles = merged_df[merged_df['ship_type'] == 'Brig']
-
-# Get the unique 'id' and 'name' of the battles
-final_df = brig_ship_battles[['id', 'name']].drop_duplicates()
-
-# Print the final result
-print(final_df)
-"""
-    c = extract_code_without_comments(st)
-    print(c)
