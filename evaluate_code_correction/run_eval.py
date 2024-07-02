@@ -151,7 +151,12 @@ def text_to_array(text: str) -> np.array:
         if isinstance(parsed_data, (int, float, str)):  # 如果是单一value
             return np.array([[parsed_data]])
         elif isinstance(parsed_data, (list, tuple)):  # 处理列表或元组
-            return pd.DataFrame(parsed_data).dropna(how="all").drop_duplicates().values
+            try:
+                return (
+                    pd.DataFrame(parsed_data).dropna(how="all").drop_duplicates().values
+                )
+            except Exception:
+                return None
         else:
             # print("警告：不支持 match 的数据类型或结构。")
             return None
