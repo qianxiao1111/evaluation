@@ -23,6 +23,7 @@ from evaluate_code_correction.utils import (
     filter_cot,
     get_tool,
     extract_ori_observe,
+    get_table_infos
 )
 from evaluate_code_correction.prompt import (
     RECTIFY_PROMPT_PYTHON_SYSTEM,
@@ -111,7 +112,9 @@ def format_inputs(test_datas: list[dict], lan_type: str = "Python") -> list[list
     format_message_datas = []
     for idx, sample in tqdm(enumerate(test_datas)):
         queries = sample["query"]
-        table_infos = sample["table_infos"]
+        table_paths = sample["table_paths"]
+        table_infos = get_table_infos(table_paths)
+        # table_infos = sample["table_infos"]
 
         current_time = datetime.datetime.now().strftime("%Y-%m-%d:%H")
         output = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
@@ -217,8 +220,9 @@ def eval_outputs(
         llm_output = output_texts[idx]
         input_prompt = input_texts[idx]
         ori_error = extract_ori_observe(input_prompt)
-        table_infos = test_datas[idx]["table_infos"]
+        # table_infos = test_datas[idx]["table_infos"]
         df_paths = test_datas[idx]["table_paths"]
+        table_infos = get_table_infos(df_paths)
         true_result = test_datas[idx]["true_result"]
         query = test_datas[idx]["query"]
         eval_result_sample = {}
@@ -242,12 +246,17 @@ def eval_outputs(
             if not pure_code:
                 observe = "Code Error: output empty code.."
             else:
-                with timeout(5):  # 设置超时时间为15秒
+                with timeout(15):  # 设置超时时间为15秒
                     pure_code = CODE_PREFIX + pure_code
+                    print(pure_code) # 这里必须print, 可能出现input()需要交互的情况
                     observe = tool.run(pure_code)  # 需要监控超时的代码块
-
+                    if isinstance(observe, pd.DataFrame):
+                        observe = observe.head().to_markdown(index=False)
+                    else:
+                        observe = str(observe)
+                
         except TimeoutException as e:
-            observe = e
+            observe = f"Timeout Error: code running time exceed 15s.."
         except SystemExit as e:
             observe = f"SystemExit Error: {str(e)}"
         except Exception as e:
@@ -341,18 +350,18 @@ def run_eval(
         f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
         round(execute_passed / total_len, 3),
     )
+    # print(
+    #     f"Exactly Matched: {matched_all}." f"\tResult accuracy is:",
+    #     round(matched_all / total_len, 3),
+    # )
     print(
-        f"Exactly Matched: {matched_all}." f"\tResult accuracy is:",
-        round(matched_all / total_len, 3),
-    )
-    print(
-        f"Row/Col Matched: {matched_row}." f"\tResult accuracy is:",
+        f"Exactly Matched: {matched_row}." f"\tResult accuracy is:",
         round(matched_row / total_len, 3),
     )
-    print(
-        f"Row/Col Partial: {matched_row_patial}." f"\tResult accuracy is:",
-        round(matched_row_patial / total_len, 3),
-    )
+    # print(
+    #     f"Row/Col Partial: {matched_row_patial}." f"\tResult accuracy is:",
+    #     round(matched_row_patial / total_len, 3),
+    # )
 
     if llm_for_judge is not None:
         print(f"LLM eval Passed: {llm_eval_passed}")

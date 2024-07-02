@@ -124,7 +124,7 @@ if __name__ == "__main__":
         "--eval_results_save_path",
         type=str,
         default="evalset/code_correction_test/results.json",
-        help="Max iteration for llm to run each code correction task",
+        help="Eval results save path",
     )
     parser.add_argument(
         "--run_llm_eval",

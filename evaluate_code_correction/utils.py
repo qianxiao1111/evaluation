@@ -139,7 +139,7 @@ def get_tool(df: Any):
     """
     tool = PythonAstREPLTool()
     if isinstance(df, pd.DataFrame):
-        locals = {"df": df}
+        locals = {"df1": df}
     else:
         locals = {}
         for i, dataframe in enumerate(df):
@@ -163,3 +163,14 @@ def get_table_infos(
         df_head_markdown = df.head(3).to_markdown(index=False)
         table_infos += f"Table samples of {table_name}\n" + df_head_markdown + "\n"
     return table_infos
+
+# def get_table_infos(table_paths):
+#     """将所有csv文件对应的df-info拼装到一起"""
+#     infos_list = []
+#     for i, path in enumerate(table_paths):
+#         # normalized_name = normalize_table_name(path)
+#         df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(3).to_string(index=False))
+#         normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
+#         # single_table_name = "\n".join([normalized_head, df_markdown_info])
+#         infos_list.append(normalized_head)
+#     return "\n".join(infos_list)
