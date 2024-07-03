@@ -5,8 +5,11 @@ from recall_eval.run_eval import (
     parser_list,
     eval_outputs,
     save_result,
+    make_pred,
+    pprint_format,
 )
 from inference import load_model, load_tokenizer_and_template, generate_outputs
+
 
 def main(args):
     # init model
@@ -17,8 +20,7 @@ def main(args):
         "max_tokens": args.max_new_tokens,
         "model_type": args.model_type,
     }
-    report = dict()
-    preds = dict()
+
     samples = load_json(args.test_path)
     if args.num is not None:
         samples = samples[: args.num]
@@ -30,23 +32,10 @@ def main(args):
     msgs_ext_sql = format_inputs(code_gen_sql, "extract_sql")
     resp_ext_sql = generate_outputs(msgs_ext_sql, llm_model, tokenizer, generate_args)
     pred_ext_sql = parser_list(resp_ext_sql, "extract_sql")
-    report["sql"] = eval_outputs(pred_ext_sql, samples, 'sql')
-    preds["resp_gen_sql"] = resp_gen_sql
-    preds["resp_ext_sql"] = resp_ext_sql
-
-    # python test
-    msgs_gen_py = format_inputs(samples, "gen_python")
-    resp_gen_py = generate_outputs(msgs_gen_py, llm_model, tokenizer, generate_args)
-    code_gen_py = parser_list(resp_gen_py, "gen_python")
-    msgs_ext_py = format_inputs(code_gen_py, "extract_python")
-    resp_ext_py = generate_outputs(msgs_ext_py, llm_model, tokenizer, generate_args)
-    pred_ext_py = parser_list(resp_ext_py, "extract_python")
-    report["python"] = eval_outputs(pred_ext_py, samples,'python')
-    preds["resp_gen_py"] = resp_gen_py
-    preds["resp_ext_py"] = resp_ext_py
-
+    report = eval_outputs(pred_ext_sql, samples, "sql")
+    preds = make_pred(samples, code_gen_sql, pred_ext_sql)
     # save result
-    print(report)
+    pprint_format(report)
     save_result(preds, report, args.test_path)
 
 
@@ -60,13 +49,13 @@ if __name__ == "__main__":
         help="Path to the model",
     )
     parser.add_argument(
-        '--model_type', choices=['base_model', 'chat_model'], default="chat_model", help='Base model or Chat model'
+        "--model_type",
+        choices=["base_model", "chat_model"],
+        default="chat_model",
+        help="Base model or Chat model",
     )
     parser.add_argument(
-        '--gpus_num', 
-        type=int, 
-        default=1, 
-        help='the number of GPUs you want to use.'
+        "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
     )
     parser.add_argument(
         "--temperature", type=float, default=0.5, help="Temperature setting"
@@ -98,20 +87,18 @@ if __name__ == "__main__":
     main(args)
 
 
-# example /home/dev/weights/CodeQwen1.5-7B-Chat /data0/pretrained-models/checkpoints/qwen2/checkpoint-1200
 """
-# 跑 10 行 测试
+# CodeQwen1.5-7B-Chat
 python run_recall_eval.py \
-    --model_path /home/qyhuang/weights/CodeQwen1.5-7B-Chat \
+    --model_path /home/dev/weights/CodeQwen1.5-7B-Chat \
     --temperature 0.01 \
     --max_model_len  8192 \
     --max_new_tokens 1024 \
     --test_path evalset/retrieval_test/recall_set.json 
-    --num 10
 
-# llama3 70b 全量测试
+# Qwen1.5-72B-Chat-GPTQ-Int4
 python run_recall_eval.py \
-    --model_path /mnt/tablegpt/zt/modelscope/qwen/Qwen2-72B-Instruct-GPTQ-Int4 \
+    --model_path /home/dev/weights/Qwen1.5-72B-Chat-GPTQ-Int4 \
     --temperature 0.01 \
     --max_model_len  8192 \
     --max_new_tokens 1024 \
