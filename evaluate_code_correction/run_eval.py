@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 import json
 import os
+import threading
 import datetime
 from tqdm import tqdm
 from typing import Optional, Any
@@ -65,6 +66,27 @@ def timeout(time):
     finally:
         # 取消信号定时器
         signal.alarm(0)
+
+def run_code(code, result, tool):
+    try:
+        # 在子线程中运行代码
+        result.append(tool.run(code))
+    except Exception as e:
+        result.append(e)
+
+def execute_with_timeout(code, timeout_seconds, tool):
+    result = []
+    thread = threading.Thread(target=run_code, args=(code, result, tool))
+    thread.start()
+    thread.join(timeout_seconds)
+
+    if thread.is_alive():
+        thread._stop()  # 终止子线程
+        raise TimeoutException(f"Timeout error, running time exceed {timeout_seconds} seconds")
+    else:
+        if isinstance(result[0], Exception):
+            raise result[0]
+        return result[0]
 
 
 def llm_eval(
@@ -213,13 +235,11 @@ def eval_outputs(
     """
     with open(eval_dataset_path, "r", encoding="utf-8") as f:
         test_datas = json.load(f)
-    input_texts = [i["input_prompt"] for i in model_outputs]
     output_texts = [i["output_text"] for i in model_outputs]
     processed_data = []
     for idx, test_dt in enumerate(test_datas):
         llm_output = output_texts[idx]
-        input_prompt = input_texts[idx]
-        ori_error = extract_ori_observe(input_prompt)
+        ori_error = test_datas[idx]["observation"]
         # table_infos = test_datas[idx]["table_infos"]
         df_paths = test_datas[idx]["table_paths"]
         table_infos = get_table_infos(df_paths)
@@ -248,8 +268,8 @@ def eval_outputs(
             else:
                 with timeout(15):  # 设置超时时间为15秒
                     pure_code = CODE_PREFIX + pure_code
-                    print(pure_code) # 这里必须print, 可能出现input()需要交互的情况
-                    observe = tool.run(pure_code)  # 需要监控超时的代码块
+                    observe = execute_with_timeout(pure_code, 15, tool)
+                    # observe = tool.run(pure_code)  # 需要监控超时的代码块
                     if isinstance(observe, pd.DataFrame):
                         observe = observe.head().to_markdown(index=False)
                     else:
@@ -282,14 +302,16 @@ def execution_eval(observe: str, ori_error: str) -> bool:
     """
     # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
     pattern = re.compile(r"error|exception", re.IGNORECASE)
+    def truncate_string(s, length=100):
+        return s[:length] + '...' if len(s) > length else s
 
     try:
         res = not pattern.search(observe)
     except:
         res = True
-    # print("Original Error:", ori_error)
-    # print("Execute Observe:", observe)
-    # print("Execute Result:", res)
+    print(f"Original Error: {truncate_string(ori_error)}") 
+    print(f"Execute Observe: {truncate_string(observe)}")
+    print(f"Execute Result: {res}\n")
     return res
 
 

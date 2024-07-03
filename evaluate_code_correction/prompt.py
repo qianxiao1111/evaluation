@@ -7,40 +7,85 @@
 """
 
 
-RECTIFY_PROMPT_PYTHON_SYSTEM = """
-你现在正在充当一名Python代码reviewer，你需要根据输入的query、表格信息、运行的错误信息来对输入的原始代码和代码思路进行修改，以获得正确的运行结果。
+# RECTIFY_PROMPT_PYTHON_SYSTEM = """
+# 你现在正在充当一名数据分析任务的Python代码审查员，并能访问对应的pandas Dataframes。
 
-输出的内容需要保持以下格式：
-Thought: 思考错误的原因并输出正确的解决方法
+# 你需要根据输入的查询、表格信息以及运行时错误信息，对输入的原始代码和代码思路进行修改，以获得正确的运行结果。
+
+# 请输出以下格式的内容：
+
+# Thought: 解释错误的原因并提供正确的解决方法。
+
+# Python Code:
+# ```python
+# # 数据预处理: 如果需要，对数据进行预处理和清理，避免直接使用 `pd.DataFrame` 进行分析数据的获取。
+
+# # 数据分析: 对数据进行分析操作，例如分组、过滤、聚合等。
+
+# # 声明 `final_df` 变量: 将数据准备和处理的结果赋值给 `final_df`。
+
+# # 根据问题打印最终结果
+# ```
+# """
+
+RECTIFY_PROMPT_PYTHON_SYSTEM ="""
+You are now acting as a Python code reviewer for data analysis tasks and have access to the corresponding pandas DataFrames.
+
+Based on the input query, table information, and runtime error messages, you need to modify the provided original code and thought process to achieve the correct result.
+
+Please output the content in the following format:
+
+Thought: Explain the cause of the error and provide the correct solution.
+
 Python Code:
 ```python
-# Data preprocessing: Preprocessing and cleaning data if necessary. Avoid using `pd.DataFrame` to obtain analysis data.
+# Data Preprocessing: If necessary, preprocess and clean the data. Avoid using `pd.DataFrame` to obtain analysis data.
 
-# Data analysis: Manipulating data for analysis, such as grouping, filtering, aggregating, etc.
+# Data Analysis: Perform data analysis operations such as grouping, filtering, aggregating, etc.
 
-# Declare `final_df` var: Assign the result of the data preparation and processing to `final_df`.
+# Declare `final_df` Variable: Assign the result of data preparation and processing to `final_df`.
 
-# Print the final result based on the question
+# Print the final result based on the query
 ```
 """
 
 RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
-以下是输入的表格信息：
+Here is the input table information:
 {table_infos}
 
-以下是输入的query：
+Here is the input query:
 {query}
 
-以下是输入的代码和思考过程：
+Here is the input code and thought process:
 {output}
 
-以下是原始Python代码运行后的结果Observe：
+Here is the result of running the original Python code (Observe):
 {observe}
 
-开始！
-请根据以上约定的格式, 对输入的代码进行纠错，保证代码获得符合用户输入和表格信息的正确结果。 注意不要使用`pd.DataFrame`来获取分析数据\n
-当前时间: {current_time}
+Let's start!
+Please correct the input code according to the format above, ensuring the code produces the correct result based on the user's input and table information. Note that you do not need to use pd.DataFrame to define analysis data.
+
+Current time: {current_time}
 """
+
+# RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
+# 以下是输入的表格信息：
+# {table_infos}
+
+# 以下是输入的查询：
+# {query}
+
+# 以下是输入的代码和思考过程：
+# {output}
+
+# 以下是原始Python代码运行后的结果（Observe）：
+# {observe}
+
+# 开始！
+# 请根据以上格式，对输入的代码进行纠错，确保代码根据用户的输入和表格信息获得正确的结果。注意你无需使用 pd.DataFrame 来定义分析数据。
+
+# 当前时间：{current_time}
+# """
 
 CLASSIFY_PROMPT_PYTHON = """
 你现在正在充当一名Python代码reviewer，输入思考过程和代码以及执行结果是根据用户的query和表格信息生成的。

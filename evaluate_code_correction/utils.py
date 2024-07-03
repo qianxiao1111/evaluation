@@ -18,7 +18,7 @@ from evaluate_code_correction.pytool import PythonAstREPLTool
 
 def extract_ori_observe(completion: str) -> str:
     # 正则表达式模式
-    pattern = r"Observe：\n(.*?)\n\n"
+    pattern = r"(Observe):\n(.*?)\n\n"
 
     # 使用re.search进行匹配
 
@@ -139,7 +139,7 @@ def get_tool(df: Any):
     """
     tool = PythonAstREPLTool()
     if isinstance(df, pd.DataFrame):
-        locals = {"df1": df}
+        locals = {"df": df}
     else:
         locals = {}
         for i, dataframe in enumerate(df):
@@ -149,28 +149,39 @@ def get_tool(df: Any):
     return tool
 
 
-def get_table_infos(
-    df_paths: list[str],
-) -> str:
-    import pandas as pd
-    from pathlib import Path
+# def get_table_infos(
+#     df_paths: list[str],
+# ) -> str:
+#     import pandas as pd
+#     from pathlib import Path
 
-    table_infos = ""
-    for i in range(len(df_paths)):
-        path = df_paths[i]
-        table_name = Path(path).stem
-        df = pd.read_csv(path)
-        df_head_markdown = df.head(3).to_markdown(index=False)
-        table_infos += f"Table samples of {table_name}\n" + df_head_markdown + "\n"
-    return table_infos
 
-# def get_table_infos(table_paths):
-#     """将所有csv文件对应的df-info拼装到一起"""
-#     infos_list = []
-#     for i, path in enumerate(table_paths):
-#         # normalized_name = normalize_table_name(path)
-#         df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(3).to_string(index=False))
-#         normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
-#         # single_table_name = "\n".join([normalized_head, df_markdown_info])
-#         infos_list.append(normalized_head)
-#     return "\n".join(infos_list)
+#     if len(df_paths) == 1:
+#         df = pd.read_csv(df_paths[0])
+#         df_head_markdown = df.head(3).to_markdown(index=False)
+#         table_infos = f"Table samples of df\n" + df_head_markdown + "\n"
+#     else:
+#         table_infos = ""
+#         for i in range(len(df_paths)):
+#             path = df_paths[i]
+#             table_name = Path(path).stem
+#             df = pd.read_csv(path)
+#             df_head_markdown = df.head(3).to_markdown(index=False)
+#             table_infos += f"Table samples of df{i+1}\n" + df_head_markdown + "\n"
+#     return table_infos
+
+def get_table_infos(table_paths):
+    """将所有csv文件对应的df-info拼装到一起"""
+    infos_list = []
+    if len(table_paths) == 1:
+        df_markdown_info = str(pd.read_csv(table_paths[0], encoding="utf-8").head(3).to_string(index=False))
+        normalized_head = f"""/*\n"df.head()" as follows:\n{df_markdown_info}\n*/"""
+        infos_list.append(normalized_head)
+    else:
+        for i, path in enumerate(table_paths):
+            # normalized_name = normalize_table_name(path)
+            df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(3).to_markdown(index=False))
+            normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
+            # single_table_name = "\n".join([normalized_head, df_markdown_info])
+            infos_list.append(normalized_head)
+    return "\n".join(infos_list)

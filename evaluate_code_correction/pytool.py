@@ -241,7 +241,7 @@ class PythonAstREPLTool(BaseTool):
             tree = ast.parse(query)
             module = ast.Module(tree.body[:-1], type_ignores=[])
             exec(ast.unparse(module), self.globals, self.locals)  # type: ignore
-            module_end_str = "print(format_result({}))".format(last_df)
+            module_end_str = "print(format_result({:.20}))".format(last_df)
             # module_end = ast.Module(tree.body[-1:], type_ignores=[])
             # module_end_str = ast.unparse(module_end)  # type: ignore
             io_buffer = StringIO()
