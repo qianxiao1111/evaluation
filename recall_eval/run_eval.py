@@ -1,7 +1,7 @@
 import os
 import re
 import ast
-from typing import List,Dict,Any
+from typing import List, Dict, Any
 from recall_eval.prompt import (
     gen_sys_python,
     gen_sys_sql,
@@ -14,10 +14,37 @@ from recall_eval.eval_metrics import Metric
 from util import load_json, save_json
 
 
-def format_inputs(samples: List[Dict], mode: str)->List:
+def pprint_format(result):
+    print("tables:")
+    print("macro-Averaged Recall", result["table"]["macro-Averaged Recall"])
+    print("macro-Averaged F1", result["table"]["macro-Averaged F1"])
+    print("columns:")
+    print("macro-Averaged Recall", result["column"]["macro-Averaged Recall"])
+    print("macro-Averaged F1", result["column"]["macro-Averaged F1"])
+
+
+def make_pred(samples, code_gen_sql, pred_ext_sql):
+    assert len(samples) == len(code_gen_sql)
+    assert len(samples) == len(pred_ext_sql)
+    preds = []
+    for i in range(len(samples)):
+        preds.append(
+            {
+                "query": samples[i]["query"],
+                "code_gen_sql": code_gen_sql[i],
+                "pred_table": pred_ext_sql[i]["tables"],
+                "pred_col": pred_ext_sql[i]["columns"],
+                "label_table": samples[i]["label_table"],
+                "label_col": samples[i]["label_col"],
+            }
+        )
+    return preds
+
+
+def format_inputs(samples: List[Dict], mode: str) -> List:
     """
     输入数据格式化函数，按照 generate 的格式要求改造 inputs
-    共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取  
+    共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取
     :param samples: 待格式化样例数据
     :param mode: 格式化模式
     """
@@ -56,7 +83,7 @@ def format_inputs(samples: List[Dict], mode: str)->List:
     return msgs
 
 
-def parser_text(text:str, mode: str)->Any:
+def parser_text(text: str, mode: str) -> Any:
     """
     llm 推理结果解析函数，提取 生成代码 或 召回的表格和字段信息
     共有四种模式，分别为 sql代码生成、python 代码生成、sql结果抽取、python结果抽取
@@ -103,6 +130,15 @@ def parser_text(text:str, mode: str)->Any:
         if match_columns:
             try:
                 columns = ast.literal_eval(f"[{match_columns[0]}]")
+                if len(tables) == 1 and len(columns) > 0:
+                    columns = [
+                        (
+                            "{}.{}".format(tables[0], column)
+                            if not column.startswith("{}.".format(tables[0]))
+                            else column
+                        )
+                        for column in columns
+                    ]
             except (SyntaxError, ValueError):
                 pass
         return {"tables": tables, "columns": columns}
@@ -126,15 +162,17 @@ def save_result(preds, report, test_file_path):
     print(f"Recall Eval Saved:{save_path}")
 
 
-def eval_outputs(preds:List[Dict], samples:List[Dict],lang:str=None)->Dict:
-    '''
+def eval_outputs(preds: List[Dict], samples: List[Dict], lang: str = None) -> Dict:
+    """
     eval结果计算函数，使用 Metric 中评估方法，评估表格、字段召回的相关指标
     :param preds: 模型预测结果
     :param samples: 数据集测试样本
-    '''
+    """
+
     def combine_metrics_under_key(pred_data, label_data, key):
         combined_metrics = {}
-        for metric_name in ["averaged", "jaccard", "hamming"]:
+        # for metric_name in ["averaged", "jaccard", "hamming"]:
+        for metric_name in ["averaged"]:
             metric_results = getattr(Metric, metric_name)(pred_data, label_data)
             combined_metrics.update(metric_results)
 
