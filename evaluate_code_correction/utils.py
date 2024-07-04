@@ -11,9 +11,15 @@ import ast
 import pandas as pd
 import re
 from typing import Any, Tuple
-from evaluate_code_correction.pytool import PythonAstREPLTool
+from langchain_experimental.tools.python.tool import PythonAstREPLTool
+from evaluate_code_correction.pytool import format_result, extract_last_df
 
-# from langchain_experimental.tools.python.tool import PythonAstREPLTool
+
+def recraft_query(query, locals):
+    last_df = extract_last_df(query, locals)
+    end_str = "\n" + format_result + "print(format_result({}))".format(last_df)
+    recraft_query = query + end_str
+    return recraft_query
 
 
 def extract_ori_observe(completion: str) -> str:
@@ -170,18 +176,25 @@ def get_tool(df: Any):
 #             table_infos += f"Table samples of df{i+1}\n" + df_head_markdown + "\n"
 #     return table_infos
 
+
 def get_table_infos(table_paths):
     """将所有csv文件对应的df-info拼装到一起"""
     infos_list = []
     if len(table_paths) == 1:
-        df_markdown_info = str(pd.read_csv(table_paths[0], encoding="utf-8").head(3).to_string(index=False))
+        df_markdown_info = str(
+            pd.read_csv(table_paths[0], encoding="utf-8").head(3).to_string(index=False)
+        )
         normalized_head = f"""/*\n"df.head()" as follows:\n{df_markdown_info}\n*/"""
         infos_list.append(normalized_head)
     else:
         for i, path in enumerate(table_paths):
             # normalized_name = normalize_table_name(path)
-            df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(3).to_markdown(index=False))
-            normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
+            df_markdown_info = str(
+                pd.read_csv(path, encoding="utf-8").head(3).to_markdown(index=False)
+            )
+            normalized_head = (
+                f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
+            )
             # single_table_name = "\n".join([normalized_head, df_markdown_info])
             infos_list.append(normalized_head)
     return "\n".join(infos_list)
