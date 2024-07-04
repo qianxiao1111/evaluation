@@ -23,7 +23,6 @@ from evaluate_code_correction.utils import (
     filter_code,
     filter_cot,
     get_tool,
-    extract_ori_observe,
     get_table_infos,
     recraft_query,
 )

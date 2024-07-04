@@ -39,12 +39,7 @@ def main(args):
                                          tokenizer,
                                          generate_args)
     # save_json("./model_outputs.json", model_outputs_tmp)
-    # 这是第二轮输出， 输出类别为negative， positive或者uncertain
-    format_message_datas_tmp = format_llm_outputs(model_outputs_tmp)
-    model_outputs = generate_outputs(format_message_datas_tmp,
-                                     llm_model, tokenizer, generate_args)
-    # save_json("./model_outputs.json", model_outputs)
-    eval_outputs(model_outputs, test_path)
+    eval_outputs(model_outputs_tmp, test_path)
     
 
 

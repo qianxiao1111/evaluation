@@ -26,13 +26,13 @@ def main(args):
         samples = samples[: args.num]
 
     # sql test
-    msgs_gen_sql = format_inputs(samples, "gen_sql")
+    msgs_gen_sql = format_inputs(samples, "gen_python")
     resp_gen_sql = generate_outputs(msgs_gen_sql, llm_model, tokenizer, generate_args)
-    code_gen_sql = parser_list(resp_gen_sql, "gen_sql")
-    msgs_ext_sql = format_inputs(code_gen_sql, "extract_sql")
+    code_gen_sql = parser_list(resp_gen_sql, "gen_python")
+    msgs_ext_sql = format_inputs(code_gen_sql, "extract_python")
     resp_ext_sql = generate_outputs(msgs_ext_sql, llm_model, tokenizer, generate_args)
-    pred_ext_sql = parser_list(resp_ext_sql, "extract_sql")
-    report = eval_outputs(pred_ext_sql, samples, "sql")
+    pred_ext_sql = parser_list(resp_ext_sql, "extract_python")
+    report = eval_outputs(pred_ext_sql, samples, "python")
     preds = make_pred(samples, code_gen_sql, pred_ext_sql)
     # save result
     pprint_format(report)

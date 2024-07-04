@@ -54,11 +54,15 @@ def extract_code_without_comments(code):
 
 
 def is_python_code(line: str) -> bool:
-    """Tool function for extract python code"""
+    """Tool function to check if a line of text is Python code"""
     try:
-        ast.parse(line)
-        return True
-    except:
+        tree = ast.parse(line)
+        # Check if the parsed tree has at least one node that represents executable code
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.Expr, ast.Assign, ast.FunctionDef, ast.ClassDef, ast.Import, ast.ImportFrom, ast.For, ast.While, ast.If, ast.With, ast.Raise, ast.Try)):
+                return True
+        return False
+    except SyntaxError:
         return False
 
 

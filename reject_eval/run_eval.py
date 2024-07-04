@@ -4,6 +4,7 @@ from reject_eval.prompt import (
     output_content_classify_instruct,
     output_content_classify_system
 )
+from evaluate_code_correction.utils import filter_code
 from reject_eval.eval_metrics import evaluation
 from util import load_json, save_json
 import os
@@ -41,7 +42,6 @@ def format_llm_outputs(model_outputs: list[dict]) -> list[list[dict]]:
 
     return format_message_datas
 
-
 def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str = "") -> None:
     """Calculate the reject evaluation metric based
     on model outputs for binary classification
@@ -52,14 +52,21 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
     processed_data = []
     for idx, test_dt in enumerate(test_datas):
         llm_output = output_texts[idx]
+
         test_dt["llm_output"] = llm_output
-        # 解析输出判断结果
-        if any(keyword.lower() in llm_output.lower() for keyword in ["positive"]):
-            test_dt["is_reject"] = False
-        elif any(keyword.lower() in llm_output.lower() for keyword in ["negative"]):
+        code, pure_code = filter_code(llm_output)
+        if pure_code == "" or "no" in pure_code:
             test_dt["is_reject"] = True
         else:
-            pass
+            test_dt["is_reject"] = False
+
+
+        # # 解析输出判断结果
+        # if any(keyword.lower() in llm_output.lower() for keyword in ["positive"]):
+            
+        # elif any(keyword.lower() in llm_output.lower() for keyword in ["negative"]):
+        #     test_dt["is_reject"] = True
+
             # print("解析错误")
         processed_data.append(test_dt)
     
@@ -68,7 +75,12 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
     if not save_path:
         save_path = os.path.join(parent_path, 'llm_output_data.json')
     ground_truth_path = os.path.join(parent_path, 'ground_truth.json')
+    ground_truth_datas = load_json(ground_truth_path)
+    for i in range(len(ground_truth_datas)):
+        processed_data[i]["true_result"] = ground_truth_datas[i]["is_reject"]
+        # processed_data[i][""]
 
     save_json(save_path, processed_data)
     print(f"评估每条数据的模型输出及结果保存路径：{save_path}")
     evaluation(ground_truth_path, save_path)
+
