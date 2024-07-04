@@ -24,7 +24,8 @@ from evaluate_code_correction.utils import (
     filter_cot,
     get_tool,
     extract_ori_observe,
-    get_table_infos
+    get_table_infos,
+    recraft_query,
 )
 from evaluate_code_correction.prompt import (
     RECTIFY_PROMPT_PYTHON_SYSTEM,
@@ -67,12 +68,14 @@ def timeout(time):
         # 取消信号定时器
         signal.alarm(0)
 
+
 def run_code(code, result, tool):
     try:
         # 在子线程中运行代码
         result.append(tool.run(code))
     except Exception as e:
         result.append(e)
+
 
 def execute_with_timeout(code, timeout_seconds, tool):
     result = []
@@ -82,7 +85,9 @@ def execute_with_timeout(code, timeout_seconds, tool):
 
     if thread.is_alive():
         thread._stop()  # 终止子线程
-        raise TimeoutException(f"Timeout error, running time exceed {timeout_seconds} seconds")
+        raise TimeoutException(
+            f"Timeout error, running time exceed {timeout_seconds} seconds"
+        )
     else:
         if isinstance(result[0], Exception):
             raise result[0]
@@ -268,13 +273,14 @@ def eval_outputs(
             else:
                 with timeout(15):  # 设置超时时间为15秒
                     pure_code = CODE_PREFIX + pure_code
+                    pure_code = recraft_query(pure_code, tool.locals)
                     observe = execute_with_timeout(pure_code, 15, tool)
                     # observe = tool.run(pure_code)  # 需要监控超时的代码块
                     if isinstance(observe, pd.DataFrame):
                         observe = observe.head().to_markdown(index=False)
                     else:
                         observe = str(observe)
-                
+
         except TimeoutException as e:
             observe = f"Timeout Error: code running time exceed 15s.."
         except SystemExit as e:
@@ -302,14 +308,15 @@ def execution_eval(observe: str, ori_error: str) -> bool:
     """
     # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
     pattern = re.compile(r"error|exception", re.IGNORECASE)
+
     def truncate_string(s, length=100):
-        return s[:length] + '...' if len(s) > length else s
+        return s[:length] + "..." if len(s) > length else s
 
     try:
         res = not pattern.search(observe)
     except:
         res = True
-    print(f"Original Error: {truncate_string(ori_error)}") 
+    print(f"Original Error: {truncate_string(ori_error)}")
     print(f"Execute Observe: {truncate_string(observe)}")
     print(f"Execute Result: {res}\n")
     return res
