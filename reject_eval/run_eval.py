@@ -1,3 +1,4 @@
+import re
 from reject_eval.prompt import (
     eval_system,
     eval_instruction,
@@ -9,6 +10,11 @@ from reject_eval.eval_metrics import evaluation
 from util import load_json, save_json
 import os
 
+def contains_independent_no(text):
+    # \b 表示单词边界, \s* 表示0个或多个空白字符，包括空格、制表符和换行符
+    pattern = r'\bno\b\s*'
+    match = re.search(pattern, text, re.IGNORECASE)
+    return match is not None
 
 def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     """Format inputs to the required messages"""
@@ -55,7 +61,7 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
 
         test_dt["llm_output"] = llm_output
         code, pure_code = filter_code(llm_output)
-        if pure_code == "" or "no" in pure_code:
+        if pure_code == "" or contains_independent_no(pure_code):
             test_dt["is_reject"] = True
         else:
             test_dt["is_reject"] = False

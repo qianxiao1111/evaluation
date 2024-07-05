@@ -103,7 +103,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--test_csv_file_path",
         type=str,
-        required=True,
         help="Path to the test csv files",
         default="./",
     )

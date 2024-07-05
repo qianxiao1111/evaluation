@@ -795,11 +795,6 @@
     "is_reject": "true or false"
   },
   {
-    "df_info": "/*\n'hgjd_gy_zygycpdxsykc_df' description information:\n\nhgjd_gy_zygycpdxsykc_df.head().to_markdown()\n| 指标                                      |   2019年第四季度 |\n|:------------------------------------------|-----------------:|\n| 运动型多用途用车(SUV)销售量_累计值        |            871.8 |\n| 运动型多用途用车(SUV)产销率_累计值        |             99.5 |\n| 运动型多用途用车(SUV)产销率比上年同期增减 |             -0.4 |\n| 运动型多用途用车(SUV)期末库存比年初增减   |              2.5 |\n*/",
-    "query": "请根据2019年和2020年各季度数据，绘制一张折线图，展示运动型多用途用车(SUV)销售量的变化趋势，以便分析两年间季度销售量的差异及变化情况。",
-    "is_reject": "true or false"
-  },
-  {
     "df_info": "/*\n'lovemusik_df' description information:\n\nlovemusik_df.head().to_markdown()\n|   Year | Award            | Category                                           | Nominee             | Result    |\n|-------:|:-----------------|:---------------------------------------------------|:--------------------|:----------|\n|   2007 | Tony Award       | Best Performance by a Leading Actor in a Musical   | Michael Cerveris    | Nominated |\n|   2007 | Tony Award       | Best Performance by a Leading Actress in a Musical | Donna Murphy        | Nominated |\n|   2007 | Tony Award       | Best Performance by a Featured Actor in a Musical  | David Pittu         | Nominated |\n|   2007 | Tony Award       | Best Orchestrations                                | Jonathan Tunick     | Nominated |\n|   2007 | Drama Desk Award | Outstanding Musical                                | Outstanding Musical | Nominated |\n*/",
     "query": "能否生成一个柱状图，展示2007年在各个类别中获奖（Won）与未获奖（Nominated）的提名者数量对比？这有助于我们分析哪些类别的获奖率较高。",
     "is_reject": "true or false"
@@ -1002,11 +997,6 @@
   {
     "df_info": "/*\n'jczs_df' description information:\n\njczs_df.head().to_markdown()\n| 日期       |   最新值 |      涨跌幅 |   近3月涨跌幅 |   近6月涨跌幅 |   近1年涨跌幅 |   近2年涨跌幅 |   近3年涨跌幅 |\n|:-----------|---------:|------------:|--------------:|--------------:|--------------:|--------------:|--------------:|\n| 2011-12-05 |     1014 | nan         |           nan |           nan |           nan |           nan |           nan |\n| 2011-12-12 |     1013 |  -0.0986193 |           nan |           nan |           nan |           nan |           nan |\n| 2011-12-19 |     1005 |  -0.789733  |           nan |           nan |           nan |           nan |           nan |\n| 2011-12-26 |      993 |  -1.19403   |           nan |           nan |           nan |           nan |           nan |\n| 2012-01-02 |      991 |  -0.20141   |           nan |           nan |           nan |           nan |           nan |\n*/",
     "query": "在建材指数数据集中，我们能否通过卡方分析来检验'日期'与'近3月涨跌幅'之间是否存在某种关联性？",
-    "is_reject": "true or false"
-  },
-  {
-    "df_info": "/*\n'zgcgjzzcxsfqqyjyhdqk_df' description information:\n\nzgcgjzzcxsfqqyjyhdqk_df.head().to_markdown()\n| 项_目                |    2022 |    2021 |\n|:---------------------|--------:|--------:|\n| 工业总产值(当年价格) | 13190.4 | 15369.1 |\n| 总收入               | 87462.9 | 84402.3 |\n| 技术收入             | 22502.6 | 20419.4 |\n| 产品销售收入         | 20676.1 | 23524.5 |\n| 商品销售收入         | 24616.7 | 23682   |\n*/",
-    "query": "根据表格数据，计算2021年至2022年技术收入的增长值并评估其对政府信息安全基础设施建设的资金保障程度。",
     "is_reject": "true or false"
   },
   {
