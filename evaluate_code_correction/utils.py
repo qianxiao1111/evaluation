@@ -186,7 +186,7 @@ def get_table_infos(table_paths):
     infos_list = []
     if len(table_paths) == 1:
         df_markdown_info = str(
-            pd.read_csv(table_paths[0], encoding="utf-8").head(3).to_string(index=False)
+            pd.read_csv(table_paths[0], encoding="utf-8").head(3).to_markdown(index=False)
         )
         normalized_head = f"""/*\n"df.head()" as follows:\n{df_markdown_info}\n*/"""
         infos_list.append(normalized_head)

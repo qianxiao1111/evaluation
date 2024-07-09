@@ -36,7 +36,6 @@ Based on the input query, table information, and runtime error messages, you nee
 Please output the content in the following format:
 
 Thought: Explain the cause of the error and provide the correct solution.
-
 Python Code:
 ```python
 # Data Preprocessing: If necessary, preprocess and clean the data. Avoid using `pd.DataFrame` to obtain analysis data.

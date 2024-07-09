@@ -125,8 +125,8 @@ def parser_text(text: str, mode: str) -> Any:
         if match_tables:
             try:
                 tables = ast.literal_eval(f"[{match_tables[0]}]")
-            except (SyntaxError, ValueError):
-                pass
+            except Exception as e: # 如果是代碼解析報錯， 直接輸出空列表
+                tables = []
         if match_columns:
             try:
                 columns = ast.literal_eval(f"[{match_columns[0]}]")
@@ -139,8 +139,8 @@ def parser_text(text: str, mode: str) -> Any:
                         )
                         for column in columns
                     ]
-            except (SyntaxError, ValueError):
-                pass
+            except Exception as e:
+                columns = []
         return {"tables": tables, "columns": columns}
     else:
         raise Exception("invalid format mode.")
