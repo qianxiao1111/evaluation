@@ -40,12 +40,17 @@ def save_json(data_path, data_list):
 def get_dfs_info(table_paths):
     """将所有csv文件对应的df-info拼装到一起"""
     infos_list = []
-    for i, path in enumerate(table_paths):
-        # normalized_name = normalize_table_name(path)
-        df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(5).to_string(index=False))
-        normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
-        # single_table_name = "\n".join([normalized_head, df_markdown_info])
+    if len(table_paths) == 1:
+        df_markdown_info = str(pd.read_csv(table_paths[0], encoding="utf-8").head(5).to_string(index=False))
+        normalized_head = f"""/*\n"df.head()" as follows:\n{df_markdown_info}\n*/"""
         infos_list.append(normalized_head)
+    else:
+        for i, path in enumerate(table_paths):
+            # normalized_name = normalize_table_name(path)
+            df_markdown_info = str(pd.read_csv(path, encoding="utf-8").head(5).to_string(index=False))
+            normalized_head = f"""/*\n"df{i+1}.head()" as follows:\n{df_markdown_info}\n*/"""
+            # single_table_name = "\n".join([normalized_head, df_markdown_info])
+            infos_list.append(normalized_head)
     return "\n".join(infos_list)
 
 def sample_from_two_lists(list1, list2):  
@@ -263,4 +268,3 @@ def execute_with_timeout(code, timeout_seconds, tool):
         if isinstance(result[0], Exception):
             raise result[0]
         return result[0]
-

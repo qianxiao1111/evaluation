@@ -11,13 +11,14 @@
 
 Table-llm-eval is a project designed to support the evaluation of large language model (LLM) capabilities related to table data. 
 
-Given the complexity of table QA tasks and the uncertainty of input instructions, unlike typical table-based QA tasks,  we provide evaluation datasets and scripts for three capabilities: 
+Given the complexity of table QA tasks and the uncertainty of input instructions,  we provide evaluation datasets and scripts for four capabilities: 
 
 - ✨Code correction based on tables 
 - ✨Refusal of ambiguous questions
-- ✨Table & field recall in multi-table scenarios.
+- ✨Table & field recall in multi-table scenarios
+- ✨Table QA output code executable.
 
-We have built an inference method based on the local model path using VLLM as the backend, and defined a set of example prompts templates for the three tasks: code correction, ambiguous question refusal, and table and field recall. 	You also can define your own prompt templates. 
+We have built an inference method based on the local model path using VLLM as the backend, and defined a set of example prompts templates for the four tasks: code correction, ambiguous question refusal,  multi-tables and field recall, and table QA executable. 	You also can define your own prompt templates to acquire better performance. 
 
 ## Usage
 
@@ -47,7 +48,7 @@ We provide a non-executable eval dataset based on the Python language. Eval data
 evalset/code_correction_test/correction_set.json
 ```
 
-We use the  ***executable_pass_rate***  of the corrected code in pass-1 to evaluate the model's code correction ability. You can perform code-correction evaluation by running the following Python command:
+We use the  ***executable_pass_rate*** and ***absolute_match_rate***  of the corrected code in pass-1 to evaluate the model's code correction ability. You can perform code-correction evaluation by running the following Python command:
 
 ```bash
 python run_code_correction_eval.py \
@@ -60,7 +61,7 @@ python run_code_correction_eval.py \
 
 ### Ambiguous reject eval
 
-We provide 300 table-based queries, with a ratio of 1:3 between queries marked as ambiguous (to be rejected) and queries that should be accepted and correctly answered. Dataset path:
+We provide 298 table-based queries, with a ratio of about 1:3 between queries marked as ambiguous (to be rejected) and queries that should be accepted and correctly answered. Dataset path:
 
 ```python
 # test queries
@@ -92,14 +93,23 @@ We use a series of evaluation metrics such as **recall**, **precision**, **Jacca
 ```bash
 python run_recall_eval.py \
     --model_path <EVAL MODEL PATH> \
-    --temperature <LLM OUTPUT CONTENT SAVE PATH> \
+    --temperature <TEMPERATURE> \
     --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
 ```
 
+### Table QA executable 
 
+Provide 2178 table based queries,  eval dataset path:
 
+```python
+evalset/table_qa_execuate_test/tableqa_samples_with_paths.jsonl
+```
 
+We employ ***executable_pass_rate***  of pass-1 to employ the model's tableQA code generation ability. You can perform tableQA evaluation by  running the following Python command:
 
-
-
-## 
+```python
+python run_tableqa_execution_eval.py \
+    --model_path <EVAL MODEL PATH> \
+    --temperature <LLM OUTPUT CONTENT SAVE PATH> \
+    --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
+```
