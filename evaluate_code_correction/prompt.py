@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-@Time ： 2024/5/25 15:52
-@Auth ： zhaliangyu
-@File ：prompt.py
-@IDE ：PyCharm
-"""
-
 
 # RECTIFY_PROMPT_PYTHON_SYSTEM = """
 # 你现在正在充当一名数据分析任务的Python代码审查员，并能访问对应的pandas Dataframes。

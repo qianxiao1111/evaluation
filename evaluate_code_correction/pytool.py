@@ -109,16 +109,6 @@ class DataFrameFlowVisitor(ast.NodeVisitor):
 
         self.generic_visit(node)
 
-    # def visit_Expr(self, node):
-    #     # Identify usage of tracked DataFrame variables in expressions
-    #     if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name):
-    #         for arg in node.value.args:
-    #             if isinstance(arg, ast.Name):
-    #                 # Mark the variable as used, but do not update last_df_variable
-    #                 self.assignments[arg.id] = node
-    #                 self.update_last_df_variable(arg.id)
-    #     self.generic_visit(node)
-
     def do_update(self, node):
         for target in node.targets:
             if isinstance(target, ast.Name):

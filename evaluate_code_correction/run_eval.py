@@ -1,30 +1,24 @@
 # -*- coding: utf-8 -*-
-"""
-@Time ： 2024/5/25 15:39
-@Auth ： zhaliangyu
-@File ：run_eval.py
-@IDE ：PyCharm
-"""
 import re
 import ast
-import signal
 import pandas as pd
 import numpy as np
 import json
 import os
-import threading
 import datetime
 from tqdm import tqdm
 from typing import Optional, Any
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from evaluate_code_correction.utils import (
+from utils import (
     filter_code,
     filter_cot,
     get_tool,
     get_table_infos,
-    recraft_query,
+    timeout,
+    execute_with_timeout,
+    TimeoutException
 )
 from evaluate_code_correction.prompt import (
     RECTIFY_PROMPT_PYTHON_SYSTEM,
@@ -32,7 +26,8 @@ from evaluate_code_correction.prompt import (
     CLASSIFY_PROMPT_PYTHON,
 )
 
-from contextlib import contextmanager
+from evaluate_code_correction.pytool import format_result, extract_last_df
+
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -46,51 +41,11 @@ warnings.filterwarnings("ignore")
 use_font("Noto Serif CJK SC")\n"""
 
 
-# 定义一个异常类，用于超时处理
-class TimeoutException(Exception):
-    pass
-
-
-# 创建一个上下文管理器来处理超时
-@contextmanager
-def timeout(time):
-    # 定义信号处理函数
-    def raise_timeout(signum, frame):
-        raise TimeoutException(f"Timeout error, running time exceed {time}")
-
-    # 设置信号定时器
-    signal.signal(signal.SIGALRM, raise_timeout)
-    signal.alarm(time)
-    try:
-        yield
-    finally:
-        # 取消信号定时器
-        signal.alarm(0)
-
-
-def run_code(code, result, tool):
-    try:
-        # 在子线程中运行代码
-        result.append(tool.run(code))
-    except Exception as e:
-        result.append(e)
-
-
-def execute_with_timeout(code, timeout_seconds, tool):
-    result = []
-    thread = threading.Thread(target=run_code, args=(code, result, tool))
-    thread.start()
-    thread.join(timeout_seconds)
-
-    if thread.is_alive():
-        thread._stop()  # 终止子线程
-        raise TimeoutException(
-            f"Timeout error, running time exceed {timeout_seconds} seconds"
-        )
-    else:
-        if isinstance(result[0], Exception):
-            raise result[0]
-        return result[0]
+def recraft_query(query, locals):
+    last_df = extract_last_df(query, locals)
+    end_str = "\n" + format_result + "print(format_result({}))".format(last_df)
+    recraft_query = query + end_str
+    return recraft_query
 
 
 def llm_eval(
@@ -378,18 +333,11 @@ def run_eval(
         f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
         round(execute_passed / total_len, 3),
     )
-    # print(
-    #     f"Exactly Matched: {matched_all}." f"\tResult accuracy is:",
-    #     round(matched_all / total_len, 3),
-    # )
+
     print(
         f"Exactly Matched: {matched_row}." f"\tResult accuracy is:",
         round(matched_row / total_len, 3),
     )
-    # print(
-    #     f"Row/Col Partial: {matched_row_patial}." f"\tResult accuracy is:",
-    #     round(matched_row_patial / total_len, 3),
-    # )
 
     if llm_for_judge is not None:
         print(f"LLM eval Passed: {llm_eval_passed}")

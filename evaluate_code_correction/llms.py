@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@Time ： 2024/5/28 14:52
-@Auth ： zhaliangyu
-@File ：llms.py
-@IDE ：PyCharm
-"""
+
 from langchain_openai import ChatOpenAI
 
 # llm for the eval_method `llm_eval`

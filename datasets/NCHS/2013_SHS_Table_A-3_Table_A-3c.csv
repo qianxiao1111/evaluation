@@ -1,0 +1,68 @@
+Selected_characteristic,Any_cancer1,Breast_cancer1,Cervical_cancer1,Prostate_cancer1
+Total,8.5 (0.20),1.5 (0.08),1.1 (0.11),2.3 (0.15)
+Sex: Male,7.6 (0.29),*0.1 (0.02),,2.3 (0.15)
+Sex: Female,9.2 (0.27),2.8 (0.15),1.1 (0.11),
+Age (years): 18–44,1.8 (0.15),0.1 (0.03),1.0 (0.19),
+Age (years): 45–64,9.5 (0.35),1.6 (0.15),1.3 (0.19),1.4 (0.20)
+Age (years): 65–74,21.2 (0.81),3.6 (0.35),1.5 (0.31),9.0 (0.91)
+Age (years): 75 and over,27.1 (1.01),6.1 (0.56),*0.4 (0.11),13.0 (1.32)
+Race: One race2,8.5 (0.20),1.5 (0.08),1.1 (0.12),2.3 (0.15)
+Race: White,9.6 (0.24),1.7 (0.09),1.2 (0.14),2.2 (0.17)
+Race: Black or African American,4.6 (0.34),0.8 (0.13),0.5 (0.14),3.0 (0.45)
+Race: American Indian or Alaska Native,*3.4 (1.07),,,
+Race: Asian,2.4 (0.41),*0.3 (0.12),*0.4 (0.16),*1.6 (0.64)
+Race: Native Hawaiian or Other Pacific Islander,,,,
+Race: Two or more races3,8.4 (1.39),*1.5 (0.57),*1.6 (0.60),
+"Race: ""Black or African American  white""",*3.0 (1.35),,,
+"Race: ""American Indian or Alaska Native  white""",14.1 (2.90),*2.7 (1.28),*2.9 (1.29),
+Hispanic or Latino origin4 and race: Hispanic or Latino,3.0 (0.25),0.6 (0.11),0.6 (0.16),0.7 (0.17)
+Hispanic or Latino origin4 and race: Mexican or Mexican American,2.3 (0.28),0.4 (0.12),0.6 (0.17),*0.5 (0.16)
+Hispanic or Latino origin4 and race: Not Hispanic or Latino,9.4 (0.23),1.6 (0.09),1.1 (0.13),2.5 (0.17)
+"Hispanic or Latino origin4 and race: ""White  single race""",10.9 (0.28),1.9 (0.11),1.3 (0.16),2.5 (0.20)
+"Hispanic or Latino origin4 and race: ""Black or African American  single race""",4.7 (0.35),0.8 (0.14),*0.4 (0.13),3.2 (0.47)
+Education5: Less than a high school diploma,8.7 (0.51),1.4 (0.19),1.0 (0.23),2.6 (0.42)
+Education5: High school diploma or GED6,10.8 (0.47),2.1 (0.21),1.3 (0.24),3.1 (0.39)
+Education5: Some college,9.5 (0.41),1.6 (0.16),1.7 (0.33),2.1 (0.31)
+Education5: Bachelor's degree or higher,9.1 (0.39),1.6 (0.16),0.6 (0.12),2.7 (0.29)
+Current employment status7: Employed,4.9 (0.20),0.7 (0.07),1.0 (0.16),0.9 (0.13)
+Current employment status7: Full-time,4.6 (0.22),0.6 (0.07),0.9 (0.20),0.7 (0.11)
+Current employment status7: Part-time,6.3 (0.53),1.1 (0.24),1.1 (0.28),2.5 (0.72)
+Current employment status7: Not employed but has worked previously,15.4 (0.42),2.8 (0.18),1.4 (0.18),5.6 (0.41)
+Current employment status7: Not employed and has never worked ,5.7 (0.67),2.0 (0.39),,
+"Family income8: ""Less than $35 000""",8.6 (0.31),1.5 (0.13),1.3 (0.17),2.5 (0.29)
+"Family income8: ""$35 000 or more""",8.3 (0.26),1.4 (0.10),1.0 (0.16),2.1 (0.19)
+"Family income8: ""$35 000–$49 999""",9.1 (0.57),1.8 (0.24),*1.8 (0.58),2.6 (0.43)
+"Family income8: ""$50 000–$74 999""",8.1 (0.46),1.4 (0.18),1.2 (0.25),2.6 (0.40)
+"Family income8: ""$75 000–$99 999""",8.8 (0.61),1.5 (0.26),1.1 (0.31),1.5 (0.37)
+"Family income8: ""$100 000 or more""",7.6 (0.43),1.2 (0.16),*0.4 (0.12),1.8 (0.31)
+Poverty status9: Poor,5.6 (0.37),0.8 (0.12),1.4 (0.25),0.9 (0.22)
+Poverty status9: Near poor,8.0 (0.46),1.2 (0.16),*1.4 (0.42),2.1 (0.39)
+Poverty status9: Not poor,9.0 (0.27),1.6 (0.11),0.9 (0.11),2.5 (0.20)
+Under 65:Private,5.3 (0.23),0.8 (0.09),0.8 (0.12),0.7 (0.12)
+Under 65:Medicaid,5.3 (0.49),0.9 (0.17),1.1 (0.23),
+Under 65:Other,9.8 (0.94),1.3 (0.33),*2.3 (0.79),2.4 (0.65)
+Under 65:Uninsured,3.0 (0.36),0.3 (0.09),1.8 (0.52),
+65 and over:Private,25.8 (0.95),5.2 (0.47),0.8 (0.21),11.5 (1.07)
+65 and over:Medicare and Medicaid,21.1 (2.03),3.9 (0.87),,10.1 (2.43)
+65 and over:Medicare only,20.6 (1.03),4.5 (0.52),*1.3 (0.40),8.7 (1.25)
+65 and over:Other,29.4 (2.54),*3.0 (1.09),*2.2 (1.06),13.7 (2.84)
+65 and over:Uninsured,,,,
+Marital status: Married,9.6 (0.31),1.5 (0.12),1.2 (0.19),2.9 (0.24)
+Marital status: Widowed,21.9 (0.97),5.9 (0.54),1.1 (0.25),9.1 (1.71)
+Marital status: Divorced or separated,10.6 (0.52),1.7 (0.21),1.6 (0.32),2.3 (0.35)
+Marital status: Never married,2.5 (0.20),0.2 (0.05),0.5 (0.11),0.3 (0.07)
+Marital status: Living with a partner,3.8 (0.46),*0.5 (0.15),*1.1 (0.36),*0.9 (0.31)
+Place of residence11: Large MSA,7.7 (0.27),1.3 (0.11),1.0 (0.17),2.1 (0.20)
+Place of residence11: Small MSA,8.5 (0.35),1.5 (0.14),0.9 (0.14),2.1 (0.25)
+Place of residence11: Not in MSA,11.0 (0.54),1.8 (0.20),1.6 (0.32),3.2 (0.44)
+Region: Northeast,9.2 (0.55),1.6 (0.23),0.7 (0.19),2.2 (0.34)
+Region: Midwest,9.0 (0.43),1.5 (0.16),1.5 (0.37),2.1 (0.28)
+Region: South,8.8 (0.31),1.5 (0.12),1.0 (0.15),2.7 (0.29)
+Region: West,6.9 (0.36),1.3 (0.14),1.1 (0.19),1.8 (0.27)
+"Hispanic or Latino origin4  race  and sex: ""Hispanic or Latino  male""",2.2 (0.31),,,0.7 (0.17)
+"Hispanic or Latino origin4  race  and sex: ""Hispanic or Latina  female""",3.8 (0.40),1.2 (0.22),0.6 (0.16),
+Hispanic or Latino origin4  race  and sex: Not Hispanic or Latino:,,,,
+"Hispanic or Latino origin4  race  and sex: ""White  single race  male""",9.7 (0.40),,,2.5 (0.20)
+"Hispanic or Latino origin4  race  and sex: ""White  single race  female""",12.1 (0.40),3.6 (0.21),1.3 (0.16),
+"Hispanic or Latino origin4  race  and sex: ""Black or African American  single race  male""",5.5 (0.60),,,3.2 (0.47)
+"Hispanic or Latino origin4  race  and sex: ""Black or African American  single race  female""",4.0 (0.40),1.4 (0.25),*0.4 (0.13),

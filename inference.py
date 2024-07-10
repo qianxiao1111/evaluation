@@ -1,10 +1,21 @@
 
 import os
 import pathlib
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
-import torch
 
+def get_infer_kwargs(args) -> dict:
+    """llm_inference kwargs"""
+    temperature = args.temperature if args.temperature else 1.0
+    max_new_tokens = args.max_new_tokens if args.max_new_tokens else 1024
+    model_type = args.model_type if args.model_type else "chat_model"
+
+    kwargs = {
+        "temperature": temperature,
+        "max_tokens": max_new_tokens,
+        "model_type": model_type,
+    }
+    return kwargs
 
 def load_tokenizer_and_template(model_name_or_path, template=None):
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)

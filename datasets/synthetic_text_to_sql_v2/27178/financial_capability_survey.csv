@@ -1,0 +1,4 @@
+id,customer_id,question_text,answer,created_at
+1,501,What is the return policy?,The return policy is 30 days from the date of purchase.,2023-01-01
+2,502,How do I change my password?,You can change your password by going to the settings page.,2023-01-02
+3,503,Do you offer international shipping?,"Yes, we offer shipping to over 100 countries worldwide.",2023-01-03

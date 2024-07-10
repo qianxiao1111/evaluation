@@ -1,0 +1,68 @@
+Selected_characteristic,All_adults_aged_18_and_over,Emphysema1,Ever_had_asthma1,Still_has_asthma1,Hay_fever1,Sinusitis1,Chronic_bronchitis1
+Total,242501,3515,30606,18445,19976,29367,9274
+Sex: Male,116875,1892,12643,6293,7704,10287,3123
+Sex: Female,125625,1624,17963,12151,12272,19080,6152
+Age (years): 18–44,112760,194,15266,8415,6602,9947,2528
+Age (years): 45–64,83239,1374,10560,6951,9245,12668,3982
+Age (years): 65–74,27297,1074,3018,1891,2723,4434,1641
+Age (years): 75 and over,19204,873,1762,1188,1405,2318,1123
+Race: One race2,238301,3410,29699,17884,19613,28792,8981
+Race: White,191218,3061,23945,14305,16809,24347,7529
+Race: Black or African American,29796,277,4199,2728,1822,3377,1244
+Race: American Indian or Alaska Native,2307,,412,240,120,233,45
+Race: Asian,14360,*64,1071,574,835,798,163
+Race: Native Hawaiian or Other Pacific Islander,619,,*73,,,,
+Race: Two or more races3,4200,*105,907,561,362,575,294
+"Race: ""Black or African American  white""",851,,193,*104,*13,*42,
+"Race: ""American Indian or Alaska Native  white""",1647,*66,394,260,151,345,*126
+Hispanic or Latino origin4 and race: Hispanic or Latino,37755,136,3920,2227,1730,2832,823
+Hispanic or Latino origin4 and race: Mexican or Mexican American,22992,*59,2013,1226,998,1570,334
+Hispanic or Latino origin4 and race: Not Hispanic or Latino,204746,3379,26687,16217,18246,26535,8451
+"Hispanic or Latino origin4 and race: ""White  single race""",157410,2940,20647,12435,15238,21782,6853
+"Hispanic or Latino origin4 and race: ""Black or African American  single race""",28418,267,3970,2595,1758,3237,1165
+Education5: Less than a high school diploma,26648,952,3083,2199,1343,2764,1568
+Education5: High school diploma or GED6,50847,1261,6083,3610,3195,5874,2428
+Education5: Some college,61605,921,8531,5145,6351,9266,2995
+Education5: Bachelor's degree or higher,72373,359,8160,4919,7880,9656,1695
+Current employment status7: Employed,148914,453,17535,9920,11669,16563,3581
+Current employment status7: Full-time,121609,305,13922,7542,9509,13393,2746
+Current employment status7: Part-time,25508,142,3407,2210,2054,3017,786
+Current employment status7: Not employed but has worked previously,79530,2938,11245,7273,7440,11880,5254
+Current employment status7: Not employed and has never worked ,13899,123,1810,1236,855,912,436
+"Family income8: ""Less than $35 000""",66342,1880,9913,6780,4530,8031,3958
+"Family income8: ""$35 000 or more""",148656,1334,17881,10040,13542,18709,4345
+"Family income8: ""$35 000–$49 999""",25114,372,3178,1853,1633,2706,894
+"Family income8: ""$50 000–$74 999""",37018,445,4400,2406,2932,4655,1357
+"Family income8: ""$75 000–$99 999""",27607,219,3095,1530,2213,3358,724
+"Family income8: ""$100 000 or more""",58917,298,7208,4251,6765,7989,1370
+Poverty status9: Poor,28022,766,4428,3215,1877,2986,1654
+Poverty status9: Near poor,42375,982,6022,3918,2807,4924,2318
+Poverty status9: Not poor,159450,1586,18839,10447,14506,20258,4756
+Under 65:Private,135220,541,16975,9551,11901,16235,3470
+Under 65:Medicaid,25313,636,4685,3416,1731,2600,1732
+Under 65:Other coverage,9086,263,1376,970,990,1647,672
+Under 65:Uninsured,24896,*114,2620,1307,1184,2092,629
+65 and over:Private,19581,752,1816,1101,1778,2918,948
+65 and over:Medicare and Medicaid,3267,274,522,373,288,509,438
+65 and over:Medicare Advantage,11634,407,1303,783,1062,1639,660
+65 and over:Medicare only,7890,346,676,453,615,1091,506
+65 and over:Other coverage,3808,159,427,348,353,583,205
+65 and over:Uninsured,249,,,,,,
+Marital status: Married,128583,1725,14042,8463,11944,16960,4295
+Marital status: Widowed,14720,629,1678,1231,1286,2185,998
+Marital status: Divorced or separated,27858,725,3983,2698,2711,4042,1836
+Marital status: Never married,53374,208,7923,4313,2889,4344,1542
+Marital status: Living with a partner,17665,228,2941,1706,1125,1813,591
+Place of residence11: Large MSA,134062,1468,16256,9536,10958,14515,4507
+Place of residence11: Small MSA,74299,1254,9871,6069,6193,9616,2772
+Place of residence11: Not in MSA,34140,793,4480,2839,2825,5236,1995
+Region: Northeast,42320,536,5074,3147,3194,4082,1364
+Region: Midwest,54367,974,7135,4417,4101,6477,2368
+Region: South,90015,1484,10857,6447,6999,14077,4060
+Region: West,55798,521,7540,4433,5681,4731,1483
+"Hispanic or Latino origin4  race  and sex: ""Hispanic or Latino  male""",18798,*68,1620,787,667,980,189
+"Hispanic or Latino origin4  race  and sex: ""Hispanic or Latina  female""",18957,67,2300,1441,1062,1852,634
+"Not Hispanic or Latino:""White  single race  male""",76483,1613,8619,4307,6074,7777,2483
+"Not Hispanic or Latino:""White  single race  female""",80927,1327,12029,8128,9164,14005,4370
+"Not Hispanic or Latino:""Black or African American  single race  male""",12771,117,1475,768,469,977,305
+"Not Hispanic or Latino:""Black or African American  single race  female""",15647,150,2494,1826,1288,2260,860
