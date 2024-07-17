@@ -5,9 +5,9 @@ from reject_eval.prompt import (
     output_content_classify_instruct,
     output_content_classify_system
 )
-from evaluate_code_correction.utils import filter_code
+from utils import filter_code
 from reject_eval.eval_metrics import evaluation
-from util import load_json, save_json
+from utils import load_json, save_json
 import os
 
 def contains_independent_no(text):

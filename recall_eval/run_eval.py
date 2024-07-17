@@ -11,7 +11,7 @@ from recall_eval.prompt import (
     extract_user,
 )
 from recall_eval.eval_metrics import Metric
-from util import load_json, save_json
+from utils import save_json
 
 
 def pprint_format(result):

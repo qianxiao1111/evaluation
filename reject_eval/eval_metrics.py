@@ -1,4 +1,4 @@
-from util import load_json
+from utils import load_json
 from sklearn.metrics import accuracy_score, recall_score, f1_score
 
 
