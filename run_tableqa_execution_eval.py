@@ -3,19 +3,30 @@ import re
 import pandas as pd
 from tqdm import tqdm
 from utils import (
-    sample_from_two_lists, 
-    get_dfs_info, 
-    get_tool, 
-    filter_code, 
+    sample_from_two_lists,
+    get_dfs_info,
+    get_tool,
+    filter_code,
     read_jsonl,
     filter_cot,
     timeout,
     TimeoutException,
-    execute_with_timeout
+    execute_with_timeout,
 )
-from table_qa_execution_eval.sft_prompt import prompt_with_format_list, prompt_with_instruction_list
-from inference import generate_outputs, load_model, load_tokenizer_and_template, get_infer_kwargs
-
+from table_qa_execution_eval.sft_prompt import (
+    prompt_with_format_list,
+    prompt_with_instruction_list,
+)
+from inference import (
+    generate_outputs,
+    load_model,
+    load_tokenizer_and_template,
+    get_infer_kwargs,
+)
+import os
+import argparse
+import shutil
+from pathlib import Path
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -36,18 +47,19 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        eval_instruction = sample_from_two_lists(prompt_with_format_list, prompt_with_instruction_list)
+        eval_instruction = sample_from_two_lists(
+            prompt_with_format_list, prompt_with_instruction_list
+        )
         query = test_dt["query"]
         table_paths = test_dt["table_paths"]
         dfs_infos = get_dfs_info(table_paths)
         format_instruction = eval_instruction.format(df_info=dfs_infos, input=query)
 
-        messages = [
-            {"role": "user", "content": format_instruction}
-        ]
+        messages = [{"role": "user", "content": format_instruction}]
         format_message_datas.append(messages)
-    
+
     return format_message_datas
+
 
 def eval_outputs(
     model_outputs: list[dict],
@@ -91,7 +103,7 @@ def eval_outputs(
             observe = f"SystemExit Error: {str(e)}"
         except Exception as e:
             observe = f"Unexpected Error: {str(e)}"
-        
+
         eval_result_sample["code"] = CODE_PREFIX + code
         eval_result_sample["cot"] = cot
         eval_result_sample["observe"] = observe
@@ -118,6 +130,7 @@ def execution_eval(observe: str) -> bool:
     print("Execute passed:", res)
     return res
 
+
 def run_eval(
     eval_result_path: str = "evalset/test_results/eval_results.json",
 ):
@@ -134,6 +147,7 @@ def run_eval(
         f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
         round(execute_passed / total_len, 3),
     )
+
 
 def main(args):
     eval_dataset_path = args.eval_dataset_path
@@ -156,20 +170,30 @@ def main(args):
     )
     print("Generating answers finished..")
 
-    eval_answers = eval_outputs(
-        model_outputs,
-        eval_dataset_path
-    )
+    eval_answers = eval_outputs(model_outputs, eval_dataset_path)
 
     print("Eval answers construct complete..")
     with open(eval_results_save_path, "w", encoding="utf-8") as f:
         json.dump(eval_answers, f, ensure_ascii=False)
-    
+
     run_eval(eval_result_path=eval_results_save_path)
-    
+
 
 if __name__ == "__main__":
-    import argparse
+    # 确定images目录是否存在和写权限
+    output_dir = Path(__file__).parent / "images"
+    if os.path.exists(output_dir):
+        if not os.access(output_dir, os.W_OK):
+            shutil.rmtree(output_dir)
+            os.makedirs(output_dir)
+            os.chmod(output_dir, 0o777)
+            print("not write permission, makedir:", output_dir)
+        else:
+            print(f"{output_dir} exists!")
+    else:
+        os.makedirs(output_dir)
+        os.chmod(output_dir, 0o777)
+        print("makedir:", output_dir)
     parser = argparse.ArgumentParser(description="eval tableqa python code")
     parser.add_argument(
         "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
@@ -213,7 +237,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_results_save_path",
         type=str,
-        default="evalset/table_qa_execuate_test/results_qwen2-7b.json",
+        default="output/result_table_qa.json",
         help="Max iteration for llm to run each code correction task",
     )
     args = parser.parse_args()

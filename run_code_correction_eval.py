@@ -122,7 +122,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_results_save_path",
         type=str,
-        default="evalset/code_correction_test/results.json",
+        default="output/result_code_correction.json",
         help="Eval results save path",
     )
     parser.add_argument(
