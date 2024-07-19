@@ -79,7 +79,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--test_path",
         type=str,
-        default="evalset/result_recall.json",
+        default="evalset/retrieval_test/recall_set.json",
         help="Test File Path",
     )
     parser.add_argument("--num", type=int, default=None, help="number of lines to eval")

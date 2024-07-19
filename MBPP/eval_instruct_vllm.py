@@ -175,7 +175,7 @@ if __name__ == "__main__":
         "--save_dir",
         type=str,
         help="output path of your generation",
-        default="outputs",
+        default="output",
     )
     parser.add_argument(
         "--temp_dir", type=str, help="temp dir for evaluation", default="tmp"

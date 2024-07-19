@@ -232,7 +232,7 @@ if __name__ == "__main__":
         "--output_path",
         type=str,
         help="output path of your generation",
-        default="outputs/qwen2-sft.json",
+        default="output/result_mmlu.json",
     )
     parser.add_argument(
         "--lang", type=str, help="prompt langauge", default="zh", choices=["zh", "en"]
@@ -253,7 +253,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--n_shot", type=int, help="n shot", default=5)
     parser.add_argument("--seed", type=int, help="seed", default=42)
-    parser.add_argument("--save_dir", type=str, help="save dir", default="outputs")
+    parser.add_argument("--save_dir", type=str, help="save dir", default="output")
     args = parser.parse_args()
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
