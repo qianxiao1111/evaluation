@@ -58,7 +58,7 @@ if __name__ == "__main__":
         "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
     )
     parser.add_argument(
-        "--temperature", type=float, default=0.01, help="Temperature setting"
+        "--temperature", type=float, default=0, help="Temperature setting"
     )
     parser.add_argument(
         "--max_new_tokens",

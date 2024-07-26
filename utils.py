@@ -157,7 +157,6 @@ def filter_cot(completion: str):
     except:
         return ""
 
-
 def filter_code(completion: str) -> Tuple[str, str]:
     """
     Filter python code from the llm output completion
@@ -184,19 +183,24 @@ def filter_code(completion: str) -> Tuple[str, str]:
         return "", ""
 
 
-def get_tool(df: Any):
+def get_tool(df: Any,df_names=None):
     """
     Define python code execute tool
     :param df: List[pd.DataFrame] or pd.DataFrame
     :return Runnable
     """
     tool = PythonAstREPLTool()
-    if isinstance(df, pd.DataFrame):
-        locals = {"df": df}
+    if df_names==None:
+        if isinstance(df, pd.DataFrame):
+            locals = {"df": df}
+        else:
+            locals = {}
+            for i, dataframe in enumerate(df):
+                locals[f"df{i + 1}"] = dataframe
     else:
         locals = {}
         for i, dataframe in enumerate(df):
-            locals[f"df{i + 1}"] = dataframe
+            locals[df_names[i]] = dataframe
     tool.locals = locals
     tool.globals = tool.locals
     return tool

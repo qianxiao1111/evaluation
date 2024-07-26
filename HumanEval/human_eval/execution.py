@@ -564,7 +564,13 @@ def check_correctness(
         "result"       : result[0],
         "passed"       : result[0] == "passed",
         "finish"       : -1 if "finish" not in sample else sample["finish"],
-        "code"         : sample["test_code"]
+        "test_code"         : sample["test_code"],
+        "prompt"         : sample["prompt"],
+        "canonical_solution"         : sample["canonical_solution"],
+        "test"         : sample["test"],
+        "text"         : sample["text"],
+        "output"         : sample["output"],
+        "generation"         : sample["generation"],
     }
 
 # Copyright (c) OpenAI (https://openai.com)
