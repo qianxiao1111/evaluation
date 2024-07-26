@@ -12,6 +12,8 @@ from utils import (
     timeout,
     TimeoutException,
     execute_with_timeout,
+    load_json,
+    save_json
 )
 from table_qa_execution_eval.sft_prompt import (
     prompt_with_format_list,
@@ -47,15 +49,15 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        eval_instruction = sample_from_two_lists(
-            prompt_with_format_list, prompt_with_instruction_list
-        )
-        query = test_dt["query"]
-        table_paths = test_dt["table_paths"]
-        dfs_infos = get_dfs_info(table_paths)
-        format_instruction = eval_instruction.format(df_info=dfs_infos, input=query)
+        # eval_instruction = sample_from_two_lists(
+        #     prompt_with_format_list, prompt_with_instruction_list
+        # )
+        # query = test_dt["query"]
+        # table_paths = test_dt["table_paths"]
+        # dfs_infos = get_dfs_info(table_paths)
+        # format_instruction = eval_instruction.format(df_info=dfs_infos, input=query)
 
-        messages = [{"role": "user", "content": format_instruction}]
+        messages = [{"role": "user", "content": test_dt["instruction"]}]
         format_message_datas.append(messages)
 
     return format_message_datas
@@ -65,32 +67,38 @@ def eval_outputs(
     model_outputs: list[dict],
     eval_dataset_path: str,
 ) -> list[dict]:
-    test_datas = read_jsonl(eval_dataset_path)
+    test_datas = load_json(eval_dataset_path)
 
     output_texts = [i["output_text"] for i in model_outputs]
     processed_data = []
     for idx, test_dt in enumerate(test_datas):
         llm_output = output_texts[idx]
         df_paths = test_datas[idx]["table_paths"]
+        df_names = test_datas[idx]["df_names"]
         query = test_datas[idx]["query"]
-        df_infos = get_dfs_info(df_paths)
+        instruction = test_datas[idx]["instruction"]
+        table_paths = test_datas[idx]["table_paths"]
+        # df_infos = get_dfs_info(df_paths)
         eval_result_sample = {}
-        if len(df_paths) == 1:
-            df = pd.read_csv(df_paths[0], low_memory=False)
-        else:
-            df = [pd.read_csv(path, low_memory=False) for path in df_paths]
-        tool = get_tool(df)
-        code, pure_code = filter_code(llm_output)
+        df = [pd.read_csv(path, low_memory=False) for path in df_paths]
+        # if len(df_paths) == 1:
+        #     df = pd.read_csv(df_paths[0], low_memory=False)
+        # else:
+        #     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
+        tool = get_tool(df,df_names)
+        code, _ = filter_code(llm_output)
         cot = filter_cot(llm_output)
+
         # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
         try:
             # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
-            if not pure_code:
+            if not code:
                 observe = "Code Error: output empty code.."
             else:
                 with timeout(15):  # 设置超时时间为15秒
-                    pure_code = CODE_PREFIX + pure_code
-                    print("pure code:", pure_code)
+                    # pure_code = CODE_PREFIX + pure_code
+                    pure_code = CODE_PREFIX + code
+                    # print("pure code:", pure_code)
                     observe = tool.run(pure_code)  # 需要监控超时的代码块
                     # observe = execute_with_timeout(pure_code, 15, tool)
                     if isinstance(observe, pd.DataFrame):
@@ -105,10 +113,20 @@ def eval_outputs(
             observe = f"Unexpected Error: {str(e)}"
 
         eval_result_sample["code"] = CODE_PREFIX + code
+        # eval_result_sample["pure_code"] = CODE_PREFIX + pure_code
+        eval_result_sample["llm_output"] = llm_output
         eval_result_sample["cot"] = cot
         eval_result_sample["observe"] = observe
-        eval_result_sample["table_infos"] = df_infos
+        eval_result_sample["input"] = instruction
         eval_result_sample["query"] = query
+        eval_result_sample["table_paths"] = table_paths
+
+        pattern = re.compile(r"error|exception", re.IGNORECASE)
+        try:
+            flag = not pattern.search(observe)
+        except:
+            flag = True
+        eval_result_sample["flag"] = flag
         processed_data.append(eval_result_sample)
     return processed_data
 
@@ -126,8 +144,8 @@ def execution_eval(observe: str) -> bool:
         res = not pattern.search(observe)
     except:
         res = True
-    print("Execute result:", observe)
-    print("Execute passed:", res)
+    # print("Execute result:", observe)
+    # print("Execute passed:", res)
     return res
 
 
@@ -161,7 +179,9 @@ def main(args):
     llm_model = load_model(model_path, max_model_len, gpus_num)
     tokenizer = load_tokenizer_and_template(model_path, template)
     eval_dataset_path = args.eval_dataset_path
-    test_datas = read_jsonl(eval_dataset_path)
+    # test_datas = read_jsonl(eval_dataset_path)
+    test_datas = load_json(eval_dataset_path)
+
     format_message_datas = format_inputs(test_datas)
 
     print("Generating eval answers now..")
@@ -230,7 +250,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_dataset_path",
         type=str,
-        default="evalset/table_qa_execuate_test/tableqa_samples_with_paths.jsonl",
+        default="evalset/table_qa_execuate_test/test_datas_zuizong.json",
         help="Test Set Path",
     )
 

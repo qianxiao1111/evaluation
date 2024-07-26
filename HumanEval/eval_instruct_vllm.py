@@ -116,6 +116,7 @@ def generate_main(args):
         timeout=3.0,
         problem_file=problem_file,
         language=lang,
+        out_path=saved_path
     )
     print(lang, result, model_name_or_path)
 

@@ -32,6 +32,7 @@ def make_pred(samples, code_gen_sql, pred_ext_sql):
             {
                 "query": samples[i]["query"],
                 "code_gen_sql": code_gen_sql[i],
+                "output": pred_ext_sql[i]["output"],
                 "pred_table": pred_ext_sql[i]["tables"],
                 "pred_col": pred_ext_sql[i]["columns"],
                 "label_table": samples[i]["label_table"],
@@ -141,7 +142,7 @@ def parser_text(text: str, mode: str) -> Any:
                     ]
             except Exception as e:
                 columns = []
-        return {"tables": tables, "columns": columns}
+        return {"tables": tables, "columns": columns,"output":text}
     else:
         raise Exception("invalid format mode.")
 

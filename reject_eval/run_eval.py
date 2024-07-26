@@ -85,6 +85,10 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
     for i in range(len(ground_truth_datas)):
         processed_data[i]["true_result"] = ground_truth_datas[i]["is_reject"]
         # processed_data[i][""]
+        if processed_data[i]["true_result"]==processed_data[i]["is_reject"]:
+            processed_data[i]["flag"]=True
+        else:
+            processed_data[i]["flag"]=False
 
     save_json(save_path, processed_data)
     print(f"评估每条数据的模型输出及结果保存路径：{save_path}")

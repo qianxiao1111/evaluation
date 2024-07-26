@@ -200,7 +200,7 @@ def evaluate_functional_correctness(
         n_workers: int = 32,
         timeout: float = 10.0,
         problem_file: str = "../data/humaneval_python.jsonl.gz",
-        out_dir: str = None,
+        out_path: str = None,
         k: List[int] = [1, 10, 100],
         test_groundtruth: bool = False,
         example_test: bool = False,
@@ -223,7 +223,8 @@ def evaluate_functional_correctness(
         futures = []
         completion_id = Counter()
         n_samples = 0
-        results = defaultdict(list)
+        # results = defaultdict(list)
+        results = {}
 
         if test_groundtruth:
             print("Testing ground truth...")
@@ -275,16 +276,19 @@ def evaluate_functional_correctness(
         print("Running test suites...")
         for future in tqdm(as_completed(futures), total=len(futures)):
             result = future.result()
-            results[result["task_id"]].append((result["completion_id"], result))
+            # results[result["task_id"]].append((result["completion_id"], result))
+            results[result["task_id"]]=result
 
     # Calculate pass@k.
     total, correct = [], []
     for result in results.values():
-        passed = [r[1]["passed"] for r in result]
+        # passed = [r[1]["passed"] for r in result]
+        passed = [result["passed"]]
         total.append(len(passed))
         correct.append(sum(passed))
     total = np.array(total)
     correct = np.array(correct)
+
     if evaluate_pass_at_k:
         ks = k
         pass_at_k = {f"pass@{k}": estimate_pass_at_k(total, correct, k).mean()
@@ -293,4 +297,8 @@ def evaluate_functional_correctness(
     else:
         print("Total:", np.sum(total))
         print("Correct:", np.sum(correct))
+
+    with open(out_path,"w")as f:
+        json.dump(list(results.values()),f,ensure_ascii=False)
+
     return pass_at_k
