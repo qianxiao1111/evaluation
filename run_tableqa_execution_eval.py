@@ -3,17 +3,12 @@ import re
 import pandas as pd
 from tqdm import tqdm
 from utils import (
-    sample_from_two_lists,
-    get_dfs_info,
     get_tool,
     filter_code,
-    read_jsonl,
     filter_cot,
     timeout,
     TimeoutException,
-    execute_with_timeout,
     load_json,
-    save_json
 )
 from table_qa_execution_eval.sft_prompt import (
     prompt_with_format_list,
@@ -49,13 +44,6 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        # eval_instruction = sample_from_two_lists(
-        #     prompt_with_format_list, prompt_with_instruction_list
-        # )
-        # query = test_dt["query"]
-        # table_paths = test_dt["table_paths"]
-        # dfs_infos = get_dfs_info(table_paths)
-        # format_instruction = eval_instruction.format(df_info=dfs_infos, input=query)
 
         messages = [{"role": "user", "content": test_dt["instruction"]}]
         format_message_datas.append(messages)
@@ -78,13 +66,8 @@ def eval_outputs(
         query = test_datas[idx]["query"]
         instruction = test_datas[idx]["instruction"]
         table_paths = test_datas[idx]["table_paths"]
-        # df_infos = get_dfs_info(df_paths)
         eval_result_sample = {}
         df = [pd.read_csv(path, low_memory=False) for path in df_paths]
-        # if len(df_paths) == 1:
-        #     df = pd.read_csv(df_paths[0], low_memory=False)
-        # else:
-        #     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
         tool = get_tool(df,df_names)
         code, _ = filter_code(llm_output)
         cot = filter_cot(llm_output)
@@ -96,9 +79,7 @@ def eval_outputs(
                 observe = "Code Error: output empty code.."
             else:
                 with timeout(15):  # 设置超时时间为15秒
-                    # pure_code = CODE_PREFIX + pure_code
                     pure_code = CODE_PREFIX + code
-                    # print("pure code:", pure_code)
                     observe = tool.run(pure_code)  # 需要监控超时的代码块
                     # observe = execute_with_timeout(pure_code, 15, tool)
                     if isinstance(observe, pd.DataFrame):
@@ -144,8 +125,6 @@ def execution_eval(observe: str) -> bool:
         res = not pattern.search(observe)
     except:
         res = True
-    # print("Execute result:", observe)
-    # print("Execute passed:", res)
     return res
 
 
