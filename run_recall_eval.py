@@ -25,15 +25,12 @@ def main(args):
     if args.num is not None:
         samples = samples[: args.num]
 
-    # sql test
-    msgs_gen_sql = format_inputs(samples, "gen_python")
-    resp_gen_sql = generate_outputs(msgs_gen_sql, llm_model, tokenizer, generate_args)
-    code_gen_sql = parser_list(resp_gen_sql, "gen_python")
-    msgs_ext_sql = format_inputs(code_gen_sql, "extract_python")
-    resp_ext_sql = generate_outputs(msgs_ext_sql, llm_model, tokenizer, generate_args)
-    pred_ext_sql = parser_list(resp_ext_sql, "extract_python")
-    report = eval_outputs(pred_ext_sql, samples, "python")
-    preds = make_pred(samples, code_gen_sql, pred_ext_sql)
+    #  test
+    msgs = format_inputs(samples)
+    resp = generate_outputs(msgs, llm_model, tokenizer, generate_args)
+    pred = parser_list(resp)
+    report = eval_outputs(pred, samples)
+    preds = make_pred(samples, pred)
     # save result
     pprint_format(report)
     save_result(preds, report, args.test_path)
@@ -89,8 +86,8 @@ if __name__ == "__main__":
 
 """
 # CodeQwen1.5-7B-Chat
-python run_recall_eval.py \
-    --model_path /home/dev/weights/CodeQwen1.5-7B-Chat \
+CUDA_VISIBLE_DEVICES=2 python run_recall_eval.py \
+    --model_path /home/dev/zhangga/downloads/wk11-weights/Qwen2-7B-Instruct \
     --temperature 0.01 \
     --max_model_len  8192 \
     --max_new_tokens 1024 \
