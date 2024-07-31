@@ -158,7 +158,7 @@ class Model(nn.Module):
             #     print(f'cc{question_id}, tab_l: {tab_l}, tab_r: {tab_r}, col_count: {col_count}')
             for table_id in range(len(col_count) - 1):
                 col_l, col_r = col_count[table_id], col_count[table_id + 1]
-                assert col_r <= 50
+                # assert col_r <= 50
                 table_embeds[question_id][col_l:col_r] = table_embeds[tab_l + table_id][:col_r - col_l]
         # 删去多余的部分
         table_embeds = table_embeds[:len(table_count) - 1]

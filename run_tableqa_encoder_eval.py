@@ -279,7 +279,7 @@ if __name__ == "__main__":
         "--decoder_model_path",
         type=str,
         # required=True,
-        default="/data4/sft_output/qwen2-base-0727/",
+        default="/data4/sft_output/qwen2-base-0717/checkpoint-2000",
         help="Decoder base model path.",
     )
 
@@ -314,8 +314,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_results_save_path",
         type=str,
-        default="output/result_table_qa.json",
-        help="Max iteration for llm to run each code correction task",
+        default="output/result_table_qa_encoder1.json",
+        # help="Max iteration for llm to run each code correction task",
     )
 
     parser.add_argument(
@@ -328,7 +328,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--num_samples_to_eval",
         type=int,
-        default=20,
+        default=None,
         help="Set eval samples number to eval",
     )
 
