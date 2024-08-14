@@ -196,7 +196,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_dataset_path",
         type=str,
-        default="evalset/reject_test/test_query.json",
+        default="evalset/reject_test/new_test_query.json",
         help="Test Set Path",
     )
 

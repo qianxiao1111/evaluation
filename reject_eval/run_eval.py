@@ -82,7 +82,7 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
     parent_path = os.path.dirname(test_file_path)
     if not save_path:
         save_path = os.path.join(parent_path, 'llm_output_data.json')
-    ground_truth_path = os.path.join(parent_path, 'ground_truth.json')
+    ground_truth_path = os.path.join(parent_path, 'new_ground_truth.json')
     ground_truth_datas = load_json(ground_truth_path)
     for i in range(len(ground_truth_datas)):
         processed_data[i]["true_result"] = ground_truth_datas[i]["is_reject"]
