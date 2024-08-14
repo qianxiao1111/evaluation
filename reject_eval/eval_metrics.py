@@ -2,15 +2,15 @@ from utils import load_json
 from sklearn.metrics import accuracy_score, recall_score, f1_score
 
 
-def evaluation(ground_truth_path: str, predictions_path: str) -> None:
+def evaluation(ground_truth_data: list[dict], predictions_data: list[dict]) -> None:
     """
     计算以下评价指标
     准确率(Accuracy): 准确率是正确预测（无论是肯定还是否定）的数量与总预测数量的比例。
     召回率(Recall): 召回率是模型正确识别为reject的查询数与实际reject的查询总数的比例。
     F1分数(F1 Score): F1分数是准确率和召回率的调和平均数，是两者的平衡指标。
     """
-    ground_truth_data = load_json(ground_truth_path)
-    predictions_data = load_json(predictions_path)
+    # ground_truth_data = load_json(ground_truth_path)
+    # predictions_data = load_json(predictions_path)
 
     # 创建（id, query）到is_reject的映射
     ground_truth = {(item['query']): item['is_reject'] for item in ground_truth_data}
