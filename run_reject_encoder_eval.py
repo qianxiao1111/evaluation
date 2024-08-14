@@ -29,14 +29,11 @@ def format_inputs(samples, tokenizer, model_type):
     msgs = []
     encoder_inputs = []
     for sample in samples:
-        csv_paths = sample["table_paths"]
+        csv_paths = sample["table_paths"] # todo fix this 
         query = sample["query"]
         df_names = sample["df_names"]
-        table_info = sample["table_infos"]
-        ori_code = sample["code"]
-        cot = sample["cot"]
-        observe = sample["observation"]
-        instruction = build_reject_question(csv_paths, df_names, query, ori_code, observe, cot)
+        table_info = sample["df_info"]
+        instruction = build_reject_question(csv_paths, df_names, query)
         decoder_input = build_instruction(instruction, tokenizer)
         msgs.append(decoder_input)
         if model_type == "1":
@@ -64,7 +61,7 @@ def generate_outputs(
         output = {}
         query = test_datas[i]["query"]
         table_path = test_datas[i]["table_paths"]
-        df_names = test_datas["df_names"]
+        df_names = test_datas[i]["df_names"]
 
         if model_type == "1":
             model_output = model.generate(
@@ -217,7 +214,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--num_samples_to_eval",
         type=int,
-        default=None,
+        default=10,
         help="Set eval samples number to eval",
     )
 

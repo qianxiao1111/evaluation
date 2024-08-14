@@ -84,6 +84,8 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
         save_path = os.path.join(parent_path, 'llm_output_data.json')
     ground_truth_path = os.path.join(parent_path, 'new_ground_truth.json')
     ground_truth_datas = load_json(ground_truth_path)
+    if num_samples:
+        ground_truth_datas = ground_truth_datas[: num_samples]
     for i in range(len(ground_truth_datas)):
         processed_data[i]["true_result"] = ground_truth_datas[i]["is_reject"]
         # processed_data[i][""]
@@ -94,5 +96,5 @@ def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str 
 
     save_json(save_path, processed_data)
     print(f"评估每条数据的模型输出及结果保存路径：{save_path}")
-    evaluation(ground_truth_path, save_path)
+    evaluation(ground_truth_datas, processed_data)
 
