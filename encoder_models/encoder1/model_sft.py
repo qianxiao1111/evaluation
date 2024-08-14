@@ -19,6 +19,9 @@ from encoder_models.encoder1.config import MAX_ROW, MAX_COL
 if 'MAX_COL' in os.environ:
     MAX_COL = int(os.environ['MAX_COL'])
     print(f'find new MAX_COL in environ: {MAX_COL}')
+if 'MAX_ROW' in os.environ:
+    MAX_ROW = int(os.environ['MAX_ROW'])
+    print(f'find new MAX_ROW in environ: {MAX_ROW}')
     
 class Model(nn.Module):
 
@@ -57,7 +60,7 @@ class Model(nn.Module):
         return model
 
     
-    def get_embedded_table(self, path_csv, path_emb = None):
+    def get_embedded_table(self, path_csv):
         def process_table_df(table_df):
             numeric_columns = table_df.select_dtypes(include=["number"]).columns
             numeric_indices = [
@@ -85,30 +88,21 @@ class Model(nn.Module):
             tokenized_anchor_table = {k: v.reshape(anchor_row_num, num_cols, -1) for k, v in tokenized_anchor_table.items()}
             return tokenized_anchor_table
 
-        try:
-            raise
-            assert os.path.exists(path_emb)
-            # print('=' * 10)
-            # print('path_emb', path_emb)
-            # print('=' * 10)
-            anchor_table_padded, anchor_table_mask, df_col_count = torch.load(path_emb)
-        except:
-            # print(f'loading csv from {path_csv}')
-            table_df = pd.read_csv(
-                path_csv,
-                encoding="utf-8",
-                low_memory=False,
-                nrows=500
-            )
-            df_col_count = table_df.shape[1]
-            anchor_table = load_tokenized_table(table_df)
-            num_cols = anchor_table['input_ids'].shape[1]
-            anchor_table_row_num = anchor_table['input_ids'].shape[0]
-            anchor_table_padded = {k: F.pad(v, (0, 0, 0, MAX_COL - v.shape[1], 0, MAX_ROW - v.shape[0]), "constant", 1) for k, v in anchor_table.items()}
-            # print('..', anchor_table_padded['input_ids'].shape, anchor_table_padded['attention_mask'].shape, anchor_table_padded['token_type_ids'].shape)
-            anchor_table_mask = np.zeros((MAX_ROW, MAX_COL))
-            anchor_table_mask[:anchor_table_row_num, : num_cols] = 1
-            # torch.save((anchor_table_padded, anchor_table_mask, df_col_count), path_emb)
+        # print(f'loading csv from {path_csv}')
+        table_df = pd.read_csv(
+            path_csv,
+            encoding="utf-8",
+            low_memory=False,
+            nrows=500
+        )
+        df_col_count = table_df.shape[1]
+        anchor_table = load_tokenized_table(table_df)
+        num_cols = anchor_table['input_ids'].shape[1]
+        anchor_table_row_num = anchor_table['input_ids'].shape[0]
+        anchor_table_padded = {k: F.pad(v, (0, 0, 0, MAX_COL - v.shape[1], 0, MAX_ROW - v.shape[0]), "constant", 1) for k, v in anchor_table.items()}
+        # print('..', anchor_table_padded['input_ids'].shape, anchor_table_padded['attention_mask'].shape, anchor_table_padded['token_type_ids'].shape)
+        anchor_table_mask = np.zeros((MAX_ROW, MAX_COL))
+        anchor_table_mask[:anchor_table_row_num, : num_cols] = 1
         ret = (
             anchor_table_padded['input_ids'].to(device = self.decoder.device),
             anchor_table_padded['attention_mask'].to(device = self.decoder.device),
@@ -120,15 +114,16 @@ class Model(nn.Module):
             
 
     
-    def get_encoder_output(self, path_csv, path_emb = None):
-        anchor_table_input_ids = []
-        anchor_table_attention_mask = []
-        anchor_table_token_type_ids = []
-        anchor_table_mask = []
+    def get_encoder_output(self, path_csv):
         
         table_count = [len(c_list) for c_list in path_csv]
         column_count = []
+        table_embeds = []
         for c_list in path_csv:
+            anchor_table_input_ids = []
+            anchor_table_attention_mask = []
+            anchor_table_token_type_ids = []
+            anchor_table_mask = []
             cur_column_count = []
             for c in c_list:
                 p, q, r, s, cnt = self.get_embedded_table(c)
@@ -137,33 +132,23 @@ class Model(nn.Module):
                 anchor_table_attention_mask.append(q)
                 anchor_table_token_type_ids.append(r)
                 anchor_table_mask.append(s)
+                
             column_count.append(cur_column_count)
-        
-        anchor_table_input_ids = torch.stack(anchor_table_input_ids, dim=0)
-        anchor_table_attention_mask = torch.stack(anchor_table_attention_mask, dim=0)
-        anchor_table_token_type_ids = torch.stack(anchor_table_token_type_ids, dim=0)
-        anchor_table_mask = torch.stack(anchor_table_mask, dim=0)    
-        table_embeds = self.encoder(anchor_table_input_ids, anchor_table_attention_mask, anchor_table_token_type_ids, anchor_table_mask, inference=True)            
-        table_embeds = F.normalize(table_embeds,dim=-1)
-        
-        table_count = [0] + table_count
-        table_count = np.cumsum(table_count)
-        # if table_embeds.shape[0] > 2:
-        #     print('tc', table_count)
-        for question_id in range(len(table_count) - 1):
-            tab_l, tab_r = table_count[question_id], table_count[question_id + 1]
-            col_count = [0] + column_count[question_id]
-            col_count = np.cumsum(col_count)
-            # if table_embeds.shape[0] > 2:
-            #     print(f'cc{question_id}, tab_l: {tab_l}, tab_r: {tab_r}, col_count: {col_count}')
-            for table_id in range(len(col_count) - 1):
-                col_l, col_r = col_count[table_id], col_count[table_id + 1]
-                # assert col_r <= 50
-                table_embeds[question_id][col_l:col_r] = table_embeds[tab_l + table_id][:col_r - col_l]
-        # 删去多余的部分
-        table_embeds = table_embeds[:len(table_count) - 1]
-        return table_embeds
-    
+            
+            anchor_table_input_ids = torch.stack(anchor_table_input_ids, dim=0)
+            anchor_table_attention_mask = torch.stack(anchor_table_attention_mask, dim=0)
+            anchor_table_token_type_ids = torch.stack(anchor_table_token_type_ids, dim=0)
+            anchor_table_mask = torch.stack(anchor_table_mask, dim=0)
+            table_embeds.append(self.encoder(anchor_table_input_ids, anchor_table_attention_mask, anchor_table_token_type_ids, anchor_table_mask, inference=True))
+            del anchor_table_input_ids, anchor_table_attention_mask, anchor_table_token_type_ids, anchor_table_mask
+      
+        cat_table_embeds = [[] for _ in range(len(table_count))]
+        for i in range(len(table_count)):
+            for j in range(len(column_count[i])):
+                cat_table_embeds[i].append(table_embeds[i][j, :column_count[i][j]])
+            cat_table_embeds[i] = torch.cat(cat_table_embeds[i], dim = 0)
+            assert cat_table_embeds[i].device == self.decoder.device
+        return cat_table_embeds
     def forward(
         self,
         input_ids: torch.LongTensor = None,
@@ -216,38 +201,70 @@ class Model(nn.Module):
         )
     
     @torch.inference_mode()
-    def generate(self, input_str = None, input_ids = None, path_csv = None, max_new_tokens = 1024, **kwargs):
-        if path_csv == None or (type(path_csv) == list and len(path_csv) == 0):
-            input_tensor = self.tokenizer(input_str, return_tensors='pt').to(device = self.decoder.device)
-            return self.decoder.generate(**input_tensor, max_new_tokens=max_new_tokens, **kwargs)
+    def generate(self, input_str: List = None, path_csv: List = None, max_new_tokens = 1024, **kwargs):
+        # if path_csv == None or (type(path_csv) == list and len(path_csv) == 0):
+        #     input_tensor = self.tokenizer(input_str, return_tensors='pt').to(device = self.decoder.device)
+        #     return self.decoder.generate(**input_tensor, max_new_tokens=max_new_tokens, **kwargs)
         
-        input_ids = tokenize_insert(input_str, self.tokenizer).unsqueeze(0).to(device = self.decoder.device)
-        path_csv = [path_csv]
-            
-        table_embeds = self.get_encoder_output(path_csv)
-        
+        bs = len(input_str)
+        if '<insert_embs>' in input_str[0]: # TODO: 支持文本、表格混杂的输入
+            table_embeds = self.get_encoder_output(path_csv)
         prepare_embs_func = self.projector.prepare_insert_embeds
-        (
-            input_ids,
-            position_ids,
-            attention_mask,
-            past_key_values,
-            inputs_embeds,
-            labels,
-        ) = prepare_embs_func(
-            decoder = self.decoder,
-            input_ids=input_ids,
-            table_embeds=table_embeds,
-        )
-        attention_mask = torch.ones(inputs_embeds.shape[:-1], device=inputs_embeds.device)
         
-        return self.decoder.generate(
+        inputs_embeds = []
+        attention_mask = []
+        for i in range(bs):
+            if '<insert_embs>' in input_str[i]:
+                cur_input_ids = tokenize_insert(input_str[i], self.tokenizer).unsqueeze(0).to(device = self.decoder.device)
+                cur_table_embeds = table_embeds[i].unsqueeze(0)
+
+                (
+                    input_ids,
+                    position_ids,
+                    cur_attention_mask,
+                    past_key_values,
+                    cur_inputs_embeds,
+                    labels,
+                ) = prepare_embs_func(
+                    decoder = self.decoder,
+                    input_ids=cur_input_ids,
+                    # position_ids,
+                    table_embeds=cur_table_embeds,
+                )
+                
+                inputs_embeds.append(cur_inputs_embeds)
+                attention_mask.append(torch.ones(cur_inputs_embeds.shape[:-1], device=self.decoder.device, dtype = torch.int64))
+            else:
+                input_tensor = self.tokenizer(input_str[i], return_tensors='pt').to(device = self.decoder.device)
+                inputs_embeds.append(self.decoder.get_input_embeddings()(input_tensor['input_ids']))
+                attention_mask.append(input_tensor['attention_mask'])
+                
+        longest_input = max([x.shape[1] for x in inputs_embeds])
+        inputs_embeds_padded = torch.zeros(bs, longest_input, *inputs_embeds[0].shape[2:], device = self.decoder.device, dtype = inputs_embeds[0].dtype)
+        attention_mask_padded = torch.zeros(bs, longest_input, device = self.decoder.device, dtype = torch.int64)
+        for i in range(bs):
+            inputs_embeds_padded[i, longest_input - inputs_embeds[i].shape[1]:] = inputs_embeds[i][0]
+            attention_mask_padded[i, longest_input - inputs_embeds[i].shape[1]:] = attention_mask[i][0]
+
+        inputs_embeds = inputs_embeds_padded
+        attention_mask = attention_mask_padded
+        
+        
+        
+        ret = self.decoder.generate(
             max_new_tokens=max_new_tokens,
             attention_mask=attention_mask,
             inputs_embeds=inputs_embeds.to(dtype = self.decoder.dtype),
             use_cache=True,
             **kwargs
         )
-    
-    
-    
+        
+        ret_str = []
+        for i in range(bs):
+            stop_sign = self.tokenizer.eos_token_id
+            ret_list = ret[i].tolist()
+            if stop_sign in ret_list:
+                ret_list = ret_list[:ret_list.index(stop_sign)]
+            ret_str.append(self.tokenizer.decode(ret_list))
+            
+        return ret, ret_str

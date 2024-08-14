@@ -18,7 +18,7 @@ INSERT_SEP_TOKEN='<insert_sep>'
 
 CONTENT_ID_MAX_LEN = 512
 
-MAX_ROW = 20
+MAX_ROW = 50
 MAX_COL = 100
 
 BASE_MODEL_PATH='/data4/sft_output/qwen2-base-0717/checkpoint-2000'
