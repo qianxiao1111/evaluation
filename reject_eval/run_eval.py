@@ -48,11 +48,13 @@ def format_llm_outputs(model_outputs: list[dict]) -> list[list[dict]]:
 
     return format_message_datas
 
-def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str = "") -> None:
+def eval_outputs(model_outputs: list[dict], test_file_path: str, save_path: str = "", num_samples:int = None) -> None:
     """Calculate the reject evaluation metric based
     on model outputs for binary classification
     """
     test_datas = load_json(test_file_path)
+    if num_samples:
+        test_datas = test_datas[ :num_samples]
     # 提取模型输出list
     output_texts = [i["output_text"] for i in model_outputs]
     processed_data = []
