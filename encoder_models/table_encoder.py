@@ -127,7 +127,7 @@ class TableEncoder(nn.Module):
                     simple_MLP([self.dim, self.dim, self.cont_dim])
                 )
         
-        self.qformer = Qformer(dim=self.dim, dim_head=128, inner_dim=3584, query_num=10)
+        self.qformer = Qformer(dim=self.dim, dim_head=128, inner_dim=3584, query_num=3)
         
     
     #Mean Pooling - Take attention mask into account for correct averaging
