@@ -107,7 +107,6 @@ def build_question(csv_paths,df_names, query):
 
     Returns:
         str: The generated question string.
-
     """
     
     pref = '''With several pandas dataframes available, your task is to write the Python code to address the user's question.\n\n## Follow this format:\nQuestion: The user's query.\nThought: Evaluate the dataframes and the question to determine the solution.\nPython code: Generate the Python code, within ```python ... ```.\n\n## Details about the dataframes:\n\n'''    

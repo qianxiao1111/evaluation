@@ -76,7 +76,7 @@ def eval_outputs(
                                 temperature = temperature,
                                 do_sample=True
                                 )
-            output_content = model.tokenizer.decode(model_output[0], skip_special_tokens=True).strip()
+            output_content = model_output[1][0]
         elif model_type == "2":
             decoder_input = build_instruction(build_question(csv_files_path, df_names, query), model.tokenizer_decoder)
             encoder_input = build_encoder_input(table_info)
@@ -337,9 +337,9 @@ if __name__ == "__main__":
 
     # Encoder1 for LONGLIN
     """
-    python run_tableqa_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0727/ \
+    python run_tableqa_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0802/ \
     --model_type "1" \
-    --encoder_model_path /home/llong/gxj/code/checkpoints/sft/30col_-1_contrastive-all-MiniLM-L6-v2-7-None-1e-05-0.0001-16-ColMatching-20240717/lr_1e-5_bs1024_bf16_freezedecoder_constantlr/checkpoint-340 \
+    --encoder_model_path /data0/gxj/sft_checkpoints/20col_-1/lr1e-5_constant_with_warmup_bs1024_bf16_freezedecoder_table4_nods/checkpoint-378 \
     --patch_model_path /data0/pretrained-models/all-MiniLM-L6-v2
     """
     # Encoder2 for LIYAO

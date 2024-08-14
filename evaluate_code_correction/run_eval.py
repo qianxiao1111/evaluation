@@ -182,6 +182,7 @@ def eval_outputs(
     eval_dataset_path: str,
     test_csv_file_path: str,
     lan_type: str,
+    num_samples: int = None
 ) -> list[dict]:
     """
     Generate complete eval samples according to the eval_datasets
@@ -194,6 +195,8 @@ def eval_outputs(
     """
     with open(eval_dataset_path, "r", encoding="utf-8") as f:
         test_datas = json.load(f)
+    if num_samples:
+        test_datas = test_datas[:num_samples]
     output_texts = [i["output_text"] for i in model_outputs]
     processed_data = []
     for idx, test_dt in enumerate(test_datas):

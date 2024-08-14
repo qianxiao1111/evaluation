@@ -7,6 +7,10 @@ from encoder_models.encoder2.projector_t5 import Projector
 from torch import nn
 import os, json
 
+import sys
+# TODO fix this by change save function
+sys.path.append("/data0/workspace/tjm/review_code")
+
 class TableDecoderConfig(PretrainedConfig):
     model_type = "table_decoder"
 
