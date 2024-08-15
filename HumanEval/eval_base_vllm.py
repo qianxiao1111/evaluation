@@ -10,8 +10,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 import json
-from accelerate import Accelerator
-from accelerate import DistributedDataParallelKwargs
+# from accelerate import Accelerator
+# from accelerate import DistributedDataParallelKwargs
 from pathlib import Path
 from argparse import ArgumentParser
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -57,7 +57,7 @@ class HumanEval:
             language=self.language,
             issft=self.sft,
         )
-        model_name_or_path = args.model
+        model_name_or_path = args.model_path
         print("model", model_name_or_path)
         tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         print(
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--logdir", type=str, default="")
     parser.add_argument(
-        "--model",
+        "--model_path",
         type=str,
         help="model name or path",
         default="/data0/pretrained-models/qwen2-7b",
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataroot",
         type=str,
-        default="/home/qyhuang/DeepSeek-Coder/Evaluation/HumanEval/data",
+        default="HumanEval/data",
     )
     args = parser.parse_args()
 
@@ -152,7 +152,7 @@ if __name__ == "__main__":
     language = args.language
 
     if logdir == "":
-        logdir = "tmp/"
+        logdir = "output/tmp/"
 
     evaluator = HumanEval(
         data_root=args.dataroot,

@@ -566,11 +566,11 @@ def check_correctness(
         "finish"       : -1 if "finish" not in sample else sample["finish"],
         "test_code"         : sample["test_code"],
         "prompt"         : sample["prompt"],
-        "canonical_solution"         : sample["canonical_solution"],
-        "test"         : sample["test"],
-        "text"         : sample["text"],
-        "output"         : sample["output"],
-        "generation"         : sample["generation"],
+        # "canonical_solution"         : sample["canonical_solution"],
+    #     "test"         : sample["test"],
+    #     "text"         : sample["text"],
+    #     "output"         : sample["output"],
+    #     "generation"         : sample["generation"],
     }
 
 # Copyright (c) OpenAI (https://openai.com)

@@ -1,4 +1,4 @@
-MODEL_NAME_OR_PATH="deepseek/deepseek-coder-1b"
-DATASET_ROOT="data/"
+MODEL_NAME_OR_PATH="/data3/models/DeepSeek/deepseek-coder-6.7b-base"
+DATASET_ROOT="HumanEval/data"
 LANGUAGE="python"
-CUDA_VISIBLE_DEVICES=1,2,3 python -m accelerate.commands.launch --config_file test_config.yaml eval_pal.py --logdir ${MODEL_NAME_OR_PATH} --language ${LANGUAGE} --dataroot ${DATASET_ROOT}
+CUDA_VISIBLE_DEVICES=5,6,7 python -m accelerate.commands.launch --config_file HumanEval/test_config.yaml HumanEval/eval_pal.py --model_path ${MODEL_NAME_OR_PATH} --language ${LANGUAGE} --dataroot ${DATASET_ROOT}
