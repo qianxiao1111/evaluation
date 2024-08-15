@@ -266,9 +266,9 @@ if __name__ == "__main__":
 
     # Encoder1 for LONGLIN
     """
-    python run_code_correction_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0802/ \
+    python run_code_correction_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0802/checkpoint-2400 \
     --model_type "1" \
-    --encoder_model_path /data0/gxj/sft_checkpoints/20col_-1/lr1e-5_constant_with_warmup_bs1024_bf16_freezedecoder_table4_nods/checkpoint-378 \
+    --encoder_model_path /data0/gxj/sft_checkpoints/20col_-1/lr1e-5_constant_with_warmup_bs1024_bf16_freezedecoder_table4_nods_new/checkpoint-378 \
     --patch_model_path /data0/pretrained-models/all-MiniLM-L6-v2
     """
 

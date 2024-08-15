@@ -70,7 +70,7 @@ def generate_outputs(
 ):
     model.eval().to(device)
     model_outputs = []
-    for i, (decoder_inp, encoder_inp) in tqdm(enumerate(list(zip(decoder_inputs, encoder_inputs)))):
+    for i, (decoder_inp, encoder_inp) in tqdm(enumerate(list(zip(decoder_inputs, encoder_inputs))), total=len(decoder_inputs)):
         output = {}
         query = test_datas[i]["query"]
         table_path = test_datas[i]["table_paths"]
@@ -248,7 +248,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--num_samples_to_eval",
         type=int,
-        default=10,
+        default=None,
         help="Set eval samples number to eval",
     )
 
@@ -267,9 +267,9 @@ if __name__ == "__main__":
 
     # Encoder1 for LONGLIN
     """
-    python run_recall_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0808/ \
+    python run_recall_encoder_eval.py --decoder_model_path /data4/sft_output/qwen2-base-0802/checkpoint-2400 \
     --model_type "1" \
-    --encoder_model_path /home/llong/gxj/code/checkpoints/sft/30col_-1_contrastive-all-MiniLM-L6-v2-7-None-1e-05-0.0001-16-ColMatching-20240717/lr_1e-5_bs1024_bf16_freezedecoder_constantlr/checkpoint-340 \
+    --encoder_model_path /data0/gxj/sft_checkpoints/20col_-1/lr1e-5_constant_with_warmup_bs1024_bf16_freezedecoder_table4_nods_new/checkpoint-378 \
     --patch_model_path /data0/pretrained-models/all-MiniLM-L6-v2
     """
     # Encoder2 for LIYAO
