@@ -1,0 +1,47 @@
+Characteristic,Prevalence (%),Prevalence Standard Error (SE),Mean,Mean Standard Error (SE)
+Overall,31.1,2.4,2.7,0.2
+Municipality,,,,
+"Urban (region II, IV)",31.0,3.5,2.9,0.2
+"Rural (region I,III, V)",31.1,3.0,2.6,0.3
+Region,,,,
+Grade level,,,,
+Kindergarten,32.6,3.1,2.9,0.2
+3rd-grade,29.7,3.5,2.5,0.2
+Gender,,,,
+Boys,30.6,3.3,2.7,0.2
+Girls,30.1,2.4,2.7,0.3
+Race/ethnicity,,,,
+Non-Hispanic White,20.2,2.0,2.6,0.2
+Non-Hispanic Black,35.0,3.7,2.7,0.2
+Non-Hispanic Other,41.6,9.4,3.8,0.5
+Hispanic,41.1,5.3,2.3,0.6
+Free/reduced meal,,,,
+Eligible,39.2,2.3,2.7,0.2
+Ineligible,23.0,3.0,2.7,0.3
+Caregiver's education,,,,
+Less than college graduate,35.5,2.1,2.8,0.2
+College Graduate,20.8,2.8,2.5,0.3
+Insurance coverage,,,,
+Medicaid,38.1,2.9,2.8,0.2
+Private,22.9,3.1,2.5,0.2
+No Coverage,34.4,4.7,2.7,0.6
+Dentist visit in past 12 months,,,,
+Yes,28.3,2.5,2.6,0.2
+No,38.1,6.0,3.0,0.4
+Dentalcare service availability,,,,
+Yes,28.5,2.3,2.4,0.2
+No,42.9,4.4,3.9,0.5
+Reported past-12-mon caries,,,,
+Yes,55.6,4.4,2.9,0.3
+No,17.5,1.8,2.4,0.2
+Treated past 12-mon caries,,,,
+Yes,49.3,4.5,2.3,0.2
+No,71.0,9.0,4.0,0.4
+Reported toothache by caries,,,,
+Yes,63.4,6.0,3.5,0.5
+No,52.6,5.7,2.5,0.3
+III – Southern,25.5,4.4,2.5,0.1
+V – Eastern Shore,39.2,4.8,3.3,0.3
+IV – Central Baltimore,33.6,2.9,2.7,0.3
+II – Central DC,28.4,5.5,2.5,0.5
+I – Western,23.5,4.8,2.4,0.2
