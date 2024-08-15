@@ -1,5 +1,5 @@
 Sort,Year,Term,Remedial Number Successfully Completing Courses,Remedial Total Enrollment,Remedial Course Success Rate,Occupational/Workforce Number Successfully Completing Courses,Occupational/Workforce Total Enrollment,Occupational/Workforce Course Success Rate,Baccalaureate/Transfer Number Successfully Completing Courses,Baccalaureate/Transfer Total Enrollment,Baccalaureate/Transfer Course Success Rate,Row Order
-1,2000 Fall,Fall,8322,15660,53,13282,17713,75,28372,44383,64,1
+1,2000 Fall,Fall,8322,15660,53.0,13282,17713,75,28372,44383,64,1
 3,2001  Fall,Fall,9864,17069,57.78897416369,13273,17811,75,31771,48859,65,3
 2,2001 Spring,Spring,6709,12788,52.46324679387,12987,17086,76,29577,45170,65,2
 5,2002 Fall,Fall,10997,18701,58.8043420138,13723,17935,77,36377,53368,68,5

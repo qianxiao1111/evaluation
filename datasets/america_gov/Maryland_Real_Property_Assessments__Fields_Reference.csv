@@ -8,217 +8,217 @@ Field Order,Field Name,Data Type,MDP Field Name,SDAT Field Number,API Field Name
 7,MDP Longitude (MDP Field: DIGXCORD converted to WGS84),number,DIGXCORD,,mdp_longitude_mdp_field_digxcord_converted_to_wgs84
 8,MDP Latitude (MDP Field: DIGYCORD converted to WGS84),number,DIGYCORD,,mdp_latitude_mdp_field_digycord_converted_to_wgs84
 9,Mappable Latitude and Longitude,location,,,mappable_latitude_and_longitude
-10,RECORD KEY: County Code (SDAT Field #1),text,,1,record_key_county_code_sdat_field_1
-11,RECORD KEY: District/Ward (SDAT Field #2),text,,2,record_key_district_ward_sdat_field_2
-12,RECORD KEY: Account Number (SDAT Field #3),text,,3,record_key_account_number_sdat_field_3
-13,RECORD KEY: Subdistrict (SDAT Field #4),text,,4,record_key_subdistrict_sdat_field_4
-14,RECORD KEY: Geographic Code (MDP Field: GEOGCODE. SDAT Field #5),text,GEOGCODE,5,record_key_geographic_code_mdp_field_geogcode_sdat_field_5
-15,RECORD KEY: Owner Occupancy Code (MDP Field: OOI. SDAT Field #6),text,OOI,6,record_key_owner_occupancy_code_mdp_field_ooi_sdat_field_6
-25,LEGAL DESCRIPTION: Line 1 (MDP Field: LEGAL1. SDAT Field #17),text,LEGAL1,17,legal_description_line_1_mdp_field_legal1_sdat_field_17
-26,LEGAL DESCRIPTION: Line 2 (MDP Field: LEGAL2. SDAT Field #18),text,LEGAL2,18,legal_description_line_2_mdp_field_legal2_sdat_field_18
-27,LEGAL DESCRIPTION: Line 3 (MDP Field: LEGAL3. SDAT Field #19),text,LEGAL3,19,legal_description_line_3_mdp_field_legal3_sdat_field_19
+10,RECORD KEY: County Code (SDAT Field #1),text,,1.0,record_key_county_code_sdat_field_1
+11,RECORD KEY: District/Ward (SDAT Field #2),text,,2.0,record_key_district_ward_sdat_field_2
+12,RECORD KEY: Account Number (SDAT Field #3),text,,3.0,record_key_account_number_sdat_field_3
+13,RECORD KEY: Subdistrict (SDAT Field #4),text,,4.0,record_key_subdistrict_sdat_field_4
+14,RECORD KEY: Geographic Code (MDP Field: GEOGCODE. SDAT Field #5),text,GEOGCODE,5.0,record_key_geographic_code_mdp_field_geogcode_sdat_field_5
+15,RECORD KEY: Owner Occupancy Code (MDP Field: OOI. SDAT Field #6),text,OOI,6.0,record_key_owner_occupancy_code_mdp_field_ooi_sdat_field_6
+25,LEGAL DESCRIPTION: Line 1 (MDP Field: LEGAL1. SDAT Field #17),text,LEGAL1,17.0,legal_description_line_1_mdp_field_legal1_sdat_field_17
+26,LEGAL DESCRIPTION: Line 2 (MDP Field: LEGAL2. SDAT Field #18),text,LEGAL2,18.0,legal_description_line_2_mdp_field_legal2_sdat_field_18
+27,LEGAL DESCRIPTION: Line 3 (MDP Field: LEGAL3. SDAT Field #19),text,LEGAL3,19.0,legal_description_line_3_mdp_field_legal3_sdat_field_19
 28,MdProperty View Edition Year (MDP Field: EXISTING),text,EXISTING,,mdproperty_view_edition_year_mdp_field_existing
 29,MDP Street Address (MDP Field: ADDRESS),text,ADDRESS,,mdp_street_address_mdp_field_address
 30,MDP Street Address City (MDP Field: CITY),text,CITY,,mdp_street_address_city_mdp_field_city
 31,MDP Street Address Zip Code (MDP Field: ZIPCODE),text,ZIPCODE,,mdp_street_address_zip_code_mdp_field_zipcode
 32,MDP Street Address Units (MDP Field: STRTUNT),text,STRTUNT,,mdp_street_address_units_mdp_field_strtunt
-33,PREMISE ADDRESS: Number (MDP Field: PREMSNUM. SDAT Field #20),text,PREMSNUM,20,premise_address_number_mdp_field_premsnum_sdat_field_20
-34,PREMISE ADDRESS: Number Suffix (SDAT Field #21),text,,21,premise_address_number_suffix_sdat_field_21
-35,PREMISE ADDRESS: Direction (MDP Field: PREMSDIR. SDAT Field #22),text,PREMSDIR,22,premise_address_direction_mdp_field_premsdir_sdat_field_22
-36,PREMISE ADDRESS: Name (MDP Field: PREMSNAM. SDAT Field #23),text,PREMSNAM,23,premise_address_name_mdp_field_premsnam_sdat_field_23
-37,PREMISE ADDRESS: Type (MDP Field: PREMSTYP. SDAT Field #24),text,PREMSTYP,24,premise_address_type_mdp_field_premstyp_sdat_field_24
-38,PREMISE ADDRESS: City (MDP Field: PREMCITY. SDAT Field #25),text,PREMCITY,25,premise_address_city_mdp_field_premcity_sdat_field_25
-39,PREMISE ADDRESS: Zip Code (MDP Field: PREMZIP. SDAT Field #26),text,PREMZIP,26,premise_address_zip_code_mdp_field_premzip_sdat_field_26
-40,PREMISE ADDRESS: Zip +4 Code (MDP Field: PREMZIP2. SDAT Field #27),text,PREMZIP2,27,premise_address_zip_4_code_mdp_field_premzip2_sdat_field_27
-41,PREMISE ADDRESS: Condominium Unit No. (SDAT Field #28),text,,28,premise_address_condominium_unit_no_sdat_field_28
-42,DEED REFERENCE 1: Clerk Initials (MDP Field: DR1CLERK. SDAT Field #29),text,DR1CLERK,29,deed_reference_1_clerk_initials_mdp_field_dr1clerk_sdat_field_29
-43,DEED REFERENCE 1: Liber (MDP Field: DR1LIBER. SDAT Field #30),text,DR1LIBER,30,deed_reference_1_liber_mdp_field_dr1liber_sdat_field_30
-44,DEED REFERENCE 1: Folio (MDP Field: DR1FOLIO. SDAT Field #31),text,DR1FOLIO,31,deed_reference_1_folio_mdp_field_dr1folio_sdat_field_31
-45,Town Code (MDP Field: TOWNCODE/DESCTOWN. SDAT Field #36),text,TOWNCODE/DESCTOWN,36,town_code_mdp_field_towncode_desctown_sdat_field_36
-46,Subdivision Code (MDP Field: SUBDIVSN. SDAT Field #37),text,SUBDIVSN,37,subdivision_code_mdp_field_subdivsn_sdat_field_37
-47,Plat Number (MDP Field: PLAT. SDAT Field #38),text,PLAT,38,plat_number_mdp_field_plat_sdat_field_38
-48,Section (MDP Field: SECTION. SDAT Field #39),text,SECTION,39,section_mdp_field_section_sdat_field_39
-49,Block (MDP Field: BLOCK. SDAT Field #40),text,BLOCK,40,block_mdp_field_block_sdat_field_40
-50,Lot (MDP Field: LOT. SDAT Field #41),text,LOT,41,lot_mdp_field_lot_sdat_field_41
-51,Map (MDP Field: MAP. SDAT Field #42),text,MAP,42,map_mdp_field_map_sdat_field_42
-52,Grid (MDP Field: GRID. SDAT Field #43),text,GRID,43,grid_mdp_field_grid_sdat_field_43
-53,Parcel (MDP Field: PARCEL. SDAT Field #44),text,PARCEL,44,parcel_mdp_field_parcel_sdat_field_44
-54,Zoning Code (MDP Field: ZONING. SDAT Field #45),text,ZONING,45,zoning_code_mdp_field_zoning_sdat_field_45
-55,Exempt Class (MDP Field: EXCLASS/DESCEXCL. SDAT Field #49),text,EXCLASS/DESCEXCL,49,exempt_class_mdp_field_exclass_descexcl_sdat_field_49
+33,PREMISE ADDRESS: Number (MDP Field: PREMSNUM. SDAT Field #20),text,PREMSNUM,20.0,premise_address_number_mdp_field_premsnum_sdat_field_20
+34,PREMISE ADDRESS: Number Suffix (SDAT Field #21),text,,21.0,premise_address_number_suffix_sdat_field_21
+35,PREMISE ADDRESS: Direction (MDP Field: PREMSDIR. SDAT Field #22),text,PREMSDIR,22.0,premise_address_direction_mdp_field_premsdir_sdat_field_22
+36,PREMISE ADDRESS: Name (MDP Field: PREMSNAM. SDAT Field #23),text,PREMSNAM,23.0,premise_address_name_mdp_field_premsnam_sdat_field_23
+37,PREMISE ADDRESS: Type (MDP Field: PREMSTYP. SDAT Field #24),text,PREMSTYP,24.0,premise_address_type_mdp_field_premstyp_sdat_field_24
+38,PREMISE ADDRESS: City (MDP Field: PREMCITY. SDAT Field #25),text,PREMCITY,25.0,premise_address_city_mdp_field_premcity_sdat_field_25
+39,PREMISE ADDRESS: Zip Code (MDP Field: PREMZIP. SDAT Field #26),text,PREMZIP,26.0,premise_address_zip_code_mdp_field_premzip_sdat_field_26
+40,PREMISE ADDRESS: Zip +4 Code (MDP Field: PREMZIP2. SDAT Field #27),text,PREMZIP2,27.0,premise_address_zip_4_code_mdp_field_premzip2_sdat_field_27
+41,PREMISE ADDRESS: Condominium Unit No. (SDAT Field #28),text,,28.0,premise_address_condominium_unit_no_sdat_field_28
+42,DEED REFERENCE 1: Clerk Initials (MDP Field: DR1CLERK. SDAT Field #29),text,DR1CLERK,29.0,deed_reference_1_clerk_initials_mdp_field_dr1clerk_sdat_field_29
+43,DEED REFERENCE 1: Liber (MDP Field: DR1LIBER. SDAT Field #30),text,DR1LIBER,30.0,deed_reference_1_liber_mdp_field_dr1liber_sdat_field_30
+44,DEED REFERENCE 1: Folio (MDP Field: DR1FOLIO. SDAT Field #31),text,DR1FOLIO,31.0,deed_reference_1_folio_mdp_field_dr1folio_sdat_field_31
+45,Town Code (MDP Field: TOWNCODE/DESCTOWN. SDAT Field #36),text,TOWNCODE/DESCTOWN,36.0,town_code_mdp_field_towncode_desctown_sdat_field_36
+46,Subdivision Code (MDP Field: SUBDIVSN. SDAT Field #37),text,SUBDIVSN,37.0,subdivision_code_mdp_field_subdivsn_sdat_field_37
+47,Plat Number (MDP Field: PLAT. SDAT Field #38),text,PLAT,38.0,plat_number_mdp_field_plat_sdat_field_38
+48,Section (MDP Field: SECTION. SDAT Field #39),text,SECTION,39.0,section_mdp_field_section_sdat_field_39
+49,Block (MDP Field: BLOCK. SDAT Field #40),text,BLOCK,40.0,block_mdp_field_block_sdat_field_40
+50,Lot (MDP Field: LOT. SDAT Field #41),text,LOT,41.0,lot_mdp_field_lot_sdat_field_41
+51,Map (MDP Field: MAP. SDAT Field #42),text,MAP,42.0,map_mdp_field_map_sdat_field_42
+52,Grid (MDP Field: GRID. SDAT Field #43),text,GRID,43.0,grid_mdp_field_grid_sdat_field_43
+53,Parcel (MDP Field: PARCEL. SDAT Field #44),text,PARCEL,44.0,parcel_mdp_field_parcel_sdat_field_44
+54,Zoning Code (MDP Field: ZONING. SDAT Field #45),text,ZONING,45.0,zoning_code_mdp_field_zoning_sdat_field_45
+55,Exempt Class (MDP Field: EXCLASS/DESCEXCL. SDAT Field #49),text,EXCLASS/DESCEXCL,49.0,exempt_class_mdp_field_exclass_descexcl_sdat_field_49
 56,MDP Street Address Type Code (MDP Field: RESITYP),text,RESITYP,,mdp_street_address_type_code_mdp_field_resityp
-57,Land Use Code (MDP Field: LU/DESCLU. SDAT Field #50),text,LU/DESCLU,50,land_use_code_mdp_field_lu_desclu_sdat_field_50
-58,Multi-Parent Account Ind. (SDAT Field #55),text,,55,multi_parent_account_ind_sdat_field_55
-59,County System Property Code (SDAT Field #56),text,,56,county_system_property_code_sdat_field_56
-60,County Service Code (SDAT Field #57),text,,57,county_service_code_sdat_field_57
-61,Tax Class (SDAT Field #58),text,,58,tax_class_sdat_field_58
-62,Municipal Tax Class (SDAT Field #59),text,,59,municipal_tax_class_sdat_field_59
-63,Recreational Influence Ind. (MDP Field: RECIND. SDAT Field #60),text,RECIND,60,recreational_influence_ind_mdp_field_recind_sdat_field_60
-64,BPRUC (Public Use Code) (MDP Field: CIUSE/DESCCIUSE. SDAT Field #61),text,CIUSE/DESCCIUSE,61,bpruc_public_use_code_mdp_field_ciuse_descciuse_sdat_field_61
-65,Ad Valorem Code (SDAT Field #62),text,,62,ad_valorem_code_sdat_field_62
-66,PROPERTY FACTORS: Utilities - Water (MDP Field: PFUW. SDAT Field #63),text,PFUW,63,property_factors_utilities_water_mdp_field_pfuw_sdat_field_63
-67,PROPERTY FACTORS: Utilities - Sewer (MDP Field: PFUS. SDAT Field #64),text,PFUS,64,property_factors_utilities_sewer_mdp_field_pfus_sdat_field_64
-68,PROPERTY FACTORS: Location - Waterfront (MDP Field: PFLW. SDAT Field #65),text,PFLW,65,property_factors_location_waterfront_mdp_field_pflw_sdat_field_65
-69,PROPERTY FACTORS: Street - Paved (MDP Field: PFSP. SDAT Field #67),text,PFSP,67,property_factors_street_paved_mdp_field_pfsp_sdat_field_67
-70,PROPERTY FACTORS: Street - Unpaved (MDP Field: PFSU. SDAT Field #68),text,PFSU,68,property_factors_street_unpaved_mdp_field_pfsu_sdat_field_68
-71,PROPERTY FACTORS: Influence - Commer/Indust. (MDP Field: PFIC. SDAT Field #69),text,PFIC,69,property_factors_influence_commer_indust_mdp_field_pfic_sdat_field_69
-72,PROPERTY FACTORS: Influence - Historical (MDP Field: PFIH. SDAT Field #70),text,PFIH,70,property_factors_influence_historical_mdp_field_pfih_sdat_field_70
-73,FIELD CARD NUMBER: Field Card No. Primary (MDP Field: FCRD1ST5. SDAT Field #75),text,FCRD1ST5,75,field_card_number_field_card_no_primary_mdp_field_fcrd1st5_sdat_field_75
-74,FIELD CARD NUMBER: Field Card No. Secondary (MDP Field: FCRDNXT3. SDAT Field #76),text,FCRDNXT3,76,field_card_number_field_card_no_secondary_mdp_field_fcrdnxt3_sdat_field_76
-75,FIELD CARD NUMBER: Field Card No. Subset 3 (MDP Field: FCRDNXT2. SDAT Field #77),text,FCRDNXT2,77,field_card_number_field_card_no_subset_3_mdp_field_fcrdnxt2_sdat_field_77
-76,FIELD CARD NUMBER: Field Card No. Subset 4 (MDP Field: FCRDLST2. SDAT Field #78),text,FCRDLST2,78,field_card_number_field_card_no_subset_4_mdp_field_fcrdlst2_sdat_field_78
-77,SALES SEGMENT 1: Transfer Number (MDP Field: TRANSNO1. SDAT Field #79),text,TRANSNO1,79,sales_segment_1_transfer_number_mdp_field_transno1_sdat_field_79
-78,SALES SEGMENT 1: Grantor Name (MDP Field: GRNTNAM1. SDAT Field #80),text,GRNTNAM1,80,sales_segment_1_grantor_name_mdp_field_grntnam1_sdat_field_80
-79,SALES SEGMENT 1: Grantor Deed Reference 1 - Clerk Initials (MDP Field: GR1CLRK1. SDAT Field #81),text,GR1CLRK1,81,sales_segment_1_grantor_deed_reference_1_clerk_initials_mdp_field_gr1clrk1_sdat_field_81
-80,SALES SEGMENT 1: Grantor Deed Reference 1 - Liber (MDP Field: GR1LIBR1. SDAT Field #82),text,GR1LIBR1,82,sales_segment_1_grantor_deed_reference_1_liber_mdp_field_gr1libr1_sdat_field_82
-81,SALES SEGMENT 1: Grantor Deed Reference 1 - Folio (MDP Field: GR1FOLO1. SDAT Field #83),text,GR1FOLO1,83,sales_segment_1_grantor_deed_reference_1_folio_mdp_field_gr1folo1_sdat_field_83
-82,SALES SEGMENT 1: How Conveyed Ind. (MDP Field: CONVEY1. SDAT Field #87),text,CONVEY1,87,sales_segment_1_how_conveyed_ind_mdp_field_convey1_sdat_field_87
-83,SALES SEGMENT 1: Transfer Date (YYYY.MM.DD) (MDP Field: TRADATE. SDAT Field #89),text,TRADATE,89,sales_segment_1_transfer_date_yyyy_mm_dd_mdp_field_tradate_sdat_field_89
-84,SALES SEGMENT 1: Consideration (MDP Field: CONSIDR1. SDAT Field #90),money,CONSIDR1,90,sales_segment_1_consideration_mdp_field_considr1_sdat_field_90
-85,SALES SEGMENT 1: Mortgage (MDP Field: MORTGAG1. SDAT Field #92),money,MORTGAG1,92,sales_segment_1_mortgage_mdp_field_mortgag1_sdat_field_92
-86,SALES SEGMENT 1: Mkt Land Value (SDAT Field #95),money,,95,sales_segment_1_mkt_land_value_sdat_field_95
-87,SALES SEGMENT 1: Mkt Improvement Value (SDAT Field #96),money,,96,sales_segment_1_mkt_improvement_value_sdat_field_96
-88,SALES SEGMENT 2: Transfer Number (SDAT Field #99),text,,99,sales_segment_2_transfer_number_sdat_field_99
-89,SALES SEGMENT 2: Grantor Name (SDAT Field #100),text,,100,sales_segment_2_grantor_name_sdat_field_100
-90,SALES SEGMENT 2: Grantor Deed Reference 1 - Clerk Initials (SDAT Field #101),text,,101,sales_segment_2_grantor_deed_reference_1_clerk_initials_sdat_field_101
-91,SALES SEGMENT 2: Grantor Deed Reference 1 - Liber (SDAT Field #102),text,,102,sales_segment_2_grantor_deed_reference_1_liber_sdat_field_102
-92,SALES SEGMENT 2: Grantor Deed Reference 1 - Folio (SDAT Field #103),text,,103,sales_segment_2_grantor_deed_reference_1_folio_sdat_field_103
-93,SALES SEGMENT 2: How Conveyed Ind. (SDAT Field #107),text,,107,sales_segment_2_how_conveyed_ind_sdat_field_107
-94,SALES SEGMENT 2: Transfer Date (YYYY.MM.DD) (SDAT Field #109),text,,109,sales_segment_2_transfer_date_yyyy_mm_dd_sdat_field_109
-95,SALES SEGMENT 2: Consideration (SDAT Field #110),money,,110,sales_segment_2_consideration_sdat_field_110
-96,SALES SEGMENT 2: Mortgage (SDAT Field #112),money,,112,sales_segment_2_mortgage_sdat_field_112
-97,SALES SEGMENT 2: Mkt Land Value (SDAT Field #115),money,,115,sales_segment_2_mkt_land_value_sdat_field_115
-98,SALES SEGMENT 2: Mkt Improvement Value (SDAT Field #116),money,,116,sales_segment_2_mkt_improvement_value_sdat_field_116
-99,SALES SEGMENT 3: Transfer Number (SDAT Field #119),text,,119,sales_segment_3_transfer_number_sdat_field_119
-100,SALES SEGMENT 3: Grantor Name (SDAT Field #120),text,,120,sales_segment_3_grantor_name_sdat_field_120
-101,SALES SEGMENT 3: Grantor Deed Reference 1 - Clerk Initials (SDAT Field #121),text,,121,sales_segment_3_grantor_deed_reference_1_clerk_initials_sdat_field_121
-102,SALES SEGMENT 3: Grantor Deed Reference 1 - Liber (SDAT Field #122),text,,122,sales_segment_3_grantor_deed_reference_1_liber_sdat_field_122
-103,SALES SEGMENT 3: Grantor Deed Reference 1 - Folio (SDAT Field #123),text,,123,sales_segment_3_grantor_deed_reference_1_folio_sdat_field_123
-104,SALES SEGMENT 3: How Conveyed Ind. (SDAT Field #127),text,,127,sales_segment_3_how_conveyed_ind_sdat_field_127
-105,SALES SEGMENT 3: Transfer Date (YYYY.MM.DD) (SDAT Field #129),text,,129,sales_segment_3_transfer_date_yyyy_mm_dd_sdat_field_129
-106,SALES SEGMENT 3: Consideration (SDAT Field #130),money,,130,sales_segment_3_consideration_sdat_field_130
-107,SALES SEGMENT 3: Mortgage (SDAT Field #132),money,,132,sales_segment_3_mortgage_sdat_field_132
-108,SALES SEGMENT 3: Mkt Land Value (SDAT Field #135),money,,135,sales_segment_3_mkt_land_value_sdat_field_135
-109,SALES SEGMENT 3: Mkt Improvement Value (SDAT Field #136),money,,136,sales_segment_3_mkt_improvement_value_sdat_field_136
-110,FULL AND PARTIAL EXEMPTIONS: County Exempt Class (SDAT Field #139),text,,139,full_and_partial_exemptions_county_exempt_class_sdat_field_139
-111,FULL AND PARTIAL EXEMPTIONS: County Exempt Assessment (SDAT Field #140),money,,140,full_and_partial_exemptions_county_exempt_assessment_sdat_field_140
-112,FULL AND PARTIAL EXEMPTIONS: County Exempt Percentage (SDAT Field #141),percent,,141,full_and_partial_exemptions_county_exempt_percentage_sdat_field_141
-113,FULL AND PARTIAL EXEMPTIONS: State Exempt Class (SDAT Field #142),text,,142,full_and_partial_exemptions_state_exempt_class_sdat_field_142
-114,FULL AND PARTIAL EXEMPTIONS: State Exempt Assessment (SDAT Field #143),money,,143,full_and_partial_exemptions_state_exempt_assessment_sdat_field_143
-115,FULL AND PARTIAL EXEMPTIONS: State Exempt Percentage (SDAT Field #144),percent,,144,full_and_partial_exemptions_state_exempt_percentage_sdat_field_144
-116,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Class (SDAT Field #145),text,,145,full_and_partial_exemptions_municipal_exempt_class_sdat_field_145
-117,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Assessment (SDAT Field #146),money,,146,full_and_partial_exemptions_municipal_exempt_assessment_sdat_field_146
-118,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Percentage (SDAT Field #147),percent,,147,full_and_partial_exemptions_municipal_exempt_percentage_sdat_field_147
-119,FULL AND PARTIAL EXEMPTIONS: Prior Exempt County Assessment (SDAT Field #148),money,,148,full_and_partial_exemptions_prior_exempt_county_assessment_sdat_field_148
-120,FULL AND PARTIAL EXEMPTIONS: Prior Exempt County Percent (SDAT Field #149),percent,,149,full_and_partial_exemptions_prior_exempt_county_percent_sdat_field_149
-121,FULL AND PARTIAL EXEMPTIONS: Prior Exempt State Assessment (SDAT Field #150),money,,150,full_and_partial_exemptions_prior_exempt_state_assessment_sdat_field_150
-122,FULL AND PARTIAL EXEMPTIONS: Prior Exempt State Percent (SDAT Field #151),percent,,151,full_and_partial_exemptions_prior_exempt_state_percent_sdat_field_151
-123,FULL AND PARTIAL EXEMPTIONS: Prior Exempt Municipal Assmt (SDAT Field #152),money,,152,full_and_partial_exemptions_prior_exempt_municipal_assmt_sdat_field_152
-124,FULL AND PARTIAL EXEMPTIONS: Prior Exempt Municipal Percent (SDAT Field #153),percent,,153,full_and_partial_exemptions_prior_exempt_municipal_percent_sdat_field_153
-125,BASE CYCLE DATA: Land Value (SDAT Field #154),money,,154,base_cycle_data_land_value_sdat_field_154
-126,BASE CYCLE DATA: Improvements Value (SDAT Field #155),money,,155,base_cycle_data_improvements_value_sdat_field_155
-127,BASE CYCLE DATA: Preferential Land Value (SDAT Field #156),money,,156,base_cycle_data_preferential_land_value_sdat_field_156
-128,BASE CYCLE DATA: Circuit Breaker Value (SDAT Field #157),money,,157,base_cycle_data_circuit_breaker_value_sdat_field_157
-129,BASE CYCLE DATA: Date Assessed (YYYY.MM) (SDAT Field #158),text,,158,base_cycle_data_date_assessed_yyyy_mm_sdat_field_158
-130,BASE CYCLE DATA: Date Inspected (YYYY.MM) (SDAT Field #159),text,,159,base_cycle_data_date_inspected_yyyy_mm_sdat_field_159
-131,BASE CYCLE DATA: Assessor Code (SDAT Field #160),text,,160,base_cycle_data_assessor_code_sdat_field_160
-132,PRIOR ASSESSMENT YEAR: Total Assessment (SDAT Field #161),money,,161,prior_assessment_year_total_assessment_sdat_field_161
-133,PRIOR ASSESSMENT YEAR: Circuit Breaker Assessment (SDAT Field #163),money,,163,prior_assessment_year_circuit_breaker_assessment_sdat_field_163
-134,"CURRENT CYCLE DATA: Land Value (MDP Field Names: NFMLNDVL, CURLNDVL, and SALLNDVL. SDAT Field #164)",money,,164,current_cycle_data_land_value_mdp_field_names_nfmlndvl_curlndvl_and_sallndvl_sdat_field_164
-135,"CURRENT CYCLE DATA: Improvements Value (MDP Field Names: NFMIMPVL, CURIMPVL, and SALIMPVL. SDAT Field #165)",money,,165,current_cycle_data_improvements_value_mdp_field_names_nfmimpvl_curimpvl_and_salimpvl_sdat_field_165
-136,CURRENT CYCLE DATA: Preferential Land Value (SDAT Field #166),money,,166,current_cycle_data_preferential_land_value_sdat_field_166
-137,CURRENT CYCLE DATA: Circuit Breaker Value (SDAT Field #167),money,,167,current_cycle_data_circuit_breaker_value_sdat_field_167
-138,CURRENT CYCLE DATA: Date Inspected (YYYY.MM) (MDP Field: LASTINSP. SDAT Field #168),text,LASTINSP,168,current_cycle_data_date_inspected_yyyy_mm_mdp_field_lastinsp_sdat_field_168
-139,CURRENT CYCLE DATA: Date Assessed (YYYY.MM) (MDP Field: LASTASSD. SDAT Field #169),text,LASTASSD,169,current_cycle_data_date_assessed_yyyy_mm_mdp_field_lastassd_sdat_field_169
-140,CURRENT CYCLE DATA: Assessor Code (MDP Field: ASSESSOR. SDAT Field #170),text,ASSESSOR,170,current_cycle_data_assessor_code_mdp_field_assessor_sdat_field_170
-141,CURRENT ASSESSMENT YEAR: Total Phase-In Value (SDAT Field #171),money,,171,current_assessment_year_total_phase_in_value_sdat_field_171
-142,CURRENT ASSESSMENT YEAR: Total Assessment (SDAT Field #172),money,,172,current_assessment_year_total_assessment_sdat_field_172
-143,CURRENT ASSESSMENT YEAR: Circuit Breaker Phase-In Value (SDAT Field #175),money,,175,current_assessment_year_circuit_breaker_phase_in_value_sdat_field_175
-144,CURRENT ASSESSMENT YEAR: Circuit Breaker Assessment (SDAT Field #176),money,,176,current_assessment_year_circuit_breaker_assessment_sdat_field_176
-145,PRIOR ASSESSMENT YEAR 3: Total Assessment (SDAT Field #181),money,,181,prior_assessment_year_3_total_assessment_sdat_field_181
-146,PRIOR ASSESSMENT YEAR 3: Circuit Breaker Assessment (SDAT Field #183),money,,183,prior_assessment_year_3_circuit_breaker_assessment_sdat_field_183
-147,NEW CONSTRUCTION DATA: Base Land Value (SDAT Field #184),money,,184,new_construction_data_base_land_value_sdat_field_184
-148,NEW CONSTRUCTION DATA: Base Improvement Value (SDAT Field #185),money,,185,new_construction_data_base_improvement_value_sdat_field_185
-149,NEW CONSTRUCTION DATA: Proposed Land Value (SDAT Field #186),money,,186,new_construction_data_proposed_land_value_sdat_field_186
-150,NEW CONSTRUCTION DATA: Proposed Improvement Value (SDAT Field #187),money,,187,new_construction_data_proposed_improvement_value_sdat_field_187
-151,NEW CONSTRUCTION DATA: Activity/Tax Year (as of July 1) (SDAT Field #189),text,,189,new_construction_data_activity_tax_year_as_of_july_1_sdat_field_189
-152,NEW CONSTRUCTION DATA: Description (SDAT Field #190),text,,190,new_construction_data_description_sdat_field_190
-153,NEW CONSTRUCTION DATA: Date Updated (YYYY.MM.DD) (SDAT Field #191),text,,191,new_construction_data_date_updated_yyyy_mm_dd_sdat_field_191
-154,NEW CONSTRUCTION DATA: County Assessment Credit (SDAT Field #192),money,,192,new_construction_data_county_assessment_credit_sdat_field_192
-155,NEW CONSTRUCTION DATA: State Assessment Credit (SDAT Field #193),money,,193,new_construction_data_state_assessment_credit_sdat_field_193
-156,NEW CONSTRUCTION DATA: Municipal Assessment Credit (SDAT Field #194),money,,194,new_construction_data_municipal_assessment_credit_sdat_field_194
-157,NEW CONSTRUCTION DATA: Cycle Code (SDAT Field #195),text,,195,new_construction_data_cycle_code_sdat_field_195
-158,ASSESSMENT CREDIT PROGRAM: Previous State Assmt Cr (SDAT Field #196),money,,196,assessment_credit_program_previous_state_assmt_cr_sdat_field_196
-159,ASSESSMENT CREDIT PROGRAM: Current State Assmt Cr (SDAT Field #197),money,,197,assessment_credit_program_current_state_assmt_cr_sdat_field_197
-160,ASSESSMENT CREDIT PROGRAM: Previous County Assmt Cr (SDAT Field #198),money,,198,assessment_credit_program_previous_county_assmt_cr_sdat_field_198
-161,ASSESSMENT CREDIT PROGRAM: Current County Assmt Cr (SDAT Field #199),money,,199,assessment_credit_program_current_county_assmt_cr_sdat_field_199
-162,ASSESSMENT CREDIT PROGRAM: Previous Municipal Assmt Cr (SDAT Field #200),money,,200,assessment_credit_program_previous_municipal_assmt_cr_sdat_field_200
-163,ASSESSMENT CREDIT PROGRAM: Current Municipal Assmt Cr (SDAT Field #201),money,,201,assessment_credit_program_current_municipal_assmt_cr_sdat_field_201
-164,ASSESSMENT CREDIT PROGRAM: Current Credit Status Code (SDAT Field #202),text,,202,assessment_credit_program_current_credit_status_code_sdat_field_202
-165,ASSESSMENT CREDIT PROGRAM: Previous Credit Status Code (SDAT Field #203),text,,203,assessment_credit_program_previous_credit_status_code_sdat_field_203
-166,ASSESSMENT CREDIT PROGRAM: Prior Year 3 State Assmt Cr (SDAT Field #204),money,,204,assessment_credit_program_prior_year_3_state_assmt_cr_sdat_field_204
-167,ASSESSMENT CREDIT PROGRAM: Prior Year 3 County Assmt Cr (SDAT Field #205),money,,205,assessment_credit_program_prior_year_3_county_assmt_cr_sdat_field_205
-201,TAX ROLL VALUES: Tax Year (as of July 1) (SDAT Field #246),text,,246,tax_roll_values_tax_year_as_of_july_1_sdat_field_246
-168,ASSESSMENT CREDIT PROGRAM: Prior Year 3 Municipal Assmt Cr (SDAT Field #206),money,,206,assessment_credit_program_prior_year_3_municipal_assmt_cr_sdat_field_206
-169,SPECIAL DATES AND DATA: FCMA Code (MDP Field: FCMACODE. SDAT Field #207),text,FCMACODE,207,special_dates_and_data_fcma_code_mdp_field_fcmacode_sdat_field_207
-170,SPECIAL DATES AND DATA: Rezoned Reality Date (YYYY.MM.DD) (MDP Field: RZREALDAT. SDAT Field #208),text,RZREALDAT,208,special_dates_and_data_rezoned_reality_date_yyyy_mm_dd_mdp_field_rzrealdat_sdat_field_208
-171,SPECIAL DATES AND DATA: Inchoate Lien Date (YYYY.MM.DD) (SDAT Field #209),text,,209,special_dates_and_data_inchoate_lien_date_yyyy_mm_dd_sdat_field_209
-172,SPECIAL DATES AND DATA: Country Club Assmt Date (YYYY.MM.DD) (SDAT Field #210),text,,210,special_dates_and_data_country_club_assmt_date_yyyy_mm_dd_sdat_field_210
-173,SPECIAL DATES AND DATA: Country Club Expiration Date (YYYY.MM.DD) (SDAT Field #211),text,,211,special_dates_and_data_country_club_expiration_date_yyyy_mm_dd_sdat_field_211
-174,SPECIAL DATES AND DATA: Country Club Extension Date (YYYY.MM.DD) (SDAT Field #212),text,,212,special_dates_and_data_country_club_extension_date_yyyy_mm_dd_sdat_field_212
-175,SPECIAL DATES AND DATA: Agr Land Preservation FDN Area (MDP Field: AGFNDAREA. SDAT Field #213),text,AGFNDAREA,213,special_dates_and_data_agr_land_preservation_fdn_area_mdp_field_agfndarea_sdat_field_213
-176,SPECIAL DATES AND DATA: Agr Land Pres. FDN Area Unit (MDP Field: AGFNDLUOM. SDAT Field #214),text,AGFNDLUOM,214,special_dates_and_data_agr_land_pres_fdn_area_unit_mdp_field_agfndluom_sdat_field_214
-177,SPECIAL DATES AND DATA: Enterprise Zone Date (YYYY.MM.DD) (MDP Field: ENTZNDAT. SDAT Field #215),text,ENTZNDAT,215,special_dates_and_data_enterprise_zone_date_yyyy_mm_dd_mdp_field_entzndat_sdat_field_215
-178,SPECIAL DATES AND DATA: Enterprise Zone Assessment (MDP Field: ENTZNASSM. SDAT Field #216),money,ENTZNASSM,216,special_dates_and_data_enterprise_zone_assessment_mdp_field_entznassm_sdat_field_216
-179,SPECIAL DATES AND DATA: Planned Development Date (YYYY.MM.DD) (MDP Field: PLNDEVDAT. SDAT Field #217),text,PLNDEVDAT,217,special_dates_and_data_planned_development_date_yyyy_mm_dd_mdp_field_plndevdat_sdat_field_217
-180,SPECIAL DATES AND DATA: Non-Perc Test Date (YYYY.MM.DD) (MDP Field: NPRCTSTDAT. SDAT Field #218),text,NPRCTSTDAT,218,special_dates_and_data_non_perc_test_date_yyyy_mm_dd_mdp_field_nprctstdat_sdat_field_218
-181,SPECIAL DATES AND DATA: Non-Perc Area (MDP Field: NPRCAREA. SDAT Field #219),text,NPRCAREA,219,special_dates_and_data_non_perc_area_mdp_field_nprcarea_sdat_field_219
-182,SPECIAL DATES AND DATA: Non-Perc Area Unit (MDP Field: NPRCLUOM. SDAT Field #220),text,NPRCLUOM,220,special_dates_and_data_non_perc_area_unit_mdp_field_nprcluom_sdat_field_220
-183,SPECIAL DATES AND DATA: Ag Tax Liab Due Date (YYYY.MM.DD) (SDAT Field #221),text,,221,special_dates_and_data_ag_tax_liab_due_date_yyyy_mm_dd_sdat_field_221
-184,SPECIAL DATES AND DATA: Letter of Intent Date (YYYY.MM.DD) (SDAT Field #222),text,,222,special_dates_and_data_letter_of_intent_date_yyyy_mm_dd_sdat_field_222
-185,SPECIAL DATES AND DATA: Critical Area Code (MDP Field: CRTARCOD. SDAT Field #223),text,CRTARCOD,223,special_dates_and_data_critical_area_code_mdp_field_crtarcod_sdat_field_223
-186,SPECIAL DATES AND DATA: Zoning Change Date (YYYY.MM.DD) (MDP Field: ZNCHGDAT. SDAT Field #224),text,ZNCHGDAT,224,special_dates_and_data_zoning_change_date_yyyy_mm_dd_mdp_field_znchgdat_sdat_field_224
-187,SPECIAL DATES AND DATA: Tax Court Date (YYYY.MM.DD) (SDAT Field #225),text,,225,special_dates_and_data_tax_court_date_yyyy_mm_dd_sdat_field_225
-188,SPECIAL DATES AND DATA: Appeal Board Date (YYYY.MM.DD) (SDAT Field #226),text,,226,special_dates_and_data_appeal_board_date_yyyy_mm_dd_sdat_field_226
-189,C.A.M.A. SYSTEM DATA: Dwelling Grade Code and Description (MDP Field: STRUGRAD/STRUDESC. SDAT Field #230),text,STRUGRAD/STRUDESC,230,c_a_m_a_system_data_dwelling_grade_code_and_description_mdp_field_strugrad_strudesc_sdat_field_230
-190,C.A.M.A. SYSTEM DATA: Dwelling Condition Code (SDAT Field #233),text,,233,c_a_m_a_system_data_dwelling_condition_code_sdat_field_233
-191,C.A.M.A. SYSTEM DATA: Year Built (YYYY) (MDP Field: YEARBLT. SDAT Field #235),text,YEARBLT,235,c_a_m_a_system_data_year_built_yyyy_mdp_field_yearblt_sdat_field_235
-192,C.A.M.A. SYSTEM DATA: Set No. (SDAT Field #236),number,,236,c_a_m_a_system_data_set_no_sdat_field_236
-193,C.A.M.A. SYSTEM DATA: Subset No. (SDAT Field #237),number,,237,c_a_m_a_system_data_subset_no_sdat_field_237
-194,C.A.M.A. SYSTEM DATA: Number of Dwelling Units (MDP Field: BLDG_UNITS. SDAT Field #239),number,BLDG_UNITS,239,c_a_m_a_system_data_number_of_dwelling_units_mdp_field_bldg_units_sdat_field_239
-195,C.A.M.A. SYSTEM DATA: Number of Stories (MDP Field: BLDG_STORY. SDAT Field #240),number,BLDG_STORY,240,c_a_m_a_system_data_number_of_stories_mdp_field_bldg_story_sdat_field_240
-196,C.A.M.A. SYSTEM DATA: Structure Area (Sq.Ft.) (MDP Field: SQFTSTRC. SDAT Field #241),number,SQFTSTRC,241,c_a_m_a_system_data_structure_area_sq_ft_mdp_field_sqftstrc_sdat_field_241
-197,C.A.M.A. SYSTEM DATA: Land Area (MDP Field: LANDAREA. SDAT Field #242),number,LANDAREA,242,c_a_m_a_system_data_land_area_mdp_field_landarea_sdat_field_242
-198,C.A.M.A. SYSTEM DATA: Land Unit of Measure (MDP Field: LUOM. SDAT Field #243),text,LUOM,243,c_a_m_a_system_data_land_unit_of_measure_mdp_field_luom_sdat_field_243
-199,C.A.M.A. SYSTEM DATA: Effective Width (MDP Field: WIDTH. SDAT Field #244),number,WIDTH,244,c_a_m_a_system_data_effective_width_mdp_field_width_sdat_field_244
-200,C.A.M.A. SYSTEM DATA: Effective Depth (MDP Field: DEPTH. SDAT Field #245),number,DEPTH,245,c_a_m_a_system_data_effective_depth_mdp_field_depth_sdat_field_245
-202,TAX ROLL VALUES: County Assessment (SDAT Field #247),money,,247,tax_roll_values_county_assessment_sdat_field_247
-203,TAX ROLL VALUES: State Assessment (SDAT Field #248),money,,248,tax_roll_values_state_assessment_sdat_field_248
-204,TAX ROLL VALUES: Municipal Assessment (SDAT Field #249),money,,249,tax_roll_values_municipal_assessment_sdat_field_249
-205,TAX ROLL VALUES: State Assessment Credit (SDAT Field #250),money,,250,tax_roll_values_state_assessment_credit_sdat_field_250
-206,TAX ROLL VALUES: County Assessment Credit (SDAT Field #251),money,,251,tax_roll_values_county_assessment_credit_sdat_field_251
-207,TAX ROLL VALUES: Municipal Assessment Credit (SDAT Field #252),money,,252,tax_roll_values_municipal_assessment_credit_sdat_field_252
-208,TAX ROLL VALUES: Homeowner Program Total Credit (SDAT Field #253),money,,253,tax_roll_values_homeowner_program_total_credit_sdat_field_253
-209,TAX ROLL VALUES: Homeowner Program-County Liab (SDAT Field #254),money,,254,tax_roll_values_homeowner_program_county_liab_sdat_field_254
-210,TAX ROLL VALUES: Homeowner Program-Municp Liab (SDAT Field #255),money,,255,tax_roll_values_homeowner_program_municp_liab_sdat_field_255
-211,TAX ROLL VALUES: Tax Roll Indicator (SDAT Field #256),text,,256,tax_roll_values_tax_roll_indicator_sdat_field_256
-212,TAX ROLL VALUES: Tax Roll Billing Date (YYYY.MM.DD) (SDAT Field #257),text,,257,tax_roll_values_tax_roll_billing_date_yyyy_mm_dd_sdat_field_257
-213,Homestead Qualification Code (MDP Field: HOMQLCOD. SDAT Field #259),text,HOMQLCOD,259,homestead_qualification_code_mdp_field_homqlcod_sdat_field_259
-214,Homestead Qualification Date (MDP Field: HOMQLDAT. SDAT Field #260),text,HOMQLDAT,260,homestead_qualification_date_mdp_field_homqldat_sdat_field_260
-215,Residential Exception Indicator (SDAT Field #261),text,,261,residential_exception_indicator_sdat_field_261
-216,ADDITIONAL C.A.M.A. Data: Permit Type (MDP Field: PERMITTYP. SDAT Field #262),text,PERMITTYP,262,additional_c_a_m_a_data_permit_type_mdp_field_permittyp_sdat_field_262
-217,ADDITIONAL C.A.M.A. Data: Dwelling Construction Code (MDP Field: STRUCNST. SDAT Field #263),text,STRUCNST,263,additional_c_a_m_a_data_dwelling_construction_code_mdp_field_strucnst_sdat_field_263
-218,ADDITIONAL C.A.M.A. Data: Building Style Code and Description (MDP Field: STRUSTYL/DESCSTYL. SDAT Field #264),text,STRUSTYL/DESCSTYL,264,additional_c_a_m_a_data_building_style_code_and_description_mdp_field_strustyl_descstyl_sdat_field_264
-219,ADDITIONAL C.A.M.A. Data: Dwelling Type (MDP Field: STRUBLDG. SDAT Field #265),text,STRUBLDG,265,additional_c_a_m_a_data_dwelling_type_mdp_field_strubldg_sdat_field_265
-220,ADDITIONAL C.A.M.A. Data: Land Valuation Unit (SDAT Field #266),text,,266,additional_c_a_m_a_data_land_valuation_unit_sdat_field_266
-221,Plat Reference Liber (MDP Field: PLTLIBER. SDAT Field #267),text,PLTLIBER,267,plat_reference_liber_mdp_field_pltliber_sdat_field_267
-222,Plat Reference Folio (MDP Field: PLTFOLIO. SDAT Field #268),text,PLTFOLIO,268,plat_reference_folio_mdp_field_pltfolio_sdat_field_268
-223,PARENT ACCOUNT NUMBER: District/Ward (SDAT Field #387),text,,387,parent_account_number_district_ward_sdat_field_387
-224,PARENT ACCOUNT NUMBER: Account Number (SDAT Field #388),text,,388,parent_account_number_account_number_sdat_field_388
-225,Last Activity Date (YYYY.MM.DD) (SDAT Field #392),text,,392,last_activity_date_yyyy_mm_dd_sdat_field_392
-226,Record Creation Date (YYYY.MM.DD) (SDAT Field #397),text,,397,record_creation_date_yyyy_mm_dd_sdat_field_397
-227,Record Deletion Date (YYYY.MM.DD) (SDAT Field #398),text,,398,record_deletion_date_yyyy_mm_dd_sdat_field_398
-228,Assessment Cycle Year (SDAT Field #399),text,,399,assessment_cycle_year_sdat_field_399
-229,File Record Type (SDAT Field #400),text,,400,file_record_type_sdat_field_400
+57,Land Use Code (MDP Field: LU/DESCLU. SDAT Field #50),text,LU/DESCLU,50.0,land_use_code_mdp_field_lu_desclu_sdat_field_50
+58,Multi-Parent Account Ind. (SDAT Field #55),text,,55.0,multi_parent_account_ind_sdat_field_55
+59,County System Property Code (SDAT Field #56),text,,56.0,county_system_property_code_sdat_field_56
+60,County Service Code (SDAT Field #57),text,,57.0,county_service_code_sdat_field_57
+61,Tax Class (SDAT Field #58),text,,58.0,tax_class_sdat_field_58
+62,Municipal Tax Class (SDAT Field #59),text,,59.0,municipal_tax_class_sdat_field_59
+63,Recreational Influence Ind. (MDP Field: RECIND. SDAT Field #60),text,RECIND,60.0,recreational_influence_ind_mdp_field_recind_sdat_field_60
+64,BPRUC (Public Use Code) (MDP Field: CIUSE/DESCCIUSE. SDAT Field #61),text,CIUSE/DESCCIUSE,61.0,bpruc_public_use_code_mdp_field_ciuse_descciuse_sdat_field_61
+65,Ad Valorem Code (SDAT Field #62),text,,62.0,ad_valorem_code_sdat_field_62
+66,PROPERTY FACTORS: Utilities - Water (MDP Field: PFUW. SDAT Field #63),text,PFUW,63.0,property_factors_utilities_water_mdp_field_pfuw_sdat_field_63
+67,PROPERTY FACTORS: Utilities - Sewer (MDP Field: PFUS. SDAT Field #64),text,PFUS,64.0,property_factors_utilities_sewer_mdp_field_pfus_sdat_field_64
+68,PROPERTY FACTORS: Location - Waterfront (MDP Field: PFLW. SDAT Field #65),text,PFLW,65.0,property_factors_location_waterfront_mdp_field_pflw_sdat_field_65
+69,PROPERTY FACTORS: Street - Paved (MDP Field: PFSP. SDAT Field #67),text,PFSP,67.0,property_factors_street_paved_mdp_field_pfsp_sdat_field_67
+70,PROPERTY FACTORS: Street - Unpaved (MDP Field: PFSU. SDAT Field #68),text,PFSU,68.0,property_factors_street_unpaved_mdp_field_pfsu_sdat_field_68
+71,PROPERTY FACTORS: Influence - Commer/Indust. (MDP Field: PFIC. SDAT Field #69),text,PFIC,69.0,property_factors_influence_commer_indust_mdp_field_pfic_sdat_field_69
+72,PROPERTY FACTORS: Influence - Historical (MDP Field: PFIH. SDAT Field #70),text,PFIH,70.0,property_factors_influence_historical_mdp_field_pfih_sdat_field_70
+73,FIELD CARD NUMBER: Field Card No. Primary (MDP Field: FCRD1ST5. SDAT Field #75),text,FCRD1ST5,75.0,field_card_number_field_card_no_primary_mdp_field_fcrd1st5_sdat_field_75
+74,FIELD CARD NUMBER: Field Card No. Secondary (MDP Field: FCRDNXT3. SDAT Field #76),text,FCRDNXT3,76.0,field_card_number_field_card_no_secondary_mdp_field_fcrdnxt3_sdat_field_76
+75,FIELD CARD NUMBER: Field Card No. Subset 3 (MDP Field: FCRDNXT2. SDAT Field #77),text,FCRDNXT2,77.0,field_card_number_field_card_no_subset_3_mdp_field_fcrdnxt2_sdat_field_77
+76,FIELD CARD NUMBER: Field Card No. Subset 4 (MDP Field: FCRDLST2. SDAT Field #78),text,FCRDLST2,78.0,field_card_number_field_card_no_subset_4_mdp_field_fcrdlst2_sdat_field_78
+77,SALES SEGMENT 1: Transfer Number (MDP Field: TRANSNO1. SDAT Field #79),text,TRANSNO1,79.0,sales_segment_1_transfer_number_mdp_field_transno1_sdat_field_79
+78,SALES SEGMENT 1: Grantor Name (MDP Field: GRNTNAM1. SDAT Field #80),text,GRNTNAM1,80.0,sales_segment_1_grantor_name_mdp_field_grntnam1_sdat_field_80
+79,SALES SEGMENT 1: Grantor Deed Reference 1 - Clerk Initials (MDP Field: GR1CLRK1. SDAT Field #81),text,GR1CLRK1,81.0,sales_segment_1_grantor_deed_reference_1_clerk_initials_mdp_field_gr1clrk1_sdat_field_81
+80,SALES SEGMENT 1: Grantor Deed Reference 1 - Liber (MDP Field: GR1LIBR1. SDAT Field #82),text,GR1LIBR1,82.0,sales_segment_1_grantor_deed_reference_1_liber_mdp_field_gr1libr1_sdat_field_82
+81,SALES SEGMENT 1: Grantor Deed Reference 1 - Folio (MDP Field: GR1FOLO1. SDAT Field #83),text,GR1FOLO1,83.0,sales_segment_1_grantor_deed_reference_1_folio_mdp_field_gr1folo1_sdat_field_83
+82,SALES SEGMENT 1: How Conveyed Ind. (MDP Field: CONVEY1. SDAT Field #87),text,CONVEY1,87.0,sales_segment_1_how_conveyed_ind_mdp_field_convey1_sdat_field_87
+83,SALES SEGMENT 1: Transfer Date (YYYY.MM.DD) (MDP Field: TRADATE. SDAT Field #89),text,TRADATE,89.0,sales_segment_1_transfer_date_yyyy_mm_dd_mdp_field_tradate_sdat_field_89
+84,SALES SEGMENT 1: Consideration (MDP Field: CONSIDR1. SDAT Field #90),money,CONSIDR1,90.0,sales_segment_1_consideration_mdp_field_considr1_sdat_field_90
+85,SALES SEGMENT 1: Mortgage (MDP Field: MORTGAG1. SDAT Field #92),money,MORTGAG1,92.0,sales_segment_1_mortgage_mdp_field_mortgag1_sdat_field_92
+86,SALES SEGMENT 1: Mkt Land Value (SDAT Field #95),money,,95.0,sales_segment_1_mkt_land_value_sdat_field_95
+87,SALES SEGMENT 1: Mkt Improvement Value (SDAT Field #96),money,,96.0,sales_segment_1_mkt_improvement_value_sdat_field_96
+88,SALES SEGMENT 2: Transfer Number (SDAT Field #99),text,,99.0,sales_segment_2_transfer_number_sdat_field_99
+89,SALES SEGMENT 2: Grantor Name (SDAT Field #100),text,,100.0,sales_segment_2_grantor_name_sdat_field_100
+90,SALES SEGMENT 2: Grantor Deed Reference 1 - Clerk Initials (SDAT Field #101),text,,101.0,sales_segment_2_grantor_deed_reference_1_clerk_initials_sdat_field_101
+91,SALES SEGMENT 2: Grantor Deed Reference 1 - Liber (SDAT Field #102),text,,102.0,sales_segment_2_grantor_deed_reference_1_liber_sdat_field_102
+92,SALES SEGMENT 2: Grantor Deed Reference 1 - Folio (SDAT Field #103),text,,103.0,sales_segment_2_grantor_deed_reference_1_folio_sdat_field_103
+93,SALES SEGMENT 2: How Conveyed Ind. (SDAT Field #107),text,,107.0,sales_segment_2_how_conveyed_ind_sdat_field_107
+94,SALES SEGMENT 2: Transfer Date (YYYY.MM.DD) (SDAT Field #109),text,,109.0,sales_segment_2_transfer_date_yyyy_mm_dd_sdat_field_109
+95,SALES SEGMENT 2: Consideration (SDAT Field #110),money,,110.0,sales_segment_2_consideration_sdat_field_110
+96,SALES SEGMENT 2: Mortgage (SDAT Field #112),money,,112.0,sales_segment_2_mortgage_sdat_field_112
+97,SALES SEGMENT 2: Mkt Land Value (SDAT Field #115),money,,115.0,sales_segment_2_mkt_land_value_sdat_field_115
+98,SALES SEGMENT 2: Mkt Improvement Value (SDAT Field #116),money,,116.0,sales_segment_2_mkt_improvement_value_sdat_field_116
+99,SALES SEGMENT 3: Transfer Number (SDAT Field #119),text,,119.0,sales_segment_3_transfer_number_sdat_field_119
+100,SALES SEGMENT 3: Grantor Name (SDAT Field #120),text,,120.0,sales_segment_3_grantor_name_sdat_field_120
+101,SALES SEGMENT 3: Grantor Deed Reference 1 - Clerk Initials (SDAT Field #121),text,,121.0,sales_segment_3_grantor_deed_reference_1_clerk_initials_sdat_field_121
+102,SALES SEGMENT 3: Grantor Deed Reference 1 - Liber (SDAT Field #122),text,,122.0,sales_segment_3_grantor_deed_reference_1_liber_sdat_field_122
+103,SALES SEGMENT 3: Grantor Deed Reference 1 - Folio (SDAT Field #123),text,,123.0,sales_segment_3_grantor_deed_reference_1_folio_sdat_field_123
+104,SALES SEGMENT 3: How Conveyed Ind. (SDAT Field #127),text,,127.0,sales_segment_3_how_conveyed_ind_sdat_field_127
+105,SALES SEGMENT 3: Transfer Date (YYYY.MM.DD) (SDAT Field #129),text,,129.0,sales_segment_3_transfer_date_yyyy_mm_dd_sdat_field_129
+106,SALES SEGMENT 3: Consideration (SDAT Field #130),money,,130.0,sales_segment_3_consideration_sdat_field_130
+107,SALES SEGMENT 3: Mortgage (SDAT Field #132),money,,132.0,sales_segment_3_mortgage_sdat_field_132
+108,SALES SEGMENT 3: Mkt Land Value (SDAT Field #135),money,,135.0,sales_segment_3_mkt_land_value_sdat_field_135
+109,SALES SEGMENT 3: Mkt Improvement Value (SDAT Field #136),money,,136.0,sales_segment_3_mkt_improvement_value_sdat_field_136
+110,FULL AND PARTIAL EXEMPTIONS: County Exempt Class (SDAT Field #139),text,,139.0,full_and_partial_exemptions_county_exempt_class_sdat_field_139
+111,FULL AND PARTIAL EXEMPTIONS: County Exempt Assessment (SDAT Field #140),money,,140.0,full_and_partial_exemptions_county_exempt_assessment_sdat_field_140
+112,FULL AND PARTIAL EXEMPTIONS: County Exempt Percentage (SDAT Field #141),percent,,141.0,full_and_partial_exemptions_county_exempt_percentage_sdat_field_141
+113,FULL AND PARTIAL EXEMPTIONS: State Exempt Class (SDAT Field #142),text,,142.0,full_and_partial_exemptions_state_exempt_class_sdat_field_142
+114,FULL AND PARTIAL EXEMPTIONS: State Exempt Assessment (SDAT Field #143),money,,143.0,full_and_partial_exemptions_state_exempt_assessment_sdat_field_143
+115,FULL AND PARTIAL EXEMPTIONS: State Exempt Percentage (SDAT Field #144),percent,,144.0,full_and_partial_exemptions_state_exempt_percentage_sdat_field_144
+116,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Class (SDAT Field #145),text,,145.0,full_and_partial_exemptions_municipal_exempt_class_sdat_field_145
+117,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Assessment (SDAT Field #146),money,,146.0,full_and_partial_exemptions_municipal_exempt_assessment_sdat_field_146
+118,FULL AND PARTIAL EXEMPTIONS: Municipal Exempt Percentage (SDAT Field #147),percent,,147.0,full_and_partial_exemptions_municipal_exempt_percentage_sdat_field_147
+119,FULL AND PARTIAL EXEMPTIONS: Prior Exempt County Assessment (SDAT Field #148),money,,148.0,full_and_partial_exemptions_prior_exempt_county_assessment_sdat_field_148
+120,FULL AND PARTIAL EXEMPTIONS: Prior Exempt County Percent (SDAT Field #149),percent,,149.0,full_and_partial_exemptions_prior_exempt_county_percent_sdat_field_149
+121,FULL AND PARTIAL EXEMPTIONS: Prior Exempt State Assessment (SDAT Field #150),money,,150.0,full_and_partial_exemptions_prior_exempt_state_assessment_sdat_field_150
+122,FULL AND PARTIAL EXEMPTIONS: Prior Exempt State Percent (SDAT Field #151),percent,,151.0,full_and_partial_exemptions_prior_exempt_state_percent_sdat_field_151
+123,FULL AND PARTIAL EXEMPTIONS: Prior Exempt Municipal Assmt (SDAT Field #152),money,,152.0,full_and_partial_exemptions_prior_exempt_municipal_assmt_sdat_field_152
+124,FULL AND PARTIAL EXEMPTIONS: Prior Exempt Municipal Percent (SDAT Field #153),percent,,153.0,full_and_partial_exemptions_prior_exempt_municipal_percent_sdat_field_153
+125,BASE CYCLE DATA: Land Value (SDAT Field #154),money,,154.0,base_cycle_data_land_value_sdat_field_154
+126,BASE CYCLE DATA: Improvements Value (SDAT Field #155),money,,155.0,base_cycle_data_improvements_value_sdat_field_155
+127,BASE CYCLE DATA: Preferential Land Value (SDAT Field #156),money,,156.0,base_cycle_data_preferential_land_value_sdat_field_156
+128,BASE CYCLE DATA: Circuit Breaker Value (SDAT Field #157),money,,157.0,base_cycle_data_circuit_breaker_value_sdat_field_157
+129,BASE CYCLE DATA: Date Assessed (YYYY.MM) (SDAT Field #158),text,,158.0,base_cycle_data_date_assessed_yyyy_mm_sdat_field_158
+130,BASE CYCLE DATA: Date Inspected (YYYY.MM) (SDAT Field #159),text,,159.0,base_cycle_data_date_inspected_yyyy_mm_sdat_field_159
+131,BASE CYCLE DATA: Assessor Code (SDAT Field #160),text,,160.0,base_cycle_data_assessor_code_sdat_field_160
+132,PRIOR ASSESSMENT YEAR: Total Assessment (SDAT Field #161),money,,161.0,prior_assessment_year_total_assessment_sdat_field_161
+133,PRIOR ASSESSMENT YEAR: Circuit Breaker Assessment (SDAT Field #163),money,,163.0,prior_assessment_year_circuit_breaker_assessment_sdat_field_163
+134,"CURRENT CYCLE DATA: Land Value (MDP Field Names: NFMLNDVL, CURLNDVL, and SALLNDVL. SDAT Field #164)",money,,164.0,current_cycle_data_land_value_mdp_field_names_nfmlndvl_curlndvl_and_sallndvl_sdat_field_164
+135,"CURRENT CYCLE DATA: Improvements Value (MDP Field Names: NFMIMPVL, CURIMPVL, and SALIMPVL. SDAT Field #165)",money,,165.0,current_cycle_data_improvements_value_mdp_field_names_nfmimpvl_curimpvl_and_salimpvl_sdat_field_165
+136,CURRENT CYCLE DATA: Preferential Land Value (SDAT Field #166),money,,166.0,current_cycle_data_preferential_land_value_sdat_field_166
+137,CURRENT CYCLE DATA: Circuit Breaker Value (SDAT Field #167),money,,167.0,current_cycle_data_circuit_breaker_value_sdat_field_167
+138,CURRENT CYCLE DATA: Date Inspected (YYYY.MM) (MDP Field: LASTINSP. SDAT Field #168),text,LASTINSP,168.0,current_cycle_data_date_inspected_yyyy_mm_mdp_field_lastinsp_sdat_field_168
+139,CURRENT CYCLE DATA: Date Assessed (YYYY.MM) (MDP Field: LASTASSD. SDAT Field #169),text,LASTASSD,169.0,current_cycle_data_date_assessed_yyyy_mm_mdp_field_lastassd_sdat_field_169
+140,CURRENT CYCLE DATA: Assessor Code (MDP Field: ASSESSOR. SDAT Field #170),text,ASSESSOR,170.0,current_cycle_data_assessor_code_mdp_field_assessor_sdat_field_170
+141,CURRENT ASSESSMENT YEAR: Total Phase-In Value (SDAT Field #171),money,,171.0,current_assessment_year_total_phase_in_value_sdat_field_171
+142,CURRENT ASSESSMENT YEAR: Total Assessment (SDAT Field #172),money,,172.0,current_assessment_year_total_assessment_sdat_field_172
+143,CURRENT ASSESSMENT YEAR: Circuit Breaker Phase-In Value (SDAT Field #175),money,,175.0,current_assessment_year_circuit_breaker_phase_in_value_sdat_field_175
+144,CURRENT ASSESSMENT YEAR: Circuit Breaker Assessment (SDAT Field #176),money,,176.0,current_assessment_year_circuit_breaker_assessment_sdat_field_176
+145,PRIOR ASSESSMENT YEAR 3: Total Assessment (SDAT Field #181),money,,181.0,prior_assessment_year_3_total_assessment_sdat_field_181
+146,PRIOR ASSESSMENT YEAR 3: Circuit Breaker Assessment (SDAT Field #183),money,,183.0,prior_assessment_year_3_circuit_breaker_assessment_sdat_field_183
+147,NEW CONSTRUCTION DATA: Base Land Value (SDAT Field #184),money,,184.0,new_construction_data_base_land_value_sdat_field_184
+148,NEW CONSTRUCTION DATA: Base Improvement Value (SDAT Field #185),money,,185.0,new_construction_data_base_improvement_value_sdat_field_185
+149,NEW CONSTRUCTION DATA: Proposed Land Value (SDAT Field #186),money,,186.0,new_construction_data_proposed_land_value_sdat_field_186
+150,NEW CONSTRUCTION DATA: Proposed Improvement Value (SDAT Field #187),money,,187.0,new_construction_data_proposed_improvement_value_sdat_field_187
+151,NEW CONSTRUCTION DATA: Activity/Tax Year (as of July 1) (SDAT Field #189),text,,189.0,new_construction_data_activity_tax_year_as_of_july_1_sdat_field_189
+152,NEW CONSTRUCTION DATA: Description (SDAT Field #190),text,,190.0,new_construction_data_description_sdat_field_190
+153,NEW CONSTRUCTION DATA: Date Updated (YYYY.MM.DD) (SDAT Field #191),text,,191.0,new_construction_data_date_updated_yyyy_mm_dd_sdat_field_191
+154,NEW CONSTRUCTION DATA: County Assessment Credit (SDAT Field #192),money,,192.0,new_construction_data_county_assessment_credit_sdat_field_192
+155,NEW CONSTRUCTION DATA: State Assessment Credit (SDAT Field #193),money,,193.0,new_construction_data_state_assessment_credit_sdat_field_193
+156,NEW CONSTRUCTION DATA: Municipal Assessment Credit (SDAT Field #194),money,,194.0,new_construction_data_municipal_assessment_credit_sdat_field_194
+157,NEW CONSTRUCTION DATA: Cycle Code (SDAT Field #195),text,,195.0,new_construction_data_cycle_code_sdat_field_195
+158,ASSESSMENT CREDIT PROGRAM: Previous State Assmt Cr (SDAT Field #196),money,,196.0,assessment_credit_program_previous_state_assmt_cr_sdat_field_196
+159,ASSESSMENT CREDIT PROGRAM: Current State Assmt Cr (SDAT Field #197),money,,197.0,assessment_credit_program_current_state_assmt_cr_sdat_field_197
+160,ASSESSMENT CREDIT PROGRAM: Previous County Assmt Cr (SDAT Field #198),money,,198.0,assessment_credit_program_previous_county_assmt_cr_sdat_field_198
+161,ASSESSMENT CREDIT PROGRAM: Current County Assmt Cr (SDAT Field #199),money,,199.0,assessment_credit_program_current_county_assmt_cr_sdat_field_199
+162,ASSESSMENT CREDIT PROGRAM: Previous Municipal Assmt Cr (SDAT Field #200),money,,200.0,assessment_credit_program_previous_municipal_assmt_cr_sdat_field_200
+163,ASSESSMENT CREDIT PROGRAM: Current Municipal Assmt Cr (SDAT Field #201),money,,201.0,assessment_credit_program_current_municipal_assmt_cr_sdat_field_201
+164,ASSESSMENT CREDIT PROGRAM: Current Credit Status Code (SDAT Field #202),text,,202.0,assessment_credit_program_current_credit_status_code_sdat_field_202
+165,ASSESSMENT CREDIT PROGRAM: Previous Credit Status Code (SDAT Field #203),text,,203.0,assessment_credit_program_previous_credit_status_code_sdat_field_203
+166,ASSESSMENT CREDIT PROGRAM: Prior Year 3 State Assmt Cr (SDAT Field #204),money,,204.0,assessment_credit_program_prior_year_3_state_assmt_cr_sdat_field_204
+167,ASSESSMENT CREDIT PROGRAM: Prior Year 3 County Assmt Cr (SDAT Field #205),money,,205.0,assessment_credit_program_prior_year_3_county_assmt_cr_sdat_field_205
+201,TAX ROLL VALUES: Tax Year (as of July 1) (SDAT Field #246),text,,246.0,tax_roll_values_tax_year_as_of_july_1_sdat_field_246
+168,ASSESSMENT CREDIT PROGRAM: Prior Year 3 Municipal Assmt Cr (SDAT Field #206),money,,206.0,assessment_credit_program_prior_year_3_municipal_assmt_cr_sdat_field_206
+169,SPECIAL DATES AND DATA: FCMA Code (MDP Field: FCMACODE. SDAT Field #207),text,FCMACODE,207.0,special_dates_and_data_fcma_code_mdp_field_fcmacode_sdat_field_207
+170,SPECIAL DATES AND DATA: Rezoned Reality Date (YYYY.MM.DD) (MDP Field: RZREALDAT. SDAT Field #208),text,RZREALDAT,208.0,special_dates_and_data_rezoned_reality_date_yyyy_mm_dd_mdp_field_rzrealdat_sdat_field_208
+171,SPECIAL DATES AND DATA: Inchoate Lien Date (YYYY.MM.DD) (SDAT Field #209),text,,209.0,special_dates_and_data_inchoate_lien_date_yyyy_mm_dd_sdat_field_209
+172,SPECIAL DATES AND DATA: Country Club Assmt Date (YYYY.MM.DD) (SDAT Field #210),text,,210.0,special_dates_and_data_country_club_assmt_date_yyyy_mm_dd_sdat_field_210
+173,SPECIAL DATES AND DATA: Country Club Expiration Date (YYYY.MM.DD) (SDAT Field #211),text,,211.0,special_dates_and_data_country_club_expiration_date_yyyy_mm_dd_sdat_field_211
+174,SPECIAL DATES AND DATA: Country Club Extension Date (YYYY.MM.DD) (SDAT Field #212),text,,212.0,special_dates_and_data_country_club_extension_date_yyyy_mm_dd_sdat_field_212
+175,SPECIAL DATES AND DATA: Agr Land Preservation FDN Area (MDP Field: AGFNDAREA. SDAT Field #213),text,AGFNDAREA,213.0,special_dates_and_data_agr_land_preservation_fdn_area_mdp_field_agfndarea_sdat_field_213
+176,SPECIAL DATES AND DATA: Agr Land Pres. FDN Area Unit (MDP Field: AGFNDLUOM. SDAT Field #214),text,AGFNDLUOM,214.0,special_dates_and_data_agr_land_pres_fdn_area_unit_mdp_field_agfndluom_sdat_field_214
+177,SPECIAL DATES AND DATA: Enterprise Zone Date (YYYY.MM.DD) (MDP Field: ENTZNDAT. SDAT Field #215),text,ENTZNDAT,215.0,special_dates_and_data_enterprise_zone_date_yyyy_mm_dd_mdp_field_entzndat_sdat_field_215
+178,SPECIAL DATES AND DATA: Enterprise Zone Assessment (MDP Field: ENTZNASSM. SDAT Field #216),money,ENTZNASSM,216.0,special_dates_and_data_enterprise_zone_assessment_mdp_field_entznassm_sdat_field_216
+179,SPECIAL DATES AND DATA: Planned Development Date (YYYY.MM.DD) (MDP Field: PLNDEVDAT. SDAT Field #217),text,PLNDEVDAT,217.0,special_dates_and_data_planned_development_date_yyyy_mm_dd_mdp_field_plndevdat_sdat_field_217
+180,SPECIAL DATES AND DATA: Non-Perc Test Date (YYYY.MM.DD) (MDP Field: NPRCTSTDAT. SDAT Field #218),text,NPRCTSTDAT,218.0,special_dates_and_data_non_perc_test_date_yyyy_mm_dd_mdp_field_nprctstdat_sdat_field_218
+181,SPECIAL DATES AND DATA: Non-Perc Area (MDP Field: NPRCAREA. SDAT Field #219),text,NPRCAREA,219.0,special_dates_and_data_non_perc_area_mdp_field_nprcarea_sdat_field_219
+182,SPECIAL DATES AND DATA: Non-Perc Area Unit (MDP Field: NPRCLUOM. SDAT Field #220),text,NPRCLUOM,220.0,special_dates_and_data_non_perc_area_unit_mdp_field_nprcluom_sdat_field_220
+183,SPECIAL DATES AND DATA: Ag Tax Liab Due Date (YYYY.MM.DD) (SDAT Field #221),text,,221.0,special_dates_and_data_ag_tax_liab_due_date_yyyy_mm_dd_sdat_field_221
+184,SPECIAL DATES AND DATA: Letter of Intent Date (YYYY.MM.DD) (SDAT Field #222),text,,222.0,special_dates_and_data_letter_of_intent_date_yyyy_mm_dd_sdat_field_222
+185,SPECIAL DATES AND DATA: Critical Area Code (MDP Field: CRTARCOD. SDAT Field #223),text,CRTARCOD,223.0,special_dates_and_data_critical_area_code_mdp_field_crtarcod_sdat_field_223
+186,SPECIAL DATES AND DATA: Zoning Change Date (YYYY.MM.DD) (MDP Field: ZNCHGDAT. SDAT Field #224),text,ZNCHGDAT,224.0,special_dates_and_data_zoning_change_date_yyyy_mm_dd_mdp_field_znchgdat_sdat_field_224
+187,SPECIAL DATES AND DATA: Tax Court Date (YYYY.MM.DD) (SDAT Field #225),text,,225.0,special_dates_and_data_tax_court_date_yyyy_mm_dd_sdat_field_225
+188,SPECIAL DATES AND DATA: Appeal Board Date (YYYY.MM.DD) (SDAT Field #226),text,,226.0,special_dates_and_data_appeal_board_date_yyyy_mm_dd_sdat_field_226
+189,C.A.M.A. SYSTEM DATA: Dwelling Grade Code and Description (MDP Field: STRUGRAD/STRUDESC. SDAT Field #230),text,STRUGRAD/STRUDESC,230.0,c_a_m_a_system_data_dwelling_grade_code_and_description_mdp_field_strugrad_strudesc_sdat_field_230
+190,C.A.M.A. SYSTEM DATA: Dwelling Condition Code (SDAT Field #233),text,,233.0,c_a_m_a_system_data_dwelling_condition_code_sdat_field_233
+191,C.A.M.A. SYSTEM DATA: Year Built (YYYY) (MDP Field: YEARBLT. SDAT Field #235),text,YEARBLT,235.0,c_a_m_a_system_data_year_built_yyyy_mdp_field_yearblt_sdat_field_235
+192,C.A.M.A. SYSTEM DATA: Set No. (SDAT Field #236),number,,236.0,c_a_m_a_system_data_set_no_sdat_field_236
+193,C.A.M.A. SYSTEM DATA: Subset No. (SDAT Field #237),number,,237.0,c_a_m_a_system_data_subset_no_sdat_field_237
+194,C.A.M.A. SYSTEM DATA: Number of Dwelling Units (MDP Field: BLDG_UNITS. SDAT Field #239),number,BLDG_UNITS,239.0,c_a_m_a_system_data_number_of_dwelling_units_mdp_field_bldg_units_sdat_field_239
+195,C.A.M.A. SYSTEM DATA: Number of Stories (MDP Field: BLDG_STORY. SDAT Field #240),number,BLDG_STORY,240.0,c_a_m_a_system_data_number_of_stories_mdp_field_bldg_story_sdat_field_240
+196,C.A.M.A. SYSTEM DATA: Structure Area (Sq.Ft.) (MDP Field: SQFTSTRC. SDAT Field #241),number,SQFTSTRC,241.0,c_a_m_a_system_data_structure_area_sq_ft_mdp_field_sqftstrc_sdat_field_241
+197,C.A.M.A. SYSTEM DATA: Land Area (MDP Field: LANDAREA. SDAT Field #242),number,LANDAREA,242.0,c_a_m_a_system_data_land_area_mdp_field_landarea_sdat_field_242
+198,C.A.M.A. SYSTEM DATA: Land Unit of Measure (MDP Field: LUOM. SDAT Field #243),text,LUOM,243.0,c_a_m_a_system_data_land_unit_of_measure_mdp_field_luom_sdat_field_243
+199,C.A.M.A. SYSTEM DATA: Effective Width (MDP Field: WIDTH. SDAT Field #244),number,WIDTH,244.0,c_a_m_a_system_data_effective_width_mdp_field_width_sdat_field_244
+200,C.A.M.A. SYSTEM DATA: Effective Depth (MDP Field: DEPTH. SDAT Field #245),number,DEPTH,245.0,c_a_m_a_system_data_effective_depth_mdp_field_depth_sdat_field_245
+202,TAX ROLL VALUES: County Assessment (SDAT Field #247),money,,247.0,tax_roll_values_county_assessment_sdat_field_247
+203,TAX ROLL VALUES: State Assessment (SDAT Field #248),money,,248.0,tax_roll_values_state_assessment_sdat_field_248
+204,TAX ROLL VALUES: Municipal Assessment (SDAT Field #249),money,,249.0,tax_roll_values_municipal_assessment_sdat_field_249
+205,TAX ROLL VALUES: State Assessment Credit (SDAT Field #250),money,,250.0,tax_roll_values_state_assessment_credit_sdat_field_250
+206,TAX ROLL VALUES: County Assessment Credit (SDAT Field #251),money,,251.0,tax_roll_values_county_assessment_credit_sdat_field_251
+207,TAX ROLL VALUES: Municipal Assessment Credit (SDAT Field #252),money,,252.0,tax_roll_values_municipal_assessment_credit_sdat_field_252
+208,TAX ROLL VALUES: Homeowner Program Total Credit (SDAT Field #253),money,,253.0,tax_roll_values_homeowner_program_total_credit_sdat_field_253
+209,TAX ROLL VALUES: Homeowner Program-County Liab (SDAT Field #254),money,,254.0,tax_roll_values_homeowner_program_county_liab_sdat_field_254
+210,TAX ROLL VALUES: Homeowner Program-Municp Liab (SDAT Field #255),money,,255.0,tax_roll_values_homeowner_program_municp_liab_sdat_field_255
+211,TAX ROLL VALUES: Tax Roll Indicator (SDAT Field #256),text,,256.0,tax_roll_values_tax_roll_indicator_sdat_field_256
+212,TAX ROLL VALUES: Tax Roll Billing Date (YYYY.MM.DD) (SDAT Field #257),text,,257.0,tax_roll_values_tax_roll_billing_date_yyyy_mm_dd_sdat_field_257
+213,Homestead Qualification Code (MDP Field: HOMQLCOD. SDAT Field #259),text,HOMQLCOD,259.0,homestead_qualification_code_mdp_field_homqlcod_sdat_field_259
+214,Homestead Qualification Date (MDP Field: HOMQLDAT. SDAT Field #260),text,HOMQLDAT,260.0,homestead_qualification_date_mdp_field_homqldat_sdat_field_260
+215,Residential Exception Indicator (SDAT Field #261),text,,261.0,residential_exception_indicator_sdat_field_261
+216,ADDITIONAL C.A.M.A. Data: Permit Type (MDP Field: PERMITTYP. SDAT Field #262),text,PERMITTYP,262.0,additional_c_a_m_a_data_permit_type_mdp_field_permittyp_sdat_field_262
+217,ADDITIONAL C.A.M.A. Data: Dwelling Construction Code (MDP Field: STRUCNST. SDAT Field #263),text,STRUCNST,263.0,additional_c_a_m_a_data_dwelling_construction_code_mdp_field_strucnst_sdat_field_263
+218,ADDITIONAL C.A.M.A. Data: Building Style Code and Description (MDP Field: STRUSTYL/DESCSTYL. SDAT Field #264),text,STRUSTYL/DESCSTYL,264.0,additional_c_a_m_a_data_building_style_code_and_description_mdp_field_strustyl_descstyl_sdat_field_264
+219,ADDITIONAL C.A.M.A. Data: Dwelling Type (MDP Field: STRUBLDG. SDAT Field #265),text,STRUBLDG,265.0,additional_c_a_m_a_data_dwelling_type_mdp_field_strubldg_sdat_field_265
+220,ADDITIONAL C.A.M.A. Data: Land Valuation Unit (SDAT Field #266),text,,266.0,additional_c_a_m_a_data_land_valuation_unit_sdat_field_266
+221,Plat Reference Liber (MDP Field: PLTLIBER. SDAT Field #267),text,PLTLIBER,267.0,plat_reference_liber_mdp_field_pltliber_sdat_field_267
+222,Plat Reference Folio (MDP Field: PLTFOLIO. SDAT Field #268),text,PLTFOLIO,268.0,plat_reference_folio_mdp_field_pltfolio_sdat_field_268
+223,PARENT ACCOUNT NUMBER: District/Ward (SDAT Field #387),text,,387.0,parent_account_number_district_ward_sdat_field_387
+224,PARENT ACCOUNT NUMBER: Account Number (SDAT Field #388),text,,388.0,parent_account_number_account_number_sdat_field_388
+225,Last Activity Date (YYYY.MM.DD) (SDAT Field #392),text,,392.0,last_activity_date_yyyy_mm_dd_sdat_field_392
+226,Record Creation Date (YYYY.MM.DD) (SDAT Field #397),text,,397.0,record_creation_date_yyyy_mm_dd_sdat_field_397
+227,Record Deletion Date (YYYY.MM.DD) (SDAT Field #398),text,,398.0,record_deletion_date_yyyy_mm_dd_sdat_field_398
+228,Assessment Cycle Year (SDAT Field #399),text,,399.0,assessment_cycle_year_sdat_field_399
+229,File Record Type (SDAT Field #400),text,,400.0,file_record_type_sdat_field_400
 230,Count,number,,,count
 231,Latitude & Longitude,location,,,latitude_longitude
 232,Date of Most Recent Open Data Portal Record Update,text,,,date_of_most_recent_open_data_portal_record_update
