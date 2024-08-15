@@ -20,23 +20,25 @@ if __name__ == '__main__':
 
 
     parser = ArgumentParser()
-    parser.add_argument("--logdir", type=str, default="/data0/pretrained-models/deepseek-coder-7b-base-v1.5")
+    parser.add_argument("--logdir", type=str, default="./output")
+    parser.add_argument("--model_path", type=str, default="/data3/models/DeepSeek/deepseek-coder-6.7b-base")
     parser.add_argument("--language", type=str, default="python")
-    parser.add_argument("--dataroot", type=str, default="/home/qyhuang/DeepSeek-Coder/Evaluation/HumanEval/data")
+    parser.add_argument("--dataroot", type=str, default="HumanEval/data")
     args = parser.parse_args()
 
     logdir = args.logdir
     language = args.language
+    model_path = args.model_path
 
     if logdir == "":
         logdir = "tmp/"
     tokenizer = dict(
         cls=AutoTokenizer,
-        model_path=logdir,)
+        model_path=model_path,)
 
     dataroot = args.dataroot
 
     evaluator = evaltor(data_root=dataroot, max_seq_len=4096, tokenizer_cfg=tokenizer, log_dir=logdir, n_sample=1, batch_size=1, language=language, max_gen_len=500)
-    model = AutoModelForCausalLM.from_pretrained(logdir, device_map=accelerator.device, trust_remote_code=True, torch_dtype=torch.bfloat16)
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map=accelerator.device, trust_remote_code=True, torch_dtype=torch.bfloat16)
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     evaluator.eval_model(model, accelerator)

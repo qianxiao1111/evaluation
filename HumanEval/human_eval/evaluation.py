@@ -298,7 +298,8 @@ def evaluate_functional_correctness(
         print("Total:", np.sum(total))
         print("Correct:", np.sum(correct))
 
-    with open(out_path,"w")as f:
-        json.dump(list(results.values()),f,ensure_ascii=False)
+    if out_path:
+        with open(out_path,"w")as f:
+            json.dump(list(results.values()),f,ensure_ascii=False)
 
     return pass_at_k

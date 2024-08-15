@@ -13,7 +13,7 @@ from utils import (
     TimeoutException,
     execute_with_timeout,
     load_json,
-    save_json
+    save_json,
 )
 from table_qa_execution_eval.sft_prompt import (
     prompt_with_format_list,
@@ -29,6 +29,9 @@ import os
 import argparse
 import shutil
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
+from joblib import Parallel, delayed
+
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -49,18 +52,69 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        # eval_instruction = sample_from_two_lists(
-        #     prompt_with_format_list, prompt_with_instruction_list
-        # )
-        # query = test_dt["query"]
-        # table_paths = test_dt["table_paths"]
-        # dfs_infos = get_dfs_info(table_paths)
-        # format_instruction = eval_instruction.format(df_info=dfs_infos, input=query)
+        instruction = test_dt["instruction"]
+        table_info = test_dt["table_info"]
+        df_info_simple_str = test_dt["df_info_simple_str"]
+        instruction = instruction.replace(table_info, df_info_simple_str)
+        messages = [{"role": "user", "content": instruction}]
 
-        messages = [{"role": "user", "content": test_dt["instruction"]}]
+        # messages = test_dt["message"]
         format_message_datas.append(messages)
 
     return format_message_datas
+
+
+def eval_outputs_parallel(
+    llm_output: str,
+    test_data: str,
+) -> dict:
+    df_paths = test_data["table_paths"]
+    df_names = test_data["df_names"]
+    query = test_data["query"]
+    instruction = test_data["instruction"]
+    table_paths = test_data["table_paths"]
+    eval_result_sample = {}
+    df = [pd.read_csv(path, low_memory=False) for path in df_paths]
+
+    tool = get_tool(df, df_names)
+    # tool = get_tool(df)
+    code, _ = filter_code(llm_output)
+    cot = filter_cot(llm_output)
+
+    # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
+    try:
+        # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
+        if not code:
+            observe = "Code Error: output empty code.."
+        elif 'df.explode("Candidate")' in code:
+            raise ValueError(f"df.explode error")
+        else:
+            with timeout(15):  # 设置超时时间为15秒
+                pure_code = CODE_PREFIX + code
+                # print("pure code:", pure_code)
+                observe = tool.run(pure_code)  # 需要监控超时的代码块
+                # observe = execute_with_timeout(pure_code, 15, tool)
+                if isinstance(observe, pd.DataFrame):
+                    observe = observe.head().to_markdown(index=False)
+                else:
+                    observe = str(observe)
+    except TimeoutException as e:
+        observe = f"Timeout Error: code running time exceed 15s.."
+    except SystemExit as e:
+        observe = f"SystemExit Error: {str(e)}"
+    except Exception as e:
+        observe = f"Unexpected Error: {str(e)}"
+
+    eval_result_sample["code"] = code
+    eval_result_sample["llm_output"] = llm_output
+    eval_result_sample["cot"] = cot
+    eval_result_sample["observe"] = observe
+    eval_result_sample["query"] = query
+    eval_result_sample["instruction"] = instruction
+    eval_result_sample["table_paths"] = table_paths
+    eval_result_sample["flag"] = execution_eval(observe)
+
+    return eval_result_sample
 
 
 def eval_outputs(
@@ -68,8 +122,8 @@ def eval_outputs(
     eval_dataset_path: str,
 ) -> list[dict]:
     test_datas = load_json(eval_dataset_path)
-
     output_texts = [i["output_text"] for i in model_outputs]
+
     processed_data = []
     for idx, test_dt in enumerate(test_datas):
         llm_output = output_texts[idx]
@@ -81,11 +135,9 @@ def eval_outputs(
         # df_infos = get_dfs_info(df_paths)
         eval_result_sample = {}
         df = [pd.read_csv(path, low_memory=False) for path in df_paths]
-        # if len(df_paths) == 1:
-        #     df = pd.read_csv(df_paths[0], low_memory=False)
-        # else:
-        #     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
-        tool = get_tool(df,df_names)
+
+        tool = get_tool(df, df_names)
+        # tool = get_tool(df)
         code, _ = filter_code(llm_output)
         cot = filter_cot(llm_output)
 
@@ -94,9 +146,11 @@ def eval_outputs(
             # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
             if not code:
                 observe = "Code Error: output empty code.."
+            elif 'df.explode("Candidate")' in code:
+                raise ValueError(f"df.explode error")
             else:
                 with timeout(15):  # 设置超时时间为15秒
-                    # pure_code = CODE_PREFIX + pure_code
+                    print("------------->code:\n",code)
                     pure_code = CODE_PREFIX + code
                     # print("pure code:", pure_code)
                     observe = tool.run(pure_code)  # 需要监控超时的代码块
@@ -120,13 +174,8 @@ def eval_outputs(
         eval_result_sample["input"] = instruction
         eval_result_sample["query"] = query
         eval_result_sample["table_paths"] = table_paths
+        eval_result_sample["flag"] = execution_eval(observe)
 
-        pattern = re.compile(r"error|exception", re.IGNORECASE)
-        try:
-            flag = not pattern.search(observe)
-        except:
-            flag = True
-        eval_result_sample["flag"] = flag
         processed_data.append(eval_result_sample)
     return processed_data
 
@@ -139,32 +188,11 @@ def execution_eval(observe: str) -> bool:
     """
     # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
     pattern = re.compile(r"error|exception", re.IGNORECASE)
-
     try:
         res = not pattern.search(observe)
     except:
         res = True
-    # print("Execute result:", observe)
-    # print("Execute passed:", res)
     return res
-
-
-def run_eval(
-    eval_result_path: str = "evalset/test_results/eval_results.json",
-):
-    with open(eval_result_path, "r", encoding="utf-8") as f:
-        samples = json.load(f)
-    execute_passed = 0
-    total_len = len(samples)
-    for sample in tqdm(samples):
-        observe = sample["observe"]
-        execute_passed += 1 if execution_eval(observe) else 0
-    print(f"Sample length: {total_len}. ")
-
-    print(
-        f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
-        round(execute_passed / total_len, 3),
-    )
 
 
 def main(args):
@@ -179,7 +207,6 @@ def main(args):
     llm_model = load_model(model_path, max_model_len, gpus_num)
     tokenizer = load_tokenizer_and_template(model_path, template)
     eval_dataset_path = args.eval_dataset_path
-    # test_datas = read_jsonl(eval_dataset_path)
     test_datas = load_json(eval_dataset_path)
 
     format_message_datas = format_inputs(test_datas)
@@ -188,15 +215,31 @@ def main(args):
     model_outputs = generate_outputs(
         format_message_datas, llm_model, tokenizer, model_kwargs
     )
+    with open("model_output.json","w")as f:
+        json.dump(model_outputs,f,ensure_ascii=False)
     print("Generating answers finished..")
 
-    eval_answers = eval_outputs(model_outputs, eval_dataset_path)
+    # eval_answers = eval_outputs(model_outputs, eval_dataset_path)
+    test_datas = load_json(eval_dataset_path)
+    eval_answers = Parallel(n_jobs=48)(
+        delayed(eval_outputs_parallel)(model_outputs[i]["output_text"], test_datas[i])
+        for i in range(len(test_datas))
+    )
 
-    print("Eval answers construct complete..")
+    # calculate  execute rate
+    execute_passed = 0
+    total_len = len(eval_answers)
+    for eval_answer in eval_answers:
+        execute_passed += int(eval_answer["flag"])
+    print(f"Sample length: {total_len}. ")
+    print(
+        f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
+        round(execute_passed / total_len, 3),
+    )
+
+    # save eval result
     with open(eval_results_save_path, "w", encoding="utf-8") as f:
         json.dump(eval_answers, f, ensure_ascii=False)
-
-    run_eval(eval_result_path=eval_results_save_path)
 
 
 if __name__ == "__main__":
