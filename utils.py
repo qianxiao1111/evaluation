@@ -192,7 +192,7 @@ def get_tool(df: Any,df_names=None):
     tool = PythonAstREPLTool()
     if df_names==None:
         if isinstance(df, pd.DataFrame):
-            locals = {"df": df}
+            locals = {"df1": df}
         else:
             locals = {}
             for i, dataframe in enumerate(df):

@@ -1,5 +1,6 @@
 import pandas as pd 
 from encoder_models.encoder1.config import INSERT_SEP_TOKEN, INSERT_EMBS_TOKEN,INSERT_SEP_TOKEN
+from encoder_models.encoder1.format import dataframe_info_combined
 
 def dataframe_info_simple(df: pd.DataFrame, df_name:str, comments=None):
     """
@@ -117,6 +118,6 @@ def build_question(csv_paths,df_names, query):
         low_memory=False,
         nrows=500
     ) for path in csv_paths]
-    df_info_list = [dataframe_info_simple(df, df_name) for df, df_name in zip(df_list, df_names)]
+    df_info_list = [dataframe_info_combined(df, df_name) for df, df_name in zip(df_list, df_names)]
     suf = '''\n\nQuestion: ''' + query + '\n'
     return pref + '\n\n'.join(df_info_list) + suf

@@ -4,6 +4,7 @@ import torch
 
 from utils import load_json
 from encoder_models.encoder1.build_input import build_instruction, dataframe_info_simple
+from encoder_models.encoder1.format import dataframe_info_combined
 from encoder_models.encoder2.build_input import build_encoder_reject_input
 from reject_eval.prompt import eval_system, eval_instruction
 from reject_eval.run_eval import eval_outputs
@@ -17,7 +18,7 @@ def build_reject_question(csv_paths,df_names, query):
         low_memory=False,
         nrows=500
     ) for path in csv_paths]
-    df_info_list = [dataframe_info_simple(df, df_name) for df, df_name in zip(df_list, df_names)]
+    df_info_list = [dataframe_info_combined(df, df_name) for df, df_name in zip(df_list, df_names)]
     table_infos = "\n\n".join(df_info_list)
     template = template.format(
         input = query,
