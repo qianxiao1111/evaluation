@@ -7,6 +7,7 @@ prompt_user = """table:
 
 Question: {query}
 Notion:
-Answer in Format: tables is: ['table_name1','table_name2',...];columns is: ['table_name1.column_name1','table_name2.column_name2',...]
+- Don't write code.
+- Answer in Format: 'tables is: ['table_name1','table_name2',...]; columns is: ['table_name1.column_name1','table_name2.column_name2',...].'
 
 Answer:"""
