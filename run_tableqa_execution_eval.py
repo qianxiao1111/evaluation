@@ -304,6 +304,7 @@ if __name__ == "__main__":
         help="Max iteration for llm to run each code correction task",
     )
     args = parser.parse_args()
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
     main(args)
     """
     python run_eval.py --model_path /data0/pretrained-models/Qwen2-7B-Instruct

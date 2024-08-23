@@ -7,8 +7,16 @@
 
 # todo 筛选eval-set， 剔除数据过大的样本， 并新增一批样本
 import json
-from evaluate_code_correction.run_eval import format_inputs, eval_outputs, run_eval
+from evaluate_code_correction.run_eval import (
+    format_inputs,
+    eval_outputs,
+    run_eval,
+    eval_outputs_parallel,
+)
 from inference import load_model, load_tokenizer_and_template, generate_outputs
+from joblib import Parallel, delayed
+from utils import load_json
+import os
 
 
 def check_eval_dataset_keys(test_datas):
@@ -61,17 +69,36 @@ def main(args):
     print("Generating answers finished..")
 
     # this is the step to generate all the eval_answers first
-    eval_answers = eval_outputs(
-        model_outputs,
-        eval_dataset_path,
-        test_csv_file_path=test_csv_file_path,
-        lan_type="Python",
+    # eval_answers = eval_outputs(
+    #     model_outputs,
+    #     eval_dataset_path,
+    #     test_csv_file_path=test_csv_file_path,
+    #     lan_type="Python",
+    # )
+    test_datas = load_json(eval_dataset_path)
+    eval_answers = Parallel(n_jobs=48)(
+        delayed(eval_outputs_parallel)(
+            model_outputs[i]["output_text"], test_datas[i], test_csv_file_path
+        )
+        for i in range(len(test_datas))
     )
-    print("Eval answers construct complete..")
+
+    # calculate  execute rate
+    execute_passed = 0
+    total_len = len(eval_answers)
+    for eval_answer in eval_answers:
+        execute_passed += int(eval_answer["flag"])
+    print(f"Sample length: {total_len}. ")
+    print(
+        f"Execute Passed: {execute_passed}." f"\tExecute pass-rate is:",
+        round(execute_passed / total_len, 3),
+    )
+
     with open(eval_results_save_path, "w", encoding="utf-8") as f:
         json.dump(eval_answers, f, ensure_ascii=False)
+
     # this is the step to get eval_pass_rate
-    run_eval(eval_result_path=eval_results_save_path, llm_for_judge=llm_for_judge)
+    # run_eval(eval_result_path=eval_results_save_path, llm_for_judge=llm_for_judge)
 
 
 if __name__ == "__main__":
@@ -132,6 +159,7 @@ if __name__ == "__main__":
         help="Whether use another llm to judge the eval-results, if set to `True`, modify the `evaluate_code_correction/llms.py` configs",
     )
     args = parser.parse_args()
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
     main(args)
 
     """example:

@@ -98,7 +98,8 @@ def format_inputs(test_datas: list[dict], lan_type: str = "Python") -> list[list
         # table_infos = sample["table_infos"]
 
         current_time = datetime.datetime.now().strftime("%Y-%m-%d:%H")
-        output = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
+        # output = sample["cot"] + f"{lan_type} Code:\n" + sample["code"]
+        output = "Thought: "+sample["cot"]+"\n```python\n" + sample["code"]+"\n```"
         observes = sample["observation"]
 
         format_instruction = RECTIFY_PROMPT_PYTHON_INSTRUCTION.format(
@@ -108,9 +109,11 @@ def format_inputs(test_datas: list[dict], lan_type: str = "Python") -> list[list
             current_time=current_time,
             output=output,
         )
+        # print(format_instruction)
+        # exit()
         format_system = RECTIFY_PROMPT_PYTHON_SYSTEM
         messages = [
-            {"role": "system", "content": format_system},
+            # {"role": "system", "content": format_system},
             {"role": "user", "content": format_instruction},
         ]
         format_message_datas.append(messages)
@@ -217,19 +220,19 @@ def eval_outputs(
             ]
         tool = get_tool(df)
 
-        code, pure_code = filter_code(llm_output)
+        code, _ = filter_code(llm_output)
         cot = filter_cot(llm_output)
         # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
         try:
             # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
-            if not pure_code:
+            if not code:
                 observe = "Code Error: output empty code.."
             else:
                 with timeout(15):  # 设置超时时间为15秒
-                    pure_code = CODE_PREFIX + pure_code
-                    pure_code = recraft_query(pure_code, tool.locals)
-                    observe = execute_with_timeout(pure_code, 15, tool)
-                    # observe = tool.run(pure_code)  # 需要监控超时的代码块
+                    pure_code = CODE_PREFIX + code
+                    # pure_code = recraft_query(pure_code, tool.locals)
+                    # observe = execute_with_timeout(pure_code, 15, tool)
+                    observe = tool.run(pure_code)  # 需要监控超时的代码块
                     if isinstance(observe, pd.DataFrame):
                         observe = observe.head().to_markdown(index=False)
                     else:
@@ -254,6 +257,74 @@ def eval_outputs(
     return processed_data
 
 
+def eval_outputs_parallel(
+    llm_output: str,
+    test_data: dict,
+    test_csv_file_path: str,
+    lan_type="Python",
+) -> list[dict]:
+    """
+    Generate complete eval samples according to the eval_datasets
+    and the model_outputs
+    :param model_outputs: output_answers generate by the llm
+    :param eval_dataset_path: eval dataset path
+    :param test_csv_file_path: the csv files path
+    :param
+    :return Required complete output_answers List[Dict]
+    """
+    ori_error = test_data["observation"]
+    df_paths = test_data["table_paths"]
+    table_infos = get_table_infos(df_paths)
+    true_result = test_data["true_result"]
+    query = test_data["query"]
+    eval_result_sample = {}
+
+    if len(df_paths) == 1:
+        df = pd.read_csv(
+            os.path.join(test_csv_file_path, df_paths[0]), low_memory=False
+        )
+    else:
+        df = [
+            pd.read_csv(os.path.join(test_csv_file_path, path), low_memory=False)
+            for path in df_paths
+        ]
+    tool = get_tool(df)
+
+    code, _ = filter_code(llm_output)
+    cot = filter_cot(llm_output)
+    # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
+    try:
+        # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
+        if not code:
+            observe = "Code Error: output empty code.."
+        else:
+            with timeout(15):  # 设置超时时间为15秒
+                pure_code = CODE_PREFIX + code
+                observe = tool.run(pure_code)  # 需要监控超时的代码块
+                if isinstance(observe, pd.DataFrame):
+                    observe = observe.head().to_markdown(index=False)
+                else:
+                    observe = str(observe)
+
+    except TimeoutException as e:
+        observe = f"Timeout Error: code running time exceed 15s.."
+    except SystemExit as e:
+        observe = f"SystemExit Error: {str(e)}"
+    except Exception as e:
+        observe = f"Unexpected Error: {str(e)}"
+
+    eval_result_sample["code"] = CODE_PREFIX + code
+    eval_result_sample["cot"] = cot
+    # eval_result_sample["true_result"] = true_result
+    eval_result_sample["table_infos"] = table_infos
+    eval_result_sample["table_paths"] = df_paths
+    eval_result_sample["query"] = query
+    eval_result_sample["ori_error"] = ori_error
+    eval_result_sample["observe"] = observe
+    eval_result_sample["flag"] = execution_eval(observe,ori_error)
+    return eval_result_sample
+
+
 def execution_eval(observe: str, ori_error: str) -> bool:
     """
     Test whether the code generated by eval_llm can be executed.
@@ -270,9 +341,9 @@ def execution_eval(observe: str, ori_error: str) -> bool:
         res = not pattern.search(observe)
     except:
         res = True
-    print(f"Original Error: {truncate_string(ori_error)}")
-    print(f"Execute Observe: {truncate_string(observe)}")
-    print(f"Execute Result: {res}\n")
+    # print(f"Original Error: {truncate_string(ori_error)}")
+    # print(f"Execute Observe: {truncate_string(observe)}")
+    # print(f"Execute Result: {res}\n")
     return res
 
 
