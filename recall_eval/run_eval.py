@@ -23,9 +23,9 @@ def make_pred(samples, pred_ext):
         preds.append(
             {
                 "query": samples[i]["query"],
-                "output": pred_ext[i]["output"],
-                "pred_table": pred_ext[i]["tables"],
-                "pred_col": pred_ext[i]["columns"],
+                "output": str(pred_ext[i]["output"]),
+                "pred_table": str(pred_ext[i]["tables"]),
+                "pred_col": str(pred_ext[i]["columns"]),
                 "label_table": samples[i]["label_table"],
                 "label_col": samples[i]["label_col"],
             }

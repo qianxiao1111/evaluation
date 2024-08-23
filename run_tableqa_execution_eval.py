@@ -52,13 +52,13 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        instruction = test_dt["instruction"]
-        table_info = test_dt["table_info"]
-        df_info_simple_str = test_dt["df_info_simple_str"]
-        instruction = instruction.replace(table_info, df_info_simple_str)
-        messages = [{"role": "user", "content": instruction}]
+        # instruction = test_dt["instruction"]
+        # table_info = test_dt["table_info"]
+        # df_info_simple_str = test_dt["df_info_simple_str"]
+        # instruction = instruction.replace(table_info, df_info_simple_str)
+        # messages = [{"role": "user", "content": instruction}]
 
-        # messages = test_dt["message"]
+        messages = test_dt["message"]
         format_message_datas.append(messages)
 
     return format_message_datas
@@ -76,8 +76,8 @@ def eval_outputs_parallel(
     eval_result_sample = {}
     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
 
-    tool = get_tool(df, df_names)
-    # tool = get_tool(df)
+    # tool = get_tool(df, df_names)
+    tool = get_tool(df)
     code, _ = filter_code(llm_output)
     cot = filter_cot(llm_output)
 
@@ -215,8 +215,8 @@ def main(args):
     model_outputs = generate_outputs(
         format_message_datas, llm_model, tokenizer, model_kwargs
     )
-    with open("model_output.json","w")as f:
-        json.dump(model_outputs,f,ensure_ascii=False)
+    # with open("model_output.json","w")as f:
+    #     json.dump(model_outputs,f,ensure_ascii=False)
     print("Generating answers finished..")
 
     # eval_answers = eval_outputs(model_outputs, eval_dataset_path)
@@ -293,7 +293,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_dataset_path",
         type=str,
-        default="evalset/table_qa_execuate_test/test_datas_zuizong.json",
+        default="evalset/table_qa_execuate_test/test_datas_zuizong_slim.json",
         help="Test Set Path",
     )
 
