@@ -41,43 +41,45 @@ Python Code:
 ```
 """
 
-RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
-Here is the input table information:
-{table_infos}
-
-Here is the input query:
-{query}
-
-Here is the input code and thought process:
-{output}
-
-Here is the result of running the original Python code (Observe):
-{observe}
-
-Let's start!
-Please correct the input code according to the format above, ensuring the code produces the correct result based on the user's input and table information. Note that you do not need to use pd.DataFrame to define analysis data.
-
-Current time: {current_time}
-"""
-
 # RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
-# 以下是输入的表格信息：
+# Here is the input table information:
 # {table_infos}
 
-# 以下是输入的查询：
+# Here is the input query:
 # {query}
 
-# 以下是输入的代码和思考过程：
+# Here is the input code and thought process:
 # {output}
 
-# 以下是原始Python代码运行后的结果（Observe）：
+# Here is the result of running the original Python code (Observe):
 # {observe}
 
-# 开始！
-# 请根据以上格式，对输入的代码进行纠错，确保代码根据用户的输入和表格信息获得正确的结果。注意你无需使用 pd.DataFrame 来定义分析数据。
+# Let's start!
+# Please correct the input code according to the format above, ensuring the code produces the correct result based on the user's input and table information. Note that you do not need to use pd.DataFrame to define analysis data.
 
-# 当前时间：{current_time}
+# Current time: {current_time}
 # """
+
+RECTIFY_PROMPT_PYTHON_INSTRUCTION = """
+Given the following inputs:
+Table Information:
+{table_infos}
+
+Question:
+{query}
+
+Generated Output by the Model:
+{output}
+
+Execution Result of the Code:
+{observe}
+
+Current time: {current_time}
+
+Your Task:
+- Explanation: Provide a brief explanation of the error and how you corrected it.
+- Correct the Error: Based on the table information, the question, the generated code, and the execution result, identify and correct the error(s) in the code. Ensure that the corrected code correctly answers the question using the provided table.
+"""
 
 CLASSIFY_PROMPT_PYTHON = """
 你现在正在充当一名Python代码reviewer，输入思考过程和代码以及执行结果是根据用户的query和表格信息生成的。
