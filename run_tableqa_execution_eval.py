@@ -72,6 +72,10 @@ def eval_outputs_parallel(
     df_names = test_data["df_names"]
     query = test_data["query"]
     instruction = test_data["instruction"]
+    table_info = test_data["table_info"]
+    df_info_simple_str = test_data["df_info_simple_str"]
+    instruction = instruction.replace(table_info, df_info_simple_str)
+    # instruction = test_data["instruction"]
     table_paths = test_data["table_paths"]
     eval_result_sample = {}
     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
