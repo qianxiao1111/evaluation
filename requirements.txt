@@ -19,3 +19,4 @@ mplfonts
 seaborn
 tabulate
 pypinyin
+evaluate==0.4.2

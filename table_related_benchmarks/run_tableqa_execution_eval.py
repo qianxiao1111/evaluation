@@ -266,6 +266,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_path", type=str, required=True, help="Path to the model"
     )
+
+    parser.add_argument(
+        "--max_new_tokens",
+        type=int,
+        default=2048,
+        help="Maximum number of output tokens",
+    )
+
     parser.add_argument(
         "--model_type",
         choices=["base_model", "chat_model"],
