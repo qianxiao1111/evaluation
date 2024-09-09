@@ -7,11 +7,13 @@ def main(args):
     llm_model = load_model(args.model_path, args.max_model_len, args.gpus_num)
     tokenizer = load_tokenizer_and_template(args.model_path, args.template)
     inference_output_dir = args.inference_output_dir
-    base_model_name = args.base_model
+    base_model_name = args.model_path
     generate_args = {
         "temperature": args.temperature,
         "max_tokens": args.max_new_tokens,
         "model_type": args.model_type,
+        "top_p": 0.95,
+        "n": 1
     }
     # inference for output 
     all_samples = model_infer_and_save(args.eval_dataset_path, llm_model, tokenizer, generate_args, inference_output_dir, base_model_name)
@@ -33,7 +35,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2-base-0817"
+        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2-cptbase-0820/checkpoint-1800"
     )
 
     parser.add_argument(
@@ -58,8 +60,28 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
+        "--max_model_len", type=int, default=16384, help="Max model length"
     )
+
+    parser.add_argument(
+        "--max_new_tokens",
+        type=int,
+        default=1024,
+        help="Maximum number of output tokens",
+    )
+
+    parser.add_argument(
+        "--template",
+        type=str,
+        choices=[None, "llama3", "baichuan", "chatglm"],
+        default=None,
+        help="The template must be specified if not present in the config file",
+    )
+
+    args = parser.parse_args()
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    main(args)
+
 
 # Example
 """

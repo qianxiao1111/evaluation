@@ -4,8 +4,8 @@ import pandas as pd
 from inference import generate_outputs
 from typing import List, Dict
 from table_bench_eval.utils import read_json_file
-from qa_metric import QAMetric
-from utils import (
+from table_bench_eval.qa_metric import QAMetric
+from table_bench_eval.utils import (
     parse_chart_code_then_exec, 
     parse_code_then_exec, 
     pre_save_table_to_csv,
@@ -39,7 +39,8 @@ def model_infer_and_save(
     tokenizer, 
     generate_args,
     inference_output_dir,
-    base_model_name
+    base_model_name,
+    n_samples_test=None, # for test mode, default None
 ):
     fnames = [x for x in os.listdir(test_path) if x.endswith('.jsonl')]
     all_samples = []
@@ -47,11 +48,13 @@ def model_infer_and_save(
         print(file_name)
         file_path = os.path.join(test_path, file_name)
         samples = read_json_file(file_path)
+        if n_samples_test:
+            samples = samples[:n_samples_test]
         msgs = format_inputs(samples)
         resp = generate_outputs(msgs, llm_model, tokenizer, generate_args)
         assert len(resp) == len(samples)
         for i, output in enumerate(resp):
-            samples[i]["raw_generation"] = output["output_content"]
+            samples[i]["raw_generation"] = output["output_text"]
         save_path = os.path.join(inference_output_dir, base_model_name.split('/')[-1]+'_infer_'+file_name.split('.')[0]+'.jsonl')
         with open(save_path, 'w') as f:
             for item in samples:
@@ -64,6 +67,7 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
     for sample in all_samples:
         instruct_type = sample["instruction_type"]
         table = sample["table"]
+        table = json.loads(table)
         pre_save_table_to_csv(table)
         prediction = sample["raw_generation"]
         qtype = sample['qtype']
@@ -118,7 +122,7 @@ def build_categoried_llm_inference_results(all_samples, base_model_name):
         type = result['qtype']
         subtype = result['qsubtype']
         merged_type = f'{type}_{subtype}'
-        prompt_type = result['prompt_type']
+        prompt_type = result['instruction_type']
         key = f'{model_name}/{prompt_type}'
         if key not in categoried_llm_inference_results:
             categoried_llm_inference_results[key] = {}

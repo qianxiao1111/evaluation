@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 from typing import Any
-from custom_python_tool import CustomPythonTool
+from table_bench_eval.custom_python_tool import CustomPythonTool
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
