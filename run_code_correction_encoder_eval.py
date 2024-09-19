@@ -36,7 +36,6 @@ def build_code_correction_question(csv_paths,df_names, query, ori_code, observe,
     )
     return template
 
-
 def format_inputs(samples, tokenizer, model_type):
     msgs = []
     encoder_inputs = []
