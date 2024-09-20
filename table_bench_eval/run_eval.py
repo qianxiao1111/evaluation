@@ -10,7 +10,8 @@ from table_bench_eval.utils import (
     parse_code_then_exec, 
     pre_save_table_to_csv,
     parse_final_answer_prediction,
-    write_json_to_file
+    write_json_to_file,
+    execution_eval
 )
 
 """
@@ -83,10 +84,10 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
                 'parsed_prediction': parsed_prediction, 'ecr_1': ecr_1
                 }
                     # save parsed results
-        if parsed_prediction == '':
-            parsed_result['Parse@1'] = False
-        else:
+        if execution_eval(parsed_prediction):
             parsed_result['Parse@1'] = True
+        else:
+            parsed_result['Parse@1'] = False
         sample["parsed_result"] = parsed_result
         if instruct_type == "TCoT":
             TCOT_samples.append(sample)
@@ -103,7 +104,7 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
     # save all the execute samples
     for save_path, samples in zip(save_paths, prompt_samples):
         all_samples.extend(samples)
-        write_json_to_file(save_path, all_samples, is_json_line=True)
+        write_json_to_file(save_path, samples, is_json_line=True)
 
     return all_samples
 
