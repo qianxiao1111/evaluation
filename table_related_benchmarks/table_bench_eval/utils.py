@@ -178,15 +178,15 @@ def parse_code_then_exec(prediction):
     exec_tool = get_tool(df)
     try:
         observe = exec_tool.run(python_code)  # 需要监控超时的代码块
-        if not execution_eval(observe): 
-            observe = ""  
+        # if not execution_eval(observe): 
+        #     observe = ""  
         if isinstance(observe, pd.DataFrame):
             observe = observe.head().to_markdown(index=False)
         else:
             observe = str(observe)
         ecr_1 = True
     except Exception as e:
-        observe = ""
+        observe = e
     if observe != "":
         observe = observe.strip()
     return observe, ecr_1
@@ -197,6 +197,8 @@ def execution_eval(observe: str) -> bool:
     :param output: output code of llm generation
     :return: True or False
     """
+    if observe == "": # 空结果直接返回false
+        return False
     # 只要执行结果中不出现error 或者 exception， 就认为代码可执行
     pattern = re.compile(r"error|exception", re.IGNORECASE)
     try:
@@ -219,14 +221,14 @@ def parse_chart_code_then_exec(sample):
         df = pd.read_csv("table.csv")
         exec_tool = get_tool(df)
         observe = exec_tool.run(chart_eval_code)
-        if not execution_eval(observe): 
-            observe = ""   
+        # if not execution_eval(observe): 
+        #     observe = ""   
         if isinstance(observe, pd.DataFrame):
             observe = observe.head().to_markdown(index=False)
         else:
             observe = str(observe)
     except Exception as e:
-        observe = ""
+        observe = e
     observe = observe.strip()
     plt.close("all")
     return observe, ecr_1
