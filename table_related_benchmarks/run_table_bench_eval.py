@@ -35,7 +35,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2-base-table-0916/checkpoint-2400"
+        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2.5-7b-base-0923/checkpoint-2000"
     )
 
     parser.add_argument(
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--max_new_tokens",
         type=int,
-        default=1024,
+        default=2048,
         help="Maximum number of output tokens",
     )
 

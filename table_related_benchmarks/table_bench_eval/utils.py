@@ -4,7 +4,9 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 from typing import Any
-from table_bench_eval.custom_python_tool import CustomPythonTool
+from utils import timeout 
+from table_bench_eval.custom_python_tool import CustomPythonTool, sanitize_input
+from langchain_experimental.tools.python.tool import PythonAstREPLTool
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -93,7 +95,7 @@ def get_tool(df: Any, df_names=None):
     :param df: List[pd.DataFrame] or pd.DataFrame
     :return Runnable
     """
-    tool = CustomPythonTool()
+    tool = PythonAstREPLTool()
     if df_names == None:
         if isinstance(df, pd.DataFrame):
             locals = {"df": df}
@@ -172,19 +174,24 @@ else:
 def parse_code_then_exec(prediction):
     ecr_1 = False
     python_code = parse_python_code(prediction)
+    if python_code == "":
+        print("raw_prediction:", prediction)
     python_code = ensure_last_line_print(python_code)
     python_code = CODE_PREFIX + python_code
+    python_code = sanitize_input(python_code)
     df = pd.read_csv("table.csv")
     exec_tool = get_tool(df)
     try:
-        observe = exec_tool.run(python_code)  # 需要监控超时的代码块
-        # if not execution_eval(observe): 
-        #     observe = ""  
-        if isinstance(observe, pd.DataFrame):
-            observe = observe.head().to_markdown(index=False)
-        else:
-            observe = str(observe)
-        ecr_1 = True
+        with timeout(10):
+            observe = exec_tool.run(python_code)  # 需要监控超时的代码块
+            # print("Observe:", observe.strip())
+            # if not execution_eval(observe): 
+            #     observe = ""  
+            if isinstance(observe, pd.DataFrame):
+                observe = observe.head().to_markdown(index=False)
+            else:
+                observe = str(observe)
+            ecr_1 = True
     except Exception as e:
         observe = e
     if observe != "":
@@ -210,25 +217,27 @@ def execution_eval(observe: str) -> bool:
 def parse_chart_code_then_exec(sample):
     ecr_1 = False
     python_code, chart_eval_code = build_chart_eval_code(sample)
+    df = pd.read_csv("table.csv")
+    python_code = sanitize_input(python_code)
+    exec_tool = get_tool(df)
     try:
-        df = pd.read_csv("table.csv")
-        exec_tool = get_tool(df)
-        _ = exec_tool.run(python_code)
-        ecr_1 = True
+        with timeout(10):
+            _ = exec_tool.run(python_code)
+            ecr_1 = True
     except Exception as e:
         pass
     try:
-        df = pd.read_csv("table.csv")
-        exec_tool = get_tool(df)
-        observe = exec_tool.run(chart_eval_code)
-        # if not execution_eval(observe): 
-        #     observe = ""   
-        if isinstance(observe, pd.DataFrame):
-            observe = observe.head().to_markdown(index=False)
-        else:
-            observe = str(observe)
+        with timeout(10):
+            observe = exec_tool.run(chart_eval_code)
+            # print("Observe:", observe)
+            # if not execution_eval(observe): 
+            #     observe = ""   
+            if isinstance(observe, pd.DataFrame):
+                observe = observe.head().to_markdown(index=False)
+            else:
+                observe = str(observe)
     except Exception as e:
-        observe = e
+        observe = str(e)
     observe = observe.strip()
     plt.close("all")
     return observe, ecr_1

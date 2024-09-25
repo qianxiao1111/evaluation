@@ -11,7 +11,8 @@ from table_bench_eval.utils import (
     pre_save_table_to_csv,
     parse_final_answer_prediction,
     write_json_to_file,
-    execution_eval
+    execution_eval,
+    parse_python_code
 )
 
 """
@@ -29,7 +30,7 @@ def format_inputs(samples: List[Dict]) -> List:
     for sample in samples:
         msg_sys = sample["instruction"]
         msg = [
-            {"role": "system", "content": msg_sys},
+            {"role": "user", "content": msg_sys},
         ]
         msgs.append(msg)
     return msgs
@@ -73,8 +74,10 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
         prediction = sample["raw_generation"]
         qtype = sample['qtype']
         if "Final Answer" in prediction:
-                parsed_prediction = parse_final_answer_prediction(prediction)
-                parsed_result = {'parsed_prediction': parsed_prediction}
+            parsed_prediction = parse_final_answer_prediction(prediction)
+            parsed_result = {'parsed_prediction': parsed_prediction}
+        elif "Final Answer" not in prediction and parse_python_code(prediction) == "":
+            parsed_result = {'parsed_prediction': prediction}
         else:
             if qtype == "Visualization":
                 parsed_prediction, ecr_1 = parse_chart_code_then_exec(sample)
