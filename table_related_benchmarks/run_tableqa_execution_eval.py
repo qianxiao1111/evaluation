@@ -9,11 +9,21 @@ import pandas as pd
 from joblib import Parallel, delayed
 from tqdm import tqdm
 
-from inference import (generate_outputs, get_infer_kwargs, load_model,
-                       load_tokenizer_and_template)
-from utils import (TimeoutException, filter_code,
-                                            filter_cot, get_tool, load_json,
-                                            save_json, timeout)
+from inference import (
+    generate_outputs,
+    get_infer_kwargs,
+    load_model,
+    load_tokenizer_and_template,
+)
+from utils import (
+    TimeoutException,
+    filter_code,
+    filter_cot,
+    get_tool,
+    load_json,
+    save_json,
+    timeout,
+)
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -281,12 +291,12 @@ if __name__ == "__main__":
         help="Base model or Chat model",
     )
 
-    parser.add_argument(
-        "--max_new_tokens",
-        type=int,
-        default=1024,
-        help="Maximum number of output tokens",
-    )
+    # parser.add_argument(
+    #     "--max_new_tokens",
+    #     type=int,
+    #     default=1024,
+    #     help="Maximum number of output tokens",
+    # )
     parser.add_argument("--max_model_len", type=int, default=8192, help="Cutoff length")
     parser.add_argument(
         "--eval_dataset_path",
