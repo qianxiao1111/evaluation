@@ -113,7 +113,7 @@ We employ ***executable_pass_rate***  of pass-1 to employ the model's tableQA co
 ```bash
 python table_related_benchmarks/run_tableqa_execution_eval.py \
     --model_path <EVAL MODEL PATH> \
-    --temperature <LLM OUTPUT CONTENT SAVE PATH> \
+    --temperature <ONE OF THE INFERENCE PARAMETER> \
     --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
 ```
 
@@ -130,7 +130,7 @@ In the evaluation of TableBench, Rough-L was used to assess general QA questions
 ```bash
 python table_related_benchmarks/run_table_bench_eval.py \
     --model_path <EVAL MODEL PATH> \
-    --temperature <LLM OUTPUT CONTENT SAVE PATH> \
+    --temperature <ONE OF THE INFERENCE PARAMETER> \
     --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
 ```
 
