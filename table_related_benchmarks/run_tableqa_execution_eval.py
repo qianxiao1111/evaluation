@@ -1,29 +1,37 @@
-import argparse
 import json
-import os
 import re
-import shutil
-from pathlib import Path
-
 import pandas as pd
-from joblib import Parallel, delayed
 from tqdm import tqdm
-
-from inference import (
-    generate_outputs,
-    get_infer_kwargs,
-    load_model,
-    load_tokenizer_and_template,
-)
 from utils import (
-    TimeoutException,
-    filter_code,
-    filter_cot,
+    sample_from_two_lists,
+    get_dfs_info,
     get_tool,
+    filter_code,
+    read_jsonl,
+    filter_cot,
+    timeout,
+    TimeoutException,
+    execute_with_timeout,
     load_json,
     save_json,
-    timeout,
 )
+from table_qa_execution_eval.sft_prompt import (
+    prompt_with_format_list,
+    prompt_with_instruction_list,
+)
+from inference import (
+    generate_outputs,
+    load_model,
+    load_tokenizer_and_template,
+    get_infer_kwargs,
+)
+import os
+import argparse
+import shutil
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
+from joblib import Parallel, delayed
+
 
 CODE_PREFIX = """import matplotlib.pyplot as plt
 from mplfonts import use_font
@@ -38,22 +46,20 @@ use_font("Noto Serif CJK SC")
 plt.rcParams['font.sans-serif']=['SimHei']
 plt.rcParams['axes.unicode_minus']=False\n"""
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(current_dir, os.pardir))
 
-
-def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
+def format_inputs(test_datas: list[dict],args) -> list[list[dict]]:
     """Format inputs to the required messages"""
     # 把需要推理的数据拼成 message 形式
     format_message_datas = []
     for idx, test_dt in enumerate(test_datas):
-        # instruction = test_dt["instruction"]
-        # table_info = test_dt["table_info"]
-        # df_info_simple_str = test_dt["df_info_simple_str"]
-        # instruction = instruction.replace(table_info, df_info_simple_str)
-        # messages = [{"role": "user", "content": instruction}]
-
-        messages = test_dt["message"]
+        if args.slim:
+            messages = test_dt["message"]
+        else:
+            instruction = test_dt["instruction"]
+            table_info = test_dt["table_info"]
+            df_info_simple_str = test_dt["df_info_simple_str"]
+            instruction = instruction.replace(table_info, df_info_simple_str)
+            messages = [{"role": "user", "content": instruction}]
         format_message_datas.append(messages)
 
     return format_message_datas
@@ -62,25 +68,28 @@ def format_inputs(test_datas: list[dict]) -> list[list[dict]]:
 def eval_outputs_parallel(
     llm_output: str,
     test_data: str,
+    args,
 ) -> dict:
     df_paths = test_data["table_paths"]
-    df_paths = [os.path.join(project_root, path) for path in df_paths]
     df_names = test_data["df_names"]
     query = test_data["query"]
-    instruction = test_data["instruction"]
-    table_info = test_data["table_info"]
-    df_info_simple_str = test_data["df_info_simple_str"]
-    instruction = instruction.replace(table_info, df_info_simple_str)
-    # instruction = test_data["instruction"]
     table_paths = test_data["table_paths"]
-    eval_result_sample = {}
     df = [pd.read_csv(path, low_memory=False) for path in df_paths]
 
-    # tool = get_tool(df, df_names)
-    tool = get_tool(df)
-    code, _ = filter_code(llm_output)
-    cot = filter_cot(llm_output)
+    if args.slim:
+        # tool = get_tool(df, df_names)
+        tool = get_tool(df) 
+        instruction = test_data["message"]
+    else:
+        tool = get_tool(df, df_names)
+        instruction = test_data["instruction"]
+        table_info = test_data["table_info"]
+        df_info_simple_str = test_data["df_info_simple_str"]
+        instruction = instruction.replace(table_info, df_info_simple_str)
 
+    code, _ = filter_code(llm_output)
+    # cot = filter_cot(llm_output)
+    eval_result_sample = {}
     # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
     try:
         # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
@@ -107,77 +116,13 @@ def eval_outputs_parallel(
 
     eval_result_sample["code"] = code
     eval_result_sample["llm_output"] = llm_output
-    eval_result_sample["cot"] = cot
     eval_result_sample["observe"] = observe
-    eval_result_sample["query"] = query
-    eval_result_sample["instruction"] = instruction
-    eval_result_sample["table_paths"] = table_paths
     eval_result_sample["flag"] = execution_eval(observe)
+    eval_result_sample["query"] = query
+    eval_result_sample["table_paths"] = table_paths
+    eval_result_sample["instruction"] = instruction
 
     return eval_result_sample
-
-
-def eval_outputs(
-    model_outputs: list[dict],
-    eval_dataset_path: str,
-) -> list[dict]:
-    test_datas = load_json(eval_dataset_path)
-    output_texts = [i["output_text"] for i in model_outputs]
-
-    processed_data = []
-    for idx, test_dt in tqdm(enumerate(test_datas), total=len(test_datas)):
-        llm_output = output_texts[idx]
-        df_paths = test_datas[idx]["table_paths"]
-        df_names = test_datas[idx]["df_names"]
-        query = test_datas[idx]["query"]
-        instruction = test_datas[idx]["instruction"]
-        table_paths = test_datas[idx]["table_paths"]
-        # df_infos = get_dfs_info(df_paths)
-        eval_result_sample = {}
-        df = [pd.read_csv(path, low_memory=False) for path in df_paths]
-
-        tool = get_tool(df, df_names)
-        # tool = get_tool(df)
-        code, _ = filter_code(llm_output)
-        cot = filter_cot(llm_output)
-
-        # 运行超时代码，认为都是异常代码， 在tool.run()过程中，可能会print出额外的内容，不影响执行
-        try:
-            # 如果生成的代码为空（解析不到代码）， 也认为是llm没有理解observe内容或instruct， 输出为Code Error
-            if not code:
-                observe = "Code Error: output empty code.."
-            elif 'df.explode("Candidate")' in code:
-                raise ValueError(f"df.explode error")
-            else:
-                with timeout(15):  # 设置超时时间为15秒
-                    print("------------->code:\n", code)
-                    pure_code = CODE_PREFIX + code
-                    # print("pure code:", pure_code)
-                    observe = tool.run(pure_code)  # 需要监控超时的代码块
-                    # observe = execute_with_timeout(pure_code, 15, tool)
-                    if isinstance(observe, pd.DataFrame):
-                        observe = observe.head().to_markdown(index=False)
-                    else:
-                        observe = str(observe)
-        except TimeoutException as e:
-            observe = f"Timeout Error: code running time exceed 15s.."
-        except SystemExit as e:
-            observe = f"SystemExit Error: {str(e)}"
-        except Exception as e:
-            observe = f"Unexpected Error: {str(e)}"
-
-        eval_result_sample["code"] = CODE_PREFIX + code
-        # eval_result_sample["pure_code"] = CODE_PREFIX + pure_code
-        eval_result_sample["llm_output"] = llm_output
-        eval_result_sample["cot"] = cot
-        eval_result_sample["observe"] = observe
-        eval_result_sample["input"] = instruction
-        eval_result_sample["query"] = query
-        eval_result_sample["table_paths"] = table_paths
-        eval_result_sample["flag"] = execution_eval(observe)
-
-        processed_data.append(eval_result_sample)
-    return processed_data
 
 
 def execution_eval(observe: str) -> bool:
@@ -209,7 +154,7 @@ def main(args):
     eval_dataset_path = args.eval_dataset_path
     test_datas = load_json(eval_dataset_path)
 
-    format_message_datas = format_inputs(test_datas)
+    format_message_datas = format_inputs(test_datas,args)
 
     print("Generating eval answers now..")
     model_outputs = generate_outputs(
@@ -219,10 +164,9 @@ def main(args):
     #     json.dump(model_outputs,f,ensure_ascii=False)
     print("Generating answers finished..")
 
-    # eval_answers = eval_outputs(model_outputs, eval_dataset_path)
-    test_datas = load_json(eval_dataset_path)
+
     eval_answers = Parallel(n_jobs=48)(
-        delayed(eval_outputs_parallel)(model_outputs[i]["output_text"], test_datas[i])
+        delayed(eval_outputs_parallel)(model_outputs[i]["output_text"], test_datas[i],args)
         for i in range(len(test_datas))
     )
 
@@ -276,32 +220,28 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_path", type=str, required=True, help="Path to the model"
     )
-
-    parser.add_argument(
-        "--max_new_tokens",
-        type=int,
-        default=2048,
-        help="Maximum number of output tokens",
-    )
-
     parser.add_argument(
         "--model_type",
         choices=["base_model", "chat_model"],
         default="chat_model",
         help="Base model or Chat model",
     )
-
-    # parser.add_argument(
-    #     "--max_new_tokens",
-    #     type=int,
-    #     default=1024,
-    #     help="Maximum number of output tokens",
-    # )
+    parser.add_argument(
+        "--slim",
+        action="store_true",
+        help="slim data format",
+    )
+    parser.add_argument(
+        "--max_new_tokens",
+        type=int,
+        default=1024,
+        help="Maximum number of output tokens",
+    )
     parser.add_argument("--max_model_len", type=int, default=8192, help="Cutoff length")
     parser.add_argument(
         "--eval_dataset_path",
         type=str,
-        default="table_related_benchmarks/evalset/table_qa_execuate_test/test_datas_zuizong_slim.json",
+        default="table_related_benchmarks/evalset/table_qa_execuate_test/test_datas_zuizong_filter.json",
         help="Test Set Path",
     )
 
@@ -312,8 +252,9 @@ if __name__ == "__main__":
         help="Max iteration for llm to run each code correction task",
     )
     args = parser.parse_args()
+
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     main(args)
     """
-    python table_related_benchmarks/run_tableqa_execution_eval.py --model_path /data4/sft_output/qwen2-base-0817
+    python run_eval.py --model_path /data0/pretrained-models/Qwen2-7B-Instruct
     """

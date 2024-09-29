@@ -180,7 +180,7 @@ if __name__ == "__main__":
         default="output",
     )
     parser.add_argument(
-        "--temp_dir", type=str, help="temp dir for evaluation", default="tmp"
+        "--temp_dir", type=str, help="temp dir for evaluation", default="output/tmp"
     )
     parser.add_argument("--seed", type=int, help="seed", default=42)
     args = parser.parse_args()

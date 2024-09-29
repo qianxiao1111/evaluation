@@ -8,8 +8,8 @@ from typing import *
 import numpy as np
 from tqdm.auto import tqdm
 
-from general_benchmarks.HumanEval.data import stream_jsonl
-from general_benchmarks.HumanEval.human_eval.execution import check_correctness
+from human_eval.data import stream_jsonl
+from human_eval.execution import check_correctness
 
 IMPORT_HELPER = {
     "python": [
