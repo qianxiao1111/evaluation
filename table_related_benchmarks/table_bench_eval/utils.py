@@ -43,12 +43,12 @@ def extract_final_answer(text):
 def parse_final_answer_prediction(prediction):
     pattern = r"Final Answer: (.+)"
     try:
-        match = re.search(pattern, prediction)
+        match = re.search(pattern, prediction, re.IGNORECASE)
         if match:
             return match.group(1)
         else:
             return ''
-    except Exception as e:
+    except Exception:
         return ''
         
 def read_json_file(path, filter_func=None):
@@ -135,7 +135,7 @@ def ensure_last_line_print(code):
 def build_chart_eval_code(sample):
     answer = sample['answer']
     chart_type = sample['chart_type']
-    prediction = sample['raw_generation'][0]
+    prediction = sample['raw_generation']
 
     python_code = parse_python_code(prediction)
     python_code = CODE_PREFIX + python_code
@@ -165,8 +165,10 @@ else:
     print(compute_general_chart_metric(y_references, y_predictions))
     '''
     # chart_eval_code = f'from chat_metric_utils import *\n{python_code}\n{answer}\nchart_type="{chart_type}"\n{eval_code}'
-    chart_eval_code = f'{python_code}\n{answer}\nchart_type="{chart_type}"\n{eval_code}'
-
+    # chart_eval_code = f'{python_code}\ny_references={answer}\nchart_type="{chart_type}"\n{eval_code}'
+    y_ref_str = f"{answer}"
+    chart_type_str = f"chart_type = '{chart_type}'"
+    chart_eval_code = "\n".join([python_code, y_ref_str, chart_type_str, eval_code])
     if python_code == '':
         return '', ''
     return python_code, chart_eval_code
@@ -219,6 +221,7 @@ def parse_chart_code_then_exec(sample):
     python_code, chart_eval_code = build_chart_eval_code(sample)
     df = pd.read_csv("table.csv")
     python_code = sanitize_input(python_code)
+    chart_eval_code = sanitize_input(chart_eval_code)
     exec_tool = get_tool(df)
     try:
         with timeout(10):
@@ -228,8 +231,9 @@ def parse_chart_code_then_exec(sample):
         pass
     try:
         with timeout(10):
+            # print("Chart eval code: ", chart_eval_code)
             observe = exec_tool.run(chart_eval_code)
-            # print("Observe:", observe)
+            print("Observe:", observe)
             # if not execution_eval(observe): 
             #     observe = ""   
             if isinstance(observe, pd.DataFrame):

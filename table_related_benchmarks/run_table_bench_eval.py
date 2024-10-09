@@ -27,7 +27,7 @@ if __name__ == "__main__":
     parser = ArgumentParser(description="Table bench evaluation")
 
     parser.add_argument(
-        "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
+        "--gpus_num", type=int, default=2, help="the number of GPUs you want to use."
     )
 
     parser.add_argument(
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2.5-7b-base-0923/checkpoint-2000"
+        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2.5-72b-ins-0927/checkpoint-1200"
     )
 
     parser.add_argument(

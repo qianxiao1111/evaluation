@@ -10,10 +10,12 @@ from table_bench_eval.utils import (
     parse_code_then_exec, 
     pre_save_table_to_csv,
     parse_final_answer_prediction,
+    extract_final_answer,
     write_json_to_file,
     execution_eval,
     parse_python_code
 )
+
 
 """
 Evaluation process modified from https://github.com/TableBench/TableBench
@@ -73,7 +75,7 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
         pre_save_table_to_csv(table)
         prediction = sample["raw_generation"]
         qtype = sample['qtype']
-        if "Final Answer" in prediction:
+        if "Final Answer" in prediction and parse_python_code(prediction) == "":
             parsed_prediction = parse_final_answer_prediction(prediction)
             parsed_result = {'parsed_prediction': parsed_prediction}
         elif "Final Answer" not in prediction and parse_python_code(prediction) == "":
