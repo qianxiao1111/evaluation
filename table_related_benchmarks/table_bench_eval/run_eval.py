@@ -74,12 +74,13 @@ def execute_samples_and_save(all_samples, output_dir, base_model_name):
         table = json.loads(table)
         pre_save_table_to_csv(table)
         prediction = sample["raw_generation"]
+        answer = sample["answer"]
         qtype = sample['qtype']
         if "Final Answer" in prediction and parse_python_code(prediction) == "":
             parsed_prediction = parse_final_answer_prediction(prediction)
             parsed_result = {'parsed_prediction': parsed_prediction}
         elif "Final Answer" not in prediction and parse_python_code(prediction) == "":
-            parsed_result = {'parsed_prediction': prediction}
+            parsed_result = {'parsed_prediction': prediction, "Parse@1": False, "ecr_1":False}
         else:
             if qtype == "Visualization":
                 parsed_prediction, ecr_1 = parse_chart_code_then_exec(sample)

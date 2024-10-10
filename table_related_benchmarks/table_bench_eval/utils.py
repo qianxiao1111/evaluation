@@ -79,15 +79,19 @@ def write_json_to_file(path: str, data: dict, is_json_line: bool = False) -> Non
             f.write(json.dumps(data, ensure_ascii=False, indent=4))
 
 def parse_python_code(prediction):
-    pattern = r"```python\n(.*?)```"
-    try:
-        matches = re.findall(pattern, prediction, flags=re.S)
-        if matches:
-            return matches[-1]
+    pattern1 = r"```python\n(.*?)```"
+    matches = re.findall(pattern1, prediction, flags=re.S)
+    if matches:
+        return matches[-1]
+    else:
+        code = ""
+    if code == "":
+        match = re.search(r'Action:\s*(.*)\n', prediction)
+        if match:
+            return match.group(1)
         else:
-            return ''
-    except Exception as e:
-        return ''
+            return code
+                
 
 def get_tool(df: Any, df_names=None):
     """
@@ -198,6 +202,8 @@ def parse_code_then_exec(prediction):
         observe = e
     if observe != "":
         observe = observe.strip()
+    # if not execution_eval(observe):
+    #     observe = ""
     return observe, ecr_1
 
 def execution_eval(observe: str) -> bool:
