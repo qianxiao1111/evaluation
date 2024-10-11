@@ -1,0 +1,84 @@
+No.,Academic Programme Category,學科類別
+111,Clinical medicine,臨牀醫學
+112,Pre-clinical medicine,臨牀前醫學
+121,Clinical dentistry,臨牀牙醫學
+122,Pre-clinical dentistry,臨牀前牙醫學
+131,Nursing,護理學
+132,Rehabilitation medicine,康復醫學
+133,Medical technology,醫療科技
+134,Dental technology,牙科技術
+135,Pharmacy,藥劑學
+136,Chinese Medicine,中醫藥學
+139,Other studies in medical diagnostics and treatment,其他醫療診斷和治療學
+210,Biological sciences,生物科學
+220,Food sciences,食物科學
+231,Chemistry,化學
+232,Physics,物理
+239,Other physical sciences,其他物理科學
+240,Environmental studies,環境科學
+250,"Mathematics, statistics and actuarial science",數學、統計及精算學
+260,Computer science and information technology,電腦科學及資訊科技
+311,Chemical engineering & materials techniques,化學工程及材料技術
+312,Civil engineering,土木工程
+313,Electrical & electronic engineering (inc. computer engineering),電機及電子工程（包括電腦工程）
+314,Manufacturing & industrial engineering,製造及工業工程
+315,Mechanical engineering,機械工程
+316,Surveying,測量
+319,Other engineering,其他工程學
+321,Biotechnology,生物科技
+322,Textile and clothing technology,紡織及服裝科技
+329,Other technology,其他科技
+330,Transport and communications,運輸及通訊
+331,Logistics (exc. business logistics / logistics management),物流學（不包括商業物流／物流管理學）
+340,Architecture,建築
+350,Building and real estate,建造及房地產
+360,Town Planning,城市規劃
+411,General business administration,綜合工商管理
+412,Accountancy,會計
+413,Finance and investment,財務及投資
+414,Marketing,市場
+419,Business administration with other specialisation,其他專門的工商管理
+422,Institutional administration,機構行政
+431,Commercial studies,商業
+511,Economics,經濟
+512,Sociology,社會
+513,Psychology,心理
+514,Geography,地理
+515,Studies of regional cultures,地區文化
+519,Other social and behavioural sciences,其他社會及行爲科學
+520,Social work and counselling,社會工作及輔導
+521,Public administration,公共行政
+530,Law,法律
+540,"Journalism, public relations and other mass communication arts",新聞、公共關係及其他大眾傳播藝術
+611,Chinese language and literature,中國語文及文學
+612,English language and literature,英國語文及文學
+619,Other foreign language and their literature,其他外國語言及文學
+620,Comparative literature,比較文學
+630,Linguistics,語言學
+690,Other language related studies,其他語言有關學科
+741,History,歷史
+742,Philosophy,哲學
+749,Other humanities,其他人文學科
+750,Religion and theology,宗敎及神學
+761,"Drawing, painting and sculpturing",繪圖、繪畫及雕塑
+762,Music,音樂
+763,Design,設計
+769,Other creative arts,其他創意藝術
+820,Education science,敎育
+830,Physical education,體育
+841,General teacher-training (primary),綜合師資訓練（小學）
+842,General teacher-training (secondary),綜合師資訓練（中學）
+843,Teacher training with specialisation in a non-vocational subject,專修非職業科目的師資訓練
+844,Teacher-training for teaching practical or vocational subjects,實用或職業科目的師資訓練
+845,Teacher-training for teaching pre-school or kindergarten,學前或幼稚園的師資訓練
+846,Teacher-training for teachers in adult education,成人敎育的師資訓練
+847,Teacher-training for teaching children with special needs,特殊需要兒童的師資訓練
+849,Other teacher-training programmes,其他師資訓練課程
+851,General teacher-training (primary),綜合師資訓練（小學）
+852,General teacher-training (secondary),綜合師資訓練（中學）
+853,Teacher training with specialisation in a non-vocational subject,專修非職業科目的師資訓練
+854,Teacher-training for teaching practical or vocational subjects,實用或職業科目的師資訓練
+855,Teacher-training for teaching pre-school or kindergarten,學前或幼稚園的師資訓練
+856,Teacher-training for teachers in adult education,成人敎育的師資訓練
+857,Teacher-training for teaching children with special needs,特殊需要兒童的師資訓練
+859,Other teacher-training programmes,其他師資訓練課程

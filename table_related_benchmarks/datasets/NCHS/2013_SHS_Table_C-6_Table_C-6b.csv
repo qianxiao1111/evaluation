@@ -1,0 +1,50 @@
+Selected_characteristic,All_children_aged_5_17_years,None1,1_2_days1,3_5_days1,6_10_days1,11_or_more_days1,_Did_not_go_to_school1
+Total,53607,15788.0,15792,13883,5025,2367,226
+Sex: Male,27367,8329.0,8100,6995,2361,1200,130
+Sex: Female,26240,7459.0,7692,6889,2664,1166,*96
+Age: 5-11 years,28842,8151.0,8735,7651,2669,1256,125
+Age: 12-17 years,24765,7638.0,7057,6232,2355,1111,*100
+Race: One race2,51301,15305.0,15105,13207,4743,2218,213
+Race: White,40097,11087.0,11814,10762,3954,1976,192
+Race: Black or African American,7855,2938.0,2172,1779,624,191,
+Race: American Indian or Alaska Native,506,146.0,141,124,,*26,
+Race: Asian,2735,1089.0,964,495,124,*25,
+Race: Native Hawaiian or Other Pacific Islander,108,,*15,,,,
+Race: Two or more races3,2307,484.0,687,676,282,148,
+Race: Black or African American and white,979,154.0,301,322,114,*74,
+Race: American Indian or Alaska Native and white,456,81.0,138,*120,*73,*39,
+Hispanic or Latino origin4 and race: Hispanic or Latino,12614,4638.0,3388,2928,979,511,*61
+Hispanic or Latino origin4 and race: Mexican or Mexican American,8754,3151.0,2415,2042,686,335,*43
+Hispanic or Latino origin4 and race: Not Hispanic or Latino,40993,11151.0,12404,10955,4046,1856,165
+"Hispanic or Latino origin4 and race: ""White  single race""",28761,6841.0,8794,8180,3086,1518,138
+"Hispanic or Latino origin4 and race: ""Black or African American only  single race""",7353,2766.0,2037,1638,581,180,
+Family structure5: Mother and father,36638,10677.0,11460,9397,3400,1318,*111
+"Family structure5: ""Mother  no father""",13350,3977.0,3249,3593,1363,888,109
+"Family structure5: ""Father  no mother""",1936,608.0,580,511,116,*75,
+Family structure5: Neither mother nor father,1684,526.0,503,382,145,85,
+Parent's education6: Less than high school diploma,6518,2472.0,1614,1384,605,336,*39
+Parent's education6: High school diploma or GED7,9326,3217.0,2427,2227,834,449,*44
+Parent's education6: More than high school,35956,9516.0,11222,9873,3441,1497,136
+"Family income8: ""Less than $35 000""",15807,5296.0,3768,3880,1547,1031,98
+"Family income8: ""$35 000 or more""",34877,9446.0,11102,9463,3302,1224,109
+"Family income8: ""$35 000-$49 999""",6443,1892.0,1703,1896,559,297,
+"Family income8: ""$50 000-$74 999""",8643,2364.0,2470,2420,957,326,*37
+"Family income8: ""$75 000-$99 999""",6493,1718.0,2036,1835,586,263,
+"Family income8: ""$100 000 or more""",13299,3472.0,4894,3311,1200,337,
+Poverty status9: Poor,10377,3533.0,2383,2503,1076,668,*95
+Poverty status9: Near poor,10892,3482.0,2825,2962,918,571,
+Poverty status9: Not poor,28221,7332.0,9335,7552,2806,962,*77
+Health insurance coverage10: Private,29442,7689.0,9751,7989,2705,990,*81
+Health insurance coverage10: Medicaid or other public,18813,6167.0,4569,4737,1820,1154,139
+Health insurance coverage10: Other,1295,424.0,408,279,*97,*86,
+Health insurance coverage10: Uninsured,3875,1431.0,1020,862,389,131,
+Place of residence11: Large MSA,28717,8887.0,8762,7128,2527,1074,*109
+Place of residence11: Small MSA,16974,4647.0,4916,4569,1724,857,110
+Place of residence11: Not in MSA,7916,2255.0,2113,2186,774,436,
+Region: Northeast,8332,2415.0,2518,2157,877,285,
+Region: Midwest,12307,3168.0,3913,3447,1099,547,60
+Region: South,20221,6397.0,5650,4945,1901,964,*101
+Region: West,12747,3809.0,3711,3333,1148,571,*61
+Current health status: Excellent or very good,44535,13439.0,13709,11721,3735,1429,122
+Current health status: Good,7863,2180.0,1939,1854,1058,653,*50
+Current health status: Fair or poor,1199,169.0,134,308,231,285,*54

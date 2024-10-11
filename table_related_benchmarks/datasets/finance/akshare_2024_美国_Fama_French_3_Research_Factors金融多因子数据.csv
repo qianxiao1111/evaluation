@@ -1,0 +1,32 @@
+item,Feb-24,Last 3  Months,Last 12  Months
+Rm-Rf,5.06,11.05,24.06
+SMB,-0.24,0.44,-15.97
+HML,-3.48,-1.4,-15.01
+Fama/French 5 Research Factors (2x3),-,-,-
+Rm-Rf,5.06,11.05,24.06
+SMB,-0.78,0.14,-19.04
+HML,-3.48,-1.4,-15.01
+RMW,-1.98,-4.5,5.93
+CMA,-2.13,-1.98,-17.95
+Fama/French Research Portfolios,-,-,-
+Size and Book-to-Market Portfolios,-,-,-
+Small Value,2.32,11.99,3.33
+Small Neutral,5.21,12.79,12.7
+Big Neutral,6.52,14.68,6.95
+Small Growth,2.81,11.83,13.21
+Big Value,6.39,14.35,18.08
+Big Growth,5.57,11.95,39.6
+Size and Operating Profitability Portfolios,-,-,-
+Small Robust,3.9,10.55,11.34
+Small Neutral,2.45,11.26,10.18
+Small Weak,6.94,15.74,6.54
+Big Robust,5.35,11.25,36.21
+Big Neutral,5.69,13.52,23.33
+Big Weak,6.28,15.07,29.16
+Size and Investment Portfolios,-,-,-
+Small Conservative,6.3,17.17,5.68
+Small Neutral,2.6,8.03,4.67
+Small Aggressive,5.34,15.21,14.45
+Big Conservative,4.17,12.26,16.91
+Big Neutral,2.93,7.76,26.62
+Big Aggressive,9.39,18.18,44.04

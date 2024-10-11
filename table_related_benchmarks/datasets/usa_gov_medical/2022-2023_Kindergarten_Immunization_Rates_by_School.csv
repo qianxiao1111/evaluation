@@ -1,0 +1,651 @@
+School_Name,School_Type,Address,City,Zipcode,County,Polio,DTaP,MMR,HepB,Varicella,HepA,All,Ex_Rel,Ex_Med,Ex_Tot
+Andover Elementary School,Public,35 School Rd,Andover,6232,Tolland,,,,,,,,,,
+Ashford School,Public,440 Westford Rd.,Ashford,6278,Windham,97.6,92.7,90.2,92.7,87.8,92.7,87.8,0.0,2.4,2.4
+Pine Grove School,Public,151 Scoville Road,Avon,6001,Hartford,99.1,99.1,99.1,99.1,99.1,99.1,99.1,0.0,0.9,0.9
+Reggio Magnet School Of The Arts,Public,59 Waterville Rd,Avon,6001,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Roaring Brook School,Public,30 Old Wheeler Lane,Avon,6001,Hartford,98.9,98.9,97.8,98.9,98.9,98.9,97.8,0.0,0.0,0.0
+Talcott Mountain Academy,Non-public,324 Montevideo Road,Avon,6001,Hartford,,,,,,,,,,
+Sayles School,Public,25 Scotland Rd.,Baltic,6330,New London,,,,,,,,,,
+St. Joseph School,Non-public,10 School Hill Road,Baltic,6330,New London,,,,,,,,,,
+Barkhamsted School,Public,65 Ripley Hill Road,Barkhamsted,6063,Litchfield,,,,,,,,,,
+Laurel Ledge Elementary School,Public,30Highland Ave,Beacon Falls,6403,New Haven,93.1,93.1,93.1,98.3,93.1,98.3,93.1,0.0,1.7,1.7
+Emma Hart Willard Elementary School,Public,1088 Norton Road,Berlin,6037,Hartford,100.0,100.0,98.3,100.0,100.0,100.0,98.3,0.0,0.0,0.0
+Bethany Community School,Public,44 Peck Road,Bethany,6524,New Haven,97.7,97.7,97.7,97.7,97.7,95.4,95.4,0.0,0.0,0.0
+Anna H. Rockwell,Public,400 Whittlesey Dr,Bethel,6801,Fairfield,100.0,100.0,100.0,98.9,100.0,98.9,98.9,0.0,0.0,0.0
+Frank A Berry Elementary,Public,200 Whittlesey Drive,Bethel,6801,Fairfield,98.8,98.8,98.8,98.8,98.8,97.7,97.7,1.2,0.0,1.2
+St Mary School,Non-public,24 Dodgingtown Road,Bethel,6801,Fairfield,,,,,,,,,,
+Bethlehem Elementary School,Public,92 East Street,Bethlehem,6751,Litchfield,100.0,100.0,100.0,100.0,97.8,100.0,97.8,0.0,0.0,0.0
+Laurel Elementary School,Public,1 Filley Street,Bloomfield,6002,Hartford,96.6,96.6,95.5,96.6,95.5,98.9,93.3,0.0,1.1,1.1
+Crec River Street Autism Program At Birken,Public,1289 Blue Hills Ave.,Bloomfield,6002,Hartford,,,,,,,,,,
+Bolton Center School,Public,108 Notch Road,Bolton,6043,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Fields Memorial School,Public,8 Bozrah St. Ext,Bozrah,6334,New London,,,,,,,,,,
+East Shoreline Catholic Academy,Non-public,62 Cedar St,Branford,6405,New Haven,,,,,,,,,,
+John B. Sliney Elementary,Public,23 Eades Street,Branford,6405,New Haven,96.3,96.3,98.2,98.2,98.2,98.2,96.3,0.0,1.8,1.8
+Mary T Murphy School,Public,14 Brushy Plain Rd,Branford,6405,New Haven,95.2,96.8,93.6,95.2,93.6,96.8,92.1,0.0,1.6,1.6
+Mary R. Tisko School,Public,118 Damascus Rd.,Branford,6405,New Haven,100.0,100.0,100.0,100.0,98.5,98.5,98.5,0.0,0.0,0.0
+Beardsley,Public,500 Huntington Rd,Bridgeport,6610,Fairfield,92.4,92.4,92.4,96.2,92.4,94.3,92.4,0.0,0.0,0.0
+Bridgeport Learning Center,Public,280 Tesiny Ave,Bridgeport,6606,Fairfield,,,,,,,,,,
+Bryant Elementary,Public,230 Poplar Street,Bridgeport,6605,Fairfield,98.0,98.0,98.0,100.0,98.0,100.0,98.0,0.0,0.0,0.0
+Capital Preparatory Harbor Lower School,Public,461 Mill Hill Avenue,Bridgeport,6610,Fairfield,98.1,98.1,96.2,96.2,94.2,94.2,86.5,1.9,0.0,1.9
+Cesar Batalla,Public,606 Howard Avenue,Bridgeport,6607,Fairfield,100.0,100.0,99.0,99.0,99.0,98.1,95.2,0.0,0.0,0.0
+Classical Studies Academy Annex,Public,659 Beachwood Ave,Bridgeport,6605,Fairfield,97.4,97.4,97.4,97.4,97.4,97.4,97.4,2.6,0.0,2.6
+Columbus School,Public,275 George Street,Bridgeport,6604,Fairfield,89.5,89.5,84.2,87.7,80.7,80.7,66.7,0.0,0.0,0.0
+Edison School,Public,115 Boston Terrace,Bridgeport,6610,Fairfield,,,,,,,,,,
+Geraldine Johnson School,Public,475 Lexington Avenue,Bridgeport,6604,Fairfield,97.9,97.9,97.9,100.0,94.8,95.9,92.8,0.0,0.0,0.0
+Hallen School,Public,68 Omega Avenue,Bridgeport,6606,Fairfield,94.9,94.9,89.7,97.4,89.7,87.2,84.6,0.0,2.6,2.6
+High Horizon Magnet School,Public,700 Palisade Ave,Bridgeport,6610,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+James J. Curiale,Public,300 Laurel Ave,Bridgeport,6605,Fairfield,88.0,90.0,90.0,90.0,76.0,76.0,90.0,0.0,0.0,0.0
+John Winthrop,Public,85 Eckart Street,Bridgeport,6606,Fairfield,100.0,100.0,100.0,100.0,98.3,98.3,98.3,0.0,0.0,0.0
+Luis Munoz Marin School,Public,479 Helen Street,Bridgeport,6608,Fairfield,92.9,92.9,92.9,94.6,89.3,89.3,83.9,0.0,0.0,0.0
+Multicultural Magnet School,Public,700 Palisade Avenue,Bridgeport,6610,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+New Beginnings Family Academy,Public,184 Garden St,Bridgeport,6605,Fairfield,98.5,98.5,95.4,98.5,95.4,95.4,93.8,0.0,0.0,0.0
+P.L. Dunbar,Public,445 Union Avenue,Bridgeport,6607,Fairfield,93.9,93.9,95.9,100.0,93.9,100.0,91.8,0.0,0.0,0.0
+Park City Magnet,Public,1526 Chopsey Hill Road,Bridgeport,6606,Fairfield,88.7,88.7,88.7,88.7,88.7,88.7,88.7,0.0,0.0,0.0
+Read School,Public,130 Ezra Street,Bridgeport,6606,Fairfield,97.2,96.2,94.3,96.2,94.3,94.3,86.8,0.0,0.0,0.0
+Roosevelt,Public,680 Park Ave.,Bridgeport,6604,Fairfield,97.7,97.7,97.7,97.7,95.4,93.2,93.2,0.0,0.0,0.0
+Six To Six Magnet School,Public,601 Pearl Harbor Sstreet,Bridgeport,6611,Fairfield,100.0,97.9,97.9,97.9,95.7,95.7,95.7,0.0,0.0,0.0
+St. Andrews,Non-public,395 Anton St,Bridgeport,6606,Fairfield,,,,,,,,,,
+St. Raphael Academy,Non-public,324 Frank Street,Bridgeport,6605,Fairfield,86.4,86.4,86.4,86.4,86.4,86.4,86.4,0.0,1.5,1.5
+Tisdale School,Public,250 Hollister Ave,Bridgeport,6607,Fairfield,100.0,100.0,100.0,100.0,98.3,98.3,98.3,0.0,0.0,0.0
+Waltersville School,Public,150 Hallett Street,Bridgeport,6608,Fairfield,91.1,91.1,91.1,94.6,89.3,92.9,89.3,0.0,5.4,5.4
+Wilbur Cross Elementary School,Public,1775 Reservoir Avenue,Bridgeport,6606,Fairfield,,,,,,,,,,
+Barnum School,Public,495 Waterview Avenue,Bridgeport,6608,Fairfield,100.0,100.0,100.0,98.6,95.8,91.6,90.1,0.0,0.0,0.0
+Black Rock,Public,545 Brewster St,Bridgeport,6605,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Blackham Elementary School,Public,425 Thorme Street,Bridgeport,6606,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Discovery Magnet,Public,4510 Park Ave,Bridgeport,6604,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Hall,Public,290 Clermont Ave,Bridgeport,6610,Fairfield,87.5,87.5,93.8,96.9,93.8,96.9,87.5,0.0,0.0,0.0
+Madison Elementary,Public,376 Wayne St,Bridgeport,6606,Fairfield,100.0,100.0,97.1,100.0,97.1,97.1,91.2,0.0,0.0,0.0
+St Anns Academy,Non-public,521 Brewster St,Bridgeport,6605,Fairfield,,,,,,,,,,
+Thomas Hooker,Public,138 Roger Williams Road,Bridgeport,6610,Fairfield,,,,,,,,,,
+Burnham School,Public,80 Main Street,Bridgewater,6752,Litchfield,,,,,,,,,,
+Edgewood Elementary,Public,345 Mix Street,Bristol,6010,Hartford,97.5,97.5,97.5,97.5,97.5,97.5,97.5,0.0,0.0,0.0
+Ellen P. Hubbell,Public,90 West Washington Street,Bristol,6010,Hartford,100.0,100.0,100.0,100.0,100.0,98.1,98.1,0.0,0.0,0.0
+Greene-Hills School,Public,718 Pine Street,Bristol,6010,Hartford,98.9,100.0,100.0,100.0,100.0,97.9,97.9,0.0,0.0,0.0
+Immanuel Lutheran,Non-public,154 Meadow St.,Bristol,6010,Hartford,,,,,,,,,,
+Ivy Drive Elementary School,Public,160 Ivy Drive,Bristol,6010,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Mountain View,Public,71 Vera Road,Bristol,6010,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+South Side School,Public,21 Tuttle Rd,Bristol,6010,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+St. Joseph School,Non-public,335 Center St,Bristol,6010,Hartford,,,,,,,,,,
+Stafford Elementary School,Public,212 Louisiana Avenue,Bristol,6010,Hartford,100.0,100.0,100.0,100.0,100.0,98.5,98.5,0.0,0.0,0.0
+West Bristol School,Public,500 Clark Avenue,Bristol,6010,Hartford,98.0,98.0,98.0,98.0,99.0,99.0,98.0,0.0,1.0,1.0
+Broad Brook Elementary School,Public,14 Rye St,Broad Brook,6016,Hartford,98.8,98.8,98.8,98.8,97.7,97.7,97.7,0.0,1.2,1.2
+Center Elementary School,Public,8 Obtuse Hill Rd,Brookfield,6804,Fairfield,99.4,99.4,99.4,98.1,99.4,99.4,98.1,0.6,0.0,0.6
+Christian Life Academy,Non-public,133 Junction Road,Brookfield,6804,Fairfield,,,,,,,,,,
+Brooklyn Elementary School,Public,119 Gorman Rd,Brooklyn,6234,Windham,93.0,93.0,94.4,93.0,94.4,91.6,91.6,2.8,2.8,5.6
+Lake Garda,Public,61 Monce,Burlington,6013,Hartford,96.6,96.6,96.6,95.5,96.6,96.6,95.5,2.2,0.0,2.2
+North Canaan Elementary School,Public,90 Pease Street,Canaan,6018,Litchfield,97.0,97.0,97.0,97.0,97.0,93.9,93.9,0.0,0.0,0.0
+Canterbury Elementary School,Public,67 Kitt Road,Canterbury,6331,Windham,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Cherry Brook Primary School,Public,4 Barbourtown Road,Canton,6019,Hartford,94.7,93.7,94.7,93.7,94.7,92.6,91.6,0.0,3.2,3.2
+Essex Elementary School,Public,108 Main St.,Centerbrook,6426,Middlesex,97.3,94.6,94.6,94.6,94.6,94.6,94.6,0.0,0.0,0.0
+Chaplin Elementary School,Public,240 Palmer Road,Chaplin,6235,Windham,,,,,,,,,,
+Chapman Elementary,Public,38 Country Club Road,Cheshire,6410,New Haven,94.0,96.0,96.0,98.0,96.0,96.0,90.0,2.0,0.0,2.0
+Darcey,Public,1686 Waterbury Rd.,Cheshire,6410,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Doolittle,Public,735 Cornwall Ave,Cheshire,6410,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Highland Elementary School,Public,490 Highland Avenue,Cheshire,6410,New Haven,99.1,99.1,100.0,100.0,100.0,100.0,99.1,0.0,0.0,0.0
+Norton Elementary School,Public,414 North Brooksvale Rd,Cheshire,6410,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+St. Bridget School,Non-public,171 Main St.,Cheshire,6410,New Haven,,,,,,,,,,
+Chester Elementary,Public,23 Ridge Road,Chester,6412,Middlesex,97.0,97.0,97.0,100.0,97.0,100.0,97.0,0.0,0.0,0.0
+Joel Elementary,Public,137 Glenwood Ave,Clinton,6413,Middlesex,98.9,98.9,98.9,98.9,98.9,96.7,96.7,0.0,0.0,0.0
+Colchester Elementary School,Public,315 Halls Hill Rd,Colchester,6415,New London,97.2,96.0,96.6,96.6,96.0,96.0,95.5,0.6,2.3,2.8
+Colebrook Consolidated School,Public,452 Smith Hill,Colebrook,6021,Litchfield,,,,,,,,,,
+Horace Porter School,Public,3 Schoolhouse Rd,Columbia,6237,Tolland,96.4,96.4,98.2,98.2,96.4,100.0,94.6,0.0,0.0,0.0
+Cos Cob School,Public,300 East Putnam Avenue,Cos Cob,6807,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Coventry Grammar School,Public,3453 Main St,Coventry,6238,Tolland,100.0,100.0,100.0,100.0,100.0,99.2,99.2,0.0,0.0,0.0
+Edna C. Stevens School,Public,25 Court Street,Cromwell,6416,Middlesex,97.7,97.7,97.7,98.5,97.7,97.7,97.0,0.0,0.8,0.8
+Ellsworth Avenue Elementary School,Public,53 Ellsworth Avenue,Danbury,6810,Fairfield,98.7,97.4,98.7,98.7,97.4,96.2,94.9,0.0,0.0,0.0
+Hayestown Avenue Schooll,Public,42 Tamarack Avenue,Danbury,6811,Fairfield,100.0,100.0,100.0,100.0,100.0,99.0,99.0,0.0,0.0,0.0
+Hudson Country Montessori,Non-public,44A Shelter Rock Rd,Danbury,6810,Fairfield,,,,,,,,,,
+Immanuel Lutheran,Non-public,18 Clapboard Ridge Road,Danbury,6811,Fairfield,,,,,,,,,,
+King Street Primary,Public,151 South King Street,Danbury,6811,Fairfield,98.0,100.0,99.0,98.0,99.0,98.0,95.9,0.0,0.0,0.0
+Mill Ridge Primary,Public,49A High Ridge Rd,Danbury,6811,Fairfield,98.8,98.8,100.0,98.8,100.0,97.6,97.6,0.0,0.0,0.0
+Morris Street  School,Public,28 Morris Street,Danbury,6810,Fairfield,98.3,96.6,98.3,100.0,96.6,96.6,93.1,0.0,0.0,0.0
+Park Avenue School,Public,82 Park Avenue School,Danbury,6801,Fairfield,98.0,98.0,98.0,98.0,98.0,98.0,97.0,0.0,0.0,0.0
+Pembroke Elementary,Public,34 1/2 Pembroke Road,Danbury,6810,Fairfield,100.0,100.0,100.0,100.0,100.0,95.6,95.6,0.0,0.0,0.0
+Shelter Rock Elementary School,Public,2 Crows Nest Lane,Danbury,6810,Fairfield,100.0,99.0,98.1,99.0,98.1,99.0,96.2,0.0,0.0,0.0
+South Street Elementary School,Public,129 South Street,Danbury,6810,Fairfield,98.4,98.4,98.4,100.0,96.9,96.9,93.8,0.0,0.0,0.0
+St Peters School,Non-public,98 Main Street,Danbury,6810,Fairfield,97.1,97.1,97.1,97.1,97.1,97.1,97.1,0.0,0.0,0.0
+St. Gregory The Great School,Non-public,85 Great Plain Road,Danbury,6811,Fairfield,,,,,,,,,,
+St. Joseph'S School,Non-public,370 Main Street,Danbury,6811,Fairfield,,,,,,,,,,
+Stadley Rough Elementary,Public,25 Karen Rd,Danbury,6811,Fairfield,98.9,98.9,97.8,98.9,98.9,92.4,89.1,0.0,0.0,0.0
+"Western Ct Academy For International Studies, Elementary School",Public,201 University Boulevard,Danbury,6811,Fairfield,94.6,94.6,96.4,94.6,94.6,94.6,94.6,0.0,3.6,3.6
+Great Plain Elementary School,Public,10 Stadley Rough Rd.,Danbury,6811,Fairfield,,,,,,,,,,
+Hindley,Public,10 Nearwater Lane,Darien,6820,Fairfield,100.0,100.0,100.0,100.0,100.0,97.2,97.2,0.0,0.0,0.0
+Holmes Elementary School,Public,18 Hoyt Street,Darien,6820,Fairfield,98.5,98.5,100.0,98.5,98.5,95.5,94.0,0.0,0.0,0.0
+Ox Ridge Elementary School,Public,395 Mansfield Avenue,Darien,6820,Fairfield,100.0,100.0,98.7,100.0,98.7,100.0,98.7,0.0,0.0,0.0
+Royle Elementary School,Public,133 Mansfield Avenue,Darien,6820,Fairfield,98.1,98.1,100.0,98.1,100.0,98.1,92.4,0.0,0.0,0.0
+Tokeneke Elementary School,Public,7 Old Farm Road,Darien,6820,Fairfield,98.7,98.7,98.7,98.7,98.7,98.7,98.7,1.3,0.0,1.3
+Killingly Central School,Public,60 Soap St,Dayville,6241,Windham,100.0,100.0,99.4,99.4,99.4,100.0,98.8,0.0,0.0,0.0
+Deep River Elementary School,Public,12 River Street,Deep River,6417,Middlesex,,,,,,,,,,
+Bradley Elementary,Public,155 David Humphreys Rd,Derby,6418,New Haven,95.0,95.0,100.0,100.0,100.0,100.0,95.0,0.0,0.0,0.0
+Irving Elementary School,Public,9 Garden Place,Derby,6418,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+St. Mary St. Michael,Non-public,14 Seymour Avenue,Derby,6418,New Haven,,,,,,,,,,
+Frederick F Brewster Elementary School,Public,126 Tuttle Road,Durham,6422,Middlesex,98.6,98.6,100.0,100.0,100.0,100.0,98.6,0.0,0.0,0.0
+Richard D. Hubbard,Public,139 Grove St.,East Berlin,6023,Hartford,,,,,,,,,,
+Carl Allgrove Elementary,Public,33 Turkey Hills Road,East Granby,6026,Hartford,98.5,98.5,98.5,98.5,97.0,97.0,97.0,0.0,0.0,0.0
+Memorial Elementary,Public,20 Smith Street,East Hampton,6424,Middlesex,96.4,96.4,96.4,97.1,96.4,97.1,96.4,1.5,0.0,1.5
+Anna E Norris Elementary School,Public,40 Remington Road,East Hartford,6108,Hartford,95.9,93.9,95.9,95.9,95.9,95.9,91.8,0.0,0.0,0.0
+Dr. John Langford Elementary School,Public,61 Alps Drive,East Hartford,6108,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Franklin Mayberry Elementart School,Public,101 Great Hill Rd,East Hartford,6108,Hartford,96.7,93.4,100.0,98.4,98.4,96.7,93.4,0.0,0.0,0.0
+Gov Wiliam Pitkin School,Public,330 Hills Street,East Hartford,6118,Hartford,89.3,89.3,89.3,89.3,89.3,89.3,89.3,0.0,0.0,0.0
+Joseph O. Goodwin Elementary School,Public,1235 Forbes St.,East Hartford,6118,Hartford,94.6,94.6,94.6,94.6,94.6,94.6,92.9,1.8,3.6,5.4
+Riverside Magnet School,Public,29 Willowbrook Rd.,East Hartford,6118,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Robert J. O'Brien Elementary School,Public,56 Farm Drive,East Hartford,6108,Hartford,96.2,96.2,98.1,98.1,98.1,98.1,92.4,0.0,0.0,0.0
+Silver Lane Elementary,Public,15 Mercer Ave,East Hartford,6108,Hartford,94.9,94.9,97.4,97.4,97.4,97.4,94.9,0.0,0.0,0.0
+Thomas S. O'Connell Elementary School,Public,305 May Road,East Hartford,6118,Hartford,100.0,100.0,100.0,100.0,100.0,98.7,98.7,0.0,0.0,0.0
+Woodland School,Public,110 Long Hill Drive,East Hartford,6108,Hartford,,,,,,,,,,
+Hartland School,Public,30 South Road,East Hartland,6027,Hartford,,,,,,,,,,
+Deer Run Elementary,Public,311 Foxon Road,East Haven,6512,New Haven,98.6,98.6,98.6,98.6,98.6,98.6,98.6,0.0,1.4,1.4
+Grove J Tuttle School,Public,108 Prospect Road,East Haven,6512,New Haven,98.5,98.5,98.5,98.5,98.5,98.5,98.5,0.0,0.0,0.0
+Momauguin,Public,99 Cosey Beach Rd,East Haven,6512,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Flanders Elementary School,Public,167 Boston Post Road,East Lyme,6333,New London,98.2,98.2,96.5,96.5,96.5,96.5,96.5,1.8,0.0,1.8
+Eastford Elementary School,Public,12 Westford Road,Eastford,6242,Windham,,,,,,,,,,
+Samuel Staples Elementary School,Public,515 Morehouse Road,Easton,6612,Fairfield,97.0,97.0,97.0,99.0,96.0,98.0,94.0,0.0,1.0,1.0
+Center Elementary School,Public,49 Main St.,Ellington,6029,Tolland,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Windermere School,Public,2 Abbott Rd,Ellington,6029,Tolland,97.6,97.6,97.6,97.6,97.6,97.6,97.6,2.4,0.0,2.4
+Crystal Lake Elementary School,Public,59 South Rd,Ellington,6074,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Enfield Street School,Public,1318 Enfield Street,Enfield,6082,Hartford,98.9,98.9,98.9,98.9,98.9,98.9,98.9,0.0,1.1,1.1
+Hazardville Memorial Elementary,Public,68 North Maple Street,Enfield,6082,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Henry Barnard,Public,27 Shaker Road,Enfield,6078,Hartford,97.1,97.1,97.1,98.5,97.1,96.3,94.1,0.0,0.0,0.0
+St. Bernard,Non-public,232 Pearl St.,Enfield,6082,Hartford,,,,,,,,,,
+Enfield Montessori,Non-public,1325 Enfield St.,Enfield,6082,Hartford,,,,,,,,,,
+Burr Elementary School,Public,1960 Burr Street,Fairfield,6824,Fairfield,98.2,98.2,98.2,98.2,98.2,96.3,96.3,0.0,1.8,1.8
+Dwight Elementary School,Public,1600 Redding Road,Fairfield,6824,Fairfield,100.0,100.0,93.8,96.9,93.8,93.8,93.8,0.0,0.0,0.0
+Fairfield Country Day School,Non-public,2970 Bronson Road,Fairfield,6824,Fairfield,,,,,,,,,,
+Holland Hill,Public,105 Meadowcroft Road,Fairfield,6824,Fairfield,95.6,95.6,95.6,97.1,95.6,97.1,95.6,0.0,1.4,1.4
+Jennings Elementary School,Public,31 Palm Drive,Fairfield,6825,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Mckinley Elementaty,Public,60 Thompson Street,Fairfield,6825,Fairfield,100.0,100.0,98.6,100.0,98.6,97.2,97.2,0.0,0.0,0.0
+North Stratfield Elementary School,Public,190 Putting Green Road,Fairfield,6825,Fairfield,98.4,98.4,98.4,98.4,98.4,98.4,98.4,1.6,0.0,1.6
+Osborn Hill Elementary School,Public,760 Stillson Road,Fairfield,6824,Fairfield,100.0,97.4,98.7,98.7,97.4,96.0,94.7,0.0,0.0,0.0
+Riverfield Elementary,Public,1625 Mill Plain Road,Fairfield,6824,Fairfield,96.8,96.8,96.8,96.8,95.2,95.2,95.2,0.0,3.2,3.2
+Roger Sherman Elementary,Public,250 Fern Street,Fairfield,6824,Fairfield,98.4,98.4,98.4,98.4,98.4,98.4,98.4,1.6,0.0,1.6
+Saint Thomas Aquinas Catholic School,Non-public,1719 Post Road,Fairfield,6824,Fairfield,93.3,93.3,93.3,100.0,93.3,100.0,93.3,0.0,0.0,0.0
+Stratfield Elementary,Public,1407 Melville Ave,Fairfield,6825,Fairfield,100.0,100.0,100.0,100.0,100.0,96.3,96.3,0.0,0.0,0.0
+The Unquowa School,Non-public,981 Stratfield Rd,Fairfield,6825,Fairfield,,,,,,,,,,
+Assumption Catholic School,Non-public,605 Stratfield Rd,Fairfield,6825,Fairfield,,,,,,,,,,
+Lee Kellogg School,Public,47 Main Street,Falls Village,6031,Litchfield,,,,,,,,,,
+East Farms Elementary School,Public,25 Wolf Pit Road,Farmington,6032,Hartford,98.6,98.6,98.6,97.3,95.9,100.0,94.5,0.0,0.0,0.0
+Noah Wallace School,Public,2 School Street,Farmington,6032,Hartford,100.0,100.0,100.0,100.0,100.0,96.4,96.4,0.0,0.0,0.0
+Franklin Elementary School,Public,206 Pond Rd,Franklin,6254,New London,,,,,,,,,,
+Green Valley School,Non-public,206 Pond Road,Franklin,6254,New London,,,,,,,,,,
+Gales Ferry Elementary School,Public,1858 Rt 12,Gales Ferry,6335,New London,92.9,92.9,95.7,98.6,92.9,98.6,88.6,0.0,0.0,0.0
+Buttonball Lane Elementary School,Public,376 Buttonball Lane,Glastonbury,6033,Hartford,98.8,98.8,97.6,98.8,97.6,97.6,97.6,0.0,0.0,0.0
+Glastonbury East Hartford Magnet School,Public,95 Oak St,Glastonbury,6033,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Hebron Avenue School,Public,1363 Hebron Avenue,Glastonbury,6033,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Naubuc Elementary,Public,84 Griswold St,Glastonbury,6033,Hartford,93.6,93.6,96.8,95.2,96.8,93.6,92.1,1.6,0.0,1.6
+Goshen Center School,Public,50 North Street,Goshen,6756,Litchfield,,,,,,,,,,
+Kelly Lane Primary School,Public,60 Kelly Lane,Granby,6035,Hartford,96.0,96.0,96.0,97.0,96.0,95.0,94.1,2.0,0.0,2.0
+Glenville Elementary School,Public,33 Riversville Rd,Greenwich,6831,Fairfield,97.4,97.4,93.4,94.7,92.1,96.0,90.8,1.3,0.0,1.3
+Greenwich Academy,Non-public,200 North Maple Ave,Greenwich,6830,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Greenwich Catholic School,Non-public,471 North Street,Greenwich,6830,Fairfield,,,,,,,,,,
+Greenwich Country Day School,Non-public,401 Old Church Road,Greenwich,6830,Fairfield,98.9,98.9,98.9,98.9,98.9,98.9,98.9,0.0,1.1,1.1
+Hamilton Avenue,Public,184 Hamilton Avenue,Greenwich,6830,Fairfield,,,,,,,,,,
+Julian Curtiss School,Public,180 East Elm Street,Greenwich,6830,Fairfield,90.6,90.6,96.9,96.9,96.9,96.9,90.6,0.0,3.1,3.1
+New Lebanon School,Public,25 Mead Ave,Greenwich,6830,Fairfield,100.0,100.0,100.0,98.4,100.0,98.4,98.4,0.0,0.0,0.0
+North Street School,Public,381 North Street,Greenwich,6830,Fairfield,98.6,98.6,98.6,98.6,98.6,98.6,98.6,1.4,0.0,1.4
+Parkway,Public,141 Lower Cross Rd,Greenwich,6831,Fairfield,100.0,100.0,100.0,97.4,100.0,97.4,97.4,0.0,0.0,0.0
+Sacred Heart Greenwich,Non-public,1177 King Street,Greenwich,6831,Fairfield,,,,,,,,,,
+Whitby School,Non-public,969 Lake Avenue,Greenwich,6831,Fairfield,,,,,,,,,,
+Catherine Kolnaski,Public,500 Poqquonnock Road,Groton,6340,New London,100.0,100.0,98.6,100.0,98.6,97.1,95.6,0.0,0.0,0.0
+Charles Barnum Discovery Magnet School,Public,68 Briar Hill Rd,Groton,6340,New London,98.2,98.2,98.2,98.2,98.2,98.2,98.2,0.0,1.8,1.8
+Sacred Heart School,Non-public,50 Sacred Heart Drive,Groton,6340,New London,,,,,,,,,,
+Thames River Magnet School,Public,25- Brandegee Ave,Groton,6340,New London,90.1,90.1,92.3,95.6,92.3,94.5,89.0,2.2,0.0,2.2
+A.W. Cox,Public,143 Three Mile Course,Guilford,6437,New Haven,100.0,100.0,100.0,100.0,100.0,98.0,98.0,0.0,0.0,0.0
+Calvin Leete Elementary School,Public,280 South Union Street,Guilford,6437,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Guilford Lakes School,Public,40 Maupas Road,Guilford,6437,New Haven,98.2,98.2,98.2,98.2,98.2,98.2,98.2,0.0,1.8,1.8
+Melissa Jones Elementary,Public,181 Ledgehill Road,Guilford,6437,New Haven,96.6,96.6,98.3,96.6,98.3,96.6,96.6,0.0,0.0,0.0
+Bear Path,Public,10 Kirk Rd,Hamden,6514,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Church Street School,Public,95 Church Street School,Hamden,6514,New Haven,94.3,94.3,94.3,94.3,94.3,94.3,94.3,0.0,0.0,0.0
+Hamden Hall Country Day School,Non-public,1108 Whitney Ave,Hamden,6517,New Haven,,,,,,,,,,
+Ridge Hill,Public,120 Carew Road,Hamden,6517,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Shepherd Glen School,Public,1 Skiff St,Hamden,6514,New Haven,97.1,94.1,97.1,97.1,91.2,94.1,91.2,0.0,0.0,0.0
+St Rita School,Non-public,1601 Whitney Ave,Hamden,6517,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+West Woods School,Public,350 West Todd Rd,Hamden,6518,New Haven,97.6,97.6,100.0,97.6,97.6,97.6,97.6,0.0,0.0,0.0
+Hampton Elementary School,Public,380 Main Street,Hampton,6247,Windham,,,,,,,,,,
+Achievement First Hartford,Non-public,305 Greenfield Street,Hartford,6112,Hartford,92.1,93.6,92.1,96.8,88.9,93.6,88.9,0.0,0.0,0.0
+Betances Learning Lab,Public,42 Charter Oak Avenue,Hartford,6106,Hartford,98.0,98.0,100.0,100.0,100.0,98.0,98.0,0.0,0.0,0.0
+Breakthrough Magnet North,Public,25 Ridgefield Street,Hartford,6002,Hartford,100.0,100.0,92.5,100.0,92.5,100.0,92.5,0.0,0.0,0.0
+Breakthrough Magnet South School,Public,290 Brookfield Street,Hartford,6106,Hartford,,,,,,,,,,
+Burns Latino Studies Academy,Public,195 Putnam St.,Hartford,6010,Hartford,100.0,100.0,100.0,100.0,93.6,93.6,93.6,0.0,0.0,0.0
+Capital Prep Magnet School,Public,1304 Main Street,Hartford,6103,Hartford,97.4,97.4,97.4,97.4,97.4,97.4,97.4,2.6,0.0,2.6
+Dwight-Bellizzi Dual Language Academy,Public,215 South Street,Hartford,6114,Hartford,87.7,87.7,94.5,97.3,86.3,84.9,78.1,0.0,0.0,0.0
+Environmental Sciences @ Mary Hooker,Public,440 Broadview Terrace,Hartford,6106,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Expeditionary Learning Academy At Moylan,Public,101 Catherine Street,Hartford,6106,Hartford,98.3,94.9,94.9,100.0,93.2,91.5,81.4,0.0,0.0,0.0
+Global Communication Academy,Public,85 Edwards Street,Hartford,6120,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Kennelly,Public,180 White Street,Hartford,6114,Hartford,100.0,100.0,100.0,100.0,98.2,94.6,92.9,0.0,0.0,0.0
+Kinsella Magnet School,Public,65 Van Block Ave.,Hartford,6106,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Maria C. Colon Sanchez Elementary School,Public,176 Babcock Street,Hartford,6106,Hartford,100.0,100.0,100.0,100.0,98.0,98.0,98.0,0.0,0.0,0.0
+MD Fox,Public,470 Maple Aveenue,Hartford,6114,Hartford,100.0,100.0,98.8,100.0,98.8,97.6,96.4,0.0,0.0,0.0
+Montessori Magnet @Annie Fisher,Public,280 Plainfield Street,Hartford,6112,Hartford,94.3,94.3,94.3,97.1,94.3,97.1,88.6,0.0,0.0,0.0
+Montessori Magnet At Batchelder,Public,757 New Britain Ave,Hartford,6106,Hartford,93.0,95.4,95.4,93.0,93.0,93.0,93.0,0.0,0.0,0.0
+Noah Webster Microsociety,Public,5 Cone St.,Hartford,6105,Hartford,100.0,100.0,95.8,100.0,97.2,100.0,95.8,0.0,0.0,0.0
+Northeastern Adventist Academy Hartford Campus,Non-public,474 Woodland Street,Hartford,6112,Hartford,,,,,,,,,,
+Parkville Community School,Public,47 New Park Avenue,Hartford,6105,Hartford,100.0,98.0,100.0,100.0,98.0,93.9,89.8,0.0,0.0,0.0
+SAND,Public,1750 Main Street,Hartford,6037,Hartford,100.0,100.0,95.6,100.0,95.6,95.6,95.6,0.0,0.0,0.0
+Sara J. Rawson Elementary School,Public,260 Holcomb Street,Hartford,6112,Hartford,93.6,93.6,100.0,100.0,100.0,100.0,93.6,0.0,0.0,0.0
+STEM Magnet @Annie Fisher,Public,280 Plainfield Street,Hartford,6112,Hartford,100.0,100.0,97.1,100.0,97.1,100.0,97.1,0.0,0.0,0.0
+West Middle School,Public,44 Niles Street,Hartford,6105,Hartford,98.2,98.2,96.3,98.2,96.3,96.3,94.4,0.0,0.0,0.0
+Wish Museum School,Public,104 Vine Street,Hartford,6112,Hartford,95.2,95.2,95.2,97.6,92.9,95.2,92.9,0.0,0.0,0.0
+CREC Montessori Magnet,Public,1460 Broad Street,Hartford,6085,Hartford,97.6,97.6,97.6,97.6,97.6,97.6,97.6,2.4,0.0,2.4
+Jumoke Academy,Public,250 Blue Hills Ave,Hartford,6112,Hartford,90.0,90.0,90.0,91.7,88.3,88.3,85.0,0.0,0.0,0.0
+Oak Hill,Non-public,120 Holcomb St,Hartford,6029,Hartford,,,,,,,,,,
+Harwinton Consolidated School,Public,115 Litchfield Road,Harwinton,6791,Litchfield,92.3,94.9,96.2,97.4,94.9,100.0,87.2,0.0,0.0,0.0
+Gilead Hill School,Public,580 Gilead Street,Hebron,6248,Tolland,95.4,93.2,92.0,95.4,92.0,95.4,90.9,3.4,1.1,4.6
+Burr Elementary,Public,792 Killingworth Road,Higganum,6441,Middlesex,93.9,95.1,95.1,95.1,95.1,93.9,91.5,3.7,0.0,3.7
+Griswold Elementary School,Public,303 Slater Ave,Jewett City,6351,New London,100.0,100.0,100.0,99.2,100.0,100.0,99.2,0.0,0.0,0.0
+Mary E. Griswold Elementary School,Public,133 Heather Lane,Kensington,6037,Hartford,98.9,98.9,98.9,98.9,98.9,97.8,97.8,0.0,0.0,0.0
+Saint Paul School,Non-public,461 Alling Street,Kensington,6037,Hartford,,,,,,,,,,
+Kent Center School,Public,9 Judd Ave,Kent,6757,Litchfield,,,,,,,,,,
+Killingworth Elementary School,Public,340 Ct-81,Killingworth,6419,Middlesex,96.1,96.1,96.1,100.0,96.1,98.0,96.1,0.0,0.0,0.0
+Lebanon Elementary School,Public,476 Exeter Rd,Lebanon,6249,New London,95.3,95.3,95.3,95.3,95.3,95.3,95.3,1.6,1.6,3.1
+Gallup Hill School,Public,169 Gallup Hill Road,Ledyard,6339,New London,100.0,100.0,100.0,98.8,98.8,98.8,96.5,0.0,0.0,0.0
+Lisbon Central School,Public,109 Bergendahl Drive,Lisbon,6351,New London,97.8,95.6,93.3,97.8,95.6,95.6,93.3,0.0,0.0,0.0
+Center School,Public,125 West Street,Litchfield,6759,Litchfield,97.6,97.6,97.6,97.6,97.6,97.6,97.6,2.4,0.0,2.4
+Lyme Consolidated School,Public,478 Hamburg Rd,Lyme,6371,New London,100.0,97.3,100.0,100.0,100.0,100.0,97.3,0.0,0.0,0.0
+Ryerson,Public,982 Durham Road,Madison,6443,New Haven,98.7,98.7,98.7,100.0,98.7,100.0,98.7,0.0,0.0,0.0
+The Country School,Non-public,341 Opening Hill Road,Madison,6443,New Haven,,,,,,,,,,
+Jeffrey,Public,331 Copse Rd,Madison,6443,New Haven,99.0,99.0,99.0,99.0,99.0,99.0,99.0,0.0,0.0,0.0
+Bowers,Public,141 Princeton Street,Manchester,6042,Hartford,92.3,92.3,96.2,88.5,96.2,92.3,76.9,0.0,1.9,1.9
+Community Child Guidance Clinic School,Non-public,317 North Main St,Manchester,6040,Hartford,,,,,,,,,,
+Cornerstone Christian School,Non-public,236 Main St.,Manchester,6042,Hartford,,,,,,,,,,
+Highland Park Elementary School,Public,397 Porter Street,Manchester,6040,Hartford,98.5,98.5,98.5,98.5,98.5,98.5,98.5,0.0,1.5,1.5
+Keeney Street Elementary School,Public,179 Keeney Street,Manchester,6040,Hartford,97.1,97.1,97.1,98.6,97.1,98.6,95.6,1.4,0.0,1.4
+Martin Elementary,Public,140 Dartmouth Rd.,Manchester,6040,Hartford,93.3,93.3,93.3,97.8,93.3,95.6,93.3,2.2,0.0,2.2
+Odyssey Community School,Public,579 West Middle Tpke.,Manchester,6040,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Saint Bridget School,Non-public,74 Main St.,Manchester,6042,Hartford,,,,,,,,,,
+Saint James School,Non-public,73 Park Street,Manchester,6040,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Verplanck,Public,126 Olcott St,Manchester,6066,Hartford,98.8,98.8,98.8,98.8,97.6,98.8,96.3,0.0,0.0,0.0
+Waddell Elementary School,Public,163 Broad Street,Manchester,6042,Hartford,96.0,96.0,98.0,97.0,95.0,92.0,89.0,1.0,0.0,1.0
+Buckley Elementary,Public,250 Vernon Street,Manchester,6042,Hartford,88.5,88.5,90.4,94.2,88.5,90.4,90.4,5.8,0.0,5.8
+Oak Grove Montessori,Non-public,132 Pleasant Valley Road,Mansfield,6250,Tolland,,,,,,,,,,
+Mansfield Elementary School,Public,134 Warrenville Rd,Mansfield Center,6250,Tolland,95.0,98.0,95.0,98.0,95.0,95.0,87.9,0.0,0.0,0.0
+Elmer Thienes-Mary Hall Elementary,Public,25 School Dr.,Marlborough,6447,Hartford,96.7,100.0,98.3,96.7,98.3,98.3,96.7,0.0,0.0,0.0
+Benjamin Franklin Elementary School,Public,426 West Main Street,Meriden,6450,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Casimir Pulaski,Public,100 Clearview Ave,Meriden,6450,New Haven,96.0,96.0,98.0,96.0,97.0,95.0,95.0,1.0,1.0,2.0
+Israel Putnam Elementary School,Public,133 Parker Ave,Meriden,6450,New Haven,96.0,96.0,96.0,96.0,96.0,96.0,96.0,0.0,1.3,1.3
+John Barry Elementary,Public,124 Columbia Street,Meriden,6451,New Haven,98.6,98.6,98.6,98.6,98.6,97.1,97.1,1.4,0.0,1.4
+Meliora Academy,Non-public,470 Murdock Ave,Meriden,6450,Hartford,,,,,,,,,,
+Midstate Christian Academy,Non-public,139 Charles Strret,Meriden,6450,New Haven,,,,,,,,,,
+Nathan Hale Elementary School,Public,277 Atkins St Ext.,Meriden,6450,New Haven,100.0,98.8,100.0,100.0,100.0,97.6,97.6,0.0,0.0,0.0
+Roger Sherman,Public,64 North Pearl Street,Meriden,6450,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Thomas Hooker Elementary School,Public,70 Overlook Rd,Meriden,6450,New Haven,97.8,97.8,100.0,98.9,97.8,94.4,93.3,0.0,0.0,0.0
+Long Meadow Elementary School,Public,65 N Benson Rd,Middlebury,6762,New Haven,100.0,100.0,100.0,100.0,100.0,98.4,98.4,0.0,0.0,0.0
+Middlebury Elementary School,Public,550 Whittemore Rd.,Middlebury,6762,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+John Lyman Elementary,Public,106 Way Road,Middlefield,6455,Middlesex,93.8,96.9,93.8,96.9,93.8,96.9,93.8,0.0,0.0,0.0
+The Independent Day School,Non-public,115 Laurel Brook Rd,Middlefield,6455,Middlesex,,,,,,,,,,
+Bielefield Elementary,Public,70 Maynard St,Middletown,6457,Middlesex,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Farm Hill,Public,390 Ridge Rd,Middletown,6457,Middlesex,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Macdonough Elementary School,Public,66 Spring Street,Middletown,6457,Middlesex,92.1,94.7,97.4,97.4,97.4,97.4,92.1,0.0,0.0,0.0
+Snow Elementary School,Public,299 Wadsworth Street,Middletown,6457,Middlesex,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Spencer Elementary,Public,206 Westfield St,Middletown,6457,Middlesex,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+St. John Paul Ii,Non-public,87 S. Main St,Middletown,6457,Middlesex,,,,,,,,,,
+Van Buren Moody Elementary,Public,300 Country Club Road,Middletown,6457,Middlesex,100.0,100.0,100.0,100.0,100.0,97.7,97.7,0.0,0.0,0.0
+Wesley Elementary School,Public,10 Wesleyan Hills Rd,Middletown,6457,Middlesex,97.4,97.4,97.4,97.4,97.4,97.4,97.4,0.0,0.0,0.0
+Lawrence Elementary,Public,Kaplan Drive,Middletown,6457,Middlesex,96.5,96.5,98.2,100.0,98.2,98.2,94.7,0.0,0.0,0.0
+Calf Pen Meadow,Public,395 Welch'S Point Road,Milford,6460,New Haven,97.6,97.6,97.6,97.6,97.6,97.6,97.6,2.4,0.0,2.4
+John F. Kennedy School,Public,404 West Avenue,Milford,6461,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Live Oaks,Public,575 Merwin Avenue,Milford,6460,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Meadowside Elementary School,Public,80 Seemans Lane,Milford,6460,New Haven,97.5,97.5,97.5,97.5,97.5,97.5,97.5,0.0,2.5,2.5
+Milestones Behavioral Services,Non-public,95 Wolf Harbor Rd,Milford,6461,New Haven,,,,,,,,,,
+Orange Avenue School,Public,260 Orange Avenue,Milford,6461,New Haven,100.0,98.4,98.4,100.0,98.4,100.0,98.4,0.0,0.0,0.0
+Orchard Hills School,Public,185 Marino Drive,Milford,6460,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Pumpkin Delight Elementary School,Public,24 Art Street,Milford,6460,New Haven,97.0,97.0,97.0,97.0,97.0,97.0,97.0,3.0,0.0,3.0
+St. Mary'S School,Non-public,72 Gulf Street,Milford,6460,New Haven,,,,,,,,,,
+Mathewson,Public,466 W River Street,Milford,6461,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Fawn Hollow Elementary School,Public,345 Fan Hill Road,Monroe,6468,Fairfield,96.9,96.9,96.9,96.9,96.9,96.9,96.9,0.0,1.0,1.0
+Stepney Elementary School,Public,180 Old Newtown Rd,Monroe,6468,Fairfield,100.0,100.0,98.8,100.0,100.0,98.8,97.5,0.0,0.0,0.0
+East Haddam Elementary School,Public,45 Joe Williams Road,Moodus,6469,Middlesex,98.8,97.6,97.6,98.8,98.8,96.4,95.2,1.2,0.0,1.2
+Moosup Elementary School,Public,35 Church Street,Moosup,6354,Windham,89.3,89.3,89.3,94.7,89.3,93.3,86.7,4.0,1.3,5.3
+James Morris School,Public,10 East Street,Morris,6763,Litchfield,,,,,,,,,,
+Mystic River Magnet School,Public,160 Fishtown Rd,Mystic,6355,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Northeast Academy,Public,115 Oslo Street,Mystic,6355,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Andrew Ave. Elementary School,Public,140 Andrew Ave,Naugatuck,6770,New Haven,97.6,100.0,100.0,100.0,97.6,97.6,95.1,0.0,0.0,0.0
+Hop Brook Elementary School,Public,75 Crown Street,Naugatuck,6770,New Haven,100.0,100.0,96.4,100.0,96.4,100.0,96.4,0.0,0.0,0.0
+Salem Elementary School,Public,124 Meadow Street,Naugatuck,6770,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Western Elemantry School,Public,100 Pine St,Naugatuck,6770,New Haven,96.8,96.8,100.0,100.0,100.0,100.0,96.8,0.0,0.0,0.0
+Maple Hill Elementary School,Public,641 Maple Hill Rd,Naugatuck,6770,New Haven,100.0,100.0,100.0,99.0,99.0,99.0,99.0,0.0,0.0,0.0
+Diloreto,Public,732 Slater Road,New Britain,6053,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Gaffney,Public,322 Slater Rd,New Britain,6053,Hartford,85.1,85.1,85.1,100.0,85.1,100.0,85.1,0.0,0.0,0.0
+Holmes Elementary School,Public,2150 Stanley St,New Britain,6053,Hartford,98.6,98.6,100.0,98.6,100.0,96.0,94.6,0.0,0.0,0.0
+Jefferson Elementary School,Public,140 Horse Plain Road,New Britain,6053,Hartford,92.7,92.7,94.6,96.4,96.4,89.1,87.3,0.0,0.0,0.0
+Lincoln Elementary,Public,145 Steele St. 06052,New Britain,6052,Hartford,94.3,94.3,96.6,97.7,96.6,96.6,76.1,0.0,0.0,0.0
+Northend Elementary School,Public,160 Bassett Street,New Britain,6051,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Smalley Elementary School,Public,175 West Street,New Britain,6051,Hartford,97.3,96.4,100.0,100.0,100.0,97.3,96.4,0.0,0.0,0.0
+Smith Elementary School,Public,142 Rutherford St,New Britain,6051,Hartford,98.0,98.0,100.0,99.0,99.0,99.0,98.0,0.0,0.0,0.0
+Vance,Public,183 Vance St,New Britain,6052,Hartford,100.0,100.0,100.0,100.0,98.5,98.5,98.5,0.0,0.0,0.0
+Chamberlain Elementary School,Public,221 Farmington Ave.,New Britain,6053,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+East Elementary School,Public,54 Little Brook Road,New Canaan,6840,Fairfield,95.8,95.8,96.9,96.9,95.8,97.9,95.8,0.0,0.0,0.0
+South,Public,8 Farm Road,New Canaan,6840,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+West School,Public,469 Ponus Ridge Rd,New Canaan,6840,Fairfield,98.8,98.8,97.7,97.7,96.6,98.8,95.4,0.0,1.2,1.2
+Consolidated School,Public,24A Gillotti Rd,New Fairfield,6812,Fairfield,98.4,98.4,100.0,100.0,100.0,98.4,96.9,0.0,0.0,0.0
+Bakerville School,Public,51 Cedar Lane,New Hartford,6057,Litchfield,97.3,97.3,100.0,100.0,100.0,97.3,97.3,0.0,0.0,0.0
+New Hartford Elementary School,Public,40 Wickett St,New Hartford,6057,Litchfield,,,,,,,,,,
+All Saints Catholic Academy,Non-public,423 Ferry St,New Haven,6513,New Haven,,,,,,,,,,
+Amistad Academy Elementary School,Public,130 Edgewood Ave,New Haven,6511,New Haven,88.8,88.8,89.8,98.0,89.8,96.9,88.8,0.0,0.0,0.0
+Augusta Lewis Troup School,Public,259 Edgewood Avenue,New Haven,6511,New Haven,97.9,97.9,97.9,97.9,97.9,97.9,97.9,0.0,2.1,2.1
+Barack H Obama Magnet University,Public,69 Farnham Avenue,New Haven,6515,New Haven,98.2,98.2,98.2,96.3,98.2,96.3,94.4,1.8,0.0,1.8
+Barnard Environmental Science And Technology School,Public,170 Derby Avenue,New Haven,6511,New Haven,95.6,95.6,97.8,95.6,97.8,95.6,95.6,2.2,0.0,2.2
+Benjamin Jepson Magnet School,Public,15 Lexington Ave,New Haven,6513,New Haven,100.0,100.0,98.0,100.0,98.0,98.0,98.0,0.0,0.0,0.0
+Bishop Woods School,Public,1481 Quinnipiac Avenue,New Haven,6513,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Booker T. Washington Academy,Public,804 State Street,New Haven,6511,New Haven,96.2,96.2,96.2,94.2,96.2,94.2,94.2,0.0,0.0,0.0
+Celentano Biotech Health And Medical Magnet School,Public,400 Canner St,New Haven,6511,New Haven,100.0,97.8,95.6,100.0,95.6,97.8,95.6,0.0,0.0,0.0
+Clinton Avenue School,Public,293 Clinton Avenue,New Haven,6513,New Haven,98.0,100.0,100.0,100.0,100.0,92.2,92.2,0.0,0.0,0.0
+Cold Spring School,Non-public,263 Chapel Street,New Haven,6513,New Haven,,,,,,,,,,
+Conte West Hills Magnet School,Public,511 Chapel St,New Haven,6511,New Haven,95.8,95.8,95.8,95.8,95.8,95.8,95.8,2.1,0.0,2.1
+Davis Academy For Arts And Design Innovation,Public,35 Davis Street,New Haven,6515,New Haven,100.0,97.7,100.0,100.0,100.0,100.0,97.7,0.0,0.0,0.0
+Edgewood,Public,737 Edgewood Avenue,New Haven,6515,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Elm City Montessori School,Public,495 Blake Street,New Haven,6515,New Haven,100.0,100.0,96.7,96.7,96.7,100.0,93.3,0.0,0.0,0.0
+Fair Haven School,Public,164 Grand Avenue,New Haven,6513,New Haven,98.2,98.2,100.0,98.2,100.0,98.2,96.5,0.0,0.0,0.0
+Family Academy Of Multilingual Exploration,Public,255 Blatchley Ave,New Haven,6513,New Haven,96.0,98.0,98.0,98.0,96.0,90.0,90.0,2.0,0.0,2.0
+Highville Charter School,Public,1 Science Park,New Haven,6511,New Haven,97.4,97.4,97.4,97.4,97.4,97.4,97.4,0.0,0.0,0.0
+John C Daniels,Public,569 Congress Ave,New Haven,6511,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+John S. Martinez Sea And Sky,Public,100 James Street,New Haven,6513,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Lincoln Bassett Community School,Public,130 Bassett St.,New Haven,6511,New Haven,,,,,,,,,,
+Mauro Sheridan,Public,191 Fountain St,New Haven,6511,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Roberto Clemente School,Public,360 Columbus Ave,New Haven,6519,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Ross Woodward Classical Magnet School,Public,185 Barnes Ave,New Haven,6513,New Haven,98.7,98.7,98.7,98.7,98.7,98.7,98.7,0.0,0.0,0.0
+St Thomas'S Day School,Non-public,830 Whitney Avenue,New Haven,6511,New Haven,,,,,,,,,,
+The Foote School,Non-public,50 Loomis Place,New Haven,6511,New Haven,96.7,96.7,96.7,96.7,96.7,96.7,96.7,0.0,3.3,3.3
+Truman,Public,114 Truman,New Haven,6518,Fairfield,91.5,91.5,91.5,91.5,91.5,91.5,91.5,0.0,8.5,8.5
+Wexler Grant Community School,Public,55 Foote St.,New Haven,6511,New Haven,,,,,,,,,,
+Brennan-Rogers Magnet School,Public,199 Wilton Rd.,New Haven,6515,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+East Rock Community And Cultural Studies Magnet School,Public,133 Nash Street,New Haven,6511,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Elm City Elementary And Middle,Public,407 James Street,New Haven,6516,New Haven,98.4,98.4,98.4,98.4,98.4,98.4,98.4,0.0,0.0,0.0
+Hill Central,Public,140 Dewitt Street,New Haven,6109,New Haven,100.0,100.0,100.0,100.0,97.9,97.9,97.9,0.0,0.0,0.0
+King Robinson School,Public,150 Fournier St,New Haven,6511,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+L.W Beecher Magnet School,Non-public,100 Jewell St.,New Haven,6515,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Nathan Hale School,Public,480 Townsend Ave,New Haven,6512,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+CB Jennings Elementary School,Public,50 Mercer St,New London,6320,New London,,,,,,,,,,
+Harbor Elementary,Public,432 Montauk Ave,New London,6320,New London,97.3,97.3,100.0,97.3,100.0,97.3,97.3,0.0,0.0,0.0
+Nathan Hale Arts Magnet School,Public,37 Beech Drive,New London,6320,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+St Joseph,Non-public,25 Squire St,New London,6320,New London,,,,,,,,,,
+Winthrop STEM Elementary School,Public,70 Grove Street,New London,6320,New London,98.3,98.3,96.6,98.3,96.6,93.1,91.4,0.0,0.0,0.0
+Regional Multicultural Magnet School,Public,1 Bulkeley Place,New London,6320,New London,100.0,100.0,100.0,98.6,100.0,98.6,98.6,0.0,0.0,0.0
+Hill And Plain Elementary School,Public,60 Old Town Park Rd,New Milford,6776,Litchfield,100.0,100.0,100.0,100.0,100.0,98.2,98.2,0.0,0.0,0.0
+Northville Elementary,Public,22 Hipp Road,New Milford,6776,Litchfield,99.3,99.3,99.3,99.3,98.5,98.5,98.5,0.0,0.7,0.7
+Washington Montessori School,Non-public,240 Litchfield Turnpike,New Preston,6069,Litchfield,,,,,,,,,,
+Anna Reynolds Elementary,Public,85 Reservoir Road,Newington,6111,Hartford,97.5,97.5,100.0,98.8,98.8,97.5,93.8,0.0,0.0,0.0
+Elizabeth Green Elementary School,Public,30 Thomas Street,Newington,6111,Hartford,97.6,97.6,97.6,97.6,97.6,97.6,97.6,0.0,2.4,2.4
+Emmanuel Christian Academy,Non-public,569 Maple Hill Ave.,Newington,6111,Hartford,76.9,76.9,75.6,74.4,75.6,74.4,73.1,21.8,0.0,21.8
+John Paterson Elementary School,Public,120 Church Street,Newington,6111,Hartford,97.3,97.3,97.3,97.3,97.3,97.3,97.3,2.7,0.0,2.7
+Ruth Chaffee Elementary School,Public,160 Superior Avenue,Newington,6067,Hartford,98.2,98.2,98.2,98.2,98.2,98.2,98.2,1.8,0.0,1.8
+Fraser Woods Montessori School,Non-public,173 South Main Street,Newtown,6471,Fairfield,,,,,,,,,,
+Hawley School,Public,29 Church Hill Rd,Newtown,6470,Fairfield,97.5,97.5,97.5,95.0,97.5,97.5,95.0,0.0,0.0,0.0
+Head O' Meadow,Public,94 Boggs Hill Rd.,Newtown,6470,Fairfield,100.0,100.0,100.0,98.5,100.0,98.5,98.5,0.0,0.0,0.0
+Housatonic Valley Waldorf School,Non-public,40 Dodgingtown Road,Newtown,6470,Fairfield,,,,,,,,,,
+Micclde Gate Elementary,Public,7 Cold Spring Road,Newtown,6470,Fairfield,98.6,98.6,98.6,98.6,97.1,100.0,97.1,0.0,0.0,0.0
+Saint Rose School,Non-public,40 Church Hill Road,Newtown,6470,Fairfield,,,,,,,,,,
+Lillie B Haynes Elementary,Public,29 Society Road,Niantic,6357,New London,97.1,98.6,97.1,98.6,97.1,98.6,95.6,1.4,0.0,1.4
+Niantic Center School,Public,7 W. Main St,Niantic,6357,New London,96.8,93.6,100.0,93.6,100.0,96.8,93.6,0.0,0.0,0.0
+Botelle School,Public,128 Greenwoods East,Norfolk,6058,Litchfield,,,,,,,,,,
+Jerome Harrison Elementary School,Public,335 Foxon Road,North Branford,6471,New Haven,97.7,97.7,98.9,98.9,97.7,97.7,97.7,0.0,0.0,0.0
+Thompson Public Schools,Public,785 Riverside Drive,North Grosvenordale,6255,Windham,95.5,95.5,95.5,95.5,94.0,95.5,94.0,4.5,0.0,4.5
+Aces Village School,Public,31 Temple Street,North Haven,6473,New Haven,,,,,,,,,,
+Clintonville Elementary School,Public,456 Clintonville Road,North Haven,6473,New Haven,96.6,96.6,96.6,96.6,96.6,96.6,96.6,0.0,0.0,0.0
+Montowese Elementary,Public,145 Fitch Street,North Haven,6473,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Ridge Road Elementary School,Public,1341 Ridge Road,North Haven,6514,New Haven,100.0,100.0,100.0,98.6,100.0,100.0,98.6,0.0,0.0,0.0
+Green Acres Elementary School,Public,146 Upper State Street,North Haven,6473,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+North Stonington Christian Academy,Non-public,12 Stillman Road,North Stonington,6359,New London,,,,,,,,,,
+North Stonington Elementary School,Public,298 Norwich Westerly Road,North Stonington,6359,New London,95.4,95.4,95.4,95.4,95.4,95.4,93.2,0.0,0.0,0.0
+C.H. Barrows Stem Academy,Public,141 Tuckie Road,North Windham,6256,Windham,98.3,98.3,98.3,98.3,98.3,98.3,98.3,1.7,0.0,1.7
+North Windham School,Public,112 Jordan Lane,North Windham,6256,Windham,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Anchor Academy Dba Regina Pacis Academy,Non-public,8 Leonard Street,Norwalk,6850,Fairfield,,,,,,,,,,
+Brookside Elementary,Public,382 Highland Avenue,Norwalk,6824,Fairfield,100.0,100.0,100.0,100.0,98.2,96.4,96.4,0.0,0.0,0.0
+Concord Magnet School,Public,21 Hunter'S Lane,Norwalk,6850,Fairfield,97.6,97.6,97.6,97.6,97.6,97.6,97.6,0.0,0.0,0.0
+Cranbury Elementary,Public,10 Knowalot Lane,Norwalk,6851,Fairfield,100.0,100.0,100.0,100.0,98.4,100.0,98.4,0.0,0.0,0.0
+Fox Run Elementary School,Public,228 Fillow Street,Norwalk,6850,Fairfield,98.3,98.3,98.3,98.3,98.3,96.7,96.7,0.0,0.0,0.0
+High Road School Of Fairfield County,Non-public,17 North Avenue,Norwalk,6851,Fairfield,,,,,,,,,,
+Jefferson Elementary School,Public,75 Van Buren,Norwalk,6850,Fairfield,98.6,97.2,97.2,98.6,95.8,98.6,94.4,0.0,0.0,0.0
+Kendall College And Career Academy,Public,57 Fillow Street,Norwalk,6850,Fairfield,91.7,91.7,91.7,91.7,91.7,89.6,89.6,2.1,6.2,8.3
+Marvin Elementary School,Public,15 Calf Pasture Road,Norwalk,6855,Fairfield,90.6,90.6,90.6,90.6,90.6,90.6,90.6,0.0,1.6,1.6
+Naramake Elementary School,Public,16 King Street,Norwalk,6851,Fairfield,100.0,100.0,100.0,100.0,100.0,95.6,95.6,0.0,0.0,0.0
+Rowayton Elementary School,Public,1 Roton Ave.,Norwalk,6853,Fairfield,100.0,100.0,100.0,100.0,98.6,100.0,98.6,0.0,0.0,0.0
+Silvermine School,Public,157 Perry Ave,Norwalk,6850,Fairfield,100.0,100.0,100.0,100.0,100.0,96.2,96.2,0.0,0.0,0.0
+South Norwalk School,Public,46 Chestnut St,Norwalk,6853,Fairfield,95.4,95.4,95.4,95.4,88.6,90.9,86.4,0.0,0.0,0.0
+Tracey Magnet School,Public,20 Camp Street,Norwalk,6851,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Wolfpit Integrated Arts School,Public,1 Starlight Drive,Norwalk,6851,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+All Saints Catholic School,Non-public,139 West Rocks Road,Norwalk,6851,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Integrated Day Charter School,Public,68 Thermos Ave,Norwich,6360,New London,93.8,93.8,81.2,90.6,84.4,96.9,78.1,3.1,0.0,3.1
+Montessori Discovery School,Non-public,218 Dudley St,Norwich,6360,New London,,,,,,,,,,
+Moriarty Magnet Elementary School,Public,20 Lawler Ln,Norwich,6360,New London,100.0,100.0,100.0,98.3,100.0,100.0,98.3,0.0,0.0,0.0
+Samuel Huntington Elementary,Public,80 West Town Street,Norwich,6360,New London,95.9,93.9,98.0,100.0,98.0,95.9,93.9,0.0,0.0,0.0
+Thomas W Mahan Elementary School,Public,94 Salem Turnpike,Norwich,6360,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Uncas Elementary,Public,280 Elizabeth Street,Norwich,6360,New London,89.5,89.5,89.5,100.0,89.5,92.1,84.2,0.0,0.0,0.0
+Veterans Memorial Elementary School,Public,80 Crouch Avenue,Norwich,6360,New London,79.1,81.4,81.4,86.0,81.4,81.4,76.7,0.0,0.0,0.0
+Widlwood Christian School,Non-public,35 Wawecus Hill Rd,Norwich,6360,New London,,,,,,,,,,
+Dr. Charles E. Murphy Elementary,Public,500 Chesterterfield Rd.,Oakdale,6370,New London,95.6,95.6,95.6,93.5,95.6,93.5,91.3,0.0,4.4,4.4
+Oakdale Elementary,Public,30 Indiana Circle,Oakdale,6370,New London,100.0,100.0,98.0,98.0,98.0,96.1,96.1,0.0,0.0,0.0
+John Trumbull Primary,Public,779 Buckingham St.,Oakville,6779,Litchfield,98.0,98.0,98.0,97.5,98.0,97.5,97.0,2.0,0.0,2.0
+St. Mary Magdalen School,Non-public,140 Buckingham Street,Oakville,6779,Litchfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Old Greenwich School,Public,285 Sound Beach Avenue,Old Greenwich,6877,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Mile Creek School,Public,205 Mile Creek Road,Old Lyme,6371,New London,98.1,98.1,100.0,100.0,98.1,100.0,96.2,0.0,0.0,0.0
+K.E. Goodwin School,Public,80 Old Boston Post Rd,Old Saybrook,6475,Middlesex,92.5,94.0,92.5,95.5,94.0,94.0,85.1,3.0,0.0,3.0
+Saint John School,Non-public,42 Maynard Road,Old Saybrook,6475,Middlesex,,,,,,,,,,
+The Children'S Tree Montessori School,Non-public,96 Essex Road,Old Saybrook,6475,Middlesex,,,,,,,,,,
+Mary L. Tracy,Public,650 Schoolhouse Lane,Orange,6477,New Haven,98.2,98.2,98.2,98.2,98.2,99.4,97.6,0.0,0.0,0.0
+Southern Connecticut Hebrew Academy,Non-public,261 Derby Avenue,Orange,6477,New Haven,,,,,,,,,,
+Quaker Farms School,Public,30 Great Oak Rd,Oxford,6478,New Haven,93.8,93.8,96.5,96.5,95.6,97.4,88.5,1.8,0.0,1.8
+West Vine Street School,Public,17 West Vine Street,Pawcatuck,6379,New London,96.2,94.3,96.2,94.3,96.2,94.3,94.3,3.8,0.0,3.8
+St. Michael School,Non-public,131 West Broad Street,Pawcatuck,6379,New London,,,,,,,,,,
+Frank T. Wheeler,Public,15 Cleveland Memorial Drive,Plainville,6062,Hartford,97.5,97.5,100.0,100.0,100.0,97.5,95.0,0.0,0.0,0.0
+Linden St. School,Public,69 Linden St.,Plainville,6062,Hartford,97.9,97.9,95.7,97.9,97.9,97.9,95.7,2.1,0.0,2.1
+Toffolon Elementary School,Public,145 Northwest Dr,Plainville,6062,Hartford,97.9,97.9,97.9,97.9,97.9,100.0,97.9,0.0,0.0,0.0
+Oshana Elementary School,Public,70 Church Street,Plantsville,6479,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+South End Elementary School,Public,10 Maxwell Noble Dr,Plantsville,6479,Hartford,100.0,100.0,97.7,100.0,100.0,100.0,97.7,0.0,0.0,0.0
+Strong Elementary School,Public,820 Marion Ave,Plantsville,6479,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Plymouth Center,Public,107 North St.,Plymouth,6782,Litchfield,98.8,97.5,98.8,100.0,98.8,97.5,96.2,0.0,0.0,0.0
+Pomfret Community School,Public,"20 Pomfret St,",Pomfret Center,6259,Windham,96.9,96.9,96.9,96.9,96.9,96.9,96.9,0.0,0.0,0.0
+Valley View,Public,81 High St,Portland,6480,Middlesex,96.8,96.8,96.8,96.8,96.8,96.8,96.8,2.1,0.0,2.1
+Preston Veteran Memorial School,Public,285 Shetucket Turnpike,Preston,6365,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Prospect Elementary School,Public,75 New Haven Road,Prospect,6712,New Haven,97.8,96.8,97.8,97.8,96.8,96.8,96.8,0.0,0.0,0.0
+Putnam Elementary School,Public,33 Wicker Street,Putnam,6260,Windham,94.2,94.2,96.6,94.2,95.4,94.2,90.8,1.2,0.0,1.2
+Quaker Hill Elementary,Public,285 Bloomingdale Road,Quaker Hill,6375,New London,98.2,100.0,100.0,100.0,100.0,100.0,98.2,0.0,0.0,0.0
+Redding Elementary School,Public,33 Lonetown Rd.,Redding,6896,Fairfield,98.6,100.0,100.0,98.6,100.0,98.6,98.6,0.0,0.0,0.0
+Barlow Mountain Elementary School,Public,115 Barlow Mountain Road,Ridgefield,6877,Fairfield,100.0,100.0,100.0,100.0,98.2,96.3,96.3,0.0,0.0,0.0
+Branchville Elementary School,Public,58 High Ridge Rd,Ridgefield,6877,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Farmingville Elementary,Public,324 Farmingville Rd,Ridgefield,6877,Fairfield,97.6,97.6,97.6,97.6,97.6,95.1,95.1,2.4,0.0,2.4
+Ridgebury Elementary School,Public,112 Bennetts Farm Rd,Ridgefield,6877,Fairfield,96.4,94.6,92.9,94.6,100.0,96.4,91.1,0.0,0.0,0.0
+Ridgefield Academy,Non-public,223 West Mountain Road,Ridgefield,6877,Fairfield,,,,,,,,,,
+Saint Mary,Non-public,183 High Ridge Ave,Ridgefield,6877,Fairfield,,,,,,,,,,
+Scotland Elementary School,Public,111 Barlow Mountain Road,Ridgefield,6877,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Veterans Park Elementary School,Public,8 Governor Street,Ridgefield,6877,Fairfield,97.8,97.8,97.8,95.6,97.8,95.6,95.6,0.0,2.2,2.2
+International School At Dundee,Public,55 Florence Road,Riverside,6878,Fairfield,100.0,100.0,100.0,100.0,98.0,100.0,98.0,0.0,0.0,0.0
+North Mianus Elementary School,Public,309 Palmer Hill Rd,Riverside,6878,Fairfield,98.7,98.7,98.7,97.4,98.7,97.4,96.1,0.0,1.3,1.3
+Riverside School,Public,90 Hendrie Avenue,Riverside,6878,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Aerospace And Engineering Elementary School,Public,7 Gardner Way,Rocky Hill,6067,Hartford,95.4,95.4,95.4,95.4,95.4,95.4,95.4,4.6,0.0,4.6
+Myrtle H. Stevens School,Public,322 Orchard Street,Rocky Hill,6109,Hartford,96.9,96.9,97.9,96.9,96.9,96.9,95.9,1.0,0.0,1.0
+West Hill Elementary,Public,95 Cronin Drive,Rocky Hill,6067,Hartford,96.7,96.7,96.7,96.7,96.7,96.7,96.7,0.0,1.1,1.1
+Booth Free School,Public,14 South Street,Roxbury,6783,Litchfield,,,,,,,,,,
+Salem School,Public,200 Hartford Road,Salem,6420,New London,,,,,,,,,,
+Salisbury Central,Public,45 Lincoln City Road,Salisbury,6069,Litchfield,100.0,100.0,97.8,93.3,100.0,100.0,91.1,0.0,0.0,0.0
+Sandy Hook Elementary School,Public,12 Dickenson Dr,Sandy Hook,6482,Fairfield,100.0,100.0,100.0,98.4,98.4,95.2,95.2,0.0,0.0,0.0
+Scotland Elementary School,Public,68 Brook Rd,Scotland,6264,Windham,,,,,,,,,,
+Bungay Elementary School,Public,35 Bungay Road,Seymour,6483,New Haven,98.8,98.8,98.8,98.8,98.8,98.8,98.8,0.0,1.2,1.2
+Chatfield-Lopresti,Public,51 Skakorat Street,Seymour,6483,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Sharon Center School,Public,80 Hilltop Road,Sharon,6069,Litchfield,,,,,,,,,,
+Booth Hill Elementary School,Public,544 Booth Hill Road,Shelton,6484,Fairfield,98.6,98.6,98.6,98.6,97.3,98.6,97.3,0.0,0.0,0.0
+Elizabeth Shelton Elementary,Public,138 Willoughby Road,Shelton,6484,Fairfield,100.0,100.0,100.0,98.8,100.0,100.0,98.8,0.0,0.0,0.0
+Long Hill Elementary,Public,565 Long Hill Avenue,Shelton,6484,Fairfield,93.8,93.8,95.4,93.8,95.4,92.3,89.2,1.5,1.5,3.1
+Mohegan School,Public,47 Mohegan Road,Shelton,6484,Fairfield,96.9,95.3,95.3,95.3,95.3,95.3,93.8,0.0,0.0,0.0
+Sunnyside School,Public,418 River Rd,Shelton,6484,Fairfield,96.3,96.3,96.3,96.3,96.3,96.3,96.3,1.8,0.0,1.8
+The Sherman School,Public,2 Route 37 East,Sherman,6784,Fairfield,,,,,,,,,,
+Central School,Public,29 Massaco St,Simsbury,6070,Hartford,98.0,98.0,96.1,96.1,98.0,96.1,96.1,0.0,2.0,2.0
+Saint Mary'S School,Non-public,946 Hopmeadow Street,Simsbury,6070,Hartford,,,,,,,,,,
+Squadron Line School,Public,44 Squadron Line Road,Simsbury,6090,Hartford,99.0,99.0,99.0,99.0,99.0,99.0,99.0,0.0,1.0,1.0
+The Cobb School,Non-public,112 Sand Hill Road,Simsbury,6070,Hartford,,,,,,,,,,
+Somers Elementary School,Public,4 Vision Blvd,Somers,6071,Tolland,90.5,88.1,83.3,96.4,85.7,96.4,78.6,0.0,0.0,0.0
+Hopewell Elementary,Public,1068 Chestnut Hill Rd,South Glastonbury,6067,Hartford,98.8,98.8,98.8,98.8,98.8,98.8,98.8,0.0,0.0,0.0
+Nayaug Elementary,Public,222 Old Maids Lane,South Glastonbury,6073,Hartford,98.2,98.2,99.1,98.2,99.1,97.2,97.2,0.0,0.0,0.0
+Hanover Elementary School,Public,208 Main Street,South Meriden,6451,New Haven,96.5,96.5,100.0,100.0,100.0,100.0,96.5,0.0,0.0,0.0
+CREC Academy of International Studies,Public,625 Chapel Road,South Windsor,6074,Hartford,96.8,98.4,98.4,98.4,98.4,98.4,96.8,1.6,0.0,1.6
+Eli Terry Elementary School,Public,569 Griffin Rd,South Windsor,6074,Hartford,96.6,97.7,97.7,97.7,97.7,96.6,95.4,0.0,0.0,0.0
+Orchard Hill Elementary School,Public,380 Foster St,South Windsor,6074,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Philip R. Smith,Public,949 Avery Street,South Windsor,6074,Hartford,100.0,100.0,98.6,100.0,100.0,98.6,97.3,0.0,0.0,0.0
+Pleasant Valley,Public,591 Ellington Rd,South Windsor,6074,Hartford,99.1,100.0,99.1,97.2,100.0,99.1,96.3,0.0,0.0,0.0
+Gainfield Elementary School,Public,307 Old Field Road,Southbury,6488,New Haven,98.2,98.2,98.2,98.2,98.2,98.2,98.2,1.8,0.0,1.8
+Pomperaug Elementary School,Public,607 Main Street South,Southbury,6488,New Haven,95.9,95.9,95.9,97.3,95.9,94.5,94.5,2.7,0.0,2.7
+Derynoski Elementary School,Public,240 Main Street,Southington,6489,Hartford,98.8,98.8,98.8,97.7,98.8,100.0,97.7,0.0,0.0,0.0
+Flanders Elementary School,Public,100 Victoria Drive,Southington,6489,Hartford,100.0,100.0,100.0,97.7,100.0,100.0,97.7,0.0,0.0,0.0
+Hatton Elementary School,Public,50 Spring Lake Road,Southington,6489,Hartford,98.1,100.0,98.1,98.1,98.1,98.1,98.1,0.0,0.0,0.0
+Thalberg Elementary School,Public,145 Dunham Street,Southington,6489,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Southington Catholic,Non-public,133 Bristol Street,Southington,6489,Hartford,,,,,,,,,,
+Urbin T Kelley Elementary School,Public,501 Ridgewood Road,Southington,6489,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Mill Hill School,Public,635 Mill Hill Terrace,Southport,6890,Fairfield,96.7,96.7,96.7,96.7,96.7,98.3,96.7,0.0,0.0,0.0
+West Stafford School,Public,153 W. Stafford Rd.,Stafford Springs,6076,Tolland,98.9,98.9,100.0,98.9,100.0,97.8,95.6,0.0,0.0,0.0
+Davenport Ridge Elementary,Public,1300 Newfield Ave.,Stamford,6905,Fairfield,100.0,99.0,100.0,100.0,100.0,99.0,98.0,0.0,0.0,0.0
+First United Methodist--Kindergarten,Non-public,42 Cross Road,Stamford,6905,Fairfield,,,,,,,,,,
+Hart Magnet Elementary,Public,61 Adams Ave,Stamford,6902,Fairfield,97.8,97.8,97.8,97.8,95.6,97.8,95.6,0.0,1.1,1.1
+Julia A Stark,Public,398 Glenbrook Road,Stamford,6906,Fairfield,97.9,95.8,96.8,97.9,97.9,99.0,92.6,0.0,0.0,0.0
+King,Non-public,1450 Newfield Avenue,Stamford,6905,Fairfield,,,,,,,,,,
+KT Murphy,Public,19 Horton Street,Stamford,6902,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Long Ridge School,Non-public,478 Erskine Road,Stamford,6906,Fairfield,,,,,,,,,,
+Mater Salvatoris College Prepartory School,Non-public,929 Newfield Avenue,Stamford,6905,Fairfield,,,,,,,,,,
+Northeast Elementary School,Public,82 Scofieldtown Rd,Stamford,6903,Fairfield,100.0,100.0,98.8,98.8,100.0,98.8,98.8,0.0,0.0,0.0
+Our Lady Of Grace-Kindergarten,Non-public,635 Glenbrook Road,Stamford,6906,Fairfield,,,,,,,,,,
+Roxbury Elementary School,Public,751 West Hill Rd,Stamford,6902,Fairfield,97.5,96.3,96.3,100.0,97.5,100.0,96.3,0.0,0.0,0.0
+Springdale Elementary,Public,11 Hope St,Stamford,6907,Fairfield,87.2,87.2,87.2,87.2,87.2,87.2,87.2,2.0,1.0,2.9
+St. Aloysius School,Non-public,403 Schofieldtown Road,Stamford,6903,Fairfield,,,,,,,,,,
+Stamford Charter School For Excellence,Public,1 Schuyler Ave,Stamford,6902,Fairfield,100.0,100.0,92.9,100.0,92.9,96.4,82.1,0.0,0.0,0.0
+Strawberry Hill School,Public,200 Strawberry Hill School,Stamford,6902,Fairfield,99.0,99.0,99.0,97.9,99.0,99.0,97.9,1.0,0.0,1.0
+The Catholic Academy Of Stamford,Non-public,1186 Newfield Ave,Stamford,6905,Fairfield,94.1,94.1,94.1,94.1,94.1,94.1,94.1,2.9,2.9,5.9
+Toquam Magnet Elementary School,Public,123 Ridgewood Ave,Stamford,6907,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Waterside School,Non-public,770 Pacific Street,Stamford,6902,Fairfield,96.7,96.7,96.7,96.7,96.7,96.7,96.7,3.3,0.0,3.3
+Westover Magnet Elementary School,Public,412 Stillwater Ave,Stamford,6902,Fairfield,98.9,98.9,98.9,98.9,97.8,98.9,97.8,0.0,1.1,1.1
+Newfield Elementary School,Public,345 Pepper Ridge Rd,Stamford,6905,Fairfield,97.7,100.0,98.8,100.0,98.8,98.8,95.4,0.0,0.0,0.0
+Rogers International School,Public,202 Blachey Rd,Stamford,6902,Fairfield,97.7,97.7,97.7,97.7,97.7,97.7,97.7,1.2,1.2,2.3
+Stillmeadow Elementary School,Public,800 Stillwater Avenue,Stamford,6902,Fairfield,99.0,99.0,99.0,99.0,98.1,99.0,98.1,1.0,0.0,1.0
+The Children'S School,Non-public,118 Scofield Town Road,Stamford,6905,Fairfield,84.4,84.4,71.9,90.6,71.9,90.6,68.8,6.2,3.1,9.4
+The Mead School,Non-public,1095 Riverbank Road,Stamford,6903,Fairfield,,,,,,,,,,
+Nichols Elementary,Public,393 Nichols Ave,Startford,6614,Fairfield,92.9,92.9,92.9,92.9,92.9,92.9,92.9,0.0,0.0,0.0
+Sterling Community School,Public,251 Sterling Rd,Sterling,6377,Windham,,,,,,,,,,
+Deans Mill School,Public,35 Deans Mill Road,Stonington,6378,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Pine Point School,Non-public,89 Barnes Road,Stonington,6378,New London,,,,,,,,,,
+BCHA,Non-public,2186 High Ridge Rd,Stramford,6903,Fairfield,69.2,66.7,61.5,74.4,56.4,74.4,48.7,0.0,0.0,0.0
+Chapel Street Elementary School,Public,380 Chapel Street,Stratford,6614,Fairfield,82.6,82.6,78.3,87.0,82.6,80.4,73.9,2.2,0.0,2.2
+Eli Whitney Elementary School,Public,1130 Huntington Ave,Stratford,6614,Fairfield,95.5,95.5,95.5,100.0,95.5,100.0,94.0,0.0,0.0,0.0
+Franklin,Public,1895 Barnum Ave,Stratford,6614,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Lordship,Public,254 Crown St,Stratford,6614,Fairfield,,,,,,,,,,
+Second Hill Lane,Public,65 Second Hill Lane,Stratford,6614,Fairfield,90.3,90.3,88.4,98.1,89.3,95.2,83.5,1.0,0.0,1.0
+St. Mark School,Non-public,500 Wigwam Lane,Stratford,6614,Fairfield,,,,,,,,,,
+Stratford Academy Johnson House,Public,719 Birdseye Street,Stratford,6615,Fairfield,66.1,66.1,66.1,66.1,66.1,66.1,66.1,0.0,0.0,0.0
+Wilcoxson Elementary School,Public,600 Wilcoxson Ave,Stratford,6614,Fairfield,90.5,92.9,90.5,100.0,95.2,97.6,88.1,0.0,0.0,0.0
+Sacred Heart,Non-public,15 Hunters Avenue,Taftville,6380,New London,,,,,,,,,,
+Wequonnoc Elementary School,Public,155 Providence St,Taftville,6380,New London,100.0,100.0,100.0,96.8,100.0,100.0,96.8,0.0,0.0,0.0
+Tariffville School,Public,42 Winthrop Street,Tariffville,6081,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Black Rock School,Public,57 Branch Rd,Thomaston,6787,Litchfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Birch Grove Primary School,Public,247 Rhodes Rd,Tolland,6084,Tolland,97.8,97.8,97.2,96.7,97.2,96.7,96.7,1.1,0.6,1.7
+Saint John Paul The Great Academy,Non-public,360 Prospect Street,Torrington,6790,Litchfield,,,,,,,,,,
+St. John Paul The Great Academy,Non-public,360 Prospect St. Torrington,Torrington,6790,Litchfield,,,,,,,,,,
+Torringford Elementary School,Public,800 Charles Street,Torrington,6790,Litchfield,95.0,97.8,98.6,98.6,97.8,96.4,89.9,0.0,0.0,0.0
+Vogel Wetmore,Public,68 Church Street,Torrington,6790,Litchfield,98.6,98.6,97.9,98.6,97.2,96.5,95.1,0.0,0.0,0.0
+Booth Hill School,Public,545 Booth Hill Road,Trumbull,6611,Fairfield,97.5,97.5,96.3,95.1,96.3,95.1,90.1,0.0,1.2,1.2
+Christian Heritage School,Non-public,575 White Plains Rd,Trumbull,6611,Fairfield,97.0,97.0,97.0,93.9,97.0,93.9,93.9,0.0,0.0,0.0
+Cooperative Educational Services,Public,25 Oakview Dr,Trumbull,6611,Fairfield,,,,,,,,,,
+Daniels Farm,Public,710 Daniels Farm Road,Trumbull,6611,Fairfield,85.3,82.7,92.0,98.7,90.7,88.0,64.0,0.0,0.0,0.0
+Frenchtown Elementary School,Public,30 Frenchtown Road,Trumbull,6611,Fairfield,98.7,98.7,98.7,94.9,98.7,96.2,92.4,1.3,0.0,1.3
+Jane Ryan,Public,190 Park Lane,Trumbull,6611,Fairfield,94.6,94.6,90.5,90.5,90.5,96.0,90.5,0.0,1.4,1.4
+Middlebrook Elementary,Public,220 Middlebrooks Ave,Trumbull,6611,Fairfield,98.8,98.8,97.6,97.6,97.6,97.6,96.3,0.0,0.0,0.0
+St. Catherine Of Siena School,Non-public,190 Shelton Rd,Trumbull,6611,Fairfield,,,,,,,,,,
+St. Theresa'S School,Non-public,55 Rosemond Terrace,Trumbull,6611,Fairfield,,,,,,,,,,
+St. Vincent'S Special Needs,Non-public,95 Merritt Blvd.,Trumbull,6611,Fairfield,,,,,,,,,,
+Tashua,Public,401 Stonehouse Rd,Trumbull,6611,Fairfield,98.5,98.5,98.5,98.5,98.5,98.5,98.5,1.5,0.0,1.5
+Mohegan Elementary School,Public,49 Golden Rd,Uncasville,6382,New London,94.3,94.3,94.3,96.2,94.3,96.2,94.3,1.9,1.9,3.8
+Union School,Public,18 Kinney Hollow Dr,Union,6076,Tolland,,,,,,,,,,
+Union Elementary School,Public,173 School St,Unionville,6085,Hartford,98.5,98.5,98.5,98.5,98.5,98.5,98.5,0.0,1.5,1.5
+West District Elementary School,Public,114 W District Rd,Unionville,6085,Hartford,98.7,98.7,98.7,98.7,98.7,98.7,98.7,0.0,1.3,1.3
+Center Road School,Public,20 Center St,Vernon,6066,Tolland,96.3,96.3,98.2,96.3,98.2,98.2,96.3,0.0,0.0,0.0
+Lake Street School,Public,201 Lake Street,Vernon,6066,Tolland,97.6,95.2,97.6,97.6,97.6,97.6,95.2,0.0,2.4,2.4
+Maple Street School,Public,20 Maple Street,Vernon,6066,Tolland,100.0,97.7,100.0,97.7,97.7,97.7,97.7,0.0,0.0,0.0
+Skinner Road School,Public,90 Skinner Road,Vernon,6066,Tolland,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Northeast School,Public,69 East Street,Vernon,6066,Tolland,100.0,100.0,100.0,100.0,93.3,96.7,90.0,0.0,0.0,0.0
+Voluntown Elementary School,Public,195 Main Street,Voluntown,6384,New London,,,,,,,,,,
+Holy Trinity School,Non-public,11 North Whittlesey Ave,Walingford,6492,New Haven,,,,,,,,,,
+Cook Hill Elementary School,Public,57 Hall Road,Wallingford,6492,New Haven,97.9,97.9,97.9,99.0,97.9,97.9,97.9,1.0,0.0,1.0
+Moses Y. Beach Elementary School,Public,340 N Main St,Wallingford,6492,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Parker Farms Elementary School,Public,30 Parker Farms Road,Wallingford,6492,New Haven,,,,,,,,,,
+Evarts C. Stevens Elementary School,Public,18 Kondracki Lane,Wallingford,6492,New Haven,97.2,97.2,97.2,98.2,96.3,100.0,94.5,0.0,0.0,0.0
+Warren School,Public,21 Sackett Hill Road,Warren,6754,Litchfield,,,,,,,,,,
+Washington Primary School,Public,11 School Street,Washington Depot,6794,Litchfield,,,,,,,,,,
+Buchs Hill Elementary,Public,300 Bucks Hill Rd,Waterbury,6704,New Haven,97.5,96.6,99.2,98.3,96.6,92.4,80.7,0.0,0.0,0.0
+Bunker Hill,Public,170 Bunker Hill Rd,Waterbury,6708,New Haven,100.0,98.8,100.0,100.0,100.0,98.8,98.8,0.0,0.0,0.0
+Carrington,Public,24 Kenmore Ave,Waterbury,6708,New Haven,97.6,97.6,100.0,97.6,100.0,100.0,95.1,0.0,0.0,0.0
+Catholic Academy,Non-public,386 Robinwood Road,Waterbury,6708,New Haven,,,,,,,,,,
+Chase Elementary School,Public,40 Woodtick Rd,Waterbury,6705,New Haven,99.2,99.2,99.2,99.2,99.2,99.2,99.2,0.8,0.0,0.8
+Driggs,Public,77 Woodlawn Terr,Waterbury,6710,New Haven,95.2,94.0,95.2,100.0,94.0,98.8,91.7,0.0,0.0,0.0
+Duggan,Public,38 West Porter St,Waterbury,6708,New Haven,98.1,98.1,98.1,98.1,98.1,98.1,98.1,0.0,0.0,0.0
+Gilmartin Elementary School,Public,94 Springlake Road,Waterbury,6706,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Hopeville Elementary School,Public,2 Cypress St,Waterbury,6706,New Haven,96.4,95.2,98.8,100.0,98.8,95.2,90.5,0.0,0.0,0.0
+International School,Public,116 Beecher Ave,Waterbury,6705,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+M.M. Generali,Public,3196 East Main St.,Waterbury,6705,New Haven,98.0,98.0,99.0,98.0,98.0,98.0,96.1,0.0,0.0,0.0
+Maloney Interdistrict Magnet School,Public,233 South Elm Street,Waterbury,6706,New Haven,97.5,97.5,90.0,97.5,90.0,97.5,87.5,1.2,1.2,2.5
+Our Lady Of Mount Carmel School,Non-public,645 Congress Ave,Waterbury,6708,New Haven,,,,,,,,,,
+Regan,Public,2780 North Main St,Waterbury,6704,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Sprague,Public,1443 Thomaston Ave,Waterbury,6704,New Haven,98.6,98.6,98.6,98.6,98.6,98.6,98.6,1.4,0.0,1.4
+State Street,Public,30 Church St,Waterbury,6702,New Haven,,,,,,,,,,
+Tinker School,Public,809 Highland Ave,Waterbury,6708,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Washington,Public,685 Baldwin St,Waterbury,6702,New Haven,94.7,97.4,97.4,97.4,94.7,97.4,92.1,0.0,0.0,0.0
+Wendell Cross Elementary School,Public,1255 Highland Ave,Waterbury,6706,New Haven,82.5,82.5,87.3,93.6,87.3,93.6,82.5,1.6,0.0,1.6
+Wilson,Public,"235 Birch St, Waterbury, Ct 06704",Waterbury,6704,New Haven,72.0,72.0,72.0,72.0,72.0,72.0,72.0,0.0,0.0,0.0
+Great Neck Elementary,Public,165 Great Neck Road,Waterford,6385,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Oswegatchie Elementary School,Public,470 Boston Post Road,Waterford,6385,New London,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+The Friendship School,Public,24 Rope Ferry Road,Waterford,6385,New London,98.9,96.7,98.9,97.8,96.7,98.9,95.6,1.1,0.0,1.1
+Latimer Lane Elementary School,Public,33 Mountain View Road,Weatogue,6089,Hartford,98.3,98.3,96.7,96.7,98.3,98.3,96.7,0.0,1.7,1.7
+Cornwall Consolidated School,Public,5 Cream Hill Road,West Cornwall,6796,Litchfield,,,,,,,,,,
+Aiken Elementary School,Public,212 King Philip Drive,West Hartford,6119,Hartford,100.0,98.2,98.2,100.0,98.2,100.0,98.2,0.0,0.0,0.0
+American School For The Deaf,Public,139 N. Main St.,West Hartford,6107,Hartford,,,,,,,,,,
+Braeburn School,Public,45 Braeburn Rd,West Hartford,6107,Hartford,98.2,98.2,98.2,98.2,98.2,94.4,94.4,0.0,1.8,1.8
+Bugbee Elementary,Public,1943 Asylum Avenue,West Hartford,6117,Hartford,92.9,92.9,96.4,96.4,96.4,96.4,92.9,0.0,0.0,0.0
+Charter Oak International Academy,Public,425 Oakwood Avenue,West Hartford,6110,Hartford,97.1,97.1,97.1,98.6,97.1,98.6,97.1,0.0,0.0,0.0
+Louise Duffy Elementary School,Public,95 Westminster Dr.,West Hartford,6109,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Montessori School Of Greater Hartford,Non-public,141 North Main Street,West Hartford,6107,Hartford,,,,,,,,,,
+Morley,Public,77 Bretton Road,West Hartford,6119,Hartford,100.0,100.0,100.0,100.0,100.0,98.0,98.0,0.0,0.0,0.0
+New England Jewish Academy,Non-public,300 Bloomfield Avenue,West Hartford,6117,Hartford,,,,,,,,,,
+Norfeldt Elementary,Public,35 Barksdale Road,West Hartford,6117,Hartford,100.0,100.0,98.4,98.4,100.0,100.0,96.8,0.0,0.0,0.0
+Renbrook School,Non-public,2865 Albany Ave,West Hartford,6117,Hartford,,,,,,,,,,
+Saint Thomas The Apostle,Non-public,25 Dover Road,West Hartford,6119,Hartford,,,,,,,,,,
+Smith,Public,64 St James Street,West Hartford,6042,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Solomon Schechter Day School,Non-public,26 Buena Vista Rd,West Hartford,6107,Hartford,,,,,,,,,,
+University Of Hartford Magnet School,Public,196 Bloomfield Ave.,West Hartford,6117,Hartford,97.0,97.0,98.5,98.5,98.5,98.5,97.0,0.0,1.5,1.5
+Webster Hill Elementary,Public,125 Webster Hill Blvd,West Hartford,6107,Hartford,97.8,95.6,95.6,100.0,95.6,93.5,93.5,0.0,0.0,0.0
+Whiting Lane Elementary,Public,47 Whiting Lane,West Hartford,6119,Hartford,97.1,94.1,94.1,100.0,94.1,100.0,94.1,0.0,0.0,0.0
+Wolcott Elementary,Public,71 Wolcott Rd,West Hartford,6110,Hartford,98.3,100.0,100.0,98.3,98.3,98.3,98.3,0.0,0.0,0.0
+Forest,Public,95 Burwell Road,West Haven,6512,New Haven,98.7,98.7,98.7,98.7,98.7,96.2,96.2,0.0,0.0,0.0
+Mackrille Elementary School,Public,806 Jones Hill Rd,West Haven,6516,New Haven,100.0,100.0,100.0,100.0,98.2,98.2,98.2,0.0,0.0,0.0
+Pagels,Public,26 Benham Hill Road,West Haven,6516,New Haven,97.2,97.2,97.2,97.2,97.2,95.8,94.4,1.4,0.0,1.4
+Savin Rock Community School,Public,50 Park Street,West Haven,6516,New Haven,97.8,97.8,98.9,96.6,98.9,97.8,95.5,0.0,0.0,0.0
+Seth G. Haley,Public,148 South Street,West Haven,6516,New Haven,98.6,98.6,97.1,97.1,95.7,95.7,92.9,1.4,0.0,1.4
+St. Lawrence School,Non-public,231 Main Street,West Haven,6516,New Haven,,,,,,,,,,
+Washington,Public,369 Washington Ave,West Haven,6516,New Haven,96.6,96.6,94.8,94.8,94.8,91.4,91.4,0.0,1.7,1.7
+The Master'S School,Non-public,36 Westledge Rd,West Simsbury,6092,Hartford,,,,,,,,,,
+Tootin' Hills,Public,25 Nimrod Rd,West Simsbury,6092,Hartford,98.0,100.0,96.0,100.0,96.0,100.0,96.0,0.0,0.0,0.0
+Spaulding Elementary,Public,945 Mountain Road,West Suffield,6493,Hartford,85.5,86.2,85.5,91.4,85.5,92.1,82.9,1.3,0.0,1.3
+Daisy Ingraham Elementary School,Public,105 Goodspeed Drive,Westbrook,6498,Middlesex,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Hurlbutt Elementary School,Public,9 School Rd,Weston,6883,Fairfield,99.2,98.4,99.2,98.4,99.2,97.7,97.7,0.0,0.8,0.8
+Coleytown Elementary School,Public,65 Easton Road,Westport,6880,Fairfield,97.3,97.3,97.3,97.3,97.3,98.7,94.7,0.0,0.0,0.0
+Greens Farms Elementary,Public,17 Morningside Drive South,Westport,6880,Fairfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Long Lots Elementary School,Public,13 Hyde Lane,Westport,6880,Fairfield,98.1,98.1,98.1,98.1,98.1,98.1,98.1,0.0,1.9,1.9
+Saugatuck Elementary School,Public,170 Riverside Avenue,Westport,6880,Fairfield,97.4,97.4,96.0,98.7,97.4,98.7,94.7,0.0,0.0,0.0
+Alfred W Hanmer Elementary School,Public,50 Francis Street,Wethersfield,6109,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Charles Wright Elementary School,Public,186 Nott Street,Wethersfield,6109,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Corpus Christi School,Non-public,581 Silas Deane Highway,Wethersfield,6109,Hartford,,,,,,,,,,
+Discovery Academy CREC,Public,176 Cumberland Ave,Wethersfield,6109,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Emerson Williams Elementary School,Public,461 Wells Road,Wethersfield,6109,Hartford,91.2,94.7,96.5,96.5,94.7,96.5,89.5,0.0,0.0,0.0
+Highcrest,Public,95 Highcrest Rd,Wethersfield,6109,Hartford,100.0,98.4,98.4,98.4,98.4,98.4,98.4,0.0,0.0,0.0
+Samuel Webb Elementary,Public,51 Willow Street,Wethersfield,6109,Hartford,97.7,97.7,97.7,97.7,97.7,97.7,97.7,2.3,0.0,2.3
+Natchaug School,Public,123 Jackson Street,Willimantic,6226,Windham,94.9,94.9,97.4,97.4,97.4,94.9,92.3,0.0,0.0,0.0
+Sweeney Elementary School,Public,60 Oak Hill Road,Willimantic,6226,Windham,100.0,97.5,100.0,100.0,95.0,95.0,95.0,0.0,0.0,0.0
+Center Elementary School,Public,12 Old Farms Road,Willington,6279,Tolland,97.8,97.8,97.8,97.8,97.8,93.3,88.9,0.0,0.0,0.0
+Miller Driscoll,Public,217 Wolfpit Road,Wilton,6897,Fairfield,97.4,97.4,97.4,97.0,97.4,97.0,97.0,0.0,1.3,1.3
+Seven Acres Montessori,Non-public,34 Whipple Rd,Wilton,6897,Fairfield,,,,,,,,,,
+Windham Center School,Public,45 North Road,Windham,6280,Windham,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Oliver Ellsworth Elementary,Public,730 Kennedy Road,Windsor,6095,Hartford,98.3,98.3,97.4,98.3,99.1,96.6,96.6,0.9,0.0,0.9
+Poquonock Elementary School,Public,1760 Poquonock Avenue,Windsor,6095,Hartford,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+River Street School,Public,601 River Street,Windsor,6095,Hartford,,,,,,,,,,
+Saint Gabriel School,Non-public,77 Bloomfield Ave.,Windsor,6095,Hartford,,,,,,,,,,
+North Street School,Public,325 North Street,Windsor Locks,6096,Hartford,92.9,93.8,94.6,95.5,95.5,96.4,92.0,0.9,1.8,2.7
+Alcott Elementary School,Public,1490 Woodtick Road,Wolcott,6716,New Haven,97.7,97.7,97.7,97.7,97.7,97.7,97.7,2.3,0.0,2.3
+Frisbie Elementary School,Public,24 Todd Road,Wolcott,6716,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Wakelee Elementary School,Public,12 Hemplel Drive,Wolcott,6716,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Beecher Road School,Public,40 Beecher Road,Woodbridge,6525,New Haven,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Ezra Academy,Non-public,75 Rimmon Road,Woodbridge,6525,New Haven,,,,,,,,,,
+Mitchell Elementary School,Public,14 School Street,Woodbury,6798,Litchfield,100.0,100.0,100.0,100.0,100.0,100.0,100.0,0.0,0.0,0.0
+Woodstock Elementary School,Public,24 Frog Pond Road,Woodstock,6281,Windham,93.8,96.9,92.2,93.8,92.2,92.2,89.1,0.0,1.6,1.6
