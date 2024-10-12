@@ -7,16 +7,16 @@ from text2sql.src.gpt_request import generate_main
 
 def main(args):
     if args.eval_data_name == "bird":
-        args.db_root_path = "table_related_benchmarks/text2sql/data/bird_data/dev_databases"
-        args.eval_data_path = "table_related_benchmarks/text2sql/data/bird_data/dev.json"
-        args.ground_truth_path = "table_related_benchmarks/text2sql/data/bird_data/dev.sql"
+        args.db_root_path = "table_related_benchmarks/evalset/bird_data/dev_databases"
+        args.eval_data_path = "table_related_benchmarks/evalset/bird_data/dev.json"
+        args.ground_truth_path = "table_related_benchmarks/evalset/bird_data/dev.sql"
         args.mode = "dev"
         args.use_knowledge = "True"
         
     if args.eval_data_name == "spider":
-        args.db_root_path = "table_related_benchmarks/text2sql/data/spider_data/test_database"
-        args.eval_data_path = "table_related_benchmarks/text2sql/data/spider_data/test.json"
-        args.ground_truth_path = "table_related_benchmarks/text2sql/data/spider_data/test_gold.sql"
+        args.db_root_path = "table_related_benchmarks/evalset/spider_data/test_database"
+        args.eval_data_path = "table_related_benchmarks/evalset/spider_data/test.json"
+        args.ground_truth_path = "table_related_benchmarks/evalset/spider_data/test_gold.sql"
         args.mode = "test"
         args.use_knowledge = "False"
     
