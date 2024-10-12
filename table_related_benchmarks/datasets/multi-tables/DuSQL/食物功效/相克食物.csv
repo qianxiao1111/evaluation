@@ -1,0 +1,6 @@
+食物id,相克食物id,原因,是否致命
+item_animal_food_3_16,item_animal_food_3_17,导致便秘,是
+item_animal_food_3_17,item_animal_food_3_20,导致气滞,否
+item_animal_food_3_19,item_animal_food_3_20,导致腹胀,否
+item_animal_food_3_16,item_animal_food_3_20,同属凉性易伤肠胃,否
+item_animal_food_3_18,item_animal_food_3_18,降低营养元素吸收,否

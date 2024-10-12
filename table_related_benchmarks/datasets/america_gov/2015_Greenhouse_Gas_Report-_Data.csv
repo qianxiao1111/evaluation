@@ -1,0 +1,142 @@
+Source,County,Address,Total Emissions (MT CO2e),Biogenic CO2 (MT CO2),Fossil CO2 (MT CO2),Methane (MT CO2e),Nitrous Oxide (MT CO2e),Hydrofluorocarbons (MT CO2e),Perfluorocarbons (MT CO2e),Sulfur Hexafluoride (MT CO2e),Other (MT CO2e),"Location (Latitude, Longitude) ",Sector ,Sub Sector,Clean Air Rule ,"Energy-Intensive, Trade-Exposed ",Point Size- Based on Total Emissions
+Agrium Kennewick Fertilizer Operations (KFO) - Kennewick,Benton,"227515 E. Bowles Rd Kennewick, WA 99337",155888,0,10731,1,145157,0,0,0,0,"(46.165957, -119.017218)",Chemicals,Nitric Acid Production,YES,YES,3
+Air Liquide Hydrogen Plant - Anacortes,Skagit,"8581 South Texas Road Anacortes, WA 98221",64413,0,64413,0,0,0,0,0,0,"(48.465617, -122.556032)",Chemicals,Hydrogen Production,NO,NO,2
+Alcoa Intalco Works - Ferndale,Whatcom,"4050 Mountain View Road Ferndale, WA 98248",1195786,0,418042,10480,34,0,767230,0,0,"(48.8455, -122.7055)",Metals,Aluminum Production,YES,YES,4
+Alcoa Wenatchee Works - Malaga,Chelan,"6200 Malaga/Alcoa Hwy. Malaga, WA 98828",331207,0,254025,14,16,0,77152,0,0,"(47.3567, -120.1273)",Metals,Aluminum Production,YES,YES,3
+Ardagh Glass Inc. - Seattle,King,"5801 East Marginal Way South Seattle, WA 98134",76674,0,76614,27,32,0,0,0,0,"(47.55242, -122.33739)",Minerals,Glass Production,YES,NO,2
+Ash Grove Cement Company - Seattle,King,"3801 E. Marginal Way South Seattle, WA 98134",495030,0,494557,369,104,0,0,0,0,"(47.56799, -122.34255)",Minerals,Cement Production,YES,YES,3
+"Biofuels Washington, LLC Landfill Gas to Energy Plant - Graham",Pierce,"30919 Meridian Ave, East Graham, WA 98338",19534,19435,0,30,70,0,0,0,0,"(46.975533, -122.290871)",Power Plants,"Other Power, Heating, or Cooling Plants",NO,NO,1
+Boeing Commercial Airplanes - Everett,Snohomish,"3003 West Casino Rd Everett, WA 98204",66276,0,66207,31,37,0,0,0,0,"(47.918622, -122.276987)",Manufacturing,Transportation,YES,YES,2
+Boeing Commercial Airplanes - Fabrication (Frederickson Site) - Puyallup,Pierce,"18001 Canyon Rd E Puyallup, WA 98375",20833,0,20812,10,12,0,0,0,0,"(47.088831, -122.34862)",Manufacturing,Transportation,NO,YES,1
+"Boise Cascade Wood Products, LLC.  Kettle Falls Lumber - Kettle Falls",Stevens,"610 West 3rd Avenue Kettle Falls, WA 99141",57294,56539,0,109,647,0,0,0,0,"(48.609799, -118.067441)",Wood Products,Lumber Mills,NO,NO,2
+"Boise Cascade Wood Products, LLC.  Kettle Falls Plywood - Kettle Falls",Stevens,"1274 S. Boise Rd Kettle Falls, WA 99141",71151,68501,1734,132,784,0,0,0,0,"(48.613175, -118.116106)",Wood Products,Engineered Wood,NO,NO,2
+Boise Paper - Wallula,Walla Walla,"31831 West Highway 12 Wallula, WA 99363",855520,717427,126547,8991,2556,0,0,0,0,"(46.10396, -118.9184)",Pulp and Paper,Kraft Mills,YES,YES,3
+Boulder Park Generating Station - Spokane Valley,Spokane,"4424 N. Barker Road Spokane Valley, WA 99027",10952,0,10941,5,6,0,0,0,0,"(47.696999, -117.147223)",Power Plants,"Other Power, Heating, or Cooling Plants",NO,NO,1
+BP Cherry Point Refinery - Blaine,Whatcom,"4519 Grandview Road Blaine, WA 98230",2093437,0,2077888,11062,4486,0,0,0,0,"(48.8864, -122.7353)",Refineries,Petroleum Refineries,YES,NO,4
+Cardinal FG Company - Winlock,Lewis,"545 Avery Road West Winlock, WA 98596",105474,0,105399,34,41,0,0,0,0,"(46.544937, -122.926313)",Minerals,Glass Production,YES,YES,3
+Cathcart Landfill - Snohomish,Snohomish,"8915 Cathcart Way Snohomish, WA 98296",23520,0,190,23329,0,0,0,0,0,"(47.870014, -122.118284)",Waste,Municipal Landfills,NO,NO,1
+Central Washington University - Ellensburg,Kittitas,"400 E University Way Ellensburg, WA 98926",12838,0,12822,7,9,0,0,0,0,"(47.003202, -120.544513)",Government,Education,NO,NO,1
+CertainTeed Gypsum - Seattle,King,"5931 East Marginal Way South Seattle, WA 98134",38141,0,38101,18,21,0,0,0,0,"(47.548056, -122.336944)",Manufacturing,Gypsum Manufacturing,NO,YES,2
+Cheyne Landfill - Zillah,Yakima,"4970 Cheyne Road Zillah, WA 98953",34450,0,0,34450,0,0,0,0,0,"(46.4785, -120.2688)",Waste,Municipal Landfills,NO,NO,2
+ConAgra Foods Lamb Weston - Connell,Franklin,"811 W. Gum St. Connell, WA 99326",36801,0,36763,17,21,0,0,0,0,"(46.651389, -118.871944)",Food Production,Potato Products,NO,YES,2
+ConAgra Foods Lamb Weston - Pasco,Franklin,"960 Glade Road N. Pasco, WA 99301",48162,0,48113,23,27,0,0,0,0,"(46.288137, -119.115336)",Food Production,Potato Products,NO,YES,2
+ConAgra Foods Lamb Weston - Quincy,Grant,"1005 E. Street SW Quincy, WA 98848",37922,0,37882,18,22,0,0,0,0,"(47.234413, -119.869914)",Food Production,Potato Products,NO,YES,2
+ConAgra Foods Lamb Weston - Richland,Benton,"2013 Saint Street Richland, WA 99354",36252,0,36215,17,20,0,0,0,0,"(46.309314, -119.297267)",Food Production,Potato Products,NO,YES,2
+ConAgra Foods Lamb Weston/BSW - Warden,Grant,"1203 Basin St. Warden, WA 98857",16271,0,16254,8,9,0,0,0,0,"(46.971504, -119.055427)",Food Production,Potato Products,NO,YES,1
+Cosmo Specialty Fibers Inc - Cosmopolis,Grays Harbor,"1701 First St Cosmopolis, WA 98537",1170393,1144912,16976,5426,3079,0,0,0,0,"(46.952907, -123.76211)",Pulp and Paper,Sulfite Mills,NO,YES,4
+Cowlitz County Headquarters Landfill - Castle Rock,Cowlitz,"3434 South Silver Lake Road Castle Rock, WA 98611",190202,2097,0,188098,7,0,0,0,0,"(46.246902, -122.772284)",Waste,Industrial Landfills,YES,NO,3
+Cowlitz County Landfill - Longview,Cowlitz,"85 Tennant Way Longview, WA 98632",4533,0,0,4533,0,0,0,0,0,"(46.107229, -122.905601)",Waste,Municipal Landfills,NO,NO,1
+Darigold - Chehalis,Lewis,"67 SW Chehalis Ave Chehalis, WA 98532",14732,0,14718,7,8,0,0,0,0,"(46.659952, -122.970162)",Food Production,Dairy Products,NO,NO,1
+Darigold - Lynden,Whatcom,"8424 Depot Road Lynden, WA 98264",21437,0,21415,10,12,0,0,0,0,"(48.947567, -122.451915)",Food Production,Dairy Products,NO,NO,1
+Darigold - Sunnyside,Yakima,"400 Alexander Road Sunnyside, WA 98944",21372,0,21349,10,12,0,0,0,0,"(46.30058, -120.015675)",Food Production,Dairy Products,NO,NO,1
+Easterday Ranches North Feedlot - Eltopia,Franklin,"8230 Blanton Rd. Eltopia, WA 99330",15048,0,922,1094,13032,0,0,0,0,"(46.50919, -118.881203)",Food Production,Cattle Feedlots,NO,NO,1
+Easterday Ranches South Feedlot - Kennewick,Benton,"152330 S. Nine Canyon Rd. Kennewick, WA 99337",21519,0,1990,1514,18016,0,0,0,0,"(45.991872, -119.136497)",Food Production,Cattle Feedlots,NO,NO,1
+"El Oro Cattle Feeders, LLC - Moses Lake",Grant,"18857 Road 2.7 SE Moses Lake, WA 98837",25752,0,0,1986,23766,0,0,0,0,"(47.052176, -119.093815)",Food Production,Cattle Feedlots,NO,NO,2
+"Emerald Kalama Chemical, LLC - Kalama",Cowlitz,"1296 NW 3rd Street Kalama, WA 98625",69126,0,69055,32,38,0,0,0,0,"(46.02191, -122.85698)",Chemicals,Other Chemicals,NO,YES,2
+Enwave - Seattle,King,"1319 Western Avenue Seattle, WA 98101",71009,1871,69042,36,60,0,0,0,0,"(47.6068, -122.340179)",Power Plants,"Other Power, Heating, or Cooling Plants",YES,NO,2
+Fairchild AFB - Spokane Co.,Spokane,"1 E Bong St Fairchild AFB, WA 99011",14053,0,14039,7,8,0,0,0,0,"(47.641332, -117.644832)",Government,National Security,NO,NO,1
+Frederickson Power LP - Tacoma,Pierce,"18610 - 50th Ave E Tacoma, WA 98446",496752,0,496248,230,274,0,0,0,0,"(47.086342, -122.365686)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Frito Lay - Vancouver,Clark,"4808 NW Fruit Valley Road Vancouver, WA 98660",15923,0,15906,8,9,0,0,0,0,"(45.657037, -122.692)",Food Production,Other Food Products,NO,NO,1
+Gas Transmission Northwest Compressor Station 6 - Rosalia,Whitman,"315 E Babb Road Rosalia, WA 99170",84805,0,82433,2326,46,0,0,0,0,"(47.277256, -117.406737)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,YES,NO,2
+Gas Transmission Northwest Compressor Station 8 - Wallula,Walla Walla,"638 Lambdin Road Wallula, WA 99363",111325,0,108440,2824,61,0,0,0,0,"(46.053153, -118.843934)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,YES,NO,3
+Georgia-Pacific Consumer Products LLC - Camas,Clark,"401 NE Adams Street Camas, WA 98607",663149,502054,150338,9299,1458,0,0,0,0,"(45.584271, -122.40843)",Pulp and Paper,Kraft Mills,YES,YES,3
+Georgia-Pacific Gypsum LLC - Tacoma,Pierce,"1240 Alexander Ave Tacoma, WA 98421",46906,0,46857,22,26,0,0,0,0,"(47.269558, -122.394869)",Manufacturing,Gypsum Manufacturing,NO,YES,2
+"Goodrich Spokane Landing Systems, Carbon Products - Spokane",Spokane,"11135 West Westbow Blvd. Spokane, WA 99224-9475",31264,0,31231,15,18,0,0,0,0,"(47.583604, -117.568511)",Manufacturing,Transportation,NO,YES,2
+Grant County Landfill 1 - Ephrata,Grant,"3803 Neva Lake Rd. NW Ephrata, WA 98823",40606,0,0,40606,0,0,0,0,0,"(47.270759, -119.573764)",Waste,Municipal Landfills,NO,NO,2
+Graymont Western US. Inc. - Tacoma,Pierce,"1220 Alexander Ave Tacoma, WA 98421",76402,0,76345,23,34,0,0,0,0,"(47.271365, -122.397262)",Minerals,Lime Manufacturing,NO,YES,2
+Grays Harbor Energy Center - Elma,Grays Harbor,"401 Keys Road Elma, WA 98541",1170621,0,1169432,542,646,0,0,0,0,"(46.9688, -123.48)",Power Plants,Natural Gas Turbine Plants,YES,NO,4
+Great Western Malting Company Limited - Vancouver,Clark,"1705 NW Harborside Drive Vancouver, WA 98660",18273,0,18255,9,10,0,0,0,0,"(45.631069, -122.690043)",Food Production,Other Food Products,NO,NO,1
+H.W. Hill Landfill Gas Power Plant - Roosevelt,Klickitat,"502 Roosevelt Grade Road Roosevelt, WA 99356",80421,80010,0,123,288,0,0,0,0,"(45.807765, -120.166354)",Power Plants,"Other Power, Heating, or Cooling Plants",YES,NO,2
+Hampton Lumber Mills Washington Inc. - Darrington,Snohomish,"46921 Sauk Prairie Road Darrington, WA 98241",87598,86443,0,166,989,0,0,0,0,"(48.262797, -121.597608)",Wood Products,Lumber Mills,NO,NO,2
+Hampton Lumber Mills Washington Inc. - Morton,Lewis,"302 State Highway 7 Morton, WA 98356",31789,31370,0,60,359,0,0,0,0,"(46.565997, -122.269573)",Wood Products,Lumber Mills,NO,NO,2
+Hampton Lumber Mills Washington Inc. - Randle,Lewis,"10166 US Highway 12 Randle, WA 98377",54461,53743,0,103,615,0,0,0,0,"(46.533743, -121.917906)",Wood Products,Lumber Mills,NO,NO,2
+Horn Rapids Sanitary Landfill - Richland,Benton,"3102 Twin Bridges Road Richland, WA 99352",26870,0,0,26870,0,0,0,0,0,"(46.346663, -119.348118)",Waste,Municipal Landfills,NO,NO,2
+"Horse Heaven Cattle Feeders, Inc. - Sunnyside",Yakima,"1691 Midvale Road Sunnyside, WA 98944",11142,0,0,860,10283,0,0,0,0,"(46.284622, -120.019668)",Food Production,Cattle Feedlots,NO,NO,1
+Imerys Minerals Quincy Plant - Quincy,Grant,"16419 Road, 10.5 NW Quincy, WA 98848",19541,0,19521,9,11,0,0,0,0,"(47.239948, -119.838831)",Minerals,Other Minerals,NO,NO,1
+Inland Empire Paper Company - Spokane,Spokane,"3320 N Argonne Spokane, WA 99212",29097,17730,11119,39,209,0,0,0,0,"(47.688295, -117.279323)",Pulp and Paper,TMP Mills,NO,YES,2
+"Interfor US, Inc. - Port Angeles",Clallam,"243701 Highway 101 West Port Angeles, WA 98363",42807,42243,0,81,483,0,0,0,0,"(48.103425, -123.518642)",Wood Products,Lumber Mills,NO,NO,2
+J.R. Simplot Company - Moses Lake,Grant,"14124 Wheeler Rd NE Moses Lake, WA 98837",44568,3636,26870,14034,28,0,0,0,0,"(47.131732, -119.18926)",Food Production,Potato Products,NO,YES,2
+J.R. Simplot Company - Othello,Adams,"1201 N Broadway Ave Othello, WA 99344",87686,0,45538,42123,26,0,0,0,0,"(46.837778, -119.176389)",Food Production,Potato Products,YES,YES,2
+Jorgensen Forge Corp. - Tukwila,King,"8531 East Marginal Way S. Tukwila, WA 98108-4018",5321,0,5316,3,3,0,0,0,0,"(47.526872, -122.303906)",Metals,Iron and Steel Production,NO,NO,1
+"Kaiser Aluminum Washington, LLC (Trentwood Works) - Spokane Valley",Spokane,"15000 E Euclid Ave Spokane Valley, WA 99215",117856,0,117734,56,66,0,0,0,0,"(47.687074, -117.212673)",Metals,Other Metals,YES,YES,3
+Kettle Falls Generating Station - Kettle Falls,Stevens,"1151 Hwy. 395 North Kettle Falls, WA 99141",826454,812601,2998,1561,9295,0,0,0,0,"(48.620335, -118.110841)",Power Plants,"Other Power, Heating, or Cooling Plants",NO,NO,3
+King County Solid Waste Cedar Hills Landfill - Maple Valley,King,"16645 228th Avenue SE Maple Valley, WA 98038",63395,0,145,63250,0,0,0,0,0,"(47.462625, -122.046025)",Waste,Municipal Landfills,YES,NO,2
+Land Recovery Landfill Industrial - Graham,Pierce,"30919 Meridian Street East Graham, WA 98338",83094,0,0,83094,0,0,0,0,0,"(46.972405, -122.292799)",Waste,Municipal Landfills,YES,NO,2
+Linde Gas North America LLC - Anacortes,Skagit,"8529 South Texas Road Anacortes, WA 98221",59516,0,59516,0,0,0,0,0,0,"(48.467646, -122.554343)",Chemicals,Hydrogen Production,NO,NO,2
+Linear Technology Corporation - Camas,Clark,"4200 NW Pacific Rim Blvd Camas, WA 98607",33622,0,1803,1,1236,1783,25804,2736,258,"(45.598844, -122.45232)",Manufacturing,Electronics Manufacturing,NO,YES,2
+"Longview Fibre Paper and Packaging, Inc/KapStone Kraft - Longview",Cowlitz,"300 Fibre Way Longview, WA 98632",1708673,1565833,135500,1387,5954,0,0,0,0,"(46.10361, -122.92167)",Pulp and Paper,Kraft Mills,YES,YES,4
+McCain Foods - Othello,Adams,"100 Lee Street Othello, WA 99344",77566,0,38078,39467,21,0,0,0,0,"(46.840102, -119.172705)",Food Production,Potato Products,YES,YES,2
+Michelsen Packaging - Yakima,Yakima,"202 N 2nd Ave Yakima, WA 98902",9296,0,9286,5,5,0,0,0,0,"(46.604058, -120.513015)",Pulp and Paper,Other Pulp and Paper,NO,NO,1
+Moses Lake Facility of Basic American Foods - Moses Lake,Grant,"538 Potato Frontage Road Moses Lake, WA 98837",31063,0,31031,15,17,0,0,0,0,"(47.075183, -119.220408)",Food Production,Potato Products,NO,YES,2
+Naval Air Station Whidbey Island - Oak Harbor,Island,"1115 W. Lexington Street, Bldg. 103 Oak Harbor, WA 98278",13388,0,13373,7,8,0,0,0,0,"(48.345281, -122.669741)",Government,National Security,NO,NO,1
+Naval Base Kitsap - Bremerton,Kitsap,"120 South Dewey Street Bremerton, WA 98315",42287,0,42241,21,26,0,0,0,0,"(47.557047, -122.645933)",Government,National Security,NO,NO,2
+Naval Base Kitsap Bangor - Silverdale,Kitsap,"1103 Hunley Road Silverdale, WA 98315",20166,0,20142,10,13,0,0,0,0,"(47.699284, -122.696926)",Government,National Security,NO,NO,1
+Nippon Dynawave - Longview,Cowlitz,"3401 Industrial Way Longview, WA 98632",1502988,1143229,351866,1723,6170,0,0,0,0,"(46.130495, -122.983637)",Pulp and Paper,Kraft Mills,YES,YES,4
+Nippon Paper Industries USA Co LTD (NPI USA) - Port Angeles,Clallam,"1902 Marine Drive Port Angeles, WA 98363",223631,214771,1633,4767,2460,0,0,0,0,"(48.134623, -123.467524)",Pulp and Paper,TMP Mills,NO,YES,3
+Northwest Hardwoods Inc. - Centralia,Lewis,"3000 Galvin Road Centralia, WA 98531",13572,13448,0,19,105,0,0,0,0,"(46.734454, -122.991963)",Wood Products,Lumber Mills,NO,NO,1
+Northwest Hardwoods Inc. - Longview,Cowlitz,"120 Industrial Way Longview, WA 98632",16772,16619,0,24,130,0,0,0,0,"(46.114537, -122.916806)",Wood Products,Lumber Mills,NO,NO,1
+Northwest Hardwoods Inc. - Mount Vernon,Skagit,"13421 Farm to Market Road Mount Vernon, WA 98273",11648,7714,3827,17,90,0,0,0,0,"(48.451642, -122.443028)",Wood Products,Lumber Mills,NO,NO,1
+Northwest Pipeline C/S - Chehalis,Lewis,"156 Meier Road West Chehalis, WA 98596",29670,0,28001,1654,16,0,0,0,0,"(46.533325, -122.87373)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,2
+Northwest Pipeline C/S - Goldendale,Klickitat,"120 Hoctor Road Goldendale, WA 98620",12873,0,10588,2280,6,0,0,0,0,"(45.771216, -120.799267)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,1
+Northwest Pipeline C/S - Mount Vernon,Skagit,"1539 Lange Road Mount Vernon, WA 98273",65776,0,63063,2678,35,0,0,0,0,"(48.421967, -122.21547)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,2
+Northwest Pipeline C/S - Snohomish,Snohomish,"22902 Echo Lake Road Snohomish, WA 98296",66543,0,65853,653,37,0,0,0,0,"(47.78825, -122.05859)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,2
+Northwest Pipeline C/S - Sumas,Whatcom,"4738 Jones Rd Sumas, WA 98295",109422,0,104002,5362,58,0,0,0,0,"(49.001, -122.2214)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,YES,NO,3
+Northwest Pipeline C/S - Sumner,Pierce,"3104 166th Ave E Sumner, WA 98390",50469,0,50142,299,28,0,0,0,0,"(47.228986, -122.209551)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,2
+Northwest Pipeline C/S - Washougal,Clark,"1309 NE Brown Road Washougal, WA 98671",15534,0,12862,2666,7,0,0,0,0,"(45.63236, -122.36516)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,1
+Northwest Pipeline Roosevelt C/S - Bickleton,Klickitat,"652 Sixprong Road Bickleton, WA 99322",13756,0,9418,4333,5,0,0,0,0,"(45.849504, -120.08083)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,1
+Northwest Pipeline Willard C/S - Cook,Skamania,"Willard Rd. Milepost 1 Cook, WA 98605",12443,0,10325,2113,6,0,0,0,0,"(45.778087, -121.626311)",Petroleum and Natural Gas Systems,Natural Gas Transmission/Compression,NO,NO,1
+"Nucor Steel Seattle, Inc, - Seattle",King,"2424 SW Andover St Seattle, WA 98106",115173,0,115128,20,24,0,0,0,0,"(47.569331, -122.367332)",Metals,Iron and Steel Production,YES,YES,3
+Olympic Panel Products LLC - Shelton,Mason,"204 E. Railroad Avenue Shelton, WA 98584",41324,40641,140,78,465,0,0,0,0,"(47.213448, -123.096517)",Wood Products,Lumber Mills,NO,NO,2
+Owens-Brockway Glass Container Inc Plant #02 - Kalama,Cowlitz,"2310 N Hendrickson Dr Kalama, WA 98625",22223,0,22207,7,9,0,0,0,0,"(46.031656, -122.866241)",Minerals,Glass Production,NO,YES,1
+PacifiCorp Energy - Chehalis Generating Facility - Chehalis,Lewis,"1813 Bishop Rd Chehalis, WA 98532",445152,0,444700,206,246,0,0,0,0,"(46.6226, -122.9145)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Paramount Petroleum - Seattle,King,"20555 Richmond Beach Drive NW Seattle, WA 98177",13688,0,13665,16,7,0,0,0,0,"(47.781642, -122.395299)",Petroleum and Natural Gas Systems,Other Petroleum and Natural Gas Systems,NO,NO,1
+Phillips 66 Ferndale Refinery - Ferndale,Whatcom,"3901 Unick Road Ferndale, WA 98248",747276,0,744011,1419,1846,0,0,0,0,"(48.830142, -122.692114)",Refineries,Petroleum Refineries,YES,NO,3
+Ponderay Newsprint Company - Usk,Pend Oreille,"422767 Highway 20 Usk, WA 99180",44680,41661,2452,83,483,0,0,0,0,"(48.289771, -117.271359)",Pulp and Paper,TMP Mills,NO,YES,2
+Port Townsend Paper Corporation - Port Townsend,Jefferson,"100 Mill Road Port Townsend, WA 98368",572693,503134,66373,578,2608,0,0,0,0,"(48.093793, -122.796806)",Pulp and Paper,Kraft Mills,YES,YES,3
+Puget Sound Energy - Encogen Generating Station - Bellingham,Whatcom,"915 Cornwall Ave Bellingham, WA 98225",143119,0,142974,66,79,0,0,0,0,"(48.746, -122.486)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Ferndale Generating Station - Ferndale,Whatcom,"5105 Lake Terrell Road Ferndale, WA 98248",405726,0,405316,187,223,0,0,0,0,"(48.828707, -122.685533)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Frederickson Generating Station - Tacoma,Pierce,"4714 192nd St E Tacoma, WA 98446",17052,0,17034,8,10,0,0,0,0,"(47.079716, -122.364711)",Power Plants,Natural Gas Turbine Plants,NO,NO,1
+Puget Sound Energy - Fredonia Generating Station - Mount Vernon,Skagit,"13085 Ball Road Mount Vernon, WA 98273",115727,0,115607,55,66,0,0,0,0,"(48.4553, -122.435)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Goldendale Generating Station - Goldendale,Klickitat,"600 Industrial Way Goldendale, WA 98620",551705,0,551145,256,305,0,0,0,0,"(45.8114, -120.833)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Mint Farm Generating Station - Longview,Cowlitz,"1200 Prudential Blvd Longview, WA 98632",685789,0,685093,318,379,0,0,0,0,"(46.140095, -122.985138)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Sumas Generating Station - Sumas,Whatcom,"1340 Thompson Lane Sumas, WA 98295",282703,0,282416,131,156,0,0,0,0,"(48.9905, -122.2733)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+Puget Sound Energy - Whitehorn Generating Station - Blaine,Whatcom,"4930 Brown Rd Blaine, WA 98230",37884,0,37844,18,22,0,0,0,0,"(48.885475, -122.724299)",Power Plants,Natural Gas Turbine Plants,NO,NO,2
+"Rainier Veneer, Inc. - Spanaway",Pierce,"8220 Eustis Hunt Rd E Spanaway, WA 98387",17378,16036,1127,31,184,0,0,0,0,"(47.062059, -122.318981)",Wood Products,Engineered Wood,NO,NO,1
+REC Silicon - Moses Lake,Grant,"3322 Road N NE Moses Lake, WA 98837",114372,0,114254,54,64,0,0,0,0,"(47.138359, -119.200383)",Metals,Other Metals,YES,YES,3
+REG Grays Harbor LLC - Hoquiam,Grays Harbor,"3122 Port Industrial Road Hoquiam, WA 98550",13806,0,13792,7,8,0,0,0,0,"(46.968196, -123.853622)",Chemicals,Other Chemicals,NO,YES,1
+River Road Generating Plant - Vancouver,Clark,"5201 NW Lower River Road Vancouver, WA 98660",708077,0,707359,328,391,0,0,0,0,"(45.64958, -122.724806)",Power Plants,Natural Gas Turbine Plants,YES,NO,3
+RockTenn Tacoma Mill - Tacoma,Pierce,"801 Portland Ave. Tacoma, WA 98421",1135442,1011954,116998,1154,5336,0,0,0,0,"(47.260953, -122.421765)",Pulp and Paper,Kraft Mills,YES,YES,4
+Roosevelt Regional Landfill - Roosevelt,Klickitat,"500 Roosevelt Grade Rd., PO Box 338 Roosevelt, WA 99356-0338",248507,0,189,248318,1,0,0,0,0,"(45.807146, -120.179785)",Waste,Municipal Landfills,YES,NO,3
+SDS Lumber Company - Bingen,Klickitat,"123 Industrial Road Bingen, WA 98605",34173,33650,74,65,385,0,0,0,0,"(45.713913, -121.468688)",Wood Products,Lumber Mills,NO,NO,2
+Seattle-Tacoma International Airport - Seattle,King,"17801 International Blvd. Seattle, WA 98158",13660,0,13645,7,8,0,0,0,0,"(47.443643, -122.302452)",Government,Other Government,NO,NO,1
+"SEH America, Inc - Vancouver",Clark,"4111 NE 112th Avenue Vancouver, WA 98682-6776",9615,0,9605,5,5,0,0,0,0,"(45.649912, -122.553612)",Manufacturing,Electronics Manufacturing,NO,YES,1
+SGL Automotive Carbon Fibers LLC - Moses Lake,Grant,"8781 Randolph Rd NE Moses Lake, WA 98837",12338,0,12326,6,7,0,0,0,0,"(47.208993, -119.285437)",Manufacturing,Transportation,NO,YES,1
+Shell Puget Sound Refinery - Anacortes,Skagit,"8505 South Texas Road Anacortes, WA 98221",1946151,0,1935309,6480,4362,0,0,0,0,"(48.470931, -122.559161)",Refineries,Petroleum Refineries,YES,NO,4
+Sierra Pacific Industries - Aberdeen,Grays Harbor,"301 Hagara Street Aberdeen, WA 98520",249544,245941,317,472,2813,0,0,0,0,"(46.971875, -123.775526)",Wood Products,Lumber Mills,NO,NO,3
+Sierra Pacific Industries - Burlington Division - Mount Vernon,Skagit,"14353 McFarland Road Mount Vernon, WA 98273",307168,301371,1771,579,3448,0,0,0,0,"(48.448553, -122.434613)",Wood Products,Lumber Mills,NO,NO,3
+Sierra Pacific Industries - Centralia,Lewis,"3115 Kuper Rd Centralia, WA 98531",40254,39724,0,76,454,0,0,0,0,"(46.756413, -122.995433)",Wood Products,Lumber Mills,NO,NO,2
+Simplot Feeders LTD. - Burbank,Walla Walla,"13981 Dodd Road Burbank, WA 99323",29065,0,0,2077,26988,0,0,0,0,"(46.133131, -118.90629)",Food Production,Cattle Feedlots,NO,NO,2
+"Solvay Chemicals, Inc. - Longview",Cowlitz,"3500 Industrial Way Longview, WA 98632",44254,0,44254,0,0,0,0,0,0,"(46.137218, -122.982847)",Chemicals,Hydrogen Production,NO,YES,2
+Sonoco Products Company - Sumner,Pierce,"1802 Steele Avenue Sumner, WA 98390-1606",11464,0,11452,6,7,0,0,0,0,"(47.210641, -122.239474)",Pulp and Paper,Other Pulp and Paper,NO,YES,1
+Spectrum Glass Company - Woodinville,King,"24105 Snohomish-Woodinville Road Woodinville, WA 98072",10750,0,10740,5,5,0,0,0,0,"(47.777004, -122.148978)",Minerals,Glass Production,NO,YES,1
+Spokane Waste to Energy Facility - Spokane,Spokane,"2900 S Geiger Blvd Spokane, WA 99224",226238,121724,99530,1944,3041,0,0,0,0,"(47.626529, -117.504278)",Waste,Solid Waste Combustion,YES,NO,3
+Starbucks Kent Flexible Plant - Kent,King,"18411 77th Place South Kent, WA 98032",13542,0,13529,6,7,0,0,0,0,"(47.436276, -122.237648)",Food Production,Other Food Products,NO,NO,1
+Tacoma City Solid Waste Facility - Tacoma,Pierce,"3510 South Mullen Street Tacoma, WA 98409",14812,0,0,14812,0,0,0,0,0,"(47.223413, -122.499775)",Waste,Municipal Landfills,NO,NO,1
+Terrace Heights Landfill - Yakima,Yakima,"7151 Roza Hill Drive Yakima, WA 98901",109385,0,26,109359,0,0,0,0,0,"(46.610031, -120.39408)",Waste,Municipal Landfills,YES,NO,3
+Tesoro Refining & Marketing Company LLC - Anacortes,Skagit,"10200 West March Point Road Anacortes, WA 98221",1280696,0,1275098,2387,3212,0,0,0,0,"(48.493816, -122.564845)",Refineries,Petroleum Refineries,YES,NO,4
+The Boeing Company - Auburn,King,"700 15th Street SW Auburn, WA 98001",36058,0,36021,17,20,0,0,0,0,"(47.285551, -122.242298)",Manufacturing,Transportation,NO,YES,2
+The Boeing Company - Renton,King,"737 Logan Avenue N. Renton, WA 98055",17191,0,17174,8,10,0,0,0,0,"(47.498257, -122.211346)",Manufacturing,Transportation,NO,YES,1
+The Boeing Company: Boeing Plant 2 - Seattle,King,"7755 E. Marginal Way S. Seattle, WA 98108",21499,0,21477,10,12,0,0,0,0,"(47.532524, -122.311623)",Manufacturing,Transportation,NO,YES,1
+The Boeing Company: DC/MFC - Seattle,King,"9725 East Marginal Way South Seattle, WA 98108",15614,0,15598,7,9,0,0,0,0,"(47.516246, -122.298613)",Manufacturing,Transportation,NO,YES,1
+TransAlta Centralia Generation LLC - Centralia,Lewis,"913 Big Hanaford Road Centralia, WA 98531",5665101,0,5619677,16615,28808,0,0,0,0,"(46.7559, -122.8578)",Power Plants,Coal Plants,NO,NO,5
+"Tyson Fresh Meats, Inc. - Wallula",Walla Walla,"13983 Dodd Road Wallula, WA 99363",74580,0,20808,53760,12,0,0,0,0,"(46.137521, -118.913051)",Food Production,Meat Products,YES,YES,2
+U.S. Department of Energy Hanford Site - Richland,Benton,"825 Jadwin Avenue Richland, WA 99352",15494,0,5571,9912,10,0,0,0,0,"(46.55069, -119.489007)",Government,Other Government,NO,NO,1
+U.S. Oil & Refining Co. - Tacoma,Pierce,"3001 Marshall Ave Tacoma, WA 98421",128434,0,127452,952,30,0,0,0,0,"(47.256813, -122.394952)",Refineries,Petroleum Refineries,YES,NO,3
+University of Washington Seattle Campus - Seattle,King,"47.6562, -122.3041 Seattle, WA 98195-4400",82430,0,82345,39,46,0,0,0,0,"(47.653614, -122.303608)",Government,Education,YES,NO,2
+US Army Joint Base Lewis-McChord - Pierce Co.,Pierce,"2012 Liggett Ave Joint Base Lewis-McChord, WA 98433-9500",78742,0,56073,22633,35,0,0,0,0,"(47.1142, -122.5365)",Government,National Security,YES,NO,2
+"Vaagen Bros. Lumber, Inc. - Colville",Stevens,"565 West 5th Avenue Colville, WA 99114",44422,43836,0,84,501,0,0,0,0,"(48.548525, -117.915469)",Wood Products,Lumber Mills,NO,NO,2
+Vertellus Performance Chemicals LLC - Elma,Grays Harbor,"4800 State Route 12 Elma, WA 98541",17600,0,17582,8,10,0,0,0,0,"(46.995459, -123.382316)",Chemicals,Other Chemicals,NO,YES,1
+WaferTech LLC - Camas,Clark,"5509 NW Parker St Camas, WA 98607",172725,0,13050,6,7177,10646,78165,39193,24486,"(45.619569, -122.454955)",Manufacturing,Electronics Manufacturing,YES,NO,3
+Washington State University - Pullman,Whitman,"2660 Grimes Way Pullman, WA 99164-1172",57370,0,57309,28,34,0,0,0,0,"(46.728702, -117.151481)",Government,Education,NO,NO,2
+Waste Management Greater Wenatchee Regional Landfill - East Wenatchee,Douglas,"191 Webb Road East Wenatchee, WA 98802",31208,0,0,31208,0,0,0,0,0,"(47.405083, -120.167444)",Waste,Municipal Landfills,NO,NO,2
+Weyerhaeuser Raymond Lumber - Raymond,Pacific,"51 Ellis Street Raymond, WA 98577",46229,45632,0,86,511,0,0,0,0,"(46.688088, -123.737495)",Wood Products,Lumber Mills,NO,NO,2

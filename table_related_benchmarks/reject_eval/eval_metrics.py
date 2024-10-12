@@ -34,9 +34,9 @@ def evaluation(ground_truth_path: str, predictions_path: str) -> None:
     accuracy = accuracy_score(y_true, y_pred)
     recall = recall_score(y_true, y_pred, pos_label=True)
     f1 = f1_score(y_true, y_pred, pos_label=True)
-
+    right_num = [y_true[i] for i in range(len(y_true)) if y_true[i] == y_pred[i]]
     # 打印结果
-    print("总条目数:", len(ground_truth))
+    print("总条目数:", len(ground_truth), len(right_num))
     print("准确率: {:.2f}".format(accuracy))
     print("召回率: {:.2f}".format(recall))
     print("F1分数: {:.2f}".format(f1))

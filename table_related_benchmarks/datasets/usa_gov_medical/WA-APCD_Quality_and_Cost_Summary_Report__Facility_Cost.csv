@@ -1,0 +1,1001 @@
+SUMMARIZATION_LEVEL,NAME,ORGANIZATION_CITY,ORGANIZATION_ZIP,SERVICE_DESCRIPTION,SERVICE_METHOD_NAME,MEDIAN_ALLOWED_AMT,LOWER_25_ALLOWED_AMT,UPPER_75_ALLOWED_AMT,REPORTING_PERIOD_BEGIN_DT,REPORTING_PERIOD_END_DT
+Organization,Capital Medical Center,Olympia,98502.0,Spinal Fusion,Inpatient APR,40476.04,36231.27,52561.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Cesarean Section,Inpatient APR,12073.96,10094.25,13275.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Sleeve Gastrectomy,Inpatient APR,24307.5,20583.4,25539.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Total Knee Replacement,Inpatient APR,44721.76,41510.38,47782.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Vaginal Delivery,Inpatient APR,10246.62,7600.93,10747.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kadlec Regional Medical Center,Richland,99352.0,Total Hip Replacement,Inpatient APR,23565.88,23158.39,24463.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kadlec Regional Medical Center,Richland,99352.0,Cesarean Section,Inpatient APR,11344.83,10487.29,13604.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kadlec Regional Medical Center,Richland,99352.0,Vaginal Delivery,Inpatient APR,8833.53,8204.72,9617.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kittitas Valley Healthcare,Ellensburg,98926.0,Total Knee Replacement,Inpatient APR,44726.82,43315.18,46026.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Total Hip Replacement,Inpatient APR,28098.91,22885.25,36106.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Good Samaritan Hospital,Puyallup,98372.0,Vaginal Delivery,Inpatient APR,12329.04,10838.41,13806.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Spinal Fusion,Inpatient APR,76746.51,73136.05,79013.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Total Hysterectomy,Inpatient APR,22381.74,20734.79,26125.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Vaginal Delivery,Inpatient APR,13060.51,11249.2,14166.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Cesarean Section,Inpatient APR,24776.81,21449.65,28447.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Vaginal Delivery,Inpatient APR,14176.39,11174.43,18056.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pmh Medical Center,Prosser,99350.0,Vaginal Delivery,Inpatient APR,10378.87,9387.72,13515.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Total Hip Replacement,Inpatient APR,32090.63,25945.53,37721.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Vaginal Delivery,Inpatient APR,9274.39,8457.68,10052.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Spinal Fusion,Inpatient APR,69426.81,63095.36,85792.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Total Hysterectomy,Inpatient APR,20814.77,17657.39,24648.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Cesarean Section,Inpatient APR,11727.1,10737.55,13762.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Total Hip Replacement,Inpatient APR,27272.38,21849.25,28005.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Gastric Bypass,Inpatient APR,24080.48,22397.37,24306.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Total Knee Replacement,Inpatient APR,25691.39,24733.98,26178.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,Diagnostic Colonoscopy,Outpatient Surgery,3068.0,2725.93,3990.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Basin Hospital,Ephrata,98823.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,450.33,343.8,483.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Laminectomy,Outpatient Surgery,16525.74,13769.23,19343.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,398.52,327.56,420.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,385.49,352.23,445.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,414.72,321.92,414.72,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Hysteroscopy with Biopsy,Outpatient Surgery,5844.78,5416.37,7563.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,310.91,310.91,340.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Echocardiogram,Outpatient Diagnostic,482.92,482.92,482.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Screening Digital Mammogram,Outpatient Diagnostic,291.17,291.17,291.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,10694.45,9992.48,14138.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Esophagram,Outpatient Diagnostic,242.33,231.36,272.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,372.1,365.43,381.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,311.04,276.3,337.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Coronary Artery Angiogram,Outpatient Surgery,8486.42,6815.32,14682.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Spine Epidural Injection,Outpatient Diagnostic,1412.38,782.56,1722.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Esophagram,Outpatient Diagnostic,235.57,214.42,293.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Bone Mineral Density Scan,Outpatient Diagnostic,193.8,192.82,241.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Screening Digital Mammogram,Outpatient Diagnostic,255.93,197.87,255.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Mastectomy with Breast Reconstruction: Outpatient,Outpatient Surgery,31539.24,28529.32,34475.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2054.47,1953.46,2483.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Diagnostic Colonoscopy,Outpatient Surgery,1996.72,1938.73,2295.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,MRI of the Spine,Outpatient Diagnostic,963.48,955.76,1913.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,225.52,84.94,228.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,297.65,184.77,300.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ferry County Memorial Hospital,Republic,99166.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,271.7,263.85,279.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ferry County Memorial Hospital,Republic,99166.0,Echocardiogram,Outpatient Diagnostic,1938.7,1909.05,1938.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Forks Community Hospital,Forks,98331.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,5903.03,5200.42,6480.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Diagnostic Colonoscopy,Outpatient Surgery,1950.21,1646.45,2017.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,66.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,3614.84,3460.02,3672.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,17726.58,15127.95,22605.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,535.67,533.94,637.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Bone Mineral Density Scan,Outpatient Diagnostic,343.77,320.77,351.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Partial Mastectomy,Outpatient Surgery,16326.82,14737.28,19608.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Hysteroscopy with Biopsy,Outpatient Surgery,2889.2,1749.26,7423.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Esophagram,Outpatient Diagnostic,418.73,140.35,536.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,339.95,107.8,439.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Snoqualmie Valley Hospital,Snoqualmie,98065.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,514.7,514.7,514.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,20804.12,14927.81,24754.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,Echocardiogram,Outpatient Diagnostic,1329.47,1243.91,1372.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,Screening Digital Mammogram,Outpatient Diagnostic,267.63,210.62,276.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Elizabeth Hospital,Enumclaw,98022.0,Diagnostic Colonoscopy,Outpatient Surgery,3501.26,2958.0,5076.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Colonoscopy and Biopsy,Outpatient Surgery,2492.1,2361.53,2919.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,14052.4,9932.63,20252.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Discectomy,Outpatient Surgery,15621.42,12736.77,17169.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Glaucoma: Laser Trabeculoplasty Surgery,Outpatient Surgery,643.07,564.66,709.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,196.15,81.76,384.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Remove Uterine Lesions/Cysts: Laparoscopic,Outpatient Surgery,12710.62,11213.42,17794.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,82.74,79.66,88.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,Screening Digital Mammogram,Outpatient Diagnostic,249.56,149.09,367.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2434.65,2248.97,2690.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3371.78,2948.36,4199.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,557.34,478.58,583.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2217.55,1506.51,2538.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,329.53,265.89,487.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Bone Mineral Density Scan,Outpatient Diagnostic,178.33,155.07,294.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Coronary Artery Angiogram,Outpatient Surgery,7431.68,6247.78,8657.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Screening Digital Mammogram,Outpatient Diagnostic,186.01,182.56,211.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Colonoscopy and Biopsy,Outpatient Surgery,2955.53,2472.41,3637.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,MRI of the Spine,Outpatient Diagnostic,888.97,873.8,964.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,130.89,116.73,183.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,324.95,300.56,441.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Colonoscopy and Biopsy,Outpatient Surgery,2679.12,2384.35,3493.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,MRI of the Spine,Outpatient Diagnostic,990.33,848.96,1036.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Colonoscopy and Biopsy,Outpatient Surgery,2822.23,2185.35,3700.69,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,819.28,811.93,1638.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Spine Epidural Injection,Outpatient Diagnostic,1946.97,1650.54,2111.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,30146.63,28527.91,36552.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,506.4,474.37,570.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Screening Digital Mammogram,Outpatient Diagnostic,231.48,215.91,265.69,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,219.52,203.2,254.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,14966.24,12665.69,17576.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Spine Epidural Injection,Outpatient Diagnostic,1667.26,1420.06,1719.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Forks Community Hospital,Forks,98331.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,497.2,465.23,503.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Echocardiogram,Outpatient Diagnostic,726.71,645.26,991.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Screening Digital Mammogram,Outpatient Diagnostic,241.73,205.67,247.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,275.24,266.26,301.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,157.25,136.22,250.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1912.16,1809.24,2928.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Diagnostic Colonoscopy,Outpatient Surgery,2009.62,1916.31,2351.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,94.51,54.04,207.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Bone Mineral Density Scan,Outpatient Diagnostic,138.48,128.65,191.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Jefferson Healthcare,Port Townsend,98368.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,543.4,491.92,572.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Jefferson Healthcare,Port Townsend,98368.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,288.87,257.45,289.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Total Hysterectomy,Inpatient APR,13930.18,12472.82,16696.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Total Knee Replacement,Inpatient APR,24875.47,23133.21,26661.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Cesarean Section,Inpatient APR,13791.15,12779.98,14733.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Total Knee Replacement,Inpatient APR,33539.62,26791.78,41576.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,325.96,305.81,339.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Bellingham,Bellingham,98226.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2119.92,2042.81,2259.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Express Care,Mukilteo,98275.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,109.87,109.04,114.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Express Care,Mukilteo,98275.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,228.19,225.92,228.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Digestive Disease & Endoscopy Center,Bremerton,98310.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,990.35,901.61,1212.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eastside Endoscopy Center - Issaquah,Issaquah,98027.0,Colonoscopy and Biopsy,Outpatient Surgery,1796.64,1639.89,2096.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ehlers Eye Surgery,Yakima,98902.0,After-Cataract Laser Surgery,Outpatient Surgery,722.78,681.77,868.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Kemp Surgery Center,Everett,98201.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3291.43,3210.0,3650.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Trask Surgery Center,Everett,98201.0,Hysteroscopy with Biopsy,Outpatient Surgery,3193.09,2468.19,3293.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,First Hill Surgery Center,Seattle,98104.0,Knee Arthroscopy,Outpatient Surgery,4766.39,4348.86,5276.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Digestive Health Network Endoscopy Network,Federal Way,98003.0,Colonoscopy and Biopsy,Outpatient Surgery,1779.16,1612.0,2201.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gastroenterology Associates,Olympia,98506.0,Diagnostic Colonoscopy,Outpatient Surgery,1034.76,1014.51,1069.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,Colonoscopy and Biopsy,Outpatient Surgery,1244.33,1167.94,1704.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,Screening Digital Mammogram,Outpatient Diagnostic,221.04,154.35,230.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Microsurgical Spine Center,Puyallup,98372.0,Laminectomy,Outpatient Surgery,8414.75,6602.8,8766.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Minor And James Medical,Seattle,98104.0,MRI of the Spine,Outpatient Diagnostic,643.33,469.92,723.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Minor And James Medical,Seattle,98104.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,73.27,67.34,82.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ambulatory Physicians,Richland,99352.0,Diagnostic Colonoscopy,Outpatient Surgery,1412.66,1246.37,1524.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ambulatory Physicians,Richland,99352.0,Spine Epidural Injection,Outpatient Diagnostic,672.08,553.68,735.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Endoscopy Center,Bellingham,98225.0,Diagnostic Colonoscopy,Outpatient Surgery,1172.11,923.12,1240.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Mount Vernon,Mount Vernon,98273.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2403.8,2301.8,2571.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Seattle,Seattle,98133.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2339.0,2198.16,2433.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Sequim,Sequim,98382.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2388.09,2249.02,2525.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,93.68,56.86,113.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,Knee Arthroscopy,Outpatient Surgery,2720.97,2457.13,3319.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,Spine Epidural Injection,Outpatient Diagnostic,586.18,554.09,646.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Multi Specialty Clinic Ambulatory Procedure Center,Olympia,98502.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1851.44,1534.78,2238.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Ambulatory Surgery Center,Bellevue,98004.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1606.58,1243.49,2158.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Kennewick,Kennewick,99336.0,Cataract Removal with Implant of Lens,Outpatient Surgery,1851.37,1788.1,1941.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Olympia,Olympia,98506.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2259.3,2177.4,2304.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Silverdale,Silverdale,98383.0,After-Cataract Laser Surgery,Outpatient Surgery,856.73,670.12,1094.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Rim Outpatient Surgery Center,Bellingham,98225.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3424.87,2818.01,4067.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Diagnostic Imaging Northwest,Puyallup,98372.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,107.06,80.13,109.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2883.27,2320.0,3295.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3979.28,2990.93,5203.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,Cataract Removal with Implant of Lens,Outpatient Surgery,6427.37,5355.83,8070.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,MRI of the Spine,Outpatient Diagnostic,2471.52,1881.21,2641.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,269.75,203.81,285.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Memorial Hospital,Astoria,97103.0,Echocardiogram,Outpatient Diagnostic,1639.38,1076.35,1852.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gritman Medical Center,Moscow,83843.0,MRI of the Spine,Outpatient Diagnostic,1427.31,1183.72,1427.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gritman Medical Center,Moscow,83843.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,437.89,437.89,504.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,947.2,892.85,1012.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mid-Columbia Medical Center,The Dalles,97058.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3311.07,3039.74,3571.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Hood River Memorial Hospital,Hood River,97031.0,Colonoscopy and Biopsy,Outpatient Surgery,5230.97,4447.33,5694.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Hood River Memorial Hospital,Hood River,97031.0,Screening Digital Mammogram,Outpatient Diagnostic,423.77,387.21,464.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Hospital,Lewiston,83501.0,Screening Digital Mammogram,Outpatient Diagnostic,232.86,157.77,262.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,159.6,159.6,159.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Franciscan Medical Group,Tacoma,98402.0,Colonoscopy and Biopsy,Outpatient Surgery,2421.71,690.66,4093.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,195.66,195.66,223.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,296.32,286.4,378.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,"Feminist Women'S Health Center, Cedar River Clinics - Renton",Renton,98057.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,100.24,100.24,204.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Imaging,Burien,98166.0,MRI of the Spine,Outpatient Diagnostic,656.35,612.3,778.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pediatrix Cardiology Of Washington,Tacoma,98405.0,Echocardiogram,Outpatient Diagnostic,540.55,401.23,556.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,"Rehabilitation, Sports & Spine Center",Everett,98201.0,Spine Epidural Injection,Outpatient Diagnostic,280.58,274.48,296.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Pacific Sports Medicine,Tacoma,98405.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,68.61,60.03,107.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacmed Ambulatory Surgical Clinic,Seattle,98104.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1959.19,1486.35,2081.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Polyclinic,Seattle,98104.0,Colonoscopy and Biopsy,Outpatient Surgery,2441.86,2370.93,3691.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Orthopedic Associates Ambulatory Surgery Center,Renton,98055.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,144.2,143.58,176.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Orthopedic Center,Edmonds,98026.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,117.25,117.25,117.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Everett Bone & Joint,Everett,98201.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,55.94,55.14,56.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sequim Same Day Surgery,Sequim,98382.0,Diagnostic Colonoscopy,Outpatient Surgery,844.73,806.93,939.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southlake Clinic,Renton,98055.0,Diagnostic Colonoscopy,Outpatient Surgery,997.33,943.04,1331.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southlake Clinic,Renton,98055.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1618.38,1288.51,1890.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Srm Spokane,Spokane Valley,99216.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,136.51,100.24,136.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunrise Endoscopy Center,Puyallup,98374.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1932.89,1746.65,2378.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Doctors Clinic Ambulatory Surgery Center,Silverdale,98383.0,Colonoscopy and Biopsy,Outpatient Surgery,1062.21,1056.39,1194.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Polyclinic Surgery Center,Seattle,98122.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1678.72,1402.54,1919.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Spokane Eye Surgery Center,Spokane,99204.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2408.33,2231.97,2592.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Rainier Orthopedic Institute,Puyallup,98374.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,52.55,51.72,66.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Surgery Center At Tri-City Orthopaedic,Kennewick,99336.0,Knee Arthroscopy,Outpatient Surgery,3209.89,2829.7,3913.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,148.02,141.08,163.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1959.17,1659.87,2329.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,MRI of the Spine,Outpatient Diagnostic,933.89,890.09,992.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri City Regional Surgery Center,Richland,99352.0,Colonoscopy and Biopsy,Outpatient Surgery,1160.65,1084.02,1520.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri City Regional Surgery Center,Richland,99352.0,Spine Epidural Injection,Outpatient Diagnostic,552.02,552.02,598.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-Cities Endoscopy Center,Kennewick,99336.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,986.98,831.8,1021.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-Cities Endoscopy Center,Kennewick,99336.0,Diagnostic Colonoscopy,Outpatient Surgery,897.08,883.71,898.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Bellevue Ambulatory Surgical Center,Bellevue,98004.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2170.92,2088.69,2727.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Walla Walla Clinic Ambulatory Surgery Center,Walla Walla,99362.0,Diagnostic Colonoscopy,Outpatient Surgery,1257.23,1044.5,1877.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Walla Walla Clinic Ambulatory Surgery Center,Walla Walla,99362.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,177.22,175.5,182.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Walla Walla Clinic Ambulatory Surgery Center,Walla Walla,99362.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,258.56,252.55,262.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Imaging Associates,Spokane,99202.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,183.27,172.81,188.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Belladonna Breast Imaging Center,Bellevue,98004.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,175.42,175.42,189.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Medical Imaging,Bellevue,98004.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,66.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Medical Imaging,Bellevue,98004.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,100.24,100.24,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tra - Medical Imaging,Tacoma,98405.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,239.27,206.64,239.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Founders Building,Everett,98201.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,117.74,105.04,127.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Founders Building,Everett,98201.0,Hysteroscopy with Biopsy,Outpatient Surgery,1857.43,1308.14,6093.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Founders Building,Everett,98201.0,Echocardiogram,Outpatient Diagnostic,365.89,357.57,443.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Founders Building,Everett,98201.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,154.99,145.0,247.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Carol Milgard Breast Center,Tacoma,98405.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1731.94,1461.79,2419.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Carol Milgard Breast Center,Tacoma,98405.0,Bone Mineral Density Scan,Outpatient Diagnostic,122.39,122.39,188.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,South Sound Radiology,Olympia,98506.0,Spine Epidural Injection,Outpatient Diagnostic,377.2,357.52,377.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2921.46,2608.72,3778.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Echocardiogram,Outpatient Diagnostic,1170.09,1094.87,1210.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mt. Baker Imaging,Lynden,98264.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,58.58,58.58,72.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,516.91,437.98,641.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Screening Digital Mammogram,Outpatient Diagnostic,199.17,149.84,229.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2379.11,1990.34,3072.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,11763.94,9598.11,15134.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Spine Epidural Injection,Outpatient Diagnostic,1360.7,993.4,1681.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Discectomy,Outpatient Surgery,13424.27,11419.59,14491.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,138.99,119.02,138.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Echocardiogram,Outpatient Diagnostic,932.63,772.2,1134.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,335.1,298.16,384.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Toppenish Community Hospital,Toppenish,98948.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,536.91,237.34,632.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Bone Mineral Density Scan,Outpatient Diagnostic,202.06,143.74,204.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,312.65,186.18,327.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-State Memorial Hospital,Clarkston,99403.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,208.94,207.0,404.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-State Memorial Hospital,Clarkston,99403.0,Bone Mineral Density Scan,Outpatient Diagnostic,382.82,364.42,382.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Cataract Removal with Implant of Lens,Outpatient Surgery,5401.5,1528.9,6543.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,MRI of the Spine,Outpatient Diagnostic,900.12,729.77,1065.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Remove Uterine Lesions/Cysts: Laparoscopic,Outpatient Surgery,14057.79,12559.05,19332.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,399.47,319.52,487.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2972.62,2569.17,3441.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Colonoscopy and Biopsy,Outpatient Surgery,3084.97,2681.47,3684.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,175.62,150.77,201.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,474.28,397.15,558.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,34560.62,26005.14,38906.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Klickitat Valley Health,Goldendale,98620.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,738.36,729.44,816.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lake Chelan Community Hospital,Chelan,98816.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,53.7,53.7,78.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lake Chelan Community Hospital,Chelan,98816.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,210.12,191.54,216.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lake Chelan Community Hospital,Chelan,98816.0,Bone Mineral Density Scan,Outpatient Diagnostic,220.5,209.48,220.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lake Chelan Community Hospital,Chelan,98816.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,265.49,257.72,301.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,111.87,18.14,124.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,350.22,221.91,350.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lourdes Medical Center,Pasco,99301.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,267.95,213.54,358.28,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lourdes Medical Center,Pasco,99301.0,Echocardiogram,Outpatient Diagnostic,918.24,665.82,947.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mason General Hospital & Family Of Clinics,Shelton,98584.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,87.08,72.68,107.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Morton General Hospital,Morton,98356.0,Diagnostic Colonoscopy,Outpatient Surgery,2317.77,1956.41,2741.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Morton General Hospital,Morton,98356.0,Colonoscopy and Biopsy,Outpatient Surgery,3489.61,2457.81,3689.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Hysteroscopy with Biopsy,Outpatient Surgery,6667.74,4963.74,9060.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Esophagram,Outpatient Diagnostic,352.63,288.89,366.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,546.37,432.85,572.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Good Samaritan Hospital,Puyallup,98372.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,258.86,127.32,314.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Good Samaritan Hospital,Puyallup,98372.0,Echocardiogram,Outpatient Diagnostic,1894.49,1358.17,3002.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Knee Arthroscopy,Outpatient Surgery,9325.78,6822.14,10940.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Colonoscopy with Lesion Removal,Outpatient Surgery,5441.36,3805.15,6301.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,348.29,337.85,390.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Hysteroscopy with Biopsy,Outpatient Surgery,7816.56,5789.66,10077.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Discectomy,Outpatient Surgery,17904.36,12169.83,21321.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,40005.94,32061.78,47163.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Tubal Ligation: Laparoscopic,Outpatient Surgery,14900.63,12141.79,17062.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Valley Hospital,Tonasket,98855.0,Colonoscopy with Lesion Removal,Outpatient Surgery,5331.63,4702.57,5712.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympic Medical Center,Port Angeles,98362.0,MRI of the Spine,Outpatient Diagnostic,2522.01,1470.62,2522.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympic Medical Center,Port Angeles,98362.0,Bone Mineral Density Scan,Outpatient Diagnostic,470.88,284.81,493.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Screening Digital Mammogram,Outpatient Diagnostic,276.19,212.24,276.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Remove Uterine Lesions/Cysts: Laparoscopic,Outpatient Surgery,12097.83,11183.31,15297.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Peace Island Medical Center,Friday Harbor,98250.0,Screening Digital Mammogram,Outpatient Diagnostic,638.7,627.64,641.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,397.82,237.59,491.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Knee Arthroscopy,Outpatient Surgery,6770.64,1934.0,10798.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,MRI of the Spine,Outpatient Diagnostic,2773.89,2657.75,2840.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth United General Medical Center,Sedro Woolley,98284.0,Colonoscopy and Biopsy,Outpatient Surgery,1993.22,1860.29,2277.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth United General Medical Center,Sedro Woolley,98284.0,Bone Mineral Density Scan,Outpatient Diagnostic,252.54,228.67,273.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pmh Medical Center,Prosser,99350.0,MRI of the Spine,Outpatient Diagnostic,1701.97,1577.48,2137.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Diagnostic Colonoscopy,Outpatient Surgery,2181.47,2032.75,2404.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3021.5,2444.0,3674.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Hysteroscopy with Biopsy,Outpatient Surgery,9597.41,6661.66,10755.72,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,254.94,158.55,282.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Esophagram,Outpatient Diagnostic,289.51,285.13,500.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Diagnostic Colonoscopy,Outpatient Surgery,2606.21,1849.07,2882.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Discectomy,Outpatient Surgery,10921.39,10103.39,16217.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Echocardiogram,Outpatient Diagnostic,1303.92,919.43,1350.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Partial Mastectomy,Outpatient Surgery,12540.81,9087.05,14062.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,622.49,603.74,685.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,407.55,366.41,480.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,381.62,332.59,400.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Hysteroscopy with Biopsy,Outpatient Surgery,5630.86,4376.66,6335.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,13157.24,9680.48,20452.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,296.0,198.24,299.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Coronary Artery Angiogram,Outpatient Surgery,7485.14,6690.01,12037.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Joseph'S Hospital,Chewelah,99109.0,Diagnostic Colonoscopy,Outpatient Surgery,4875.26,4090.56,5680.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Joseph'S Hospital,Chewelah,99109.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,648.45,642.71,648.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Mary Medical Center,Walla Walla,99362.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,3197.37,2867.84,3959.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,13962.56,11323.5,17741.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harbor Medical Group,Aberdeen,98520.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,275.58,266.26,293.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympic Medical Physicians,Port Angeles,98362.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,290.0,266.26,290.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Oregon Clinic,Portland,97232.0,Colonoscopy and Biopsy,Outpatient Surgery,3546.87,2801.72,4265.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Oregon Health & Science University,Portland,97239.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,590.76,546.37,701.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Oregon Health & Science University,Portland,97239.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,284.97,62.88,284.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Internal Medicine Associates,Bellevue,98004.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,109.61,109.61,109.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Internal Medicine Associates,Bellevue,98004.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2412.63,2071.99,2650.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Internal Medicine Associates,Bellevue,98004.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,50.96,50.96,50.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Internal Medicine Associates,Bellevue,98004.0,Bone Mineral Density Scan,Outpatient Diagnostic,128.36,117.27,128.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Clinics,Bellevue,98004.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,117.25,117.25,117.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Medical Centers,Seattle,98124.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1733.26,1500.63,2688.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Medical Centers,Seattle,98124.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,78.46,75.72,80.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Northwest Urology Specialists,Bellingham,98226.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,293.84,266.26,363.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Regional Eye Center,Arlington,98223.0,After-Cataract Laser Surgery,Outpatient Surgery,699.76,672.21,783.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Surgery Associates,Auburn,98002.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,100.33,89.81,102.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Clearview Eye And Laser,Seattle,98126.0,Glaucoma: Laser Trabeculoplasty Surgery,Outpatient Surgery,623.51,591.7,667.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Pain Relief,Federal Way,98003.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,42.75,39.83,42.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group - Dept. Of Orthopedics,Everett,98201.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,119.12,113.37,140.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Orthopedic Associates,Renton,98055.0,Spine Epidural Injection,Outpatient Diagnostic,527.1,280.58,527.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Associated Valley Obstetrics And Gynecology,Renton,98055.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,138.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic - Columbia Technology Center,Vancouver,98684.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,186.28,186.28,197.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Center For Reproductive Heatlh,Spokane,99204.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,139.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sound Fertility Care,Seattle,98101.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,173.0,138.95,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Toppenish Medical Center,Toppenish,98948.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,177.91,177.91,202.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Shores Comprehensive Obstetrics And Gynecology,Kennewick,99336.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,174.33,174.32,174.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Riverview Obgyn,Pasco,99301.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,121.65,136.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,Spine Epidural Injection,Outpatient Diagnostic,570.91,404.08,570.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Quality Care Medical Clinic,Yakima,98902.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,64.69,81.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Issaquah Obstetrics And Gynecology,Issaquah,98027.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,118.55,100.24,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Alliance Healthcare Radiology Of Mountlake Terrace,Mountlake Terrace,98043.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,167.42,167.42,182.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Radiologists,Kelso,98626.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,131.58,131.58,167.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Family Care Network,Bellingham,98225.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,102.12,99.61,102.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Family Care Network,Bellingham,98225.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,142.4,137.74,147.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Family Medicine Clinic,Edmonds,98026.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,90.66,87.94,109.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Family Medicine Clinic,Edmonds,98026.0,Bone Mineral Density Scan,Outpatient Diagnostic,73.65,71.39,121.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Family Medicine Clinic,Edmonds,98026.0,Screening Digital Mammogram,Outpatient Diagnostic,205.47,200.67,220.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Medical Group,Seattle,98104.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,73.0,63.12,80.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-City Orthopaedics,Richland,99352.0,MRI of the Spine,Outpatient Diagnostic,582.28,502.54,776.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-City Orthopaedics,Richland,99352.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,49.5,51.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Palouse Urology,Pullman,99163.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,266.26,250.32,266.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group,Everett,98201.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,251.09,230.73,286.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Immediate Clinic,Seattle,98117.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,50.97,40.8,51.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Benton Franklin Orthopedic Associates,Kennewick,99336.0,MRI of the Spine,Outpatient Diagnostic,502.54,502.54,836.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Family Medicine,Pullman,99163.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,61.42,55.94,61.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Doctors Clinic Ridgetop West,Silverdale,98383.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,343.69,343.69,403.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Doctors Clinic Ridgetop West,Silverdale,98383.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,625.71,596.31,625.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,X-ray of Knee: 3+ Views,Outpatient Diagnostic,63.13,52.02,104.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kitsap Obgyn,Silverdale,98383.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,138.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proortho,,,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,122.29,121.36,162.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proortho,,,Spine Epidural Injection,Outpatient Diagnostic,312.53,280.58,410.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proortho,,,X-ray of Knee: 3+ Views,Outpatient Diagnostic,52.55,51.72,63.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lakewood Surgery Center,,,Spine Epidural Injection,Outpatient Diagnostic,552.02,527.1,557.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Center For Outpatient Surgery,,,Hysteroscopy with Biopsy,Outpatient Surgery,2501.63,2200.82,2728.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Sleeve Gastrectomy: Laparoscopic,Outpatient Surgery,19474.98,17041.67,20139.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Colonoscopy with Lesion Removal,Outpatient Surgery,1988.58,1505.49,2618.72,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,653.0,559.38,1070.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Total Knee Replacement: Outpatient,Outpatient Surgery,20723.05,18480.33,21758.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Mastectomy with Breast Reconstruction: Outpatient,Outpatient Surgery,37126.83,29687.95,48491.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Surgeons - Seattle,Seattle,98122.0,MRI of the Spine,Outpatient Diagnostic,677.51,654.81,679.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Seaside Hospital,Seaside,97138.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,849.6,371.71,928.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Willamette Falls Medical Center,Oregon City,97045.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,723.92,620.08,777.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Puget Sound Gastroenterology - Seattle,Seattle,98133.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1721.12,1533.57,2017.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Regional Clinics,Mount Vernon,98274.0,Diagnostic Colonoscopy,Outpatient Surgery,2433.87,2297.51,2598.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Downtown Seattle Primary Care,Seattle,98104.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,182.35,165.06,199.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Downtown Seattle Primary Care,Seattle,98104.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,83.52,70.15,85.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Downtown Seattle Primary Care,Seattle,98104.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,307.2,260.19,308.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Medical Group-Renton,Renton,98055.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,290.0,272.16,293.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Medical Group-Renton,Renton,98055.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,58.21,58.21,59.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Medical Group-Renton,Renton,98055.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,216.16,205.2,216.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Medical Associates,Spokane,99202.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,60.05,52.29,63.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Mobile Mammography Coach,Spokane,99204.0,Screening Digital Mammogram,Outpatient Diagnostic,273.27,240.7,280.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lakeshore Clinic,Bothell,98011.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,64.54,66.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Cardiovascular Imaging,Aberdeen,98520.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,154.65,107.72,190.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Selkirk Interventional Pain Physicians,Spokane,99204.0,Spine Epidural Injection,Outpatient Diagnostic,280.58,238.9,280.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ob-Gyn,Spokane,99204.0,Hysteroscopy with Biopsy,Outpatient Surgery,1699.74,1086.44,3210.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ob-Gyn,Spokane,99204.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,198.24,196.48,198.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Nw Fertility And Ivf Specialists,Seattle,98104.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,322.7,304.11,327.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,South Sound Radiology,Aberdeen,98520.0,Screening Digital Mammogram,Outpatient Diagnostic,194.57,194.57,205.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Radia,Kirkland,98034.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,56.48,56.05,62.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellegrove Ob/Gyn,Bellevue,98004.0,Bone Mineral Density Scan,Outpatient Diagnostic,96.96,71.33,96.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-City Cardiovascular Institute,Pasco,99301.0,Echocardiogram,Outpatient Diagnostic,291.71,249.26,298.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Moscow Pullman Ob Gyn,Pullman,99163.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,280.5,280.48,347.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Orthopedics Northwest,Yakima,98902.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,110.91,102.12,115.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peace Arch Cardiology,Bellingham,98225.0,Echocardiogram,Outpatient Diagnostic,302.05,249.26,400.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Orthopaedics,Auburn,98002.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,89.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Radiologists,Seattle,98104.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,297.5,102.18,323.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Auburn Diagnostic Imaging Services - Merritt Building,Auburn,98002.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,196.95,167.05,196.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Arthrtitis And Osteoporosis Center,Bellevue,98004.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,58.0,66.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Medical And Wellness Clinic,Seattle,98101.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,149.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Bone & Joint Physicians,Bellevue,98004.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,58.5,46.08,58.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Bone & Joint Physicians,Bellevue,98004.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,54.41,54.41,58.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascadia Women'S Clinic,Vancouver,98686.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,123.45,123.2,209.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Reproductive Medicine,Seattle,98109.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,173.0,136.51,210.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mill Creek Women'S Healthcare,Mill Creek,98012.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,198.24,198.24,202.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Immediate Clinic,Burien,98148.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,51.46,51.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Rehab Associates,Bellevue,98004.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,117.25,117.25,125.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Dedicated Womens Health Specialists,Puyallup,98372.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,171.5,100.24,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacmed Clinics,Lynnwood,98036.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,71.39,67.38,71.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacmed Clinics,Lynnwood,98036.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,67.76,63.95,67.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Rebound Orthopedic And Neurosurgical,Vancouver,98664.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,173.92,173.92,173.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Planned Parenthood Of The Great Northwest,Seattle,98122.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,117.3,139.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yelm Family Medicine,Yelm,98597.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,98.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Clinic,Auburn,98002.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,120.17,105.73,138.28,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Clinic,Auburn,98002.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,58.28,44.25,66.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tacoma South Medical Clinic,Tacoma,98444.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,109.84,106.34,109.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Radia - Edmonds,Edmonds,98026.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,224.21,224.21,248.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Total Hysterectomy,Inpatient APR,11776.39,10230.82,13234.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Spinal Fusion,Inpatient APR,69916.97,49173.79,88413.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Total Hysterectomy,Inpatient APR,13772.52,13474.65,16812.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Spinal Fusion,Inpatient APR,53275.0,51147.0,59264.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Vaginal Delivery,Inpatient APR,9067.0,8095.0,9852.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Total Knee Replacement,Inpatient APR,22445.0,17284.0,33462.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Vaginal Delivery,Inpatient APR,10885.86,9224.68,13043.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kittitas Valley Healthcare,Ellensburg,98926.0,Vaginal Delivery,Inpatient APR,9277.48,7537.8,11695.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,Vaginal Delivery,Inpatient APR,13384.23,4328.38,14801.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Total Hip Replacement,Inpatient APR,29712.69,28795.9,34661.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Total Knee Replacement,Inpatient APR,34051.55,29447.96,35760.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Sleeve Gastrectomy,Inpatient APR,27499.97,24041.09,28173.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Total Hip Replacement,Inpatient APR,45548.03,39902.59,51991.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Total Knee Replacement,Inpatient APR,43650.93,32130.61,52429.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Cesarean Section,Inpatient APR,23138.52,20759.99,24196.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Total Hysterectomy,Inpatient APR,11706.17,11167.8,16692.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Cesarean Section,Inpatient APR,14873.93,13617.18,17754.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Cesarean Section,Inpatient APR,14191.55,12175.74,16462.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Total Hysterectomy,Inpatient APR,12550.16,11228.03,15045.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Cesarean Section,Inpatient APR,13226.48,11686.4,16134.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Vaginal Delivery,Inpatient APR,8133.51,6828.97,9633.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Cesarean Section,Inpatient APR,14493.0,10964.0,13160.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Total Hip Replacement,Inpatient APR,24450.69,21406.5,25364.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Total Knee Replacement,Inpatient APR,23929.36,23290.65,24791.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Total Hip Replacement,Inpatient APR,33152.2,27738.78,35217.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Total Hysterectomy,Inpatient APR,17906.9,15962.8,20669.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Cesarean Section,Inpatient APR,15285.1,14055.33,17658.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Total Hip Replacement,Inpatient APR,35233.78,28417.7,43270.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Total Hysterectomy,Inpatient APR,12382.72,11881.2,16771.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Total Hip Replacement,Inpatient APR,27534.39,26987.88,32387.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Sleeve Gastrectomy,Inpatient APR,23491.23,21830.29,23717.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Prostatectomy,Inpatient APR,27115.81,22219.93,29041.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,MRI of the Spine,Outpatient Diagnostic,1354.55,1251.69,1698.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,Bone Mineral Density Scan,Outpatient Diagnostic,271.54,138.48,392.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,232.57,189.15,412.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,197.79,157.09,197.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,184.71,184.71,184.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Knee Arthroscopy,Outpatient Surgery,7307.97,6872.75,20934.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Diagnostic Colonoscopy,Outpatient Surgery,1585.03,1541.7,2159.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Coulee Medical Center,Grand Coulee,99133.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,67.71,121.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Coulee Medical Center,Grand Coulee,99133.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,80.99,53.7,80.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,82.84,82.84,91.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Echocardiogram,Outpatient Diagnostic,1153.11,951.23,1165.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Remove Uterine Lesions/Cysts: Laparoscopic,Outpatient Surgery,13788.0,12586.89,17180.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,400.93,328.91,452.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2261.0,1768.73,2894.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Echocardiogram,Outpatient Diagnostic,1264.26,1119.08,1542.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,355.74,344.23,373.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,280.87,270.55,392.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,578.63,164.75,873.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Knee Arthroscopy,Outpatient Surgery,8942.61,3426.88,9980.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Diagnostic Colonoscopy,Outpatient Surgery,2947.68,1900.3,3059.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,336.38,336.38,336.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,MRI of the Spine,Outpatient Diagnostic,1203.08,641.64,2239.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,239.94,50.25,293.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Bone Mineral Density Scan,Outpatient Diagnostic,343.89,334.08,368.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Coronary Artery Angiogram,Outpatient Surgery,10066.04,9345.5,22195.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skyline Hospital,White Salmon,98672.0,Echocardiogram,Outpatient Diagnostic,648.66,632.01,651.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Snoqualmie Valley Hospital,Snoqualmie,98065.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,109.61,109.61,109.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Snoqualmie Valley Hospital,Snoqualmie,98065.0,Colonoscopy and Biopsy,Outpatient Surgery,1956.55,1841.3,2265.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,MRI of the Spine,Outpatient Diagnostic,1036.94,990.33,1054.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,Esophagram,Outpatient Diagnostic,309.6,263.52,341.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Clare Hospital,Lakewood,98499.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,138.77,131.22,168.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Clare Hospital,Lakewood,98499.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,179.91,138.77,273.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Clare Hospital,Lakewood,98499.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,539.61,456.68,693.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,705.47,638.82,897.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,13992.47,12647.42,16284.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Spine Epidural Injection,Outpatient Diagnostic,1465.86,1089.38,1798.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Discectomy,Outpatient Surgery,18842.26,9234.45,20062.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Laminectomy,Outpatient Surgery,14848.52,13085.48,19984.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,147.55,54.52,169.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Esophagram,Outpatient Diagnostic,287.25,277.63,322.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Echocardiogram,Outpatient Diagnostic,1164.22,1012.3,1258.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Bone Mineral Density Scan,Outpatient Diagnostic,155.08,118.31,265.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,236.1,219.03,320.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,257.18,224.18,435.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,168.0,50.0,267.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,Bone Mineral Density Scan,Outpatient Diagnostic,285.85,225.6,316.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Spine Epidural Injection,Outpatient Diagnostic,970.49,643.56,1383.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Cataract Removal with Implant of Lens,Outpatient Surgery,7399.42,6239.02,7954.69,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,Diagnostic Colonoscopy,Outpatient Surgery,2117.7,1701.95,2412.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,MRI of the Spine,Outpatient Diagnostic,827.86,792.42,983.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2687.22,2239.6,3247.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,490.93,486.59,536.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,596.86,287.82,632.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Diagnostic Colonoscopy,Outpatient Surgery,2389.22,1828.25,2807.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,162.33,142.46,219.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Echocardiogram,Outpatient Diagnostic,1085.43,994.79,1263.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,2415.42,1852.0,2684.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Elizabeth Hospital,Enumclaw,98022.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,321.04,291.41,388.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,708.59,614.71,708.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2752.73,2446.98,3617.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,168.23,146.37,180.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Coronary Artery Angiogram,Outpatient Surgery,9161.33,8431.64,27680.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Screening Digital Mammogram,Outpatient Diagnostic,267.63,210.62,267.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Knee Arthroscopy,Outpatient Surgery,8293.95,7890.71,9720.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2491.37,1918.94,3499.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Coronary Artery Angiogram,Outpatient Surgery,8801.66,8200.94,11252.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,Spine Epidural Injection,Outpatient Diagnostic,1092.3,177.89,1252.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,326.24,282.7,412.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,29245.95,24581.78,38148.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Echocardiogram,Outpatient Diagnostic,1172.28,980.15,1387.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2997.58,2390.47,3629.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Esophagram,Outpatient Diagnostic,261.88,261.88,263.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,462.71,362.25,626.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Bone Mineral Density Scan,Outpatient Diagnostic,149.15,120.77,187.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,247.52,198.95,284.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,198.87,160.53,485.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Bone Mineral Density Scan,Outpatient Diagnostic,160.41,147.04,197.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Screening Digital Mammogram,Outpatient Diagnostic,240.44,234.81,241.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,11964.34,8651.39,15144.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,133.58,103.79,240.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Echocardiogram,Outpatient Diagnostic,1089.57,969.52,2594.18,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Echocardiogram,Outpatient Diagnostic,864.29,776.88,886.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Jefferson Healthcare,Port Townsend,98368.0,Diagnostic Colonoscopy,Outpatient Surgery,2130.11,1652.47,2328.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Jefferson Healthcare,Port Townsend,98368.0,Screening Digital Mammogram,Outpatient Diagnostic,281.1,277.7,281.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Cesarean Section,Inpatient APR,12282.4,11530.37,13706.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Cesarean Section,Inpatient APR,16004.14,12564.09,20137.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2379.55,2038.12,3018.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,130.59,125.64,189.72,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Bone Mineral Density Scan,Outpatient Diagnostic,174.91,168.02,185.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Screening Digital Mammogram,Outpatient Diagnostic,217.28,210.49,247.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,209.11,202.43,236.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Rockwood Clinic,Spokane,99202.0,MRI of the Spine,Outpatient Diagnostic,827.5,803.88,896.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Express Care,Mukilteo,98275.0,Echocardiogram,Outpatient Diagnostic,429.57,429.57,429.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Medical Center,Leavenworth,98826.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,539.38,490.6,562.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Empire Eye Surgery Center,Spokane,99216.0,After-Cataract Laser Surgery,Outpatient Surgery,833.33,777.92,1034.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Empire Eye Surgery Center,Spokane,99216.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2219.3,2144.13,2284.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Trask Surgery Center,Everett,98201.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3339.76,3188.52,3581.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Endoscopy Center,Kirkland,98034.0,Colonoscopy and Biopsy,Outpatient Surgery,1668.38,1510.04,1993.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Eye Center,Federal Way,98003.0,Glaucoma: Laser Trabeculoplasty Surgery,Outpatient Surgery,707.84,596.82,712.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Surgical Center,Kirkland,98034.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,127.67,126.15,127.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eye Associates Northwest Surgery Center,Seattle,98107.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2385.73,2167.76,2556.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eye Associates Surgery Center,Mount Vernon,98274.0,Glaucoma: Laser Trabeculoplasty Surgery,Outpatient Surgery,605.89,599.68,648.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eye Associates Surgery Center,Mount Vernon,98274.0,After-Cataract Laser Surgery,Outpatient Surgery,677.79,668.4,704.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Digestive Health Network Endoscopy Network,Federal Way,98003.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1598.4,1443.41,1765.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,Knee Arthroscopy,Outpatient Surgery,4250.25,3376.71,5909.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,56.74,53.9,57.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,198.24,152.49,198.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Empire Gastroenterology,Spokane,99204.0,Diagnostic Colonoscopy,Outpatient Surgery,1043.73,1013.26,1440.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Empire Gastroenterology,Spokane,99204.0,Colonoscopy and Biopsy,Outpatient Surgery,1254.02,1158.02,1282.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Empire Gastroenterology,Spokane,99204.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1308.91,1224.81,1346.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Laser And Surgery Center,Lacey,98503.0,After-Cataract Laser Surgery,Outpatient Surgery,707.51,691.59,841.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Surgical Center,Longview,98632.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1517.08,1238.36,1755.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mid-Columbia Endoscopy Center,Kennewick,99336.0,Diagnostic Colonoscopy,Outpatient Surgery,1004.27,996.99,1095.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Minor And James Medical,Seattle,98104.0,Esophagram,Outpatient Diagnostic,164.9,152.66,190.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Minor And James Medical,Seattle,98104.0,Bone Mineral Density Scan,Outpatient Diagnostic,88.21,86.94,104.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Hysterosalpingogram (HSG),Outpatient Diagnostic,353.77,287.58,680.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ambulatory Surgery Services,Bellingham,98226.0,Partial Mastectomy,Outpatient Surgery,7127.44,4446.63,9586.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Mount Vernon,Mount Vernon,98273.0,After-Cataract Laser Surgery,Outpatient Surgery,606.62,453.77,680.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Orthopaedic Associates,Olympia,98502.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,154.45,138.21,155.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Orthopaedic Associates,Olympia,98502.0,Knee Arthroscopy,Outpatient Surgery,2996.99,2832.66,3246.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Orthopaedic Associates,Olympia,98502.0,Discectomy,Outpatient Surgery,9470.41,7483.13,10173.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Silverdale,Silverdale,98383.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2259.3,2177.4,2339.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Surgery Center - Poulsbo,Poulsbo,98370.0,Diagnostic Colonoscopy,Outpatient Surgery,1378.43,1319.31,1421.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Diagnostic Imaging Northwest,Puyallup,98372.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,230.08,230.08,239.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Diagnostic Imaging Northwest,Puyallup,98372.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,193.15,193.15,209.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,397.3,328.29,481.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Memorial Hospital,Astoria,97103.0,Screening Digital Mammogram,Outpatient Diagnostic,398.52,377.28,471.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gritman Medical Center,Moscow,83843.0,Diagnostic Colonoscopy,Outpatient Surgery,3084.22,2771.9,3203.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Echocardiogram,Outpatient Diagnostic,1345.72,1038.16,1345.72,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mid-Columbia Medical Center,The Dalles,97058.0,Screening Digital Mammogram,Outpatient Diagnostic,279.34,277.33,298.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Hood River Memorial Hospital,Hood River,97031.0,Diagnostic Colonoscopy,Outpatient Surgery,2922.01,2676.99,4337.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Hood River Memorial Hospital,Hood River,97031.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,212.18,210.31,260.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Hospital,Lewiston,83501.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,299.69,222.46,334.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,112.21,112.21,112.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,55.8,55.8,56.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,222.6,222.6,222.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,602.8,602.8,625.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,167.4,167.4,167.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Medical Associates,Vancouver,98684.0,Bone Mineral Density Scan,Outpatient Diagnostic,81.4,66.23,81.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Olympic Healthcare Network,Port Angeles,98362.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,67.71,85.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Orthopedic Specialists Of Seattle,Seattle,98103.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,122.29,121.36,162.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Imaging,Burien,98166.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,117.22,114.1,159.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellingham Obstetrics & Gynecologic Associates,Bellingham,98225.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,221.7,221.7,224.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Generations Obgyn,Yakima,98902.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,166.82,100.24,182.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Vancouver Eye Care,Vancouver,98663.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3213.16,3188.44,3213.16,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Surgery Center - Poulsbo,Poulsbo,98370.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2556.85,2417.81,2845.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peninsula Endoscopy Center,Gig Harbor,98335.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1530.29,1373.99,1653.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Highlands Surgery Center,Issaquah,98029.0,Laminectomy,Outpatient Surgery,7807.96,7540.41,8237.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Eastside Mri,Kirkland,98034.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,98.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Puget Sound Orthopaedics - Lakewood,Lakewood,98499.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,52.27,51.72,69.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Puget Sound Surgical Center,Edmonds,98026.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1421.64,1184.57,2272.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Reproductive Surgery Center,Seattle,98109.0,Hysteroscopy with Biopsy,Outpatient Surgery,1996.53,1922.91,2094.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Surgery Center,Seattle,98104.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,144.82,143.58,243.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southlake Clinic,Renton,98055.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1337.82,1176.94,1535.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Seattle Ambulatory Surgery Center,Burien,98166.0,Knee Arthroscopy,Outpatient Surgery,4177.5,3267.35,6157.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Washington Regional Surgery Center,Vancouver,98664.0,Partial Mastectomy,Outpatient Surgery,6089.59,4661.48,7162.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Washington Regional Surgery Center,Vancouver,98664.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1383.07,960.85,2341.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Washington Regional Surgery Center,Vancouver,98664.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1851.39,1483.58,2171.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Spokane Digestive Disease Center,Spokane,99204.0,Diagnostic Colonoscopy,Outpatient Surgery,1096.0,1082.01,1117.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunrise Endoscopy Center,Puyallup,98374.0,Colonoscopy and Biopsy,Outpatient Surgery,1671.73,1523.99,1877.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Spokane Eye Surgery Center,Spokane,99204.0,After-Cataract Laser Surgery,Outpatient Surgery,689.92,664.32,740.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Surgery Center At Tri-City Orthopaedic,Kennewick,99336.0,Discectomy,Outpatient Surgery,7936.62,7576.53,9775.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Knee Arthroscopy,Outpatient Surgery,4361.24,4055.57,4488.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Echocardiogram,Outpatient Diagnostic,955.06,421.93,1283.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Diagnostic Colonoscopy,Outpatient Surgery,1388.43,1306.0,1826.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Colonoscopy and Biopsy,Outpatient Surgery,1841.43,1540.12,2329.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,493.26,471.6,517.29,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Vancouver Clinic,Vancouver,98664.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,253.26,242.54,262.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-Cities Endoscopy Center,Kennewick,99336.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1074.67,1050.87,1115.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-City Orthopaedics,Richland,99352.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,97.62,55.55,97.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Eye And Laser Surgery,Renton,98055.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2345.58,2332.36,2358.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Bellevue Ambulatory Surgical Center,Bellevue,98004.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,1195.95,1195.95,1195.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Issaquah Ambulatory Surgery Center,Issaquah,98027.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1807.66,1430.15,1986.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Waldron Endoscopy Center,Tacoma,98405.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1689.4,1301.28,1915.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Walla Walla Clinic Ambulatory Surgery Center,Walla Walla,99362.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1688.58,1330.33,2033.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Walla Walla Clinic Ambulatory Surgery Center,Walla Walla,99362.0,Hysteroscopy with Biopsy,Outpatient Surgery,2842.63,2324.66,3607.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Washington Center For Pain Management,Bellevue,98004.0,Spine Epidural Injection,Outpatient Diagnostic,621.19,569.49,621.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Washington Urology Associates,Bellevue,98004.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,1070.7,792.02,1070.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group - Endoscopy Center,Everett,98208.0,Diagnostic Colonoscopy,Outpatient Surgery,1056.56,1056.56,1333.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Imaging Associates,Spokane,99202.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,151.06,129.44,162.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Imaging Associates,Spokane,99202.0,MRI of the Spine,Outpatient Diagnostic,972.16,801.48,991.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Imaging Associates,Spokane,99202.0,Esophagram,Outpatient Diagnostic,191.89,159.04,191.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inland Imaging Associates,Spokane,99202.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,217.87,186.58,219.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Orthopedic Associates,Longview,98632.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,87.1,74.03,87.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Orthopedic Associates,Longview,98632.0,MRI of the Spine,Outpatient Diagnostic,577.0,577.0,600.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Orthopedic Associates,Longview,98632.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,51.46,54.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Advanced Medical Imaging,Silverdale,98383.0,Bone Mineral Density Scan,Outpatient Diagnostic,68.08,68.08,164.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Belladonna Breast Imaging Center,Bellevue,98004.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1212.66,1118.53,1937.69,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Assured Imaging Women'S Wellness Of Washington,Tukwila,98188.0,Screening Digital Mammogram,Outpatient Diagnostic,188.06,182.58,192.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Breast Diagnostic Center,Auburn,98002.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1424.47,1204.5,1714.25,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Medical Imaging,Bellevue,98004.0,MRI of the Spine,Outpatient Diagnostic,502.54,502.54,559.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Medical Imaging,Bellevue,98004.0,Esophagram,Outpatient Diagnostic,123.51,123.51,131.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tra - Medical Imaging,Tacoma,98405.0,MRI of the Spine,Outpatient Diagnostic,838.02,716.92,887.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Founders Building,Everett,98201.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,291.01,286.04,296.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Colonoscopy and Biopsy,Outpatient Surgery,3114.34,2586.53,3835.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Valley Hospital,Spokane Valley,99216.0,Spine Epidural Injection,Outpatient Diagnostic,1757.08,1734.47,1829.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Mastectomy with Breast Reconstruction: Outpatient,Outpatient Surgery,39608.16,32296.76,54746.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Partial Mastectomy,Outpatient Surgery,12414.12,7465.14,15624.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Diagnostic Colonoscopy,Outpatient Surgery,2132.17,1793.84,2193.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,453.26,397.9,531.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Screening Digital Mammogram,Outpatient Diagnostic,229.73,193.18,250.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Toppenish Community Hospital,Toppenish,98948.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,126.62,15.81,266.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Toppenish Community Hospital,Toppenish,98948.0,Screening Digital Mammogram,Outpatient Diagnostic,414.87,174.84,441.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Diagnostic Colonoscopy,Outpatient Surgery,1861.76,1733.24,2309.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Colonoscopy and Biopsy,Outpatient Surgery,2207.68,2021.41,2487.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Trios Health,Kennewick,99336.0,Coronary Artery Angiogram,Outpatient Surgery,6438.44,5623.29,10505.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-State Memorial Hospital,Clarkston,99403.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,67.71,113.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-State Memorial Hospital,Clarkston,99403.0,Echocardiogram,Outpatient Diagnostic,1287.21,1232.63,1289.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri-State Memorial Hospital,Clarkston,99403.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,436.13,365.24,453.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Esophagram,Outpatient Diagnostic,298.63,247.26,321.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Echocardiogram,Outpatient Diagnostic,1234.41,955.06,1401.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Northwest Hospital & Medical Center,Seattle,98133.0,Screening Digital Mammogram,Outpatient Diagnostic,218.57,217.96,236.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Diagnostic Colonoscopy,Outpatient Surgery,2487.02,2353.71,2710.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Bone Mineral Density Scan,Outpatient Diagnostic,271.09,262.78,305.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,3473.85,3063.53,3688.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Screening Digital Mammogram,Outpatient Diagnostic,149.84,149.38,156.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,394.92,112.21,632.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kadlec Regional Medical Center,Richland,99352.0,Laminectomy,Outpatient Surgery,12111.54,6668.66,15366.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kittitas Valley Healthcare,Ellensburg,98926.0,Knee Arthroscopy,Outpatient Surgery,8834.4,6528.44,11236.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kittitas Valley Healthcare,Ellensburg,98926.0,Cataract Removal with Implant of Lens,Outpatient Surgery,6141.94,5780.26,6719.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kittitas Valley Healthcare,Ellensburg,98926.0,Echocardiogram,Outpatient Diagnostic,1448.3,934.23,1448.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Klickitat Valley Health,Goldendale,98620.0,Colonoscopy and Biopsy,Outpatient Surgery,3925.95,1470.82,5040.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lake Chelan Community Hospital,Chelan,98816.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,79.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lincoln Hospital,Davenport,99122.0,Screening Digital Mammogram,Outpatient Diagnostic,305.03,305.03,309.69,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lourdes Medical Center,Pasco,99301.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,254.19,237.22,420.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mason General Hospital & Family Of Clinics,Shelton,98584.0,Echocardiogram,Outpatient Diagnostic,2507.78,2465.24,2735.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Morton General Hospital,Morton,98356.0,MRI of the Spine,Outpatient Diagnostic,3011.01,3011.01,3095.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Colonoscopy and Biopsy,Outpatient Surgery,3734.24,2672.78,4176.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Auburn Medical Center,Auburn,98001.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,479.79,214.79,551.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Good Samaritan Hospital,Puyallup,98372.0,Knee Arthroscopy,Outpatient Surgery,10772.14,9090.37,20465.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,115.7,102.69,139.59,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,6110.12,4404.47,6425.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Colonoscopy and Biopsy,Outpatient Surgery,3773.8,3063.06,5441.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,16219.18,11455.86,22241.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Laminectomy,Outpatient Surgery,18684.53,14428.93,25232.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Tacoma General Hospital,Tacoma,98405.0,Coronary Artery Angiogram,Outpatient Surgery,9709.25,7184.0,15370.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Valley Hospital,Tonasket,98855.0,Diagnostic Colonoscopy,Outpatient Surgery,4553.52,4045.58,4794.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Valley Hospital,Tonasket,98855.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,217.6,217.22,228.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Valley Hospital,Tonasket,98855.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,603.07,595.43,625.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,North Valley Hospital,Tonasket,98855.0,Bone Mineral Density Scan,Outpatient Diagnostic,331.43,330.47,347.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ocean Beach Hospital,Ilwaco,98624.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,309.7,277.1,330.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ocean Beach Hospital,Ilwaco,98624.0,Bone Mineral Density Scan,Outpatient Diagnostic,422.43,397.95,437.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympic Medical Center,Port Angeles,98362.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,235.93,145.44,246.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Diagnostic Colonoscopy,Outpatient Surgery,2722.22,2139.32,4711.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,324.03,265.7,371.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,24725.44,21673.4,26907.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,669.67,578.85,721.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,810.25,810.25,1021.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,265.17,204.16,265.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,324.33,321.75,396.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Peace Island Medical Center,Friday Harbor,98250.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,407.25,383.31,489.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2742.29,2227.88,3196.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Colonoscopy and Biopsy,Outpatient Surgery,3562.26,2997.49,4985.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Bone Mineral Density Scan,Outpatient Diagnostic,248.85,216.21,296.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth Southwest Medical Center,Vancouver,98664.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,36543.36,29492.56,40239.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. John Medical Center,Longview,98632.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,426.18,251.41,431.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. Joseph Medical Center,Bellingham,98225.0,Laminectomy,Outpatient Surgery,20105.05,17592.49,22382.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth United General Medical Center,Sedro Woolley,98284.0,Esophagram,Outpatient Diagnostic,508.04,482.99,659.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth United General Medical Center,Sedro Woolley,98284.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,324.72,196.85,354.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Centralia Hospital,Centralia,98531.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,243.14,242.82,244.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Colonoscopy and Biopsy,Outpatient Surgery,3020.05,2572.81,3648.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Holy Family Hospital,Spokane,99208.0,Cataract Removal with Implant of Lens,Outpatient Surgery,5935.5,5084.23,6110.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Mount Carmel Hospital,Colville,99114.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,416.91,394.72,416.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2988.76,2597.96,3792.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,13120.26,10955.92,15667.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Coronary Artery Angiogram,Outpatient Surgery,8269.33,6803.22,17851.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Simple Mastectomy: Outpatient,Outpatient Surgery,15287.86,12857.18,18929.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Tubal Ligation: Laparoscopic,Outpatient Surgery,9980.39,3213.29,12064.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Discectomy,Outpatient Surgery,13074.66,10218.21,14191.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Simple Mastectomy: Outpatient,Outpatient Surgery,15598.96,12478.44,20224.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Mary Medical Center,Walla Walla,99362.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,264.92,211.45,281.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Mary Medical Center,Walla Walla,99362.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,553.85,462.33,610.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Partial Mastectomy,Outpatient Surgery,13705.11,9566.75,15695.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Spine Epidural Injection,Outpatient Diagnostic,2102.9,1494.62,2214.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,139.5,139.5,186.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,366.98,288.2,451.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Franciscan Medical Group,Tacoma,98402.0,Echocardiogram,Outpatient Diagnostic,426.37,420.42,438.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harbor Medical Group,Aberdeen,98520.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,51.24,54.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Gastroenterology Associates,Bellevue,98004.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,996.3,493.49,1169.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Gastroenterology Associates,Bellevue,98004.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1977.35,1849.01,2314.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Oregon Health & Science University,Portland,97239.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,389.05,356.01,432.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Medical Centers,Seattle,98124.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,387.83,378.77,390.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Medical Centers,Seattle,98124.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,244.19,205.09,244.19,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Advanced Endoscopy Center,Vancouver,98686.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1214.29,1055.69,1602.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Auburn Surgical Center,Auburn,98002.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,99.66,96.99,145.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Surgery Associates,Auburn,98002.0,Knee Arthroscopy,Outpatient Surgery,2227.54,2167.65,2273.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Clearview Eye And Laser,Seattle,98126.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2542.85,2459.49,2679.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Moses Lake Asc,Moses Lake,98837.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1545.52,1340.94,1801.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Surgical Associates Northwest,Federal Way,98003.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,266.26,266.26,290.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group - Dept. Of Orthopedics,Everett,98201.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,59.78,59.78,61.4,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bogachiel Clinic,Forks,98331.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,171.36,101.92,171.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center Specialty Physicians,Olympia,98502.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,84.58,79.66,93.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Ppgwni - Pasco Health Center,Pasco,99301.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,136.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Vancouver Radiologists,Vancouver,98662.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1670.79,1279.17,2465.28,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Family Medicine Of Yakima,Yakima,98908.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,116.28,90.34,119.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sound Fertility Care,Seattle,98101.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,273.5,264.48,273.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highlands Mri,Issaquah,98029.0,MRI of the Spine,Outpatient Diagnostic,679.59,677.51,682.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Rheumatology,Kennewick,99336.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,67.71,93.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Toppenish Medical Center,Toppenish,98948.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,70.45,70.45,85.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,Knee Arthroscopy,Outpatient Surgery,2729.56,1789.26,3889.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic Specialists,Spokane,99204.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,53.7,53.7,60.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Obstetrics & Gynecology,Olympia,98506.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,135.1,107.72,177.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Alliance Healthcare Radiology Of Mountlake Terrace,Mountlake Terrace,98043.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,56.94,52.77,105.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,San Juan Healthcare,Friday Harbor,98250.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,83.63,78.32,85.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Longview Radiologists,Kelso,98626.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,44.37,44.37,55.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,University Place Medical Clinic,University Place,98466.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,372.46,326.3,388.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri City Radiology,Kennewick,99336.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2116.0,1248.0,2358.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Tri City Radiology,Kennewick,99336.0,MRI of the Spine,Outpatient Diagnostic,679.8,679.8,907.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Edmonds Family Medicine Clinic,Edmonds,98026.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,57.68,48.34,59.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pinnacle Pain Center,Kennewick,99336.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,130.52,117.25,130.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Medical Group,Seattle,98104.0,Diagnostic Colonoscopy,Outpatient Surgery,1986.6,1634.2,2062.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Wenatchee Valley Medical Center,Wenatchee,98801.0,MRI of the Spine,Outpatient Diagnostic,906.84,906.84,943.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Wenatchee Valley Medical Center,Wenatchee,98801.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,76.85,76.85,76.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Wenatchee Valley Medical Center,Wenatchee,98801.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,215.73,215.73,215.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Orthopaedic And Sports Medicine,Richland,99352.0,MRI of the Spine,Outpatient Diagnostic,538.18,538.18,654.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group,Everett,98201.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,67.92,49.29,70.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group,Everett,98201.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,160.47,136.94,212.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Benton Franklin Orthopedic Associates,Kennewick,99336.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,51.46,55.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Lakewood Surgery Center,,,Laminectomy,Outpatient Surgery,8733.42,7477.02,12767.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,116.57,93.79,144.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Esophagram,Outpatient Diagnostic,243.47,176.27,319.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,229.33,167.42,368.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Portland Adventist Medical Center,Portland,97216.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,659.16,475.02,773.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Surgeons - Seattle,Seattle,98122.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,52.55,51.72,63.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - Spokane,Spokane,99204.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,920.88,357.14,2718.37,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - Spokane,Spokane,99204.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,80.99,65.96,80.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - West Olympia Family Medicine,Olympia,98501.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,154.45,150.32,154.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - West Olympia Family Medicine,Olympia,98501.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,185.49,184.28,204.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - West Olympia Family Medicine,Olympia,98501.0,Echocardiogram,Outpatient Diagnostic,249.26,249.26,249.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Medical Group - West Olympia Family Medicine,Olympia,98501.0,Transrectal Ultrasound and Biopsy of Prostrate,Outpatient Diagnostic,528.9,528.02,584.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Spokane Heart Institutte,Spokane,99204.0,Echocardiogram,Outpatient Diagnostic,474.43,370.96,486.88,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Puget Sound Gastroenterology - Seattle,Seattle,98133.0,Colonoscopy and Biopsy,Outpatient Surgery,1463.87,1455.36,1992.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Regional Clinics,Mount Vernon,98274.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,141.48,117.25,141.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Downtown Seattle Primary Care,Seattle,98104.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,266.26,266.26,276.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish - Downtown Seattle Primary Care,Seattle,98104.0,Laminectomy,Outpatient Surgery,5441.02,3881.86,13697.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Medical Group-Renton,Renton,98055.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,89.18,79.66,98.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Medical Group-Renton,Renton,98055.0,Colonoscopy and Biopsy,Outpatient Surgery,1965.92,1894.81,2038.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth - Southwest Washington Medical Group,Vancouver,98664.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,68.24,62.38,71.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Medical Associates,Spokane,99202.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1397.62,965.6,2043.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Medical Associates,Spokane,99202.0,Screening Digital Mammogram,Outpatient Diagnostic,247.87,247.87,247.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Arthritis Northwest,Spokane,99204.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,115.04,79.66,119.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Arthritis Northwest,Spokane,99204.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,96.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Spine And Pain Medicine,Spokane,99204.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,75.24,75.23,79.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Complete Healthcare For Women,Richland,99352.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,135.53,136.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Hma Physician Management,Yakima,98902.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,95.48,79.66,97.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Via Radiology - Meridian Pavilion,Seattle,98133.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,184.14,167.05,206.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mount Vernon Womens Clinc,Mount Vernon,98273.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,142.45,136.94,142.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mount Vernon Womens Clinc,Mount Vernon,98273.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,104.06,100.24,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Radia,Kirkland,98034.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,58.24,53.56,58.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Center For Diagnostic Imaging,Kirkland,98034.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,101.41,101.41,107.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Medical Group,Colfax,99111.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,69.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Orthopedics Northwest,Yakima,98902.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,53.1,47.47,54.41,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Arthritis & Rehabilitation Clinic,Olympia,98502.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,98.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Spokane Internal Medicine,Spokane Valley,99216.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,66.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Radiologists,Seattle,98104.0,Spine Epidural Injection,Outpatient Diagnostic,301.26,265.12,399.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,"Ppgwni - Spokane, Spokane Valley And Pullman Health Centers",Spokane,99207.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,125.51,125.51,125.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Center For Womens Health At Evergreen,Kirkland,98034.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,149.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Knee Foot Ankle Center,Kirkland,98034.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,82.84,79.66,92.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Knee Foot Ankle Center,Kirkland,98034.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,52.14,51.52,52.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eastside Ob/Gyn,Kirkland,98034.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,138.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Imaging Clinics,Everett,98208.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,71.09,62.91,81.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Imaging Clinics,Everett,98208.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,203.8,196.18,261.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Osteoporosis Detection Center,Mount Vernon,98274.0,Bone Mineral Density Scan,Outpatient Diagnostic,164.45,153.39,180.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Womens & Family Health Specialists,Renton,98057.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,100.24,100.24,173.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Obstetrics And Gynecology,Spokane Valley,99216.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,198.24,178.8,198.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,"Memorial Physicians, Lakeview",Yakima,98902.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,119.78,116.27,119.78,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Aethena Gynecology Associates,Vancouver,98683.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,183.71,123.2,186.27,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Clinic,Moses Lake,98837.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,136.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Clinic,Moses Lake,98837.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,100.24,100.24,100.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Bellevue Rehab Associates,Bellevue,98004.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,79.66,79.66,95.04,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Dedicated Womens Health Specialists,Puyallup,98372.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,136.94,136.94,139.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Valley Women'S Clinic,Renton,98055.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,137.97,110.7,163.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Radia,Lynnwood,98036.0,Spine Epidural Injection,Outpatient Diagnostic,262.0,208.41,262.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacmed Clinics,Lynnwood,98036.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,368.45,347.74,368.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacmed Clinics,Lynnwood,98036.0,Screening Digital Mammogram,Outpatient Diagnostic,234.68,234.68,248.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Rebound Orthopedic And Neurosurgical,Vancouver,98664.0,MRI of the Spine,Outpatient Diagnostic,842.36,816.91,842.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Doctors Clinic Cavalon Place,Silverdale,98383.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,343.69,343.69,356.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Inhealth Imaging,Poulsbo,98370.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,51.46,51.46,102.92,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Doctors Clinic Salmon Medical Center,Silverdale,98383.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,208.66,204.55,228.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Vaginal Delivery,Inpatient APR,13944.83,11356.19,16912.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Total Knee Replacement,Inpatient APR,26297.25,25040.29,27203.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Total Hysterectomy,Inpatient APR,12990.0,12261.0,14182.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Cesarean Section,Inpatient APR,12423.0,10273.0,13165.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Cesarean Section,Inpatient APR,11207.83,10197.91,13123.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Cesarean Section,Inpatient APR,21679.37,17841.58,25513.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Legacy Salmon Creek Medical Center,Vancouver,98686.0,Total Knee Replacement,Inpatient APR,32796.06,30187.61,35418.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympic Medical Center,Port Angeles,98362.0,Vaginal Delivery,Inpatient APR,8337.75,6873.92,10349.49,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Overlake Medical Center,Bellevue,98004.0,Gastric Bypass,Inpatient APR,29575.14,25252.86,31876.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth St. John Medical Center,Longview,98632.0,Total Knee Replacement,Inpatient APR,40376.02,28169.44,49507.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Mount Carmel Hospital,Colville,99114.0,Vaginal Delivery,Inpatient APR,13777.6,12616.94,16191.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Regional Medical Center Everett,Everett,98201.0,Total Hip Replacement,Inpatient APR,44330.68,33404.46,45277.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Prostatectomy,Inpatient APR,23093.38,16070.39,25936.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Sacred Heart Medical Center & Children'S Hospital,Spokane,99204.0,Vaginal Delivery,Inpatient APR,8996.63,7906.46,10397.17,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Mary Medical Center,Walla Walla,99362.0,Total Hip Replacement,Inpatient APR,34836.1,33325.46,35909.08,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Mary Medical Center,Walla Walla,99362.0,Vaginal Delivery,Inpatient APR,9891.87,8796.54,11255.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Vaginal Delivery,Inpatient APR,8055.51,7589.33,10076.7,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Clare Hospital,Lakewood,98499.0,Total Knee Replacement,Inpatient APR,41491.27,38664.05,43848.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Cesarean Section,Inpatient APR,7298.07,5435.08,18080.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Vaginal Delivery,Inpatient APR,11711.01,10416.67,13809.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Issaquah,Issaquah,98029.0,Vaginal Delivery,Inpatient APR,11831.29,10819.84,12965.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Gastric Bypass,Inpatient APR,29262.26,28859.91,29517.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - University Of Washington Medical Center,Seattle,98195.0,Vaginal Delivery,Inpatient APR,13136.36,11025.13,13849.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Spinal Fusion,Inpatient APR,54525.95,51016.03,60907.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,Vaginal Delivery,Inpatient APR,6526.76,5791.65,8273.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,Spine Epidural Injection,Outpatient Diagnostic,2077.35,1523.02,2081.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cascade Valley Hospital And Clinics,Arlington,98223.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,634.43,507.86,800.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Basin Hospital,Ephrata,98823.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,134.73,121.75,147.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Basin Hospital,Ephrata,98823.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,307.82,237.3,319.31,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia County Health System,Dayton,99328.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,226.27,211.09,265.83,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,153.0,147.9,153.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Knee Arthroscopy,Outpatient Surgery,7449.82,6620.01,7995.91,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Discectomy,Outpatient Surgery,12626.33,11506.24,17013.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,MRI of the Spine,Outpatient Diagnostic,1718.91,1718.91,1775.89,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,133.86,133.86,133.86,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Central Washington Hospital,Wenatchee,98807.0,Coronary Artery Angiogram,Outpatient Surgery,8314.79,7119.69,13952.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,2067.78,1698.76,2844.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2051.12,1998.16,2660.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,MRI of the Spine,Outpatient Diagnostic,906.84,906.84,943.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Bone Mineral Density Scan,Outpatient Diagnostic,138.0,138.0,143.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,275.66,275.66,275.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - East Wenatchee Clinic,East Wenatchee,98802.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,260.85,260.85,260.85,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Partial Mastectomy,Outpatient Surgery,10122.31,8019.15,12993.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Coronary Artery Angiogram,Outpatient Surgery,7112.92,6738.77,11101.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,177.6,119.06,180.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Deaconess Hospital,Spokane,99204.0,Tubal Ligation: Laparoscopic,Outpatient Surgery,13219.64,9753.02,14274.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Partial Mastectomy,Outpatient Surgery,11420.02,7271.32,13871.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Diagnostic Colonoscopy,Outpatient Surgery,1800.15,1721.1,2417.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,59.1,54.41,128.65,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,375.88,150.71,432.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,26168.0,23924.0,31365.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Coronary Artery Angiogram,Outpatient Surgery,6772.92,5439.14,7594.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,439.54,321.46,531.45,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,948.38,740.35,948.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Medical Center,Kirkland,98034.0,Simple Mastectomy: Outpatient,Outpatient Surgery,15886.42,10620.02,17768.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreenhealth Monroe,Monroe,98272.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3996.33,3887.22,5641.54,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Forks Community Hospital,Forks,98331.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,223.0,223.0,223.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Forks Community Hospital,Forks,98331.0,Diagnostic Colonoscopy,Outpatient Surgery,3645.71,3074.64,4508.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence St. Peter Hospital,Olympia,98506.0,Echocardiogram,Outpatient Diagnostic,1031.37,980.01,1402.02,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,351.82,79.66,524.14,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2271.86,1954.31,2899.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pullman Regional Hospital,Pullman,99163.0,Esophagram,Outpatient Diagnostic,351.51,246.8,476.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Knee Arthroscopy,Outpatient Surgery,10356.12,10120.23,11488.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Diagnostic Colonoscopy,Outpatient Surgery,3448.21,2935.6,3531.21,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Hysteroscopy with Biopsy,Outpatient Surgery,8295.84,7930.09,11517.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,MRI of the Spine,Outpatient Diagnostic,1136.4,1107.4,1327.03,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,225.5,201.06,225.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,660.44,610.52,739.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Samaritan Healthcare,Moses Lake,98837.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,547.79,504.77,606.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skagit Valley Hospital,Mount Vernon,98274.0,Echocardiogram,Outpatient Diagnostic,1989.53,1878.05,2030.8,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skyline Hospital,White Salmon,98672.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,250.63,189.15,286.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Skyline Hospital,White Salmon,98672.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,465.73,182.87,465.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Anthony Hospital,Gig Harbor,98332.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,146.37,39.24,168.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Elizabeth Hospital,Enumclaw,98022.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,3905.23,3046.33,5009.87,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Elizabeth Hospital,Enumclaw,98022.0,Colonoscopy and Biopsy,Outpatient Surgery,3878.96,3472.98,4524.94,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,3203.8,2122.63,4029.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2983.0,2558.82,3635.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,33254.05,16883.55,35792.55,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Uw Medicine - Valley Medical Center,Renton,98055.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,537.74,422.23,618.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,4018.37,2435.53,4711.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,481.88,181.28,713.51,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,15048.52,13840.95,23636.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,After-Cataract Laser Surgery,Outpatient Surgery,1682.98,1666.83,1945.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Esophagram,Outpatient Diagnostic,284.4,162.6,321.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Coronary Angioplasty: Outpatient,Outpatient Surgery,33198.12,28989.73,35605.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Coronary Artery Angiogram,Outpatient Surgery,8259.65,7342.75,25722.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason Medical Center,Seattle,98101.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,556.42,499.93,618.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1897.83,549.52,3403.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whidbeyhealth Medical Center,Coupeville,98239.0,Echocardiogram,Outpatient Diagnostic,1709.66,1187.67,1829.22,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Colonoscopy and Biopsy,Outpatient Surgery,2916.46,2554.64,3310.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Bone Mineral Density Scan,Outpatient Diagnostic,339.23,332.71,403.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Whitman Hospital & Medical Center,Colfax,99111.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,370.05,181.0,417.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Willapa Harbor Hospital,South Bend,98586.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,347.32,341.53,355.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Willapa Harbor Hospital,South Bend,98586.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,628.86,561.93,647.33,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Yakima Regional Medical & Cardiac Center,Yakima,98902.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,104.55,15.81,129.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Knee Arthroscopy,Outpatient Surgery,7413.96,6346.03,8815.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3106.41,2477.58,3862.29,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,733.39,612.73,762.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Elizabeth Hospital,Enumclaw,98022.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,678.26,600.42,898.42,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,388.59,228.5,462.44,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Francis Hospital,Federal Way,98003.0,Echocardiogram,Outpatient Diagnostic,1298.88,1163.43,1378.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Medical Center,Tacoma,98405.0,Hysteroscopy with Biopsy,Outpatient Surgery,6641.12,6264.51,11134.97,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Summit Pacific Medical Center,Elma,98541.0,Screening Digital Mammogram,Outpatient Diagnostic,347.44,297.72,388.11,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,Knee Arthroscopy,Outpatient Surgery,9638.42,8500.08,12074.28,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,Diagnostic Colonoscopy,Outpatient Surgery,3886.7,3397.86,6678.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,Colonoscopy with Lesion Removal,Outpatient Surgery,7740.22,4929.64,8137.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sunnyside Community Hospital & Clinics,Sunnyside,98944.0,X-ray of Hip: 2+ Views,Outpatient Diagnostic,508.12,71.6,521.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,MRI of the Spine,Outpatient Diagnostic,975.55,758.21,1046.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Esophagram,Outpatient Diagnostic,261.88,220.23,263.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Cherry Hill,Seattle,98122.0,Hysterosalpingogram (HSG),Outpatient Diagnostic,978.58,950.42,1055.07,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,Diagnostic Colonoscopy,Outpatient Surgery,2222.25,2079.86,3271.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish Edmonds,Edmonds,98026.0,MRI of the Spine,Outpatient Diagnostic,847.52,766.6,978.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,3053.02,2366.63,3860.52,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Swedish First Hill,Seattle,98122.0,Laminectomy,Outpatient Surgery,15205.34,12755.02,18366.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Grays Harbor Community Hospital,Aberdeen,98520.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,405.66,365.79,1093.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,303.83,88.88,328.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,19281.51,14100.61,21111.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,MRI of the Spine,Outpatient Diagnostic,754.58,717.4,866.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harrison Medical Center,Bremerton,98310.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,744.6,730.41,849.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Coronary Artery Angiogram,Outpatient Surgery,6749.67,6060.23,7271.09,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Highline Medical Center,Tukwila,98168.0,Screening Digital Mammogram,Outpatient Diagnostic,203.17,193.74,242.46,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,1766.17,1742.64,1914.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,98.91,79.66,335.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Diagnostic Colonoscopy,Outpatient Surgery,1846.94,1542.22,2282.6,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Hysteroscopy with Biopsy,Outpatient Surgery,5201.0,3057.0,7315.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Hysteroscopy with Salpingo-oophorectomy,Outpatient Surgery,9588.26,8690.37,11644.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Island Hospital,Anacortes,98221.0,Esophagram,Outpatient Diagnostic,187.15,131.25,458.05,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Jefferson Healthcare,Port Townsend,98368.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,2647.67,2411.84,3003.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Virginia Mason - Yakima Valley Memorial Hospital,Yakima,98902.0,Vaginal Delivery,Inpatient APR,9455.54,8491.95,9773.61,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Statewide,,,,Coronary Bypass,Inpatient APR,72979.94,58668.84,87644.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Partial Mastectomy,Outpatient Surgery,11351.84,9186.99,13290.67,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Capital Medical Center,Olympia,98502.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,315.7,284.0,334.26,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Rockwood Clinic,Spokane,99202.0,Diagnostic Colonoscopy,Outpatient Surgery,1987.45,1886.19,2399.01,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Rockwood Clinic,Spokane,99202.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1298.85,814.07,2548.47,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Rockwood Clinic,Spokane,99202.0,Bone Mineral Density Scan,Outpatient Diagnostic,120.63,108.91,120.63,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Rockwood Clinic,Spokane,99202.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,224.13,167.68,224.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kruger Clinic Orthopaedics,Edmonds,98026.0,Drain/Injection Joint with Ultrasound Guidance,Outpatient Diagnostic,117.25,117.25,132.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kruger Clinic Orthopaedics,Edmonds,98026.0,Bone Mineral Density Scan,Outpatient Diagnostic,66.23,66.23,145.39,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Confluence Health - Omak Ambulatory Surgery Center,Omak,98841.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1639.99,1571.04,1704.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eastside Endoscopy Center - Bellevue,Bellevue,98004.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1638.75,1477.77,1893.06,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eastside Endoscopy Center - Issaquah,Issaquah,98027.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1609.3,1430.95,1801.99,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Everett Bone And Joint Surgery Center,Everett,98201.0,Knee Arthroscopy,Outpatient Surgery,3141.16,3042.05,4045.74,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Everett Clinic - Kemp Surgery Center,Everett,98201.0,Knee Arthroscopy,Outpatient Surgery,3437.73,3287.99,4285.58,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Endoscopy Center,Kirkland,98034.0,Diagnostic Colonoscopy,Outpatient Surgery,1244.98,1244.98,1244.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Evergreen Endoscopy Center,Kirkland,98034.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2193.14,1857.34,2509.82,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,103.85,103.85,119.12,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Western Washington Medical Group,Everett,98201.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1127.53,975.9,1382.68,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mid-Columbia Endoscopy Center,Kennewick,99336.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1085.59,978.89,1287.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ambulatory Surgery Services,Bellingham,98226.0,Cataract Removal with Implant of Lens,Outpatient Surgery,3486.36,3331.28,3627.53,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Ambulatory Surgery Services,Bellingham,98226.0,Simple Mastectomy: Outpatient,Outpatient Surgery,8959.98,8393.2,9402.93,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Renton,Renton,98057.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2245.83,1997.2,2314.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Northwest Eye Surgeons - Seattle,Seattle,98133.0,Glaucoma: Laser Trabeculoplasty Surgery,Outpatient Surgery,507.6,464.51,657.48,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Olympia Multi Specialty Clinic Ambulatory Procedure Center,Olympia,98502.0,Echocardiogram,Outpatient Diagnostic,302.05,249.26,320.0,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Chehalis,Chehalis,98532.0,After-Cataract Laser Surgery,Outpatient Surgery,926.2,774.7,1086.13,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Cataract And Laser Institute - Chehalis,Chehalis,98532.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2410.38,2216.4,2636.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Harborview Medical Center,Seattle,98104.0,Bone Mineral Density Scan,Outpatient Diagnostic,533.12,408.44,566.36,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Memorial Hospital,Astoria,97103.0,Diagnostic Digital Mammogram: Unilateral,Outpatient Diagnostic,317.45,305.19,422.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Columbia Memorial Hospital,Astoria,97103.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,512.04,501.6,574.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gritman Medical Center,Moscow,83843.0,Colonoscopy and Biopsy,Outpatient Surgery,3566.74,3206.79,3957.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Gritman Medical Center,Moscow,83843.0,Transvaginal Ultrasound First Trimester,Outpatient Diagnostic,312.23,247.63,542.35,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Breast Biopsy Including Ultrasound Guidance,Outpatient Surgery,3582.82,3192.85,4055.32,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Colonoscopy with Lesion Removal,Outpatient Surgery,2721.82,2386.15,3126.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,14637.62,12681.61,15978.62,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Kootenai Health,Coeur D Alene,83814.0,Bone Mineral Density Scan,Outpatient Diagnostic,337.71,234.4,337.71,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Mid-Columbia Medical Center,The Dalles,97058.0,Bone Mineral Density Scan,Outpatient Diagnostic,373.73,288.17,386.79,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Hood River Memorial Hospital,Hood River,97031.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,237.77,180.8,485.96,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Providence Portland Medical Center,Portland,97213.0,Echocardiogram,Outpatient Diagnostic,1753.01,1536.48,1997.1,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Hospital,Lewiston,83501.0,Colonoscopy and Biopsy,Outpatient Surgery,1459.35,1459.35,1576.24,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,St. Joseph Hospital,Lewiston,83501.0,Emergency Department Visit: Moderate Severity,Outpatient Diagnostic,613.04,391.96,627.95,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Cardiac Study Center,Tacoma,98405.0,Echocardiogram,Outpatient Diagnostic,302.05,249.26,357.38,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,Cystoscopy of Bladder/Urethra,Outpatient Diagnostic,346.2,343.69,346.2,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Doctors Clinic,Bremerton,98310.0,MRI of the Spine,Outpatient Diagnostic,630.84,327.3,630.84,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Eye Mds Of Puget Sound,Tacoma,98405.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2439.23,2064.73,2546.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Franciscan Medical Group,Tacoma,98402.0,Total Hysterectomy: Laparoscopic,Outpatient Surgery,6834.52,4382.86,15964.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Franciscan Medical Group,Tacoma,98402.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,66.17,60.72,72.77,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Kent Clinic,Kent,98030.0,Transvaginal Ultrasound: Non-obstetric,Outpatient Diagnostic,213.48,196.21,298.64,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Pain Specialists,Issaquan,98027.0,Spine Epidural Injection,Outpatient Diagnostic,288.42,280.58,314.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Union Avenue Open Mri,Tacoma,98405.0,MRI of the Spine,Outpatient Diagnostic,887.34,716.92,984.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,White River Family Care,Buckley,98321.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,72.68,67.71,79.66,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Multicare Imaging,Tacoma,98405.0,Obstetrical Ultrasound of Fetus,Outpatient Diagnostic,304.22,212.2,372.3,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Center For Diagnostic Imaging,Federal Way,98003.0,Drain/Injection Joint without Ultrasound Guidance,Outpatient Diagnostic,101.41,92.34,107.73,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Pacific Surgery Center - Poulsbo,Poulsbo,98370.0,Colonoscopy and Biopsy,Outpatient Surgery,1747.41,1534.34,2059.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Peacehealth - St. Joeseph Medical Center,Bellingham,98226.0,Colonoscopy with Lesion Removal,Outpatient Surgery,1670.36,1418.73,1964.43,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Polyclinic,Seattle,98104.0,Diagnostic Colonoscopy,Outpatient Surgery,2175.0,2175.0,2218.5,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,The Polyclinic,Seattle,98104.0,Colonoscopy with Lesion Removal,Outpatient Surgery,3691.86,2612.79,3919.9,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Proliance Southwest Seattle Orthopedics,Burien,98166.0,X-ray of Knee: 3+ Views,Outpatient Diagnostic,53.02,51.72,66.75,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Puget Sound Orthopaedics - Lakewood,Lakewood,98499.0,Laminectomy,Outpatient Surgery,15795.2,10814.81,16215.34,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Retina Laser Eye Center & Asc,Kennewick,99336.0,Cataract Removal with Implant of Lens,Outpatient Surgery,2330.53,2156.84,2651.81,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Seattle Endoscopy Center,Seattle,98133.0,Diagnostic Colonoscopy,Outpatient Surgery,1244.98,1244.98,1244.98,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Sequim Same Day Surgery,Sequim,98382.0,Colonoscopy and Biopsy,Outpatient Surgery,1009.12,960.15,1388.15,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southlake Clinic,Renton,98055.0,Colonoscopy and Biopsy,Outpatient Surgery,1318.02,1170.67,1681.56,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Washington Regional Surgery Center,Vancouver,98664.0,Colonoscopy and Biopsy,Outpatient Surgery,1685.05,1370.37,2042.23,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Southwest Washington Regional Surgery Center,Vancouver,98664.0,Discectomy,Outpatient Surgery,7557.91,7105.77,10088.57,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
+Organization,Spokane Digestive Disease Center,Spokane,99204.0,"Upper Endoscopy of Esophagus, Stomach and Duodenum (EGD)",Outpatient Surgery,1231.89,1139.07,1460.76,01/01/2016 12:00:00 AM,12/31/2016 12:00:00 AM
