@@ -1,7 +1,7 @@
 import json
 import argparse
 from text2sql.src.evaluation import evaluation_main
-from text2sql.src.evaluation_ves import evaluation_ves_main
+# from text2sql.src.evaluation_ves import evaluation_ves_main
 
 from text2sql.src.gpt_request import generate_main
 
@@ -11,17 +11,19 @@ def main(args):
         args.eval_data_path = "table_related_benchmarks/evalset/bird_data/dev.json"
         args.ground_truth_path = "table_related_benchmarks/evalset/bird_data/dev.sql"
         args.mode = "dev"
-        args.use_knowledge = "True"
+        # args.use_knowledge = "True"
         
     if args.eval_data_name == "spider":
         args.db_root_path = "table_related_benchmarks/evalset/spider_data/test_database"
         args.eval_data_path = "table_related_benchmarks/evalset/spider_data/test.json"
         args.ground_truth_path = "table_related_benchmarks/evalset/spider_data/test_gold.sql"
         args.mode = "test"
-        args.use_knowledge = "False"
+        # args.use_knowledge = "False"
     
     if args.is_use_knowledge:
         args.use_knowledge = "True"
+    else:
+        args.use_knowledge = "False"
     eval_datas = json.load(open(args.eval_data_path, 'r'))
 
     # '''for debug'''
