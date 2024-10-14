@@ -109,8 +109,8 @@ def generate_comment_prompt(question, knowledge=None):
     return result_prompt
 
 def cot_wizard():
-    # cot = "\nGenerate the SQL after thinking step by step: "
-    cot = "\nCarefully reason through each step to generate the SQL query:"
+    cot = "\nGenerate the SQL after thinking step by step: "
+    # cot = "\nCarefully reason through each step to generate the SQL query:"
     return cot
 
 def few_shot():
@@ -232,7 +232,7 @@ def parser_sql(text):
     if sql_query:
         extracted_sql = sql_query.group(1).strip()
     else:
-        extracted_sql = ""
+        extracted_sql = text
     return extracted_sql
 
 def collect_response_from_gpt(model_path, gpus_num, db_path_list, question_list, knowledge_list=None):

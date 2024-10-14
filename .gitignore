@@ -176,3 +176,12 @@ output/
 images/
 .vscode
 vllm_encoder/
+
+!table_related_benchmarks/evalset/bird_data/*.sql
+!table_related_benchmarks/evalset/spider_data/*.sql
+
+table_related_benchmarks/evalset/spider_data/test_database/*
+table_related_benchmarks/evalset/bird_data/dev_databases/*
+
+!table_related_benchmarks/evalset/spider_data/test_database/README.md
+!table_related_benchmarks/evalset/bird_data/dev_databases/README.md
