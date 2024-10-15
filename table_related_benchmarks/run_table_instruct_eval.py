@@ -3,7 +3,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import AutoConfig
 import json, os
 import sys
-from table_instruct.eval.metric.eval_tableinstruct import *
+from table_instruct.eval.metric.eval_tableinstruct import (
+    eval_row_pop_map,
+    eval_col_pop_map,
+    eval_hitab_ex,
+    eval_tabfact_acc,
+    eval_col_type_f1,
+    eval_ent_link_acc,
+    eval_bleu
+)
 from vllm import LLM, SamplingParams
 
 EOT_TOKEN = "<|EOT|>"
@@ -80,8 +88,8 @@ def build_instruction_prompt(example):
         table_infos = example["input_seg"]
     else:
         table_infos = ''
-    if len(table_infos) > 29997:
-        table_infos=table_infos[:29997]+'...'
+    #if len(table_infos) > 29997:
+    #    table_infos=table_infos[:29997]+'...'
     #table_infos = example["input"]
     query = example["question"]
     instruction=example["instruction"]
@@ -392,15 +400,16 @@ def evaluate_tableinstruct(model_path, json_path, output_path, num_gpus_total, n
             logging.info('Processing WikiTQ error %s', e, exc_info=True)
             print('Processing WikiTQ error')
 
+
 import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--json-path', type=str, default='table_related_benchmarks/evalset/TableInstruct/eval_data')
-    parser.add_argument('--model-path', type=str, default='/data4/sft_output/qwen2.5-7b-coder-base-1008/checkpoint-2000')
-    parser.add_argument('--output-path', type=str, default='table_related_benchmarks/evalset/TableInstruct/eval_data/eval_output')
+    parser.add_argument('--model-path', type=str, default='/data4/sft_output/qwen2.5-ins-1012/checkpoint-2600')
+    parser.add_argument('--output-path', type=str, default='table_related_benchmarks/evalset/TableInstruct/eval_data/eval_output-sft')
     parser.add_argument('--num-gpus-total', type=int, default=1)
     parser.add_argument('--num-gpus-per-model', type=int, default=1)
-    parser.add_argument('--dataset-part', type=str, default='in_domain_test',
+    parser.add_argument('--dataset-part', type=str, default='all_test',
                         choices=['in_domain_test', 'out_of_domain_test', 'all_test'])
     parser.add_argument('--inference-type', type=str, default='vLLM',
                         choices=['TGI', 'vLLM'])

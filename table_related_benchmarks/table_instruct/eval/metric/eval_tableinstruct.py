@@ -1,5 +1,4 @@
-
-import json
+import re
 from table_instruct.eval.scripts.table_utils import evaluate as table_llama_eval
 from table_instruct.eval.scripts.metric import *
 from rouge_score import rouge_scorer
@@ -9,6 +8,18 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 import sacrebleu
 from nltk.translate import meteor_score
 import time
+
+def extract_bracket_content(text):
+    # 使用正则表达式提取由 <> 包裹的内容
+    pattern = r'<(.*?)>'
+    matches = re.findall(pattern, text)
+    
+    # 如果没有匹配内容，则返回原始字符串
+    return matches[0] if matches else text
+
+def split_string(text):
+    # 使用换行符和逗号进行分割
+    return [item.strip() for item in re.split(r'[\n,]+', text) if item.strip()]
 
 def eval_hitab_ex(data):
     pred_list = []
@@ -87,13 +98,12 @@ def eval_bleu(data):
     result_rouge = compute_rouge(references,predictions)
     result_bleu = compute_bleu(references,predictions)
     result_sacrebleu = compute_sacrebleu(references,predictions)
-    result_meteor = compute_meteor(references,predictions)
+    # result_meteor = compute_meteor(references,predictions)
 
     result = {
         'rouge':result_rouge,
         'bleu':result_bleu,
         'sacrebleu':result_sacrebleu,
-        'meteor':result_meteor
     }
     return result
 
@@ -104,11 +114,9 @@ def eval_ent_link_acc(data):
     for i in range(len(data)):
         candidate_list = data[i]["candidates_entity_desc_list"]
         ground_truth = data[i]["output"].strip("<>").lower()
-        predict = data[i]["predict"][:-4].strip("<>").lower()
-        # import pdb
-        # pdb.set_trace()
+        predict = data[i]["predict"].strip("<>").lower()
 
-        if ground_truth == predict:
+        if ground_truth.lower() in predict.lower():
             correct_count += 1
         if len(candidate_list) > 1:
             multi_candidates_example_count += 1
@@ -131,16 +139,12 @@ def eval_col_pop_map(data):
             end_tok_ix = pred.rfind("</s>")
             pred = pred[:end_tok_ix]
         ground_truth_list = ground_truth.split(", ")
-        # ground_truth_list = test_col_pop_rank[i]["target"].strip(".").split(", ")
-        pred_list = pred.split(", ")
+
+        pred_list = split_string(pred)
+        pred_list = [extract_bracket_content(p) for p in pred_list]
         for k in range(len(pred_list)):
             pred_list[k] = pred_list[k].strip("<>")
 
-        # print(len(ground_truth_list), len(pred_list))
-
-        # import pdb
-        # pdb.set_trace()
-        # add to remove repeated generated item
         new_pred_list = list(set(pred_list))
         new_pred_list.sort(key=pred_list.index)
         r = [1 if z in ground_truth_list else 0 for z in new_pred_list]
@@ -148,10 +152,6 @@ def eval_col_pop_map(data):
         # print("ap:", ap)
         rs.append(r)
 
-        # if sum(r) != 0:
-        #     recall.append(sum(r)/len(ground_truth_list))
-        # else:
-        #     recall.append(0)
         recall.append(sum(r) / len(ground_truth_list))
     map = mean_average_precision(rs)
     m_recall = sum(recall) / len(data)
@@ -159,8 +159,7 @@ def eval_col_pop_map(data):
         f1=0
     else:
         f1 = 2 * map * m_recall / (map + m_recall)
-    #print(data_name, len(data))
-    #print("mean_average_precision:", map)
+
     result={
         "mean_average_precision":map,
         "mean_average_recall":m_recall,
@@ -186,7 +185,12 @@ def eval_col_type_f1(data):
     for i in range(len(ground_truth_list)):
         total_ground_truth_col_types += len(ground_truth_list[i])
         total_pred_col_types += len(pred_list[i])
-        joint_items = [item for item in pred_list[i] if item in ground_truth_list[i]]
+        # joint_items = [item for item in pred_list[i] if item in ground_truth_list[i]]
+        joint_items = []
+        for g in ground_truth_list[i]:
+            for p in pred_list[i]:
+                if g.lower() in p.lower():
+                    joint_items_list.append(p)
         joint_items_list += joint_items
 
     # import pdb
@@ -241,9 +245,9 @@ def eval_tabfact_acc(data):
     remove_count = 0
     for i in range(len(data)):
         ground_truth = data[i]["output"]
-        prediction = data[i]["predict"].strip("</s>")
+        prediction = data[i]["predict"]
         # if prediction.find(ground_truth) == 0:
-        if prediction == ground_truth:
+        if ground_truth.lower() in prediction.lower():
             correct += 1
         if prediction.find("<s>") == 0:
             remove_count += 1
@@ -265,7 +269,11 @@ def eval_row_pop_map(data):
             end_tok_ix = pred.rfind("</s>")
             pred = pred[:end_tok_ix]
         ground_truth_list = data[i]["target"]
-        pred_list = pred.split(", ")
+        pred_list_tmp = split_string(pred)
+        try:
+            pred_list = [extract_bracket_content(p) for p in pred_list_tmp]
+        except:
+            print(pred_list_tmp)
         for k in range(len(pred_list)):
             pred_list[k] = pred_list[k].strip("<>")
 

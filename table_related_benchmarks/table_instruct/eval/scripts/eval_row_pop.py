@@ -1,6 +1,6 @@
 import json
 import argparse
-from metric import *
+from table_instruct.eval.scripts.metric import *
 
 
 def get_map_recall(data, data_name):
