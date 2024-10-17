@@ -16,11 +16,20 @@ from vllm import LLM, SamplingParams
 
 EOT_TOKEN = "<|EOT|>"
 
+
 import logging
 import os
 import datetime
 import warnings
 warnings.filterwarnings("ignore")
+
+PROMPT_TEMPLATE = """"
+table:
+{table_info}
+
+Question: {query}
+Answer: 
+"""
 
 def save_json(result,save_path):
     save_dir = os.path.dirname(save_path)
@@ -138,7 +147,21 @@ def evaluate(model, tokenizer, output_path, all_data, inference_type, inference_
     elif inference_type=='vLLM':
         prompt_batch = []
         for index, conv in tqdm.tqdm(enumerate(all_data), total=len(all_data)):
-            prompt = build_instruction_prompt(conv)
+            # prompt = build_instruction_prompt(conv)
+            if "input_seg" in conv:
+                table_info = conv["input_seg"]
+            elif "input" in conv:
+                table_info = conv["input"]
+            else:
+                table_info = ""
+            query = conv["question"]
+            instruction = conv["instruction"]
+            # table_info = conv["input"]
+            prompt_str = PROMPT_TEMPLATE.format(query=query, table_info=table_info)
+            msg = [{"role": "system", "content": instruction},{"role": "user", "content": prompt_str}]
+            prompt = tokenizer.apply_chat_template(
+                msg, tokenize=False, add_generation_prompt=True
+            )
             prompt_batch.append(prompt)
         sampling_params = SamplingParams(**generate_para)
         outputs = model.generate(prompt_batch, sampling_params)
@@ -220,7 +243,7 @@ def evaluate_tableinstruct(model_path, json_path, output_path, num_gpus_total, n
 
     if dataset_part in['in_domain_test','all_test']:
         try:
-            #row_pop
+            # row_pop
             logging.info('Processing row_pop ...')
             print('Processing row_pop ...')
             json_path_tmp = os.path.join(json_path, 'in_domain_test', 'row_pop_test')#这个特殊
