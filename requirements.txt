@@ -1,4 +1,4 @@
-vllm==0.5.5
+vllm==0.6.3
 defog_data==0.1.1
 func_timeout==4.3.5
 langchain==0.2.5
@@ -25,7 +25,7 @@ nltk==3.9.1
 evaluate==0.4.2
 sacrebleu==2.4.3
 bert_score==0.3.13
-absl-py==0.2.1
+absl-py
 einops
 babel==2.16.0
 openpyxl==3.1.5

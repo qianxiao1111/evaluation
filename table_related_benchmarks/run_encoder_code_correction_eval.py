@@ -7,7 +7,7 @@ from joblib import Parallel, delayed
 import warnings
 import copy
 from tqdm import tqdm
-from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head
+from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head, build_encoder_table_part_content
 from evaluate_code_correction.run_eval import eval_outputs_parallel
 from evaluate_code_correction.prompt import RECTIFY_PROMPT_PYTHON_INSTRUCTION
 from utils import load_json
@@ -32,17 +32,20 @@ def format_encoder_inputs(test_datas: list[dict], lan_type: str = "Python") -> l
         else:
             df_names = [f"df{i+1}" for i in range(len(table_paths))]
         # encoder 信息
-        tables, encoder_tables_info = format_encoder_tables(df_names, table_paths)
+        # tables, encoder_tables_info = format_encoder_tables(df_names, table_paths)
+        # content_msgs = build_encoder_table_part_content(df_names, table_paths)
 
         # 原来的df_head信息和encoder的一起拼接
-        all_tables_info = []
+        all_tables_msgs = []
         for idx, table_path in enumerate(table_paths):
             df_head_str, df = read_df_head(table_path, 3, "md")
-            normalized_head = (
-                f"""/*\n"{df_names[idx]}.head(3).to_markdown()" as follows:\n{df_head_str}\n{encoder_tables_info[idx]}**/"""
-            )
-            all_tables_info.append(normalized_head)
-        all_tables_info = "\n".join(all_tables_info)
+            df_name = df_names[idx]
+            # table_path = table_paths[idx]
+            content_msg = build_encoder_table_part_content([df_name], [table_path])
+            text_content = f"""/*\n"{df_names[idx]}.head(3).to_markdown()" as follows:\n{df_head_str}\n*/"""
+            all_tables_msgs.append(copy.deepcopy({"type": "text", "text": text_content}))
+            all_tables_msgs.extend(copy.deepcopy(content_msg))
+        # print(all_tables_msgs)
         # 设定当前时间
         current_time = "2024-09-26"
         output = (
@@ -51,12 +54,13 @@ def format_encoder_inputs(test_datas: list[dict], lan_type: str = "Python") -> l
         observes = sample["observation"]
 
         format_instruction = RECTIFY_PROMPT_PYTHON_INSTRUCTION.format(
-            table_infos=all_tables_info,
+            table_infos="<TABLE_CONTENT>",
             query=queries,
             observe=observes,
             current_time=current_time,
             output=output,
         )
+        format_instruction_list = format_instruction.split("<TABLE_CONTENT>")
         messages = [
             {
                 "role": "system", 
@@ -65,11 +69,9 @@ def format_encoder_inputs(test_datas: list[dict], lan_type: str = "Python") -> l
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": format_instruction},
-                    {
-                        "type": "table",
-                        "tables": tables,
-                    },
+                    {"type": "text", "text": format_instruction_list[0]},
+                    *all_tables_msgs,
+                    {"type": "text", "text": format_instruction_list[1]},
                 ],
             }
         ]
