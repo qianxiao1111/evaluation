@@ -1,7 +1,7 @@
 
 import os
 import warnings
-from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head
+from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head, build_encoder_table_part_content
 from inference import load_model, load_tokenizer_and_template
 from table_bench_eval.run_eval import run_eval, execute_samples_and_save
 from table_bench_eval.utils import read_json_file
@@ -37,19 +37,16 @@ def format_encoder_inputs(samples: List[Dict]) -> List:
         # encoder 信息
         df_names = ["table"]
         table_paths = ["table.csv"]
-        tables, encoder_tables_info = format_encoder_tables(df_names, table_paths)
-        replace_value = table_str + f"\n{encoder_tables_info[0]}"
-        msg_sys = msg_sys.replace(table_str, replace_value)
-        # msg_sys = msg_sys.replace(table_str, "<TABLE_CONTENT>")
+        msg_sys_list = msg_sys.split(table_str)
+
         msg = [
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": msg_sys},
-                    {
-                        "type": "table",
-                        "tables": tables,
-                    },
+                    {"type": "text", "text": msg_sys_list[0]},
+                    {"type": "text", "text": table_str},
+                    *build_encoder_table_part_content(df_names, table_paths),
+                    {"type": "text", "text": msg_sys_list[1]},
                 ],
             }
         ]
@@ -133,7 +130,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--max_model_len", type=int, default=40960, help="Max model length"
+        "--max_model_len", type=int, default=15000, help="Max model length"
     )
 
     parser.add_argument(

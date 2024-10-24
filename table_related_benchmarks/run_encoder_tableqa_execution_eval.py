@@ -11,7 +11,7 @@ from joblib import Parallel, delayed
 from io import StringIO
 import pandas as pd
 
-from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head
+from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head, build_encoder_table_part_content
 from utils import (
     get_tool,
     filter_code,
@@ -132,7 +132,7 @@ def build_single_slim_messages(test_dt):
         df_name = f"df{idx + 1}"
         file_name = os.path.basename(table_path)
         df_head_str, df = read_df_head(table_path, 3)
-        tables, tables_info = format_encoder_tables([df_name], [table_path])
+        content_msg = build_encoder_table_part_content([df_name], [table_path])
         table_info_messages.extend(copy.deepcopy(
             [
                 {
@@ -154,11 +154,8 @@ def build_single_slim_messages(test_dt):
                 {
                     "role": "system",
                     "content": [
-                        {"type": "text", "text": f"```pycon\n{df_head_str}\n```\n {tables_info[0]}"},
-                        {
-                            "type": "table",
-                            "tables": tables,
-                        },
+                        {"type": "text", "text": f"```pycon\n{df_head_str}\n```"},
+                        *content_msg,
                     ],
                 },
                 {
@@ -181,9 +178,6 @@ def build_tableqa_messages_from_csv_file(test_dt):
     table_paths = test_dt["table_paths"]
     df_names = test_dt["df_names"]
 
-    # 支持多表情况
-    tables, tables_info = format_encoder_tables(df_names, table_paths)
-    
     # instruction 切分重新拼接 messages
     instruction_list = instruction.split(table_info)
     messages = [
@@ -192,19 +186,13 @@ def build_tableqa_messages_from_csv_file(test_dt):
             "content": "You are a helpful assistant.",
         }
     ]
-    tables_info_str = "\n".join(tables_info)
-    user_content = instruction_list[0] + \
-        df_info_simple_str + \
-        "\n/*\n" + tables_info_str.strip() + "\n*/" + \
-        instruction_list[1]
     messages.append({
         "role": "user",
         "content": [
-            {"type": "text", "text": user_content},
-            {
-                "type": "table",
-                "tables": tables,
-            },
+            {"type": "text", "text": instruction_list[0]},
+            {"type": "text", "text": df_info_simple_str},
+            *build_encoder_table_part_content(df_names, table_paths),
+            {"type": "text", "text": instruction_list[1]},
         ],
     })
     return messages
@@ -307,7 +295,7 @@ if __name__ == "__main__":
         default=1024,
         help="Maximum number of output tokens",
     )
-    parser.add_argument("--max_model_len", type=int, default=40960, help="Cutoff length")
+    parser.add_argument("--max_model_len", type=int, default=10000, help="Cutoff length")
     parser.add_argument(
         "--eval_dataset_path",
         type=str,

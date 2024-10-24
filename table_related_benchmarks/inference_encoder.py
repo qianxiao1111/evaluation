@@ -40,14 +40,19 @@ def inference_with_encoder(args, format_msg_datas):
     model = LLM(
         model=args.model_path,
         max_model_len=args.max_model_len,
-        # gpu_memory_utilization=0.9,
-        # max_num_seqs=16,
-        dtype="half",
-        # dtype="bfloat16",
+        gpu_memory_utilization=0.8,
+        max_num_seqs=20,
+        limit_mm_per_prompt={"table": 10},
+        # dtype="half",
+        dtype="bfloat16",
     )
+
     sparams = SamplingParams(temperature=args.temperature, max_tokens=args.max_new_tokens)
     # 单个推理查看prompt
-    # res = model.chat(messages=format_msg_datas[0], sampling_params=sparams)
+    # ----------------------
+    # print("==================")
+    # print(test_datas)
+    # res = model.chat(messages=format_msg_datas, sampling_params=sparams)
     # print(res)
     # print("------------------PROMPT Start----------------")
     # print(res[0].prompt)
@@ -58,13 +63,27 @@ def inference_with_encoder(args, format_msg_datas):
     # print(res[0].outputs[0].text)
     # print("++++++++++++++++++++++++Response End++++++++++++++++++++++++")
     # print("Generating answers finished..")
-    model_outputs = model.batch_chat(messages=format_msg_datas, sampling_params=sparams)
+    # exit()
+    # ----------------------
+    # 单个运行
+    # ----------------------
+    # model_outputs_text = []
+    # for fmd in format_msg_datas:
+    #     print(fmd)
+    #     res = model.chat(messages=fmd, sampling_params=sparams)
+    #     rt_output = res[0].outputs[0].text
+    #     model_outputs_text.append(rt_output)
+    # ----------------------
+    
+    # 批量运行
+    # ----------------------
+    model_outputs = model.chat(messages=format_msg_datas, sampling_params=sparams)
     model_outputs_text = [mot.outputs[0].text for mot in model_outputs]
+    # ----------------------
+
     del model
     cleanup()
     return model_outputs_text
-
-# format_inputs
 
 def truncate(value, max_length=80):
     new_value = ""
@@ -80,16 +99,71 @@ def format_encoder_tables(df_names, table_paths):
     for idx, table_path in enumerate(table_paths):
         df_name = df_names[idx]
         df = pd.read_csv(table_path, encoding="utf-8", nrows=500)
+        df.columns = df.columns.str.strip()
+        df = df.dropna(how="all").dropna(axis=1, how="all")
+        # 限制超过列时截断
+        max_columns = 50  # 可以根据你的需求设置这个数量
+        if len(df.columns) > max_columns:
+            df = df.iloc[:, :max_columns]
+            
         df_extra_info = extract_contrastive_table(df)
         tables_info.append(copy.deepcopy(f"Details about the '{df_name}' other info as follows:\n<TABLE_CONTENT>\n"))
         tables.append(copy.deepcopy(df_extra_info))
+    
+    tables_list = []
+    for tb in tables:
+        tables_list.append({
+            "type": "table",
+            "table": tb,
+        })
 
-    return tables, tables_info
+    return tables_list, tables_info
+
+def build_encoder_table_part_content(df_names, table_paths):
+    content_msg = []
+    for idx, table_path in enumerate(table_paths):
+        
+        content_msg.append(
+            {
+                "type": "text",
+                "text": f"/*\nDetails about the '{df_names[idx]}' other info as follows:\n",
+            }
+        )
+        # 读取df并处理
+        df = pd.read_csv(table_path, encoding="utf-8", nrows=500)
+        df.columns = df.columns.str.strip()
+        df = df.dropna(how="all").dropna(axis=1, how="all")
+        # 限制超过列时截断
+        max_columns = 50  # 可以根据你的需求设置这个数量
+        if len(df.columns) > max_columns:
+            df = df.iloc[:, :max_columns]
+
+        content_msg.append(
+            {
+                "type": "table",
+                "table": extract_contrastive_table(
+                    copy.deepcopy(df)
+                )
+            }
+        )
+        content_msg.append(
+            {
+                "type": "text",
+                "text": "*/",
+            }
+        )
+
+    return content_msg
 
 def read_df_head(table_path, head_num=3, format_type="string"):
     df = pd.read_csv(table_path, encoding="utf-8", nrows=500)
     df.columns = df.columns.str.strip()
     df = df.dropna(how="all").dropna(axis=1, how="all")
+    # 限制超过列时截断
+    max_columns = 50  # 可以根据你的需求设置这个数量
+    if len(df.columns) > max_columns:
+        df = df.iloc[:, :max_columns]
+        
     df_head = copy.deepcopy(df.head(head_num))
     df_truncated_head = df_head.apply(lambda x: x.map(lambda y: truncate(y, 80)))
     if format_type == "string":

@@ -5,7 +5,7 @@ import pandas as pd
 from utils import filter_code, load_json, save_json
 from reject_eval.run_eval import contains_independent_no, load_json
 from reject_eval.eval_metrics import evaluation
-from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head
+from inference_encoder import inference_with_encoder, format_encoder_tables, read_df_head, build_encoder_table_part_content
 from reject_eval.prompt import (eval_instruction, eval_system,
                                 output_content_classify_instruct,
                                 output_content_classify_system)
@@ -23,14 +23,16 @@ def format_encoder_inputs(test_datas: list[dict]) -> list[list[dict]]:
         df_names = test_dt["df_names"]
         
         # encoder 信息
-        tables, encoder_tables_info = format_encoder_tables(df_names, table_paths)
-
+        # tables, encoder_tables_info = format_encoder_tables(df_names, table_paths)
+        content_msg = build_encoder_table_part_content(df_names, table_paths)
         # 只有单表数据
         if len(table_paths) != 1:
             raise ValueError("多表情况")
 
-        df_info_str = df_info_str + f"\n/*\n{encoder_tables_info[0].strip()}\n*/"
+        # df_info_str = df_info_str + f"\n/*\n{encoder_tables_info[0].strip()}\n*/"
         format_instruction = eval_instruction.format(df_info=df_info_str, input=query)
+        format_instruction_list = format_instruction.split(df_info_str)
+
         format_system = eval_system
         messages = [
             {
@@ -40,11 +42,10 @@ def format_encoder_inputs(test_datas: list[dict]) -> list[list[dict]]:
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": format_instruction},
-                    {
-                        "type": "table",
-                        "tables": tables,
-                    },
+                    {"type": "text", "text": format_instruction_list[0]},
+                    {"type": "text", "text": df_info_str},
+                    *content_msg,
+                    {"type": "text", "text": format_instruction_list[1]},
                 ],
             }
         ]
@@ -131,7 +132,7 @@ if __name__ == "__main__":
         help="Maximum number of output new tokens",
     )
     parser.add_argument(
-        "--max_model_len", type=int, default=8192, help="Max model length"
+        "--max_model_len", type=int, default=15000, help="Max model length"
     )
     parser.add_argument(
         "--template",
