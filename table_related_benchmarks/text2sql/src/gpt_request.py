@@ -15,12 +15,17 @@ import sqlparse
 from tqdm import tqdm
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
-
+import os
+from openai import AzureOpenAI
 
 def new_directory(path):  
     if not os.path.exists(path):  
         os.makedirs(path)  
 
+def load_json(data_path):
+    with open(data_path, "r") as f:
+        datas = json.load(f)
+    return datas
 
 def get_db_schemas(bench_root: str, db_name: str) -> Dict[str, str]:
     """
@@ -137,28 +142,12 @@ def generate_combined_prompts_one(db_path, question, knowledge=None):
     schema_prompt = generate_schema_prompt(db_path, num_rows=None) # This is the entry to collect values
     comment_prompt = generate_comment_prompt(question, knowledge)
 
-    combined_prompts = schema_prompt + '\n\n' + comment_prompt + cot_wizard() #+ '\nSELECT '
+    combined_prompts = schema_prompt + '\n\n' + comment_prompt + cot_wizard() + '\nSELECT '
     # combined_prompts = few_shot_no_kg() + '\n\n' + schema_prompt + '\n\n' + comment_prompt
     # print("="*100)
     # print(combined_prompts)
     # print("="*100)
     return combined_prompts
-
-# def generate_combined_prompts_one(db_path, question, knowledge=None):
-#     schema_prompt = generate_schema_prompt(db_path, num_rows=None) # This is the entry to collect values
-#     prompt_template = """
-#     You are a helpful assistant that generates SQL queries based on user requests. 
-#     Here are the details for the SQLite database schema:
-
-#     Tables:
-#     {schema_table}
-
-#     User Query: {user_query}
-
-#     Please generate an appropriate SQL query that retrieves the necessary information based on the user request.
-#     """
-#     prompt = prompt_template.format_map({"schema_table": schema_prompt, "user_query": question})
-#     return prompt
 
 
 def quota_giveup(e):
@@ -172,7 +161,7 @@ def connect_gpt(engine, prompt, max_tokens, temperature, stop):
         result = 'error:{}'.format(e)
     return result
 
-def llm_generate_result(model_name_or_path, gpus_num, prompt_ls):
+def llm_generate_result(model_name_or_path, gpus_num, prompt_ls, args=None):
 
     print("model", model_name_or_path)
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
@@ -219,23 +208,92 @@ def llm_generate_result(model_name_or_path, gpus_num, prompt_ls):
 
     outputs = llm.generate(messages_list, sampling_params=sampling_params)
     generated_res = []
+    ori_generated_res = []
     for i, output in enumerate(tqdm(outputs)):
         text = output.outputs[0].text
+        ori_generated_res.append(text)
         sql = parser_sql(text)
         generated_res.append(sql)
 
-    return generated_res
+    return generated_res, ori_generated_res
+
+
+def gpt_generate_result(model_name_or_path, gpus_num, prompt_ls, args=None):
+
+    client = AzureOpenAI(
+    api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
+    api_version="2024-07-01-preview",
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+    max_retries=3
+    )
+
+    generated_res = []
+    ori_generated_res = []
+
+    output_name =  os.path.join(args.data_output_path, f'{args.eval_data_name}_{args.mode}_{args.is_use_knowledge}_temp.json')
+    unparser_name = os.path.join(args.data_output_path,f'{args.eval_data_name}_{args.mode}_{args.is_use_knowledge}_unparser_temp.json')
+
+
+    if os.path.exists(unparser_name):
+        ori_generated_res_dict = load_json(unparser_name)
+        generated_res_dict = load_json(output_name)
+
+        generated_res = [v for k,v in generated_res_dict.items()]
+        ori_generated_res = [v for k,v in ori_generated_res_dict.items()]
+
+        
+    for i in tqdm(range(len(prompt_ls))):
+        if i < len(generated_res):
+            continue
+        prompt = prompt_ls[i]
+        response = client.chat.completions.create(
+                model="gpt-4o",
+                # model="gpt-4o-mini",
+                messages=[
+                    # {"role": "system", "content": "Assistant is a large language model trained by OpenAI."},
+                    {"role": "user", "content": prompt}
+                ],
+                # stop=["\nObservation:"],
+                temperature=0.01,
+                timeout=40
+            )
+
+        generated_message = response.choices[0].message
+        text = generated_message.content
+
+        ori_generated_res.append(text)
+
+        sql = parser_sql(text)
+        generated_res.append(sql)
+        
+        if i % 50 == 0:
+            generate_sql_file(sql_lst=generated_res, output_path=output_name)
+        
+            generate_sql_file(sql_lst=ori_generated_res, output_path=unparser_name)   # 未解析的结果保存
+
+    return generated_res, ori_generated_res
 
 
 def parser_sql(text):
-    sql_query = re.search(r'```sql\n(.*?)```', text, re.DOTALL)
-    if sql_query:
-        extracted_sql = sql_query.group(1).strip()
+    text = text.strip()
+    sql_query_1 = re.search(r'```sql(.*?)```', text, re.DOTALL)
+    sql_query_2 = re.search(r'```(.*?)```', text, re.DOTALL)
+    if sql_query_1:
+        extracted_sql = sql_query_1.group(1).strip()
+    elif sql_query_2:
+        extracted_sql = sql_query_2.group(1).strip()
     else:
-        extracted_sql = text
+        top_word = text.split(" ")[0]
+        if not top_word.lower().startswith("select"):
+            extracted_sql = "SELECT " + text
+        else:
+            extracted_sql = text
+    extracted_sql_ls = extracted_sql.split("\n")
+    extracted_sql_ls = [s for s in extracted_sql_ls if not s.lower().startswith("-- ") ]
+    extracted_sql = "\n".join(extracted_sql_ls)
     return extracted_sql
 
-def collect_response_from_gpt(model_path, gpus_num, db_path_list, question_list, knowledge_list=None):
+def collect_response_from_gpt(model_path, gpus_num, db_path_list, question_list, knowledge_list=None, args=None):
     '''
     :param db_path: str
     :param question_list: []
@@ -254,8 +312,12 @@ def collect_response_from_gpt(model_path, gpus_num, db_path_list, question_list,
         else:
             cur_prompt = generate_combined_prompts_one(db_path=db_path_list[i], question=question)
         prompt_ls.append(cur_prompt)
-        
-    outputs_sql = llm_generate_result(model_path, gpus_num, prompt_ls)
+    
+    if args.use_gpt_api:
+        outputs_sql, ori_outputs_text = gpt_generate_result(model_path, gpus_num, prompt_ls, args)
+    else:
+        outputs_sql, ori_outputs_text = llm_generate_result(model_path, gpus_num, prompt_ls, args)
+    
     for i in tqdm(range(len(question_list)), desc="postprocess result"):
         question = question_list[i]
         sql = outputs_sql[i]
@@ -264,7 +326,7 @@ def collect_response_from_gpt(model_path, gpus_num, db_path_list, question_list,
         sql = sql + '\t----- bird -----\t' + db_id # to avoid unpredicted \t appearing in codex results
         response_list.append(sql)
 
-    return response_list
+    return response_list, ori_outputs_text
 
 def question_package(data_json, knowledge=False):
     question_list = []
@@ -310,16 +372,20 @@ def generate_main(eval_data, args):
     assert len(question_list) == len(db_path_list) == len(knowledge_list)
     
     if args.use_knowledge == 'True':
-        responses = collect_response_from_gpt(model_path=args.model_path, gpus_num=args.gpus_num, db_path_list=db_path_list, question_list=question_list, knowledge_list=knowledge_list)
+        responses, ori_outputs_text = collect_response_from_gpt(model_path=args.model_path, gpus_num=args.gpus_num, db_path_list=db_path_list, question_list=question_list, knowledge_list=knowledge_list, args=args)
     else:
-        responses = collect_response_from_gpt(model_path=args.model_path, gpus_num=args.gpus_num, db_path_list=db_path_list, question_list=question_list, knowledge_list=None)
+        responses, ori_outputs_text = collect_response_from_gpt(model_path=args.model_path, gpus_num=args.gpus_num, db_path_list=db_path_list, question_list=question_list, knowledge_list=None, args=args)
     
     if args.chain_of_thought == 'True':
-        output_name = os.path.join(args.data_output_path, f'predict_{args.mode}_cot.json')
+        output_name = os.path.join(args.data_output_path, f'{args.eval_data_name}_{args.mode}_cot.json')
     else:
-        output_name =  os.path.join(args.data_output_path, f'predict_{args.mode}.json')
+        output_name =  os.path.join(args.data_output_path, f'{args.eval_data_name}_{args.mode}_{args.is_use_knowledge}.json')
+        unparser_name = os.path.join(args.data_output_path,f'{args.eval_data_name}_{args.mode}_{args.is_use_knowledge}_unparser.json')
+
     # pdb.set_trace()
     generate_sql_file(sql_lst=responses, output_path=output_name)
+    
+    generate_sql_file(sql_lst=ori_outputs_text, output_path=unparser_name)   # 未解析的结果保存
 
     print('successfully collect results from {} for {} evaluation; Use knowledge: {}; Use COT: {}'.format(args.model_path, args.mode, args.use_knowledge, args.chain_of_thought))
     print(f'output: {output_name}')
