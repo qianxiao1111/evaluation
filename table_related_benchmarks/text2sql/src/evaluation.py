@@ -91,10 +91,13 @@ def sort_results(list_of_dicts):
 def compute_acc_by_diff(exec_results, contents):
     num_queries = len(exec_results)
     results = [res['res'] for res in exec_results]
+
     
     simple_results, moderate_results, challenging_results = [], [], []
 
     for i,content in enumerate(contents):
+        if i >= len(exec_results):
+            continue
         if content['difficulty'] == 'simple':
             simple_results.append(exec_results[i])
 
@@ -104,9 +107,21 @@ def compute_acc_by_diff(exec_results, contents):
         if content['difficulty'] == 'challenging':
             challenging_results.append(exec_results[i])
 
-    simple_acc = sum([res['res'] for res in simple_results])/len(simple_results)
-    moderate_acc = sum([res['res'] for res in moderate_results])/len(moderate_results)
-    challenging_acc = sum([res['res'] for res in challenging_results])/len(challenging_results)
+    if len(simple_results) != 0:
+        simple_acc = sum([res['res'] for res in simple_results])/len(simple_results)
+    else:
+        simple_acc = 0
+    
+    if len(moderate_results) != 0:
+        moderate_acc = sum([res['res'] for res in moderate_results])/len(moderate_results)
+    else:
+        moderate_acc = 0
+    
+    if len(challenging_results) != 0:
+        challenging_acc = sum([res['res'] for res in challenging_results])/len(challenging_results)
+    else:
+        challenging_acc = 0
+        
     all_acc = sum(results)/num_queries
     count_lists = [len(simple_results), len(moderate_results), len(challenging_results), num_queries]
     return simple_acc * 100, moderate_acc * 100, challenging_acc * 100, all_acc * 100, count_lists
