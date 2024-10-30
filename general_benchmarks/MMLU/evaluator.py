@@ -10,6 +10,7 @@ import numpy as np
 import torch
 import transformers
 from datasets import load_dataset
+
 # from ..hparams import get_eval_args
 # from ..model import load_model, load_tokenizer
 from template import CHOICES, get_eval_template
@@ -48,39 +49,95 @@ class Evaluator:
         #     get_eval_args(args)
         # )
         self.args = args
-        self.tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-        llm_args = {
-            "model": args.model_path,
-            "gpu_memory_utilization": 0.95,
-            "trust_remote_code": True,
-            "tensor_parallel_size": args.gpus_num,
-            "dtype": "half",
-            "max_model_len": 8192,
-            "enforce_eager": True,
-        }
-        self.llm = LLM(**llm_args)
-        self.sampling_params = SamplingParams(
-            temperature=0,
-            max_tokens=1024,
-            top_p=0.95,
-            stop_token_ids=[self.tokenizer.eos_token_id],
-            logprobs=20,
-        )
 
-        self.tokenizer.padding_side = (
-            "right"  # avoid overflow issue in batched inference for llama2
-        )
+        if not self.args.api:
+            self.tokenizer = AutoTokenizer.from_pretrained(args.model_path)
+            llm_args = {
+                "model": args.model_path,
+                "gpu_memory_utilization": 0.95,
+                "trust_remote_code": True,
+                "tensor_parallel_size": args.gpus_num,
+                "dtype": "half",
+                "max_model_len": 8192,
+                "enforce_eager": True,
+            }
+            self.llm = LLM(**llm_args)
+            self.sampling_params = SamplingParams(
+                temperature=0,
+                max_tokens=1024,
+                top_p=0.95,
+                stop_token_ids=[self.tokenizer.eos_token_id],
+                logprobs=20,
+            )
 
-        # self.template = get_template_and_fix_tokenizer(
-        #     self.tokenizer, self.data_args.template
-        # )
+            self.tokenizer.padding_side = (
+                "right"  # avoid overflow issue in batched inference for llama2
+            )
+
+            # self.template = get_template_and_fix_tokenizer(
+            #     self.tokenizer, self.data_args.template
+            # )
+
+            self.choice_inputs = [
+                self.tokenizer.encode(ch, add_special_tokens=False)[-1]
+                for ch in CHOICES
+            ]
+            self.label_map = {}
+            for label in ["A", "B", "C", "D"]:
+                self.label_map[label] = self.tokenizer.convert_tokens_to_ids(label)
         self.eval_template = get_eval_template(args.lang)
-        self.choice_inputs = [
-            self.tokenizer.encode(ch, add_special_tokens=False)[-1] for ch in CHOICES
-        ]
-        self.label_map = {}
-        for label in ["A", "B", "C", "D"]:
-            self.label_map[label] = self.tokenizer.convert_tokens_to_ids(label)
+
+    def get_client_res(self, example, open_ai_key=False):
+        messages = example["input"]
+        try:
+            if open_ai_key:
+                from openai import AzureOpenAI, OpenAI
+                try:
+                    api_key = os.environ["OPENAI_API_KEY"]
+                except KeyError:
+                    print("环境变量 OPENAI_API_KEY 未设置")
+                    api_key = "default_value"
+                client = AzureOpenAI(
+                    api_key=api_key,
+                    api_version="2024-07-01-preview",
+                    azure_endpoint="https://zju-tablegpt.openai.azure.com/",
+                    max_retries=3,
+                )
+                chat_response = client.chat.completions.create(
+                    model="gpt-4o",
+                    # model="gpt-4o-mini",
+                    messages=messages,
+                    top_p=0.95,
+                    temperature=0,
+                    max_tokens=1024,
+                    # stop_token_ids=[self.tokenizer.eos_token_id],
+                    logprobs=True,
+                    top_logprobs=5,
+                    timeout=40,
+                )
+            else:
+                # Set OpenAI's API key and API base to use vLLM's API server.
+                openai_api_key = "EMPTY"
+                openai_api_base = "http://localhost:8080/v1"
+
+                client = OpenAI(
+                    api_key=openai_api_key,
+                    base_url=openai_api_base,
+                )
+                chat_response = client.chat.completions.create(
+                    model="qwen2-7b-sft",
+                    messages=messages,
+                    top_p=0.3,
+                    temperature=0.1,
+                    max_tokens=1024,
+                )
+
+            output = chat_response
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            output = None
+        example["output"] = output
+        return example
 
     def get_answer(self, output):
         import numpy as np
@@ -111,6 +168,19 @@ class Evaluator:
         answer = {i: k for i, k in enumerate(["A", "B", "C", "D"])}[np.argmax(probs)]
         return answer
 
+    def get_answer_gpt(self, chat_response):
+        try:
+            labels = ["A", "B", "C", "D"]
+            top_logprobs = chat_response.choices[0].logprobs.content[0].top_logprobs
+            for prob in top_logprobs:
+                if prob.token in labels:
+                    answer = prob.token
+                    return answer
+            return "Y"
+        except Exception as e:
+            print(f"get answer gpt error occurred: {e}")
+            return "N"
+
     def eval(self) -> None:
         mapping = cached_file(
             path_or_repo_id=os.path.join(data_abs_dir, self.args.task),
@@ -137,6 +207,7 @@ class Evaluator:
             )
             pbar.set_postfix_str(categorys[subject]["name"])
             inputs, outputs, labels = [], [], []
+            examples = []
             for i in trange(
                 len(dataset[args.split]),
                 desc="Formatting batches",
@@ -153,21 +224,47 @@ class Evaluator:
                     support_set=support_set,
                     subject_name=categorys[subject]["name"],
                 )
-                inputs.append(
-                    self.tokenizer.apply_chat_template(
+                if self.args.api:
+                    inp = messages[0:-1]
+                    inputs.append(inp)
+                else:
+                    inp = self.tokenizer.apply_chat_template(
                         messages[0:-1], tokenize=False, add_generation_prompt=True
                     )
-                )
+                    inputs.append(inp)
                 labels.append(messages[-1]["content"])
+                examples.append({"input": inp, "label": messages[-1]["content"]})
+            if self.args.api:
+                from joblib import Parallel, delayed
 
-            llm_outputs = self.llm.generate(
-                inputs, sampling_params=self.sampling_params
-            )
-            for output in llm_outputs:
-                answer = self.get_answer(output)
-                outputs.append(answer)
+                examples = Parallel(n_jobs=24)(
+                    delayed(self.get_client_res)(example, open_ai_key=True)
+                    for example in tqdm(examples)
+                )
+
+                # 请求错误的重新请求
+                llm_outputs = []
+                for example in examples:
+                    if example["output"]==None:
+                        example = self.get_client_res(example, open_ai_key=True)
+                    llm_outputs.append(example)
+                # 多进程请求后label与output的顺序乱了，需要重置
+                labels = []
+                outputs = []
+                for example in llm_outputs:
+                    answer = self.get_answer_gpt(example["output"])
+                    outputs.append(answer)
+                    labels.append(example["label"])
+            else:
+                llm_outputs = self.llm.generate(
+                    inputs, sampling_params=self.sampling_params
+                )
+                for output in llm_outputs:
+                    answer = self.get_answer(output)
+                    outputs.append(answer)
 
             corrects = np.array(outputs) == np.array(labels)
+            print("正确率：",corrects.sum()/len(corrects))
             category_name = categorys[subject]["category"]
             category_corrects[category_name] = np.concatenate(
                 [category_corrects[category_name], corrects], axis=0
@@ -238,6 +335,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--lang", type=str, help="prompt langauge", default="zh", choices=["zh", "en"]
     )
+    parser.add_argument("--api", action="store_true", help="infer api type")
     parser.add_argument(
         "--task",
         type=str,

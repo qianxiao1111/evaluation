@@ -86,37 +86,84 @@ def convert_for_evaluation(example):
     return example
 
 
+def get_client_res(messages, example, output_key, open_ai_key=False):
+    try:
+        if open_ai_key:
+            from openai import AzureOpenAI, OpenAI
+            try:
+                api_key = os.environ["OPENAI_API_KEY"]
+            except KeyError:
+                print("环境变量 OPENAI_API_KEY 未设置")
+                api_key = "default_value"
+            client = AzureOpenAI(
+                api_key=api_key,
+                api_version="2024-07-01-preview",
+                azure_endpoint="https://zju-tablegpt.openai.azure.com/",
+            )
+            chat_response = client.chat.completions.create(
+                model="gpt-4o",
+                # model="gpt-4o-mini",
+                messages=messages,
+                top_p=0.95,
+                temperature=0,
+                max_tokens=1024,
+                timeout=40,
+            )
+        else:
+            # Set OpenAI's API key and API base to use vLLM's API server.
+            openai_api_key = "EMPTY"
+            openai_api_base = "http://localhost:8080/v1"
+
+            client = OpenAI(
+                api_key=openai_api_key,
+                base_url=openai_api_base,
+            )
+            chat_response = client.chat.completions.create(
+                model="qwen2-7b-sft",
+                messages=messages,
+                top_p=0.3,
+                temperature=0.1,
+                max_tokens=1024,
+            )
+        example[output_key] = chat_response.choices[0].message.content
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        example[output_key] = None
+    example["input"] = messages
+    return example
+
+
 def generate_main(args):
     model_name_or_path = args.model_path
     temp_dir = args.temp_dir
     create_dir(temp_dir)
     # os.makedirs(temp_dir, exist_ok=True)
     problem_file = os.path.join(data_abs_dir, f"mbpp.jsonl")
-
-    print("model", model_name_or_path)
-    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-    print(
-        "load tokenizer {} from {} over.".format(
-            tokenizer.__class__, model_name_or_path
+    if not args.api:
+        print("model", model_name_or_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+        print(
+            "load tokenizer {} from {} over.".format(
+                tokenizer.__class__, model_name_or_path
+            )
         )
-    )
+        llm_args = {
+            "model": model_name_or_path,
+            "gpu_memory_utilization": 0.95,
+            "trust_remote_code": True,
+            "tensor_parallel_size": args.gpus_num,
+            "dtype": "half",
+            "max_model_len": 8192,
+            "enforce_eager": True,
+        }
 
-    llm_args = {
-        "model": model_name_or_path,
-        "gpu_memory_utilization": 0.95,
-        "trust_remote_code": True,
-        "tensor_parallel_size": args.gpus_num,
-        "dtype": "half",
-        "max_model_len": 8192,
-        "enforce_eager": True,
-    }
-    llm = LLM(**llm_args)
-    sampling_params = SamplingParams(
-        temperature=0,
-        max_tokens=1024,
-        top_p=0.95,
-        stop_token_ids=[tokenizer.eos_token_id],
-    )
+        llm = LLM(**llm_args)
+        sampling_params = SamplingParams(
+            temperature=0,
+            max_tokens=1024,
+            top_p=0.95,
+            stop_token_ids=[tokenizer.eos_token_id],
+        )
 
     examples = list(read_test_examples(problem_file))
     print("Read {} examples for evaluation over.".format(len(examples)))
@@ -124,20 +171,48 @@ def generate_main(args):
     for example in tqdm(examples, desc="Generating"):
         prompt = example["prompt"]
         message = [{"role": "user", "content": prompt}]
-        messages_list.append(
-            tokenizer.apply_chat_template(
-                message, tokenize=False, add_generation_prompt=True
+        if args.api:
+            messages_list.append(message)
+        else:
+            messages_list.append(
+                tokenizer.apply_chat_template(
+                    message, tokenize=False, add_generation_prompt=True
+                )
             )
+    if args.api:
+        from joblib import Parallel, delayed
+
+        examples_ = Parallel(n_jobs=24)(
+            delayed(get_client_res)(
+                inp, examples[i], "gpt_completion", open_ai_key=True
+            )
+            for i, inp in enumerate(tqdm(messages_list))
         )
 
-    outputs = llm.generate(messages_list, sampling_params=sampling_params)
-    generated_examples = []
-    for i, output in enumerate(tqdm(outputs)):
-        output = output.outputs[0].text
-        example = examples[i]
-        example["gpt_completion"] = output
-        example = convert_for_evaluation(example)
-        generated_examples.append(example)
+        # 请求错误的重新请求
+        examples = []
+        for example in examples_:
+            if example["gpt_completion"] == None:
+                example = get_client_res(
+                    example["input"], example, "gpt_completion", open_ai_key=True
+                )
+            del example["input"]
+            examples.append(example)
+
+        generated_examples = []
+        for example in examples:
+            example = convert_for_evaluation(example)
+            generated_examples.append(example)
+
+    else:
+        outputs = llm.generate(messages_list, sampling_params=sampling_params)
+        generated_examples = []
+        for i, output in enumerate(tqdm(outputs)):
+            output = output.outputs[0].text
+            example = examples[i]
+            example["gpt_completion"] = output
+            example = convert_for_evaluation(example)
+            generated_examples.append(example)
 
     print("Generate all over!!!")
     # os.makedirs(args.save_dir, exist_ok=True)
@@ -173,6 +248,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--gpus_num", type=int, default=1, help="the number of GPUs you want to use."
     )
+    parser.add_argument("--api", action="store_true", help="infer api type")
     parser.add_argument(
         "--save_dir",
         type=str,
