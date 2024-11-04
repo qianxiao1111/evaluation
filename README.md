@@ -1,4 +1,4 @@
-# Table-llm-eval： An Open-Source tabular data related tasks evaluation framework
+# Benchmarks evaluations for tablegpt
 
 <p align="center">
     <a href="#-About">🔥About</a> •
@@ -9,19 +9,20 @@
 
 </div>
 
-Table-llm-eval is a project designed to support the evaluation of large language model (LLM) capabilities related to table data. 
+This is a repo opened for evaluation on different table-related benchmarks for tablegpt. 
 
-Given the complexity of table QA tasks and the uncertainty of input instructions,  we provide evaluation datasets and scripts for 5 capabilities: 
+Given the complexity of table QA tasks and the uncertainty of input instructions,  we provide evaluation datasets and scripts for 7 capabilities: 
 
 - ✨Code correction based on tables 
 - ✨Refusal of ambiguous questions
 - ✨Table & field recall in multi-table scenarios
 - ✨Table QA output code executable
 - ✨Table-Bench.
+- ✨Text2Sql.
+- ✨TableInstruct, which includes a series of table-related evaluation benchmarks.
 
-We have built an inference method based on the  local model path using vLLM as the backend, and defined a set of example prompts templates for the four tasks: code correction, ambiguous question refusal,  multi-tables and field recall,  table QA executable. You also can define your own prompt templates to acquire better performance. 
-
-In addition, we have integrated the TableBench benchmark released by Beihang University (Beijing University of Aeronautics and Astronautics). The test data source for this project can be found at: https://huggingface.co/datasets/Multilingual-Multimodal-NLP/TableBench. The project's GitHub repository is available at: https://github.com/TableBench/TableBench.	
+In addition, we have integrated other general abilities benchmarks like HumanEval, MBPP and MMLU/CMMLU.
+We have built an inference method based on the  local model path using vLLM as the backend, and defined a set of example prompts templates for the above benchmarks. 
 
 ## Usage
 
@@ -39,9 +40,9 @@ pip install -r requirements.txt
 </div>
 </details>
 
-[!Tip]
-
-If you want more configuration options for running parameters, refer to the typical Python script.
+[!Tips]
+1. You can run all the benchmarks with the default params by running command `bash run_benchmarks.sh`.
+2. If you want more configuration options for running parameters, refer to the typical Python script.
 
 ### Code correction eval
 
@@ -132,5 +133,47 @@ python table_related_benchmarks/run_table_bench_eval.py \
     --model_path <EVAL MODEL PATH> \
     --temperature <ONE OF THE INFERENCE PARAMETER> \
     --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
+```
+
+### TableInstruct
+
+The provided eval dataset path:
+
+```python
+table_related_benchmarks/evalset/TableInstruct
+```
+
+You can perform TableInstruct evaluation by the following command:
+
+```bash
+python table_related_benchmarks/run_table_instruct_eval.py \
+    --model_path <EVAL MODEL PATH> \
+    --temperature <ONE OF THE INFERENCE PARAMETER> \
+    --gpus_num <NUMBER OF GPU TO RUN INFERENCE> 
+```
+
+### Text2Sql
+```bash
+python table_related_benchmarks/run_text2sql_eval.py --model_path <EVAL MODEL PATH> 
+```
+
+### HumanEval
+Perform HumanEval evaluation by the following command:
+
+```bash
+python general_benchmarks/HumanEval/eval_instruct_vllm.py --model_path <EVAL MODEL PATH> 
+```
+
+### MBPP
+Perform MBPP evaluation by the following command:
+
+```bash
+python general_benchmarks/MBPP/eval_instruct_vllm.py --model_path <EVAL MODEL PATH> 
+```
+
+### MMLU & CMMLU
+
+```bash
+python general_benchmarks/MMLU/evaluator.py --task <mmlu or cmmlu> --lang <en or zh> --model_path <EVAL MODEL PATH> 
 ```
 
