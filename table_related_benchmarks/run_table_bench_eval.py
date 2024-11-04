@@ -35,7 +35,7 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2.5-ins-1012/checkpoint-1800"
+        "--model_path", type=str, help="Path to the model", default="/data4/sft_output/qwen2.5-7b-ins-1012/checkpoint-3200"
     )
 
     parser.add_argument(

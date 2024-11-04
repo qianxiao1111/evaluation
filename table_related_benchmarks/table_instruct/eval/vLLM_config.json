@@ -1,13 +1,12 @@
 {
   "load_para": {
-    "gpu_memory_utilization": 0.95,
+    "gpu_memory_utilization": 0.9,
     "trust_remote_code": 1,
-    "tensor_parallel_size": 1,
-    "dtype": "half"
+    "tensor_parallel_size": 1
   },
   "generate_para": {
     "temperature": 0.01,
     "top_k": 1,
-    "max_tokens": 1024
+    "max_tokens": 2048
   }
 }

@@ -29,3 +29,4 @@ absl-py
 einops
 babel==2.16.0
 openpyxl==3.1.5
+datasets==2.21.0

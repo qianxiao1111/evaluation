@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0
 
-MODEL_PATHS=("/data4/models/table_llms/TableLLM-CodeQwen-7B") # 指定需要运行测评的权重
+MODEL_PATHS=("/data4/sft_output/qwen2.5-7b-ins-1012/checkpoint-3200") # 指定需要运行测评的权重
 
 for MODEL_PATH in "${MODEL_PATHS[@]}"
 do
@@ -14,16 +14,8 @@ do
     python table_related_benchmarks/run_table_bench_eval.py --model_path ${MODEL_PATH}
     wait
 
-    # reject
-    python table_related_benchmarks/run_reject_eval.py --model_path ${MODEL_PATH}
-    wait
-
-    # recall
-    python table_related_benchmarks/run_recall_eval.py --model_path ${MODEL_PATH}
-    wait
-
     # nl2sql
-    python table_related_benchmarks/run_text2sql_eval.py --model_path ${MODEL_PATH}
+    python table_related_benchmarks/run_text2sql_eval.py --model_path ${MODEL_PATH} --is_use_knowledge 
     wait 
 
     # MBPP

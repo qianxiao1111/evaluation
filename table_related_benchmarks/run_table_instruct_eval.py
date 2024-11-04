@@ -391,8 +391,8 @@ def evaluate_tableinstruct(model_path, json_path, output_path, num_gpus_total, n
             json_path_tmp = os.path.join(json_path, 'out_of_domain_test', 'totto_eval.json')
             output_path_tmp = os.path.join(output_path, 'out_of_domain_test', 'totto_eval')
             evaluate_all(model, tokenizer, json_path_tmp, output_path_tmp, num_gpus_total, num_gpus_per_model,
-                         eval_type='totto',
-                         inference_type=inference_type, inference_config=inference_config)
+                            eval_type='totto',
+                            inference_type=inference_type, inference_config=inference_config)
         except Exception as e:
             logging.info('Processing ToTTo error %s', e, exc_info=True)
             print('Processing ToTTo error')
@@ -428,7 +428,7 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--json-path', type=str, default='table_related_benchmarks/evalset/TableInstruct/eval_data')
-    parser.add_argument('--model-path', type=str, default='/data4/sft_output/qwen2.5-ins-1012/checkpoint-2600')
+    parser.add_argument('--model-path', type=str, default='/data4/sft_output/qwen2.5-7b-ins-1012/checkpoint-3200')
     parser.add_argument('--output-path', type=str, default='table_related_benchmarks/evalset/TableInstruct/eval_data/eval_output-sft')
     parser.add_argument('--num-gpus-total', type=int, default=1)
     parser.add_argument('--num-gpus-per-model', type=int, default=1)
