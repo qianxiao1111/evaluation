@@ -41,7 +41,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eval_dataset_path",
         type=str,
-        default="table_related_benchmarks/evalset/TableBench1",
+        default="table_related_benchmarks/evalset/TableBench",
         help="Test Set Path",
     )
 
