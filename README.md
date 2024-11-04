@@ -43,6 +43,8 @@ pip install -r requirements.txt
 [!Tips]
 1. You can run all the benchmarks with the default params by running command `bash run_benchmarks.sh`.
 2. If you want more configuration options for running parameters, refer to the typical Python script.
+3. Download the .db files before running text2sql evaluation scripts. Download urls refer to `/table_related_benchmarks/evalset/bird_data/dev_databases/README.md`(Bird dev) & `table_related_benchmarks/evalset/spider_data/dev_database/README.md` (Spider dev) & `table_related_benchmarks/evalset/spider_data/test_database/README.md` (Spider test).
+
 
 ### Code correction eval
 
